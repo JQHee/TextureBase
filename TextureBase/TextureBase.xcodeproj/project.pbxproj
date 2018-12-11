@@ -24,6 +24,8 @@
 		5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */; };
 		5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */; };
 		5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */; };
+		66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */; };
+		66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */; };
 		EDF33F41342CDA8854B03075 /* Pods_TextureBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTAsKitTool.swift; sourceTree = "<group>"; };
 		5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFImageTextButton.swift; sourceTree = "<group>"; };
 		5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableNodeViewController.swift; sourceTree = "<group>"; };
+		66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeactivityIndicatorCellNode.swift; sourceTree = "<group>"; };
+		66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASCellNode生命周期.png"; sourceTree = "<group>"; };
 		6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase.debug.xcconfig"; sourceTree = "<group>"; };
 		9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,17 +247,10 @@
 		5E8BF48821BF6CD8005BD4E0 /* TestTableNode */ = {
 			isa = PBXGroup;
 			children = (
+				66D69EF321BFDB07008C31BD /* View */,
 				5E8BF48A21BF6D05005BD4E0 /* ViewController */,
-				5E8BF48921BF6CEA005BD4E0 /* View */,
 			);
 			path = TestTableNode;
-			sourceTree = "<group>";
-		};
-		5E8BF48921BF6CEA005BD4E0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5E8BF48A21BF6D05005BD4E0 /* ViewController */ = {
@@ -262,6 +259,15 @@
 				5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		66D69EF321BFDB07008C31BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */,
+				66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FFC9FA1D9F9C2105027ABF1D /* Pods */ = {
@@ -387,6 +393,7 @@
 			files = (
 				5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */,
 				5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */,
+				66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */,
 				5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +530,7 @@
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
+				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

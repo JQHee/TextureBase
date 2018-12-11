@@ -6,6 +6,11 @@
 //  Copyright © 2018年 ml. All rights reserved.
 //
 
+/**
+ * @brief 自动按钮
+ * desc: 图片和文字上下排列方式
+ */
+
 import UIKit
 
 class BFImageTextButton: UIButton {

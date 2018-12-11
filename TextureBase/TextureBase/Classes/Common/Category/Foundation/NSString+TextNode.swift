@@ -23,4 +23,20 @@ extension String {
         let attributesString = NSAttributedString.init(string: self, attributes: attributesDic)
         return attributesString
     }
+
+    /**
+     Node富文本
+
+     @param text 文本
+     @param textColor 文本颜色
+     @param font 字体
+     @param alignment 水平对齐方式
+     */
+    func nodeAttributes(color: UIColor, font: UIFont, alignment: NSTextAlignment) -> NSAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = alignment
+        let attributesDic = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        let attributesString = NSAttributedString.init(string: self, attributes: attributesDic)
+        return attributesString
+    }
 }

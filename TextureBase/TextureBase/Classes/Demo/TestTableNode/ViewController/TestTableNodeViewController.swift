@@ -16,7 +16,15 @@ class TestTableNodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewBindEvents()
+        // viewBindEvents()
+    }
+
+    deinit {
+        /*
+         * 记得在这里将 delegate、dataSource 设为 nil，否则有可能崩溃
+         */
+        tableNode.delegate = nil
+        tableNode.dataSource = nil
     }
     
     // MARK:  - Private methods
@@ -29,11 +37,14 @@ class TestTableNodeViewController: UIViewController {
         self.tableNode.view.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
             guard let `self` = self else { return }
             self.tableNode.view.mj_header.endRefreshing()
+            self.tableNode.reloadData()
+
         })
         
         self.tableNode.view.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: { [weak self] in
             guard let `self` = self else { return }
-            self.tableNode.view.mj_footer.endRefreshing()
+            self.tableNode.view.mj_header.endRefreshing()
+            self.tableNode.reloadData()
         })
 
     }
@@ -43,7 +54,7 @@ class TestTableNodeViewController: UIViewController {
         let tableNode = ASTableNode.init(style: UITableView.Style.plain)
         tableNode.frame = UIScreen.main.bounds
         tableNode.leadingScreensForBatching = 1.0
-        tableNode.view.separatorStyle = .none
+        // tableNode.view.separatorStyle = .none
         // tableNode.view.tableHeaderView
         tableNode.delegate = self
         tableNode.dataSource = self
@@ -60,7 +71,30 @@ extension TestTableNodeViewController: ASTableDataSource {
     }
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1000
+    }
+
+    // 自动计算大小
+    func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
+        let minSize = CGSize.init(width: UIScreen.main.bounds.width, height: 20)
+        let maxSize = CGSize.init(width: UIScreen.main.bounds.width, height: CGFloat(MAXFLOAT))
+        return ASSizeRange.init(min: minSize, max: maxSize)
+    }
+
+
+    // 将要显示
+    func tableNode(_ tableNode: ASTableNode, willDisplayRowWith node: ASCellNode) {
+
+        guard let indexPath = node.indexPath else {
+            return
+        }
+        /*
+         * 一个 Node 中的 UIView 是会被清除、重新生成的吗？ 在滑动到下方的时候， Node 中的所有 UIView 都会被干掉，然后滑回来的时候，会被重新执行 Block 中的代码，然后重新添加到界面上
+         */
+        if let cellNode = tableNode.nodeForRow(at: indexPath) as? CustomeactivityIndicatorCellNode {
+            // 不要这个划回来都被移除掉了
+            cellNode.resume()
+        }
     }
     
     // 返回cell
@@ -68,7 +102,11 @@ extension TestTableNodeViewController: ASTableDataSource {
         
         let cellNodeBlock: ASCellNodeBlock = { () -> ASCellNode in
             #warning("需要自定义cell")
-            return ASCellNode()
+            let cell = CustomeactivityIndicatorCellNode()
+            DispatchQueue.main.async { // 不放大主线程会崩溃
+                cell.startAnimating()
+            }
+            return cell
         }
         return cellNodeBlock
     }
@@ -88,10 +126,11 @@ extension TestTableNodeViewController {
     func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
         return true
     }
-    
+
     func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
         context.beginBatchFetching()
         // [self.mainTableNode insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
         context.completeBatchFetching(true)
+
     }
 }
