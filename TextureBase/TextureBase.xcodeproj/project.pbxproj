@@ -17,6 +17,12 @@
 		5E8BF45A21BF4E76005BD4E0 /* TextureBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF45921BF4E76005BD4E0 /* TextureBaseTests.swift */; };
 		5E8BF46521BF4E76005BD4E0 /* TextureBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF46421BF4E76005BD4E0 /* TextureBaseUITests.swift */; };
 		5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47321BF5202005BD4E0 /* TestViewController.swift */; };
+		5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47521BF526B005BD4E0 /* Global.swift */; };
+		5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47A21BF587E005BD4E0 /* NSAttributedString+TextNode.swift */; };
+		5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47D21BF59C9005BD4E0 /* NetworkImageNode.swift */; };
+		5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47F21BF5F57005BD4E0 /* NSString+TextNode.swift */; };
+		5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */; };
+		5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */; };
 		EDF33F41342CDA8854B03075 /* Pods_TextureBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +63,12 @@
 		5E8BF46421BF4E76005BD4E0 /* TextureBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureBaseUITests.swift; sourceTree = "<group>"; };
 		5E8BF46621BF4E76005BD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E8BF47321BF5202005BD4E0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		5E8BF47521BF526B005BD4E0 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		5E8BF47A21BF587E005BD4E0 /* NSAttributedString+TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+TextNode.swift"; sourceTree = "<group>"; };
+		5E8BF47D21BF59C9005BD4E0 /* NetworkImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageNode.swift; sourceTree = "<group>"; };
+		5E8BF47F21BF5F57005BD4E0 /* NSString+TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+TextNode.swift"; sourceTree = "<group>"; };
+		5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTAsKitTool.swift; sourceTree = "<group>"; };
+		5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFImageTextButton.swift; sourceTree = "<group>"; };
 		6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase.debug.xcconfig"; sourceTree = "<group>"; };
 		9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,9 +170,63 @@
 		5E8BF47221BF51EE005BD4E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5E8BF47721BF5821005BD4E0 /* Common */,
 				5E8BF47321BF5202005BD4E0 /* TestViewController.swift */,
+				5E8BF47521BF526B005BD4E0 /* Global.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		5E8BF47721BF5821005BD4E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF48421BF63ED005BD4E0 /* View */,
+				5E8BF48121BF6083005BD4E0 /* Tools */,
+				5E8BF47821BF5831005BD4E0 /* Category */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5E8BF47821BF5831005BD4E0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF47C21BF5995005BD4E0 /* Texture */,
+				5E8BF47921BF5851005BD4E0 /* Foundation */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5E8BF47921BF5851005BD4E0 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF47A21BF587E005BD4E0 /* NSAttributedString+TextNode.swift */,
+				5E8BF47F21BF5F57005BD4E0 /* NSString+TextNode.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5E8BF47C21BF5995005BD4E0 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF47D21BF59C9005BD4E0 /* NetworkImageNode.swift */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		5E8BF48121BF6083005BD4E0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5E8BF48421BF63ED005BD4E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FFC9FA1D9F9C2105027ABF1D /* Pods */ = {
@@ -410,9 +476,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
 				5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */,
 				5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */,
+				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
+				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
+				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
+				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
+				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYZGGW5E8S;
 				INFOPLIST_FILE = TextureBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,6 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYZGGW5E8S;
 				INFOPLIST_FILE = TextureBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
