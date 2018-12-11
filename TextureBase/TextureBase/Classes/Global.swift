@@ -13,4 +13,22 @@
 // 第三方框架
 @_exported import AsyncDisplayKit
 @_exported import SnapKit
+@_exported import MJRefresh
 
+
+// 常量
+var kScreenW: CGFloat {
+    return UIScreen.main.bounds.width
+}
+
+var kScreenH: CGFloat {
+    return UIScreen.main.bounds.height
+}
+
+var kStaBarH: CGFloat {
+    return UIApplication.shared.statusBarFrame.height
+}
+
+var kNavBarH: CGFloat {
+    return 44.0
+}
