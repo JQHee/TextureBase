@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A8BF9A8CE84BBD354FB2267 /* Pods_TextureBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */; };
+		4D9C10C588302A14D67E6DF6 /* Pods_TextureBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */; };
+		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
+		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
+		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
+		5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44B21BF4E76005BD4E0 /* Assets.xcassets */; };
+		5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44D21BF4E76005BD4E0 /* LaunchScreen.storyboard */; };
+		5E8BF45A21BF4E76005BD4E0 /* TextureBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF45921BF4E76005BD4E0 /* TextureBaseTests.swift */; };
+		5E8BF46521BF4E76005BD4E0 /* TextureBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF46421BF4E76005BD4E0 /* TextureBaseUITests.swift */; };
+		5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47321BF5202005BD4E0 /* TestViewController.swift */; };
+		EDF33F41342CDA8854B03075 /* Pods_TextureBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E8BF45621BF4E76005BD4E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E8BF43921BF4E6D005BD4E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E8BF44021BF4E6D005BD4E0;
+			remoteInfo = TextureBase;
+		};
+		5E8BF46121BF4E76005BD4E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E8BF43921BF4E6D005BD4E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E8BF44021BF4E6D005BD4E0;
+			remoteInfo = TextureBase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0618F38E26A92FD5E8F80B13 /* Pods-TextureBaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseUITests/Pods-TextureBaseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1666F3092DB92DADBED5C9D3 /* Pods-TextureBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseTests/Pods-TextureBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB482ABB7990619B4674469 /* Pods-TextureBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseUITests/Pods-TextureBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		553E745B134D836BADC51E38 /* Pods-TextureBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseTests/Pods-TextureBaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E8BF44921BF4E6D005BD4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E8BF44B21BF4E76005BD4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E8BF44E21BF4E76005BD4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E8BF45021BF4E76005BD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E8BF45521BF4E76005BD4E0 /* TextureBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8BF45921BF4E76005BD4E0 /* TextureBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureBaseTests.swift; sourceTree = "<group>"; };
+		5E8BF45B21BF4E76005BD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E8BF46021BF4E76005BD4E0 /* TextureBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8BF46421BF4E76005BD4E0 /* TextureBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureBaseUITests.swift; sourceTree = "<group>"; };
+		5E8BF46621BF4E76005BD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E8BF47321BF5202005BD4E0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase.debug.xcconfig"; sourceTree = "<group>"; };
+		9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7255816CA5DCB33B9B7D58 /* Pods-TextureBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E8BF43E21BF4E6D005BD4E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A8BF9A8CE84BBD354FB2267 /* Pods_TextureBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8BF45221BF4E76005BD4E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDF33F41342CDA8854B03075 /* Pods_TextureBaseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8BF45D21BF4E76005BD4E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9C10C588302A14D67E6DF6 /* Pods_TextureBaseUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09E959EB00D7DB74CA3F9840 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */,
+				9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */,
+				28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E8BF43821BF4E6D005BD4E0 = {
+			isa = PBXGroup;
+			children = (
+				5E8BF44321BF4E6D005BD4E0 /* TextureBase */,
+				5E8BF45821BF4E76005BD4E0 /* TextureBaseTests */,
+				5E8BF46321BF4E76005BD4E0 /* TextureBaseUITests */,
+				5E8BF44221BF4E6D005BD4E0 /* Products */,
+				FFC9FA1D9F9C2105027ABF1D /* Pods */,
+				09E959EB00D7DB74CA3F9840 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5E8BF44221BF4E6D005BD4E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */,
+				5E8BF45521BF4E76005BD4E0 /* TextureBaseTests.xctest */,
+				5E8BF46021BF4E76005BD4E0 /* TextureBaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E8BF44321BF4E6D005BD4E0 /* TextureBase */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF47221BF51EE005BD4E0 /* Classes */,
+				5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */,
+				5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */,
+				5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */,
+				5E8BF44B21BF4E76005BD4E0 /* Assets.xcassets */,
+				5E8BF44D21BF4E76005BD4E0 /* LaunchScreen.storyboard */,
+				5E8BF45021BF4E76005BD4E0 /* Info.plist */,
+			);
+			path = TextureBase;
+			sourceTree = "<group>";
+		};
+		5E8BF45821BF4E76005BD4E0 /* TextureBaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF45921BF4E76005BD4E0 /* TextureBaseTests.swift */,
+				5E8BF45B21BF4E76005BD4E0 /* Info.plist */,
+			);
+			path = TextureBaseTests;
+			sourceTree = "<group>";
+		};
+		5E8BF46321BF4E76005BD4E0 /* TextureBaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF46421BF4E76005BD4E0 /* TextureBaseUITests.swift */,
+				5E8BF46621BF4E76005BD4E0 /* Info.plist */,
+			);
+			path = TextureBaseUITests;
+			sourceTree = "<group>";
+		};
+		5E8BF47221BF51EE005BD4E0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF47321BF5202005BD4E0 /* TestViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FFC9FA1D9F9C2105027ABF1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */,
+				CA7255816CA5DCB33B9B7D58 /* Pods-TextureBase.release.xcconfig */,
+				1666F3092DB92DADBED5C9D3 /* Pods-TextureBaseTests.debug.xcconfig */,
+				553E745B134D836BADC51E38 /* Pods-TextureBaseTests.release.xcconfig */,
+				4AB482ABB7990619B4674469 /* Pods-TextureBaseUITests.debug.xcconfig */,
+				0618F38E26A92FD5E8F80B13 /* Pods-TextureBaseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E8BF44021BF4E6D005BD4E0 /* TextureBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E8BF46921BF4E76005BD4E0 /* Build configuration list for PBXNativeTarget "TextureBase" */;
+			buildPhases = (
+				FEE31F0BF95B7FBE5F8F2EC5 /* [CP] Check Pods Manifest.lock */,
+				5E8BF43D21BF4E6D005BD4E0 /* Sources */,
+				5E8BF43E21BF4E6D005BD4E0 /* Frameworks */,
+				5E8BF43F21BF4E6D005BD4E0 /* Resources */,
+				EA2941211A02FB978760C31B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextureBase;
+			productName = TextureBase;
+			productReference = 5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E8BF45421BF4E76005BD4E0 /* TextureBaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E8BF46C21BF4E77005BD4E0 /* Build configuration list for PBXNativeTarget "TextureBaseTests" */;
+			buildPhases = (
+				D76996352D94C75EA8B56280 /* [CP] Check Pods Manifest.lock */,
+				5E8BF45121BF4E76005BD4E0 /* Sources */,
+				5E8BF45221BF4E76005BD4E0 /* Frameworks */,
+				5E8BF45321BF4E76005BD4E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E8BF45721BF4E76005BD4E0 /* PBXTargetDependency */,
+			);
+			name = TextureBaseTests;
+			productName = TextureBaseTests;
+			productReference = 5E8BF45521BF4E76005BD4E0 /* TextureBaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5E8BF45F21BF4E76005BD4E0 /* TextureBaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E8BF46F21BF4E77005BD4E0 /* Build configuration list for PBXNativeTarget "TextureBaseUITests" */;
+			buildPhases = (
+				D4A434D616170D441A4F9DA4 /* [CP] Check Pods Manifest.lock */,
+				5E8BF45C21BF4E76005BD4E0 /* Sources */,
+				5E8BF45D21BF4E76005BD4E0 /* Frameworks */,
+				5E8BF45E21BF4E76005BD4E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E8BF46221BF4E76005BD4E0 /* PBXTargetDependency */,
+			);
+			name = TextureBaseUITests;
+			productName = TextureBaseUITests;
+			productReference = 5E8BF46021BF4E76005BD4E0 /* TextureBaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E8BF43921BF4E6D005BD4E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = ml;
+				TargetAttributes = {
+					5E8BF44021BF4E6D005BD4E0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5E8BF45421BF4E76005BD4E0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5E8BF44021BF4E6D005BD4E0;
+					};
+					5E8BF45F21BF4E76005BD4E0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5E8BF44021BF4E6D005BD4E0;
+					};
+				};
+			};
+			buildConfigurationList = 5E8BF43C21BF4E6D005BD4E0 /* Build configuration list for PBXProject "TextureBase" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E8BF43821BF4E6D005BD4E0;
+			productRefGroup = 5E8BF44221BF4E6D005BD4E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E8BF44021BF4E6D005BD4E0 /* TextureBase */,
+				5E8BF45421BF4E76005BD4E0 /* TextureBaseTests */,
+				5E8BF45F21BF4E76005BD4E0 /* TextureBaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E8BF43F21BF4E6D005BD4E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */,
+				5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */,
+				5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8BF45321BF4E76005BD4E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8BF45E21BF4E76005BD4E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4A434D616170D441A4F9DA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextureBaseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D76996352D94C75EA8B56280 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextureBaseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA2941211A02FB978760C31B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE31F0BF95B7FBE5F8F2EC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextureBase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E8BF43D21BF4E6D005BD4E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */,
+				5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */,
+				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8BF45121BF4E76005BD4E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8BF45A21BF4E76005BD4E0 /* TextureBaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8BF45C21BF4E76005BD4E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8BF46521BF4E76005BD4E0 /* TextureBaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E8BF45721BF4E76005BD4E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E8BF44021BF4E6D005BD4E0 /* TextureBase */;
+			targetProxy = 5E8BF45621BF4E76005BD4E0 /* PBXContainerItemProxy */;
+		};
+		5E8BF46221BF4E76005BD4E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E8BF44021BF4E6D005BD4E0 /* TextureBase */;
+			targetProxy = 5E8BF46121BF4E76005BD4E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E8BF44921BF4E6D005BD4E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E8BF44D21BF4E76005BD4E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E8BF44E21BF4E76005BD4E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E8BF46721BF4E76005BD4E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E8BF46821BF4E76005BD4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E8BF46A21BF4E76005BD4E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextureBase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E8BF46B21BF4E76005BD4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7255816CA5DCB33B9B7D58 /* Pods-TextureBase.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextureBase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5E8BF46D21BF4E77005BD4E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1666F3092DB92DADBED5C9D3 /* Pods-TextureBaseTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextureBaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextureBase.app/TextureBase";
+			};
+			name = Debug;
+		};
+		5E8BF46E21BF4E77005BD4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553E745B134D836BADC51E38 /* Pods-TextureBaseTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextureBaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextureBase.app/TextureBase";
+			};
+			name = Release;
+		};
+		5E8BF47021BF4E77005BD4E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB482ABB7990619B4674469 /* Pods-TextureBaseUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextureBaseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TextureBase;
+			};
+			name = Debug;
+		};
+		5E8BF47121BF4E77005BD4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0618F38E26A92FD5E8F80B13 /* Pods-TextureBaseUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TextureBaseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TextureBase;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E8BF43C21BF4E6D005BD4E0 /* Build configuration list for PBXProject "TextureBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E8BF46721BF4E76005BD4E0 /* Debug */,
+				5E8BF46821BF4E76005BD4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E8BF46921BF4E76005BD4E0 /* Build configuration list for PBXNativeTarget "TextureBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E8BF46A21BF4E76005BD4E0 /* Debug */,
+				5E8BF46B21BF4E76005BD4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E8BF46C21BF4E77005BD4E0 /* Build configuration list for PBXNativeTarget "TextureBaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E8BF46D21BF4E77005BD4E0 /* Debug */,
+				5E8BF46E21BF4E77005BD4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E8BF46F21BF4E77005BD4E0 /* Build configuration list for PBXNativeTarget "TextureBaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E8BF47021BF4E77005BD4E0 /* Debug */,
+				5E8BF47121BF4E77005BD4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E8BF43921BF4E6D005BD4E0 /* Project object */;
+}

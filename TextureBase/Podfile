@@ -1,0 +1,19 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'TextureBase' do
+  
+  pod 'Texture', '~> 2.7'
+  pod 'SnapKit', '~> 4.2.0'
+
+  target 'TextureBaseTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TextureBaseUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
