@@ -1,4 +1,5 @@
 PODS:
+  - MJRefresh (3.1.15.7)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -24,11 +25,13 @@ PODS:
     - Texture/Core
 
 DEPENDENCIES:
+  - MJRefresh (~> 3.1.15.7)
   - SnapKit (~> 4.2.0)
   - Texture (~> 2.7)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - MJRefresh
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -36,12 +39,13 @@ SPEC REPOS:
     - Texture
 
 SPEC CHECKSUMS:
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
 
-PODFILE CHECKSUM: dd0d7ce40111e70e1f2116e321ac45031b1a6ad0
+PODFILE CHECKSUM: a862193fee9dc5dfac527b6dada4f616abf5f5b6
 
 COCOAPODS: 1.5.3
