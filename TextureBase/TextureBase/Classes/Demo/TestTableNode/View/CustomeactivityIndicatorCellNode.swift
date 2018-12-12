@@ -41,7 +41,7 @@ class CustomeactivityIndicatorCellNode: ASCellNode {
         activityIndicator.frame = CGRect(x: self.calculatedSize.width / 2.0 - 22.0, y: 11, width: 44, height: 44)
     }
 
-
+    #warning("blcok 创建会强引用")
     let activityIndicator: ASDisplayNode = ASDisplayNode { () -> UIView in
         let view = UIActivityIndicatorView(style: .gray)
         view.backgroundColor = UIColor.clear

@@ -97,6 +97,7 @@ class NetworkImageNode: ASDisplayNode {
         networkImageNode.addTarget(target, action: action, forControlEvents: controlEvents)
         imageNode.addTarget(target, action: action, forControlEvents: controlEvents)
     }
+    
 }
 
 // MARK: - ASNetworkImageNodeDelegate
