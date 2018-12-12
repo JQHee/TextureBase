@@ -40,6 +40,15 @@ extension YYWebImageManager: ASImageCacheProtocol, ASImageDownloaderProtocol {
         return operation
     }
 
+    public func clearFetchedImageFromCache(with URL: URL) {
+
+        let manager = YYWebImageManager.shared()
+        if(manager.cache?.containsImage(forKey: URL.absoluteString, with: .memory))! {
+            //            print("从内存删除图片")
+            manager.cache?.removeImage(forKey: URL.absoluteString, with: .memory)
+        }
+    }
+
     // 取消下载
     public func cancelImageDownload(forIdentifier downloadIdentifier: Any) {
         guard let operation = downloadIdentifier as? YYWebImageOperation else {
