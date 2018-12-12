@@ -35,6 +35,10 @@ _tableNode.js_reloadIndexPaths = @[indexPath];
 [_tableNode reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:(UITableViewRowAnimationNone)];
  */
 
+/* ASTableNode reloadData 动画很奇怪，不想要动画
+ 可以用 tableNode.performBatchUpdates(nil, completion: nil) [等同于 tableNode.beginUpdate & tableNode.endUpdate] 替代 tableNode.reloadData()
+ */
+
 /*
 - (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath {
     ASCellNode *(^ASCellNodeBlock)(void) = ^ASCellNode *() {

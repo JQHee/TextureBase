@@ -19,9 +19,6 @@ class ViewController: UIViewController {
         let VC = TestTableNodeViewController()
         self.present(VC, animated: true, completion: nil)
     }
-    
-    
-
 
 }
 
