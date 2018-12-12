@@ -10,7 +10,7 @@ import UIKit
 import AsyncDisplayKit
 import MJRefresh
 
-class TestCustomeactivityIndicatorVC: UIViewController {
+class TestCustomeactivityIndicatorVC: ASViewController<ASDisplayNode> {
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -30,6 +30,10 @@ class TestCustomeactivityIndicatorVC: UIViewController {
     // MARK:  - Private methods
     private func setupUI() {
         self.view.addSubnode(tableNode)
+        // 使用约束
+        tableNode.view.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
     
     private func viewBindEvents() {
@@ -52,13 +56,16 @@ class TestCustomeactivityIndicatorVC: UIViewController {
     private lazy var tableNode: ASTableNode = { [weak self] in
         let tableNode = ASTableNode.init(style: UITableView.Style.plain)
         tableNode.frame = UIScreen.main.bounds
+        // 预加载的屏幕数
         tableNode.leadingScreensForBatching = 1.0
         // tableNode.view.separatorStyle = .none
         // tableNode.view.tableHeaderView
         tableNode.delegate = self
         tableNode.dataSource = self
+        // 可以使用约束
+        // tableNode.view
         return tableNode
-        }()
+    }()
     
     
 }

@@ -10,6 +10,8 @@
 		2A8BF9A8CE84BBD354FB2267 /* Pods_TextureBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */; };
 		4D9C10C588302A14D67E6DF6 /* Pods_TextureBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */; };
 		5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */; };
+		5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */; };
+		5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3921C0A69F0025F45B /* ReadMe.swift */; };
 		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
 		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
 		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		4AB482ABB7990619B4674469 /* Pods-TextureBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseUITests/Pods-TextureBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		553E745B134D836BADC51E38 /* Pods-TextureBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseTests/Pods-TextureBaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomeactivityIndicatorVC.swift; sourceTree = "<group>"; };
+		5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASTableNode+ReloadIndexPaths.swift"; sourceTree = "<group>"; };
+		5E682E3921C0A69F0025F45B /* ReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
 		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E682E3821C0A68C0025F45B /* LayoutSpec */ = {
+			isa = PBXGroup;
+			children = (
+				5E682E3921C0A69F0025F45B /* ReadMe.swift */,
+			);
+			path = LayoutSpec;
+			sourceTree = "<group>";
+		};
 		5E8BF43821BF4E6D005BD4E0 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +190,7 @@
 		5E8BF47221BF51EE005BD4E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5E682E3821C0A68C0025F45B /* LayoutSpec */,
 				5E8BF48721BF6C8B005BD4E0 /* Demo */,
 				5E8BF47721BF5821005BD4E0 /* Common */,
 				5E8BF47321BF5202005BD4E0 /* TestViewController.swift */,
@@ -218,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				5E8BF47D21BF59C9005BD4E0 /* NetworkImageNode.swift */,
+				5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */,
 			);
 			path = Texture;
 			sourceTree = "<group>";
@@ -471,7 +485,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/JPFPSStatus/JPFPSStatus.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
@@ -485,7 +502,10 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JPFPSStatus.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
@@ -534,11 +554,13 @@
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
 				5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
+				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
+				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
 			);

@@ -1,5 +1,9 @@
 PODS:
+  - FBRetainCycleDetector (0.1.4)
+  - JPFPSStatus (0.1.1)
   - MJRefresh (3.1.15.7)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -32,14 +36,19 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - JPFPSStatus (~> 0.1.1)
   - MJRefresh (~> 3.1.15.7)
+  - MLeaksFinder (~> 1.0.0)
   - SnapKit (~> 4.2.0)
   - Texture (~> 2.7)
   - YYWebImage (~> 1.0.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FBRetainCycleDetector
+    - JPFPSStatus
     - MJRefresh
+    - MLeaksFinder
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -50,7 +59,10 @@ SPEC REPOS:
     - YYWebImage
 
 SPEC CHECKSUMS:
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
@@ -60,6 +72,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 1e27cd52a847a1a81238f21a40e1102320dcb156
+PODFILE CHECKSUM: 0256395662cc6e597adf977353c71588882daced
 
 COCOAPODS: 1.5.3
