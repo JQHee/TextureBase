@@ -13,6 +13,7 @@
 		5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */; };
 		5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3921C0A69F0025F45B /* ReadMe.swift */; };
 		5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3B21C0AC7A0025F45B /* CollectionFlowLayout.swift */; };
+		5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3D21C0B2A00025F45B /* ImageCellNode.swift */; };
 		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
 		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
 		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASTableNode+ReloadIndexPaths.swift"; sourceTree = "<group>"; };
 		5E682E3921C0A69F0025F45B /* ReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
 		5E682E3B21C0AC7A0025F45B /* CollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFlowLayout.swift; sourceTree = "<group>"; };
+		5E682E3D21C0B2A00025F45B /* ImageCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellNode.swift; sourceTree = "<group>"; };
 		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			children = (
 				66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */,
 				66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */,
+				5E682E3D21C0B2A00025F45B /* ImageCellNode.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
+				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,

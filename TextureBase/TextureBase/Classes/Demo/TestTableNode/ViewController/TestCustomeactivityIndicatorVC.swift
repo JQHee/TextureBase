@@ -137,6 +137,7 @@ extension TestCustomeactivityIndicatorVC {
     
     func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
         context.beginBatchFetching()
+        #warning("需要放在主线程")
         // [self.mainTableNode insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
         context.completeBatchFetching(true)
         

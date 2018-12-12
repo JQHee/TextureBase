@@ -102,12 +102,20 @@ extension TestTableNodeViewController: ASTableDataSource {
         
         let cellNodeBlock: ASCellNodeBlock = { () -> ASCellNode in
             #warning("需要自定义cell")
-            let cell = CustomeactivityIndicatorCellNode()
+            let cellNode = ImageCellNode.init(key: "测试为内资")
+            if ((tableNode.js_reloadIndexPaths ?? []).contains(indexPath)) {
+                cellNode.neverShowPlaceholders = true
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                    cellNode.neverShowPlaceholders = false
+                })
+            } else {
+                cellNode.neverShowPlaceholders = false
+            }
             dispatch_sync_safely_main_queue {
-                cell.startAnimating()
+                // cellNode.startAnimating()
                 // UIImage(named: "iconName") // 需注意SomeNode有时会在子线程初始化，而UIImage(named:)并不是线程安全
             }
-            return cell
+            return cellNode
         }
         return cellNodeBlock
     }
@@ -130,6 +138,7 @@ extension TestTableNodeViewController {
 
     func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
         context.beginBatchFetching()
+        #warning("需要放在主线程")
         // [self.mainTableNode insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
         context.completeBatchFetching(true)
 
