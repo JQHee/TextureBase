@@ -71,7 +71,7 @@ extension TestTableNodeViewController: ASTableDataSource {
     }
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 1000
+        return 100
     }
 
     // 自动计算大小
@@ -103,7 +103,7 @@ extension TestTableNodeViewController: ASTableDataSource {
         let cellNodeBlock: ASCellNodeBlock = { () -> ASCellNode in
             #warning("需要自定义cell")
             let cell = CustomeactivityIndicatorCellNode()
-            DispatchQueue.main.async { // 不放大主线程会崩溃
+            dispatch_sync_safely_main_queue {
                 cell.startAnimating()
             }
             return cell

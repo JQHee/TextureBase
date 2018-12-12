@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A8BF9A8CE84BBD354FB2267 /* Pods_TextureBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */; };
 		4D9C10C588302A14D67E6DF6 /* Pods_TextureBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */; };
+		5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */; };
 		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
 		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
 		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB482ABB7990619B4674469 /* Pods-TextureBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseUITests/Pods-TextureBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		553E745B134D836BADC51E38 /* Pods-TextureBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseTests/Pods-TextureBaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomeactivityIndicatorVC.swift; sourceTree = "<group>"; };
 		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */,
+				5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -474,6 +477,9 @@
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -485,6 +491,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,6 +531,7 @@
 			files = (
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
 				5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */,
+				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
 				5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
@@ -636,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -691,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
