@@ -29,6 +29,10 @@
 		5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */; };
 		5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */; };
 		5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */; };
+		66BD871121C136A20072466D /* FPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871021C136A20072466D /* FPS.swift */; };
+		66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */; };
+		66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */; };
+		66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871921C13F3E0072466D /* TestCollectionNodeCell.swift */; };
 		66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */; };
 		66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */; };
 		EDF33F41342CDA8854B03075 /* Pods_TextureBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */; };
@@ -83,6 +87,10 @@
 		5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTAsKitTool.swift; sourceTree = "<group>"; };
 		5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFImageTextButton.swift; sourceTree = "<group>"; };
 		5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableNodeViewController.swift; sourceTree = "<group>"; };
+		66BD871021C136A20072466D /* FPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPS.swift; sourceTree = "<group>"; };
+		66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASNetworkImageNode+Extension.swift"; sourceTree = "<group>"; };
+		66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionNodeVC.swift; sourceTree = "<group>"; };
+		66BD871921C13F3E0072466D /* TestCollectionNodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionNodeCell.swift; sourceTree = "<group>"; };
 		66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeactivityIndicatorCellNode.swift; sourceTree = "<group>"; };
 		66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASCellNode生命周期.png"; sourceTree = "<group>"; };
 		6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +245,7 @@
 				5E8BF47D21BF59C9005BD4E0 /* NetworkImageNode.swift */,
 				5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */,
 				5E682E3B21C0AC7A0025F45B /* CollectionFlowLayout.swift */,
+				66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */,
 			);
 			path = Texture;
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 		5E8BF48421BF63ED005BD4E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				66BD871021C136A20072466D /* FPS.swift */,
 				5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */,
 			);
 			path = View;
@@ -260,6 +270,7 @@
 		5E8BF48721BF6C8B005BD4E0 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				66BD871421C13A470072466D /* TestCollectionNode */,
 				5E8BF48821BF6CD8005BD4E0 /* TestTableNode */,
 			);
 			path = Demo;
@@ -281,6 +292,31 @@
 				5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		66BD871421C13A470072466D /* TestCollectionNode */ = {
+			isa = PBXGroup;
+			children = (
+				66BD871621C13A670072466D /* View */,
+				66BD871521C13A590072466D /* ViewController */,
+			);
+			path = TestCollectionNode;
+			sourceTree = "<group>";
+		};
+		66BD871521C13A590072466D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		66BD871621C13A670072466D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66BD871921C13F3E0072466D /* TestCollectionNodeCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		66D69EF321BFDB07008C31BD /* View */ = {
@@ -556,7 +592,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
+				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
+				66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */,
 				5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */,
+				66BD871121C136A20072466D /* FPS.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
 				5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
@@ -566,6 +605,7 @@
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
+				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,

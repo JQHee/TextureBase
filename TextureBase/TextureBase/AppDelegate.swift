@@ -16,11 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        JPFPSStatus.sharedInstance()?.open()
-        JPFPSStatus.sharedInstance()?.open(handler: { (value) in
-            print(value)
-        })
-        // Override point for customization after application launch.
+        adapterIOS_11()
         return true
     }
 
