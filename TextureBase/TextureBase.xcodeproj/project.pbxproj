@@ -14,6 +14,10 @@
 		5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3921C0A69F0025F45B /* ReadMe.swift */; };
 		5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3B21C0AC7A0025F45B /* CollectionFlowLayout.swift */; };
 		5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3D21C0B2A00025F45B /* ImageCellNode.swift */; };
+		5E71773121C23C16003BCAE5 /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71773021C23C16003BCAE5 /* BaseAdapter.swift */; };
+		5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71773221C23C53003BCAE5 /* BaseCell.swift */; };
+		5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71773421C23CA7003BCAE5 /* BaseController.swift */; };
+		5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71773621C23CDE003BCAE5 /* BaseLayout.swift */; };
 		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
 		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
 		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
@@ -68,6 +72,10 @@
 		5E682E3921C0A69F0025F45B /* ReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
 		5E682E3B21C0AC7A0025F45B /* CollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFlowLayout.swift; sourceTree = "<group>"; };
 		5E682E3D21C0B2A00025F45B /* ImageCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellNode.swift; sourceTree = "<group>"; };
+		5E71773021C23C16003BCAE5 /* BaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAdapter.swift; sourceTree = "<group>"; };
+		5E71773221C23C53003BCAE5 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		5E71773421C23CA7003BCAE5 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		5E71773621C23CDE003BCAE5 /* BaseLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLayout.swift; sourceTree = "<group>"; };
 		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +157,17 @@
 			path = LayoutSpec;
 			sourceTree = "<group>";
 		};
+		5E71772F21C23BEF003BCAE5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5E71773021C23C16003BCAE5 /* BaseAdapter.swift */,
+				5E71773221C23C53003BCAE5 /* BaseCell.swift */,
+				5E71773421C23CA7003BCAE5 /* BaseController.swift */,
+				5E71773621C23CDE003BCAE5 /* BaseLayout.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		5E8BF43821BF4E6D005BD4E0 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +237,7 @@
 		5E8BF47721BF5821005BD4E0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5E71772F21C23BEF003BCAE5 /* Base */,
 				66BD871B21C147230072466D /* Main */,
 				5E8BF48421BF63ED005BD4E0 /* View */,
 				5E8BF48121BF6083005BD4E0 /* Tools */,
@@ -615,9 +635,13 @@
 			files = (
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
 				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
+				5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */,
+				5E71773121C23C16003BCAE5 /* BaseAdapter.swift in Sources */,
 				66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */,
+				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
 				5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
+				5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
 				5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,

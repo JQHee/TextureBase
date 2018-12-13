@@ -32,6 +32,10 @@ class TestCollectionNodeCell: ASCellNode {
         return ASInsetLayoutSpec.init(insets: UIEdgeInsets.zero, child: spc)
     }
     
+    override func animateLayoutTransition(_ context: ASContextTransitioning) {
+        // flex在这里实现动画
+    }
+    
     // MARK: - Lazy load
     lazy var titleNode: ASTextNode = ASTextNode()
     lazy var imageNode: NetworkImageNode = NetworkImageNode()
