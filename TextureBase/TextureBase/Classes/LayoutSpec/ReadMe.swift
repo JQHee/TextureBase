@@ -25,6 +25,7 @@ self.node.layoutSpecBlock = ^ASLayoutSpec *(ASDisplayNode *node, ASSizeRange con
 
 /*
   布局说明： https://www.jianshu.com/p/5d196b4f78cf
+ 布局的Demo: https://github.com/ysw-hello/TextureLayoutDemo
   ASDisplayKit的布局主要有两种， 一种是相对布局，一种是绝对布局
   绝对布局：ASAbsoluteLayoutSpec （不推荐使用）
   相对布局：ASStackLayoutSpec

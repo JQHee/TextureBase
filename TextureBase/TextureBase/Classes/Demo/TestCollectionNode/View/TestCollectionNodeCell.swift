@@ -20,6 +20,9 @@ class TestCollectionNodeCell: ASCellNode {
     private func setupUI() {
         addSubnode(imageNode)
         addSubnode(titleNode)
+        addSubnode(dotNode)
+        
+        dotNode.backgroundColor = UIColor.red
         
         titleNode.maximumNumberOfLines = 1
         titleNode.attributedText = "测试测试测试测试测试测试".nodeAttributes(color: UIColor.red, font: UIFont.systemFont(ofSize: 13))
@@ -27,8 +30,18 @@ class TestCollectionNodeCell: ASCellNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
         imageNode.style.preferredSize = CGSize.init(width: 80, height: 60)
+        self.dotNode.style.preferredSize = CGSize.init(width: 10, height: 10)
+        
+        let cornerLayoutSpec = ASCornerLayoutSpec.init(child: imageNode, corner: self.dotNode, location: ASCornerLayoutLocation.topRight)
+        cornerLayoutSpec.offset = CGPoint.init(x: 3, y: 3)
+        
+        // 竖直方向的布局
         let spc = ASStackLayoutSpec.init(direction: .vertical, spacing: 5, justifyContent: .start, alignItems: .center, children: [imageNode, titleNode])
+        
+        // let spcs = ASStackLayoutSpec.init(direction: .horizontal, spacing: 0, justifyContent: .start, alignItems: .end, children: [spc, cornerLayoutSpec])
+        
         return ASInsetLayoutSpec.init(insets: UIEdgeInsets.zero, child: spc)
     }
     
@@ -39,5 +52,7 @@ class TestCollectionNodeCell: ASCellNode {
     // MARK: - Lazy load
     lazy var titleNode: ASTextNode = ASTextNode()
     lazy var imageNode: NetworkImageNode = NetworkImageNode()
+    // 角标
+    lazy var dotNode: ASTextNode = ASTextNode()
     
 }
