@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let VC = TestTableNodeViewController()
+        let VC = TestCollectionNodeVC()
         self.present(VC, animated: true, completion: nil)
     }
 
