@@ -15,18 +15,31 @@ class TestCollectionNodeVC: ASViewController<ASDisplayNode> {
     let itemPerPage: CGFloat = 10
     var currentPage: CGFloat = 0
     
+    var datas = [String]()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         setupUI()
     }
     
     // MARK: - Private methods
     private func setupUI() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: button)
         view.addSubnode(collectionNode)
         
         let label = FPSLabel.init(frame: CGRect.init(x: 0, y: 0, width: 80, height: 30))
         self.view.insertSubview(label, at: 999)
+    }
+    
+    // MARK: - Event response
+    @objc func addAction() {
+        for i in 0..<10 {
+            self.datas.append("\(i)")
+        }
+        collectionNode.cn_reloadIndexPaths = collectionNode.indexPathsForVisibleItems
+        collectionNode.reloadData()
     }
     
     // MARK: - Lazy load
@@ -36,12 +49,22 @@ class TestCollectionNodeVC: ASViewController<ASDisplayNode> {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         let collectionNode = ASCollectionNode.init(collectionViewLayout: layout)
-        collectionNode.frame = UIScreen.main.bounds
+        collectionNode.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - kStaBarH - kNavBarH)
         collectionNode.backgroundColor = UIColor.white
         collectionNode.delegate = self
         collectionNode.dataSource = self
         collectionNode.leadingScreensForBatching = 1.0
+        // 弹簧属性
+        collectionNode.alwaysBounceVertical = true
         return collectionNode
+    }()
+    
+    lazy var button: UIButton = { [weak self] in
+        let button = UIButton()
+        button.setTitle("添加", for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(addAction), for: UIControl.Event.touchUpInside)
+        button.setTitleColor(UIColor.red, for: UIControl.State.normal)
+        return button
     }()
 
 }
@@ -53,12 +76,22 @@ extension TestCollectionNodeVC: ASCollectionDataSource {
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
-        return 100000
+        return datas.count
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         let cellBlock: ASCellNodeBlock = {() -> ASCellNode in
-            return TestCollectionNodeCell()
+            let cellNode = TestCollectionNodeCell()
+
+            if ((collectionNode.cn_reloadIndexPaths ?? []).contains(indexPath)) {
+                cellNode.neverShowPlaceholders = true
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                    cellNode.neverShowPlaceholders = false
+                })
+            } else {
+                cellNode.neverShowPlaceholders = false
+            }
+            return cellNode
         }
         return cellBlock
     }

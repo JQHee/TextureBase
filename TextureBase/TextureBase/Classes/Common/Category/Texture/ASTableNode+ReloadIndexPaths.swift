@@ -9,20 +9,31 @@
 import Foundation
 
 fileprivate struct BFRefreshRuntimeKey {
-    static let reloadIndexPathsKey = UnsafeRawPointer.init(bitPattern: "reloadIndexPathsKey".hashValue)
+    static let tnReloadIndexPathsKey = UnsafeRawPointer.init(bitPattern: "tnReloadIndexPathsKey".hashValue)
+    static let cnReloadIndexPathsKey = UnsafeRawPointer.init(bitPattern: "cnReloadIndexPathsKey".hashValue)
 }
 
 extension ASTableNode {
     
-    var js_reloadIndexPaths: NSArray? {
+    var tn_reloadIndexPaths: [IndexPath]? {
         set(newValue) {
-            objc_setAssociatedObject(self, BFRefreshRuntimeKey.reloadIndexPathsKey!, newValue, .OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, BFRefreshRuntimeKey.tnReloadIndexPathsKey!, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         get {
-            return  objc_getAssociatedObject(self, BFRefreshRuntimeKey.reloadIndexPathsKey!) as? NSArray
+            return  objc_getAssociatedObject(self, BFRefreshRuntimeKey.tnReloadIndexPathsKey!) as? [IndexPath]
         }
     }
-    
+}
+
+extension ASCollectionNode {
+    var cn_reloadIndexPaths: [IndexPath]? {
+        set(newValue) {
+            objc_setAssociatedObject(self, BFRefreshRuntimeKey.cnReloadIndexPathsKey!, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            return  objc_getAssociatedObject(self, BFRefreshRuntimeKey.cnReloadIndexPathsKey!) as? [IndexPath]
+        }
+    }
 }
 
 /* 可视cell刷新

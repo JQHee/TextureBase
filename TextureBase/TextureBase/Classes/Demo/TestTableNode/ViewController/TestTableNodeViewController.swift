@@ -108,7 +108,7 @@ extension TestTableNodeViewController: ASTableDataSource {
         let cellNodeBlock: ASCellNodeBlock = { () -> ASCellNode in
             #warning("需要自定义cell")
             let cellNode = ImageCellNode.init(key: "测试为内资")
-            if ((tableNode.js_reloadIndexPaths ?? []).contains(indexPath)) {
+            if ((tableNode.tn_reloadIndexPaths ?? []).contains(indexPath)) {
                 cellNode.neverShowPlaceholders = true
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
                     cellNode.neverShowPlaceholders = false
