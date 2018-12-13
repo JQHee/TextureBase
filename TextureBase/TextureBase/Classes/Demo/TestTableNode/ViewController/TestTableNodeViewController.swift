@@ -15,8 +15,9 @@ class TestTableNodeViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false
         setupUI()
-        // viewBindEvents()
+        viewBindEvents()
     }
 
     deinit {
@@ -30,6 +31,9 @@ class TestTableNodeViewController: UIViewController {
     // MARK:  - Private methods
     private func setupUI() {
         self.view.addSubnode(tableNode)
+
+        let label = FPSLabel.init(frame: CGRect.init(x: 0, y: 0, width: 80, height: 30))
+        self.view.insertSubview(label, at: 999)
     }
     
     private func viewBindEvents() {
@@ -53,6 +57,7 @@ class TestTableNodeViewController: UIViewController {
     private lazy var tableNode: ASTableNode = { [weak self] in
         let tableNode = ASTableNode.init(style: UITableView.Style.plain)
         tableNode.frame = UIScreen.main.bounds
+        #warning ("ASTableNode的leadingScreensForBatching减缓卡顿")
         tableNode.leadingScreensForBatching = 1.0
         // tableNode.view.separatorStyle = .none
         // tableNode.view.tableHeaderView

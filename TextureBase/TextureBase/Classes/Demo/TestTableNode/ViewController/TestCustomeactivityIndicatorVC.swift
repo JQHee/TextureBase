@@ -15,8 +15,9 @@ class TestCustomeactivityIndicatorVC: ASViewController<ASDisplayNode> {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false
         setupUI()
-        // viewBindEvents()
+        viewBindEvents()
     }
     
     deinit {

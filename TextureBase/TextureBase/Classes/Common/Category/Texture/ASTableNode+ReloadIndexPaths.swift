@@ -57,3 +57,26 @@ _tableNode.js_reloadIndexPaths = @[indexPath];
     return ASCellNodeBlock;
 }
  */
+
+/*
+private var indexPathesToBeReloaded: [IndexPath] = []
+
+func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
+    let cell = ASCellNode()
+        ... // 其他代码
+
+        cell.neverShowPlaceholders = false
+    if indexPathesToBeReloaded.contains(indexPath) {
+        let oldCellNode = tableNode.nodeForRow(at: indexPath)
+        cell.neverShowPlaceholders = true
+        oldCellNode?.neverShowPlaceholders = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            cell.neverShowPlaceholders = false
+            if let indexP = self.indexPathesToBeReloaded.index(of: indexPath) {
+                self.indexPathesToBeReloaded.remove(at: indexP)
+            }
+        })
+    }
+    return cell
+}
+*/

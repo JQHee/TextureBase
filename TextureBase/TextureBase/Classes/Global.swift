@@ -5,6 +5,7 @@
 //  Created by midland on 2018/12/11.
 //  Copyright © 2018年 ml. All rights reserved.
 //
+import WebKit
 
 // 系统框架
 @_exported import Foundation
@@ -52,4 +53,20 @@ func haveCacheImage(key: String) -> Bool {
 
 func cacheImage(key: String) -> UIImage? {
     return YYImageCache.shared().getImageForKey(key)
+}
+
+// 全局适配ios 11
+func adapterIOS_11() {
+    if #available(iOS 11.0, *) {
+        // 适配iOS 11的系统
+        UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+        UITableView.appearance().estimatedRowHeight = 0
+        UITableView.appearance().estimatedSectionFooterHeight = 0
+        UITableView.appearance().estimatedSectionHeaderHeight = 0
+        // 适配webview底部有黑色块的问题
+        UIWebView.appearance().scrollView.contentInsetAdjustmentBehavior = .never
+        WKWebView.appearance().scrollView.contentInsetAdjustmentBehavior = .never
+        WKWebView.appearance().isOpaque = false
+        UIWebView.appearance().isOpaque = false
+    }
 }

@@ -21,6 +21,7 @@ class ImageCellNode: ASCellNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
         imageNode.style.preferredSize = CGSize.init(width: 80, height: 60)
         titleNode.style.flexShrink = 1.0
         let spc = ASStackLayoutSpec.init(direction: .horizontal, spacing: 0, justifyContent: .spaceBetween, alignItems: .start, children: [titleNode, imageNode])
@@ -39,6 +40,9 @@ class ImageCellNode: ASCellNode {
     
     // MAKR: - Lazy Load
     lazy var titleNode: ASTextNode = ASTextNode()
-    
+
+    // 第一种方案（使用YYWebImage下载）
+    // lazy var imageNode: BFNetworkImageNode = BFNetworkImageNode()
+    // 第二种方案 (使用Texture自带的下载器下载)
     lazy var imageNode: NetworkImageNode = NetworkImageNode()
 }
