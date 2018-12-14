@@ -13,10 +13,12 @@ target 'TextureBase' do
   pod 'YYWebImage', '~> 1.0.5'
   pod 'JPFPSStatus', '~> 0.1.1'
   pod 'MLeaksFinder', '~> 1.0.0'
+  pod 'SDWebImage', '~> 5.0.0-beta3'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
   # demo不错 https://github.com/tomykho/ios-boilerplate
+  # https://github.com/fuhailong/FuASObjet
 
   target 'TextureBaseTests' do
     inherit! :search_paths

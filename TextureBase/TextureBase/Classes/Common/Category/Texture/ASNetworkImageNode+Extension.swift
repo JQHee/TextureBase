@@ -18,6 +18,10 @@ extension ASNetworkImageNode {
     }
 }
 
+/**
+ * 如果需要替换图片下载框架 Kingfisher SDWebImage 照下面的写法即可
+ */
+
 extension YYWebImageManager: ASImageCacheProtocol, ASImageDownloaderProtocol {
 
     // 下载图片

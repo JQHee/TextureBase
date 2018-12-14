@@ -10,15 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Texture"
 
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let VC = TestTableNodeViewController()
-        self.present(VC, animated: true, completion: nil)
+        let VC = TestCollectionNodeVC()
+        navigationController?.pushViewController(VC, animated: true)
     }
 
 }

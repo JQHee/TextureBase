@@ -16,6 +16,8 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+*.xcworkspace/xcuserdata/midland.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+*.xcworkspace/xcuserdata/midland.xcuserdatad/UserInterfaceState.xcuserstate
 
 ## Other
 *.moved-aside

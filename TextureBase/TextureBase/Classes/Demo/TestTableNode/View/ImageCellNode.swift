@@ -21,6 +21,7 @@ class ImageCellNode: ASCellNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
         imageNode.style.preferredSize = CGSize.init(width: 80, height: 60)
         titleNode.style.flexShrink = 1.0
         let spc = ASStackLayoutSpec.init(direction: .horizontal, spacing: 0, justifyContent: .spaceBetween, alignItems: .start, children: [titleNode, imageNode])
