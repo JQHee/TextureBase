@@ -177,7 +177,10 @@
                     [indexPaths addObject:[NSIndexPath indexPathForRow:row inSection:0]];
                 }
                 _newsList = [_newsList arrayByAddingObjectsFromArray:newsList];
-                [_tableNode.view insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+                // 不需要动画
+                [UIView performWithoutAnimation:^{
+                    [_tableNode.view insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+                }];
                 _curIndexPage++;
                 _haveMore = YES;
             }else {

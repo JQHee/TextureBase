@@ -18,6 +18,7 @@ target 'TextureBase' do
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
   # demo不错 https://github.com/tomykho/ios-boilerplate
+  # https://github.com/fuhailong/FuASObjet
 
   target 'TextureBaseTests' do
     inherit! :search_paths

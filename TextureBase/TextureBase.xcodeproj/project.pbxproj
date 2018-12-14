@@ -26,6 +26,7 @@
 		5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */; };
 		5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */; };
 		5E850F7321C342A8002A31E0 /* NodeInsertTopAndBottomLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F7221C342A8002A31E0 /* NodeInsertTopAndBottomLine.png */; };
+		5E850F7D21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7C21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift */; };
 		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
 		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
 		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
@@ -92,6 +93,7 @@
 		5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEdgeIconCellNode.swift; sourceTree = "<group>"; };
 		5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeInsertTopAndBottomLine.swift; sourceTree = "<group>"; };
 		5E850F7221C342A8002A31E0 /* NodeInsertTopAndBottomLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NodeInsertTopAndBottomLine.png; sourceTree = "<group>"; };
+		5E850F7C21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASDisplayNode+Extension.swift"; sourceTree = "<group>"; };
 		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */,
 				5E682E3B21C0AC7A0025F45B /* CollectionFlowLayout.swift */,
 				66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */,
+				5E850F7C21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift */,
 			);
 			path = Texture;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
+				5E850F7D21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
