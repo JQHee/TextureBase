@@ -60,6 +60,10 @@
 		66F18A7A21C3E07F0009A074 /* welecome3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A7621C3E07F0009A074 /* welecome3.png */; };
 		66F18A7B21C3E07F0009A074 /* welecome2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A7721C3E07F0009A074 /* welecome2.png */; };
 		66F18A7C21C3E07F0009A074 /* welecome1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A7821C3E07F0009A074 /* welecome1.png */; };
+		66F18A8421C3F7B30009A074 /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A8221C3F7B30009A074 /* MineHeaderView.swift */; };
+		66F18A8521C3F7B30009A074 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A8321C3F7B30009A074 /* MineHeaderView.xib */; };
+		66F18A8721C3FB520009A074 /* MineCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A8621C3FB520009A074 /* MineCellNode.swift */; };
+		66F18A8921C400380009A074 /* MineItemCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A8821C400380009A074 /* MineItemCellNode.swift */; };
 		EDF33F41342CDA8854B03075 /* Pods_TextureBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +147,10 @@
 		66F18A7621C3E07F0009A074 /* welecome3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome3.png; sourceTree = "<group>"; };
 		66F18A7721C3E07F0009A074 /* welecome2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome2.png; sourceTree = "<group>"; };
 		66F18A7821C3E07F0009A074 /* welecome1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome1.png; sourceTree = "<group>"; };
+		66F18A8221C3F7B30009A074 /* MineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
+		66F18A8321C3F7B30009A074 /* MineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
+		66F18A8621C3FB520009A074 /* MineCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCellNode.swift; sourceTree = "<group>"; };
+		66F18A8821C400380009A074 /* MineItemCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineItemCellNode.swift; sourceTree = "<group>"; };
 		6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase.debug.xcconfig"; sourceTree = "<group>"; };
 		9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -516,6 +524,7 @@
 		66F18A6521C3D8B10009A074 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				66F18A7D21C3F6660009A074 /* View */,
 				66F18A6621C3D8CD0009A074 /* MineViewController.swift */,
 			);
 			path = Mine;
@@ -546,6 +555,17 @@
 				66F18A7821C3E07F0009A074 /* welecome1.png */,
 			);
 			path = WelcomImages;
+			sourceTree = "<group>";
+		};
+		66F18A7D21C3F6660009A074 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A8221C3F7B30009A074 /* MineHeaderView.swift */,
+				66F18A8321C3F7B30009A074 /* MineHeaderView.xib */,
+				66F18A8621C3FB520009A074 /* MineCellNode.swift */,
+				66F18A8821C400380009A074 /* MineItemCellNode.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FFC9FA1D9F9C2105027ABF1D /* Pods */ = {
@@ -670,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F18A7A21C3E07F0009A074 /* welecome3.png in Resources */,
+				66F18A8521C3F7B30009A074 /* MineHeaderView.xib in Resources */,
 				5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */,
 				66F18A5F21C3D6890009A074 /* startImage@2x.png in Resources */,
 				5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */,
@@ -759,6 +780,7 @@
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
@@ -778,6 +800,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
@@ -825,6 +848,7 @@
 				66F18A6121C3D7B40009A074 /* BaseNavigationViewController.swift in Sources */,
 				66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */,
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
+				66F18A8721C3FB520009A074 /* MineCellNode.swift in Sources */,
 				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
 				5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */,
 				5E71773121C23C16003BCAE5 /* BaseAdapter.swift in Sources */,
@@ -840,9 +864,11 @@
 				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
 				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */,
+				66F18A8421C3F7B30009A074 /* MineHeaderView.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
 				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
 				66F18A6D21C3D8FB0009A074 /* InfomationViewController.swift in Sources */,
+				66F18A8921C400380009A074 /* MineItemCellNode.swift in Sources */,
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,

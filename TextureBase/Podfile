@@ -16,6 +16,7 @@ target 'TextureBase' do
   pod 'SDWebImage', '~> 5.0.0-beta3'
   pod 'GDPerformanceView-Swift', '~> 2.0.2'
   pod 'CYLTabBarController', '~> 1.17.22'
+  pod 'MXParallaxHeader'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
