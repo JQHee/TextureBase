@@ -108,19 +108,4 @@
     [self addChildViewController:mineController title:@"我" image:@"icon_w_nomal_pgall" selectedImage:@"icon_w_pressed_pgall"imageInsets:imageInsets titlePosition:titlePosition navControllerClass:[LPNavigationController class]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

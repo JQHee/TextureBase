@@ -104,6 +104,8 @@
 		2BEDE9221D7D4CFA0009DADB /* LPZoneDiscuzController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDE9211D7D4CFA0009DADB /* LPZoneDiscuzController.m */; };
 		2BEDE9251D7D6B060009DADB /* LPZoneDiscuzCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDE9241D7D6B060009DADB /* LPZoneDiscuzCellNode.m */; };
 		2BEDE9281D7D74A40009DADB /* LPDiscuzHeaderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDE9271D7D74A40009DADB /* LPDiscuzHeaderNode.m */; };
+		5E850F7521C347B1002A31E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F7421C347B1002A31E0 /* LaunchScreen.storyboard */; };
+		5E850F7921C34852002A31E0 /* startImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F7821C34852002A31E0 /* startImage@2x.png */; };
 		A0AC7548470CCBA46E294FCF /* libPods-LovePlayNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2368E49576CDBD8B779D43C5 /* libPods-LovePlayNews.a */; };
 		B00A86C21D729E1100B84F8F /* LPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A86C11D729E1100B84F8F /* LPWebViewController.m */; };
 		B0126BA91D7DA06700BB9310 /* LPMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0126BA81D7DA06700BB9310 /* LPMineViewController.m */; };
@@ -340,6 +342,8 @@
 		2BEDE9261D7D74A40009DADB /* LPDiscuzHeaderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDiscuzHeaderNode.h; sourceTree = "<group>"; };
 		2BEDE9271D7D74A40009DADB /* LPDiscuzHeaderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDiscuzHeaderNode.m; sourceTree = "<group>"; };
 		4D4BA0AA1064CB12BA750010 /* Pods-LovePlayNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LovePlayNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LovePlayNews/Pods-LovePlayNews.debug.xcconfig"; sourceTree = "<group>"; };
+		5E850F7421C347B1002A31E0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E850F7821C34852002A31E0 /* startImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startImage@2x.png"; sourceTree = "<group>"; };
 		97F536CF2561A47B92A45EF3 /* Pods-LovePlayNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LovePlayNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-LovePlayNews/Pods-LovePlayNews.release.xcconfig"; sourceTree = "<group>"; };
 		B00A86C01D729E1100B84F8F /* LPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPWebViewController.h; sourceTree = "<group>"; };
 		B00A86C11D729E1100B84F8F /* LPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPWebViewController.m; sourceTree = "<group>"; };
@@ -598,6 +602,7 @@
 		2B8174231D4EE5A200BA297C /* LovePlayNews */ = {
 			isa = PBXGroup;
 			children = (
+				5E850F7821C34852002A31E0 /* startImage@2x.png */,
 				2B81744C1D4EF8ED00BA297C /* Modeuls */,
 				2B00ACA01D517E5E0048B5C2 /* NetWorking */,
 				2B8174971D4F2B4400BA297C /* Foundation */,
@@ -610,6 +615,7 @@
 				2B8174351D4EE5A300BA297C /* Info.plist */,
 				2B0056231D54392200DDA531 /* NewsInfo.plist */,
 				2B8174241D4EE5A200BA297C /* Supporting Files */,
+				5E850F7421C347B1002A31E0 /* LaunchScreen.storyboard */,
 			);
 			path = LovePlayNews;
 			sourceTree = "<group>";
@@ -1165,12 +1171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BBECF731D7E642A006C71B2 /* LPTableItemCell.xib in Resources */,
+				5E850F7921C34852002A31E0 /* startImage@2x.png in Resources */,
 				2B8A00FE1D5AD07200F04812 /* News.css in Resources */,
 				B066BE931D82C5920028DD67 /* LPDiscuzPostCell.xib in Resources */,
 				2BBECF781D7E83D2006C71B2 /* LPMineHeaderView.xib in Resources */,
 				2BE4EF791D7577B600CD50D3 /* LPLoadFailedView.xib in Resources */,
 				2B7100131D7FF43400A4D4FB /* LPDiscuzHeaderView.xib in Resources */,
 				2B7C5DD51D6D9FCF005B30B5 /* LPLoadingView.xib in Resources */,
+				5E850F7521C347B1002A31E0 /* LaunchScreen.storyboard in Resources */,
 				B066BE951D82CD070028DD67 /* LPDiscuzWebViewCell.xib in Resources */,
 				2B8174311D4EE5A200BA297C /* Assets.xcassets in Resources */,
 				B058BA3B1DC76ABB00230E17 /* TYRefresh.bundle in Resources */,
@@ -1456,7 +1464,6 @@
 			baseConfigurationReference = 4D4BA0AA1064CB12BA750010 /* Pods-LovePlayNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SYZGGW5E8S;
@@ -1541,7 +1548,6 @@
 			baseConfigurationReference = 97F536CF2561A47B92A45EF3 /* Pods-LovePlayNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SYZGGW5E8S;

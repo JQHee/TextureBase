@@ -117,7 +117,7 @@ extension TestCollectionNodeVC: ASCollectionDelegate {
 
 // MARK: - configData
 extension TestCollectionNodeVC {
-    // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取
+    // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取 （添加一个hasNodata标识，滑动时会触发加载）
     func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
         return true
     }
