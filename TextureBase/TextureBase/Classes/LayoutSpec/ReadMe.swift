@@ -22,6 +22,25 @@ self.node.layoutSpecBlock = ^ASLayoutSpec *(ASDisplayNode *node, ASSizeRange con
     请在这里进行布局
 };
  */
+/*
+override func calculateSizeThatFits(constrainedSize: CGSize) -> CGSize {
+    // 这是一堆约束，只是给开发者看的。
+    // |-15-[iconImageView(60)]-15-[titleLabel]-15-|
+    // |-15-[iconImageView(60)]-15-[subTitleLabel]-15-|
+    // V:|-8-[titleLable]-3-[subTitleLabel]-8-|
+    // V:|-2-[iconImageView(60)]-2-|
+    let textMaxWidth = constrainedSize.width - 15 - 60 - 15 - 15
+    titleLabel.measure(CGSize(width: textMaxWidth, height: CGFloat.max))
+    subTitleLabel.measure(CGSize(width: textMaxWidth, height: CGFloat.max))
+    if 8 + titleLabel.calculatedSize.height + subTitleLabel.calculatedSize.height + 8 < 64.0 {
+        return CGSize(width: constrainedSize.width, height: 64.0)
+    }
+    else {
+        return CGSize(width: constrainedSize.width,
+                      height: 8 + titleLabel.calculatedSize.height + subTitleLabel.calculatedSize.height + 8)
+    }
+}
+ */
 
 /*
   布局说明： https://www.jianshu.com/p/5d196b4f78cf

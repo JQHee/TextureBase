@@ -22,6 +22,10 @@
 		5E71773C21C258C0003BCAE5 /* leftAndRightTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E71773B21C258C0003BCAE5 /* leftAndRightTitle.png */; };
 		5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */; };
 		5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */; };
+		5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */; };
+		5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */; };
+		5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */; };
+		5E850F7321C342A8002A31E0 /* NodeInsertTopAndBottomLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F7221C342A8002A31E0 /* NodeInsertTopAndBottomLine.png */; };
 		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
 		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
 		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
@@ -84,6 +88,10 @@
 		5E71773B21C258C0003BCAE5 /* leftAndRightTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftAndRightTitle.png; sourceTree = "<group>"; };
 		5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textInsertBlowImage.png; sourceTree = "<group>"; };
 		5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsertBlowImageCellNode.swift; sourceTree = "<group>"; };
+		5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoEdgeIcon.png; sourceTree = "<group>"; };
+		5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEdgeIconCellNode.swift; sourceTree = "<group>"; };
+		5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeInsertTopAndBottomLine.swift; sourceTree = "<group>"; };
+		5E850F7221C342A8002A31E0 /* NodeInsertTopAndBottomLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NodeInsertTopAndBottomLine.png; sourceTree = "<group>"; };
 		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +168,8 @@
 		5E682E3821C0A68C0025F45B /* LayoutSpec */ = {
 			isa = PBXGroup;
 			children = (
+				5E850F6F21C3428C002A31E0 /* NodeInsertTopAndBottomLine */,
+				5E850F6A21C33EF6002A31E0 /* PhotoEdgeIcon */,
 				5E71773D21C25D1E003BCAE5 /* TextInsertBlowImage */,
 				5E71773821C25758003BCAE5 /* LeftAndRightTitle */,
 				5E682E3921C0A69F0025F45B /* ReadMe.swift */,
@@ -194,6 +204,24 @@
 				5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */,
 			);
 			path = TextInsertBlowImage;
+			sourceTree = "<group>";
+		};
+		5E850F6A21C33EF6002A31E0 /* PhotoEdgeIcon */ = {
+			isa = PBXGroup;
+			children = (
+				5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */,
+				5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */,
+			);
+			path = PhotoEdgeIcon;
+			sourceTree = "<group>";
+		};
+		5E850F6F21C3428C002A31E0 /* NodeInsertTopAndBottomLine */ = {
+			isa = PBXGroup;
+			children = (
+				5E850F7221C342A8002A31E0 /* NodeInsertTopAndBottomLine.png */,
+				5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */,
+			);
+			path = NodeInsertTopAndBottomLine;
 			sourceTree = "<group>";
 		};
 		5E8BF43821BF4E6D005BD4E0 = {
@@ -524,8 +552,10 @@
 				5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */,
 				5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */,
 				66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */,
+				5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */,
 				5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */,
 				5E71773C21C258C0003BCAE5 /* leftAndRightTitle.png in Resources */,
+				5E850F7321C342A8002A31E0 /* NodeInsertTopAndBottomLine.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +713,7 @@
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
+				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
@@ -693,6 +724,7 @@
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
+				5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
