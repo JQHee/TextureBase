@@ -7,19 +7,47 @@
 //
 
 import UIKit
-import JPFPSStatus
+import GDPerformanceView_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var mainVC = BFTabBarController()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        self.window?.makeKeyAndVisible()
+        setupRootVC()
+        PerformanceMonitor.shared().start()
         adapterIOS_11()
         return true
     }
 
+    func setupRootVC() {
+        guard let isFirstLoad = UserDefaults.standard.value(forKey: "isFirstLoad") as? Bool else {
+            self.window?.rootViewController = GuidePageViewController()
+            return
+        }
+        print(isFirstLoad)
+        mainVC.setupRootVC()
+        addADLaunchController()
+    }
+
+    // 添加广告页
+    func addADLaunchController() {
+        let VC = ADLaunchController()
+        VC.view.frame = mainVC.view.bounds
+        mainVC.view.addSubview(VC.view)
+        mainVC.addChild(VC)
+    }
+
+}
+
+// MARK: - 应用的生命周期
+extension AppDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -42,6 +70,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
 
+extension AppDelegate {
+    func restoreRootViewController(newRootVC: UIViewController) {
+        guard let window = window else { return}
+
+        newRootVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+
+        UIView.transition(with: window,
+                          duration: 0.3,
+                          options: .transitionCrossDissolve,
+                          animations: {
+                            let oldState = UIView.areAnimationsEnabled
+                            UIView.setAnimationsEnabled(false)
+                            window.rootViewController = newRootVC
+                            UIView.setAnimationsEnabled(oldState)
+        },
+                          completion: { (finished: Bool) in
+
+        })
+    }
 }
 

@@ -28,13 +28,10 @@
 		5E850F7321C342A8002A31E0 /* NodeInsertTopAndBottomLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F7221C342A8002A31E0 /* NodeInsertTopAndBottomLine.png */; };
 		5E850F7D21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7C21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift */; };
 		5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */; };
-		5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */; };
-		5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */; };
 		5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44B21BF4E76005BD4E0 /* Assets.xcassets */; };
 		5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BF44D21BF4E76005BD4E0 /* LaunchScreen.storyboard */; };
 		5E8BF45A21BF4E76005BD4E0 /* TextureBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF45921BF4E76005BD4E0 /* TextureBaseTests.swift */; };
 		5E8BF46521BF4E76005BD4E0 /* TextureBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF46421BF4E76005BD4E0 /* TextureBaseUITests.swift */; };
-		5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47321BF5202005BD4E0 /* TestViewController.swift */; };
 		5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47521BF526B005BD4E0 /* Global.swift */; };
 		5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47A21BF587E005BD4E0 /* NSAttributedString+TextNode.swift */; };
 		5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF47D21BF59C9005BD4E0 /* NetworkImageNode.swift */; };
@@ -50,6 +47,19 @@
 		66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871F21C147BC0072466D /* UIImage+Extension.swift */; };
 		66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */; };
 		66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */; };
+		66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */; };
+		66F18A5F21C3D6890009A074 /* startImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A5E21C3D6890009A074 /* startImage@2x.png */; };
+		66F18A6121C3D7B40009A074 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */; };
+		66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6621C3D8CD0009A074 /* MineViewController.swift */; };
+		66F18A6921C3D8DD0009A074 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */; };
+		66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6A21C3D8EC0009A074 /* SelectViewController.swift */; };
+		66F18A6D21C3D8FB0009A074 /* InfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6C21C3D8FB0009A074 /* InfomationViewController.swift */; };
+		66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6F21C3DEDE0009A074 /* ADLaunchController.swift */; };
+		66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A7221C3E0300009A074 /* GuidePageViewController.swift */; };
+		66F18A7921C3E07F0009A074 /* welecome4.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A7521C3E07F0009A074 /* welecome4.png */; };
+		66F18A7A21C3E07F0009A074 /* welecome3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A7621C3E07F0009A074 /* welecome3.png */; };
+		66F18A7B21C3E07F0009A074 /* welecome2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A7721C3E07F0009A074 /* welecome2.png */; };
+		66F18A7C21C3E07F0009A074 /* welecome1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A7821C3E07F0009A074 /* welecome1.png */; };
 		EDF33F41342CDA8854B03075 /* Pods_TextureBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,8 +106,6 @@
 		5E850F7C21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASDisplayNode+Extension.swift"; sourceTree = "<group>"; };
 		5E8BF44121BF4E6D005BD4E0 /* TextureBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5E8BF44921BF4E6D005BD4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E8BF44B21BF4E76005BD4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E8BF44E21BF4E76005BD4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E8BF45021BF4E76005BD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +115,6 @@
 		5E8BF46021BF4E76005BD4E0 /* TextureBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8BF46421BF4E76005BD4E0 /* TextureBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureBaseUITests.swift; sourceTree = "<group>"; };
 		5E8BF46621BF4E76005BD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E8BF47321BF5202005BD4E0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		5E8BF47521BF526B005BD4E0 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		5E8BF47A21BF587E005BD4E0 /* NSAttributedString+TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+TextNode.swift"; sourceTree = "<group>"; };
 		5E8BF47D21BF59C9005BD4E0 /* NetworkImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageNode.swift; sourceTree = "<group>"; };
@@ -123,6 +130,19 @@
 		66BD871F21C147BC0072466D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeactivityIndicatorCellNode.swift; sourceTree = "<group>"; };
 		66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASCellNode生命周期.png"; sourceTree = "<group>"; };
+		66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CYLTabBarController-Extension.swift"; sourceTree = "<group>"; };
+		66F18A5E21C3D6890009A074 /* startImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "startImage@2x.png"; path = "../../../../../LovePlayNews-master/LovePlayNews/startImage@2x.png"; sourceTree = "<group>"; };
+		66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		66F18A6621C3D8CD0009A074 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		66F18A6A21C3D8EC0009A074 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		66F18A6C21C3D8FB0009A074 /* InfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewController.swift; sourceTree = "<group>"; };
+		66F18A6F21C3DEDE0009A074 /* ADLaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLaunchController.swift; sourceTree = "<group>"; };
+		66F18A7221C3E0300009A074 /* GuidePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidePageViewController.swift; sourceTree = "<group>"; };
+		66F18A7521C3E07F0009A074 /* welecome4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome4.png; sourceTree = "<group>"; };
+		66F18A7621C3E07F0009A074 /* welecome3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome3.png; sourceTree = "<group>"; };
+		66F18A7721C3E07F0009A074 /* welecome2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome2.png; sourceTree = "<group>"; };
+		66F18A7821C3E07F0009A074 /* welecome1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welecome1.png; sourceTree = "<group>"; };
 		6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase.debug.xcconfig"; sourceTree = "<group>"; };
 		9CA8960BE326425D70F000A9 /* Pods_TextureBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,8 +273,6 @@
 			children = (
 				5E8BF47221BF51EE005BD4E0 /* Classes */,
 				5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */,
-				5E8BF44621BF4E6D005BD4E0 /* ViewController.swift */,
-				5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */,
 				5E8BF44B21BF4E76005BD4E0 /* Assets.xcassets */,
 				5E8BF44D21BF4E76005BD4E0 /* LaunchScreen.storyboard */,
 				5E8BF45021BF4E76005BD4E0 /* Info.plist */,
@@ -283,10 +301,11 @@
 		5E8BF47221BF51EE005BD4E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				66F18A5921C3D43F0009A074 /* Sections */,
+				66F18A5821C3D42B0009A074 /* Resources */,
 				5E682E3821C0A68C0025F45B /* LayoutSpec */,
 				5E8BF48721BF6C8B005BD4E0 /* Demo */,
 				5E8BF47721BF5821005BD4E0 /* Common */,
-				5E8BF47321BF5202005BD4E0 /* TestViewController.swift */,
 				5E8BF47521BF526B005BD4E0 /* Global.swift */,
 			);
 			path = Classes;
@@ -430,6 +449,105 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		66F18A5821C3D42B0009A074 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A5D21C3D66A0009A074 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66F18A5921C3D43F0009A074 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A7121C3E0200009A074 /* GuidePage */,
+				66F18A6E21C3DEC40009A074 /* ADLaunch */,
+				66F18A6521C3D8B10009A074 /* Mine */,
+				66F18A6421C3D8A20009A074 /* Community */,
+				66F18A6321C3D86C0009A074 /* Select */,
+				66F18A6221C3D8560009A074 /* Infomation */,
+				66F18A5A21C3D4AC0009A074 /* Main */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		66F18A5A21C3D4AC0009A074 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */,
+				66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		66F18A5D21C3D66A0009A074 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A7421C3E07F0009A074 /* WelcomImages */,
+				66F18A5E21C3D6890009A074 /* startImage@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		66F18A6221C3D8560009A074 /* Infomation */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A6C21C3D8FB0009A074 /* InfomationViewController.swift */,
+			);
+			path = Infomation;
+			sourceTree = "<group>";
+		};
+		66F18A6321C3D86C0009A074 /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A6A21C3D8EC0009A074 /* SelectViewController.swift */,
+			);
+			path = Select;
+			sourceTree = "<group>";
+		};
+		66F18A6421C3D8A20009A074 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		66F18A6521C3D8B10009A074 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A6621C3D8CD0009A074 /* MineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		66F18A6E21C3DEC40009A074 /* ADLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A6F21C3DEDE0009A074 /* ADLaunchController.swift */,
+			);
+			path = ADLaunch;
+			sourceTree = "<group>";
+		};
+		66F18A7121C3E0200009A074 /* GuidePage */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A7221C3E0300009A074 /* GuidePageViewController.swift */,
+			);
+			path = GuidePage;
+			sourceTree = "<group>";
+		};
+		66F18A7421C3E07F0009A074 /* WelcomImages */ = {
+			isa = PBXGroup;
+			children = (
+				66F18A7521C3E07F0009A074 /* welecome4.png */,
+				66F18A7621C3E07F0009A074 /* welecome3.png */,
+				66F18A7721C3E07F0009A074 /* welecome2.png */,
+				66F18A7821C3E07F0009A074 /* welecome1.png */,
+			);
+			path = WelcomImages;
+			sourceTree = "<group>";
+		};
 		FFC9FA1D9F9C2105027ABF1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,14 +669,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F18A7A21C3E07F0009A074 /* welecome3.png in Resources */,
 				5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */,
+				66F18A5F21C3D6890009A074 /* startImage@2x.png in Resources */,
 				5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */,
 				5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */,
 				66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */,
+				66F18A7C21C3E07F0009A074 /* welecome1.png in Resources */,
 				5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */,
-				5E8BF44A21BF4E6D005BD4E0 /* Main.storyboard in Resources */,
+				66F18A7921C3E07F0009A074 /* welecome4.png in Resources */,
 				5E71773C21C258C0003BCAE5 /* leftAndRightTitle.png in Resources */,
 				5E850F7321C342A8002A31E0 /* NodeInsertTopAndBottomLine.png in Resources */,
+				66F18A7B21C3E07F0009A074 /* welecome2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,9 +753,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
-				"${BUILT_PRODUCTS_DIR}/JPFPSStatus/JPFPSStatus.framework",
+				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
@@ -650,8 +773,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JPFPSStatus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
@@ -666,7 +790,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEE31F0BF95B7FBE5F8F2EC5 /* [CP] Check Pods Manifest.lock */ = {
@@ -698,6 +822,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F18A6121C3D7B40009A074 /* BaseNavigationViewController.swift in Sources */,
+				66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */,
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
 				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
 				5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */,
@@ -705,15 +831,18 @@
 				66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
-				5E8BF44721BF4E6D005BD4E0 /* ViewController.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
 				5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
-				5E8BF47421BF5202005BD4E0 /* TestViewController.swift in Sources */,
+				66F18A6921C3D8DD0009A074 /* CommunityViewController.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
+				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
+				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
 				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
+				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
+				66F18A6D21C3D8FB0009A074 /* InfomationViewController.swift in Sources */,
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
@@ -725,6 +854,7 @@
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
+				66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
@@ -764,14 +894,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5E8BF44821BF4E6D005BD4E0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E8BF44921BF4E6D005BD4E0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5E8BF44D21BF4E76005BD4E0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

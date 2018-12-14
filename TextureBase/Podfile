@@ -11,9 +11,11 @@ target 'TextureBase' do
   # 5.0 不支持 iOS 9
   # pod 'Kingfisher', '~> 4.10.1'
   pod 'YYWebImage', '~> 1.0.5'
-  pod 'JPFPSStatus', '~> 0.1.1'
+  # pod 'JPFPSStatus', '~> 0.1.1'
   pod 'MLeaksFinder', '~> 1.0.0'
   pod 'SDWebImage', '~> 5.0.0-beta3'
+  pod 'GDPerformanceView-Swift', '~> 2.0.2'
+  pod 'CYLTabBarController', '~> 1.17.22'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
