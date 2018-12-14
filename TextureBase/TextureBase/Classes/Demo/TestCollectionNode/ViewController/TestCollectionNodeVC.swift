@@ -18,6 +18,16 @@ class TestCollectionNodeVC: ASViewController<ASDisplayNode> {
     var datas = [String]()
     
     // MARK: - Life cycle
+    #warning ("需要初始化该方法才可以使用node添加subnode")
+    init() {
+        super.init(node: ASDisplayNode())
+        node.addSubnode(collectionNode)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
@@ -27,7 +37,7 @@ class TestCollectionNodeVC: ASViewController<ASDisplayNode> {
     // MARK: - Private methods
     private func setupUI() {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: button)
-        view.addSubnode(collectionNode)
+        
         
         let label = FPSLabel.init(frame: CGRect.init(x: 0, y: 0, width: 80, height: 30))
         self.view.insertSubview(label, at: 999)
