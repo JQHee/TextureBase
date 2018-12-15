@@ -46,10 +46,17 @@ class MineViewController: ASViewController<ASDisplayNode> {
         tableNode.delegate = self
         tableNode.dataSource = self
         tableNode.view.tableFooterView = UIView()
+        // tableNode.backgroundColor = UIColor.init(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
         return tableNode
     }()
 
     lazy var mineHeaderView: MineHeaderView = MineHeaderView.loadNib()
+
+    var datas: [(sectionName: String, items: [[String: String]])] = [
+        ("Prize", [["name": "无"]]),
+        ("SectionName", [["name": "消息"], ["name": "任务"], ["name": "收藏"],  ["name": "收藏"]]),
+        ("SectionName", [["name": "设置"], ["name": "意见反馈"]])
+    ]
 
 }
 
@@ -62,8 +69,25 @@ extension MineViewController: ASTableDelegate {
 
 // MARK: - ASTableDataSource
 extension MineViewController: ASTableDataSource {
+    func numberOfSections(in tableNode: ASTableNode) -> Int {
+        return datas.count
+    }
+
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return datas[section].items.count
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerSectionView = UIView()
+        headerSectionView.backgroundColor = UIColor.init(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
+        return headerSectionView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if datas[section].sectionName == "Prize" {
+            return 0
+        }
+        return 10
     }
 
     // 自动计算大小
@@ -74,12 +98,22 @@ extension MineViewController: ASTableDataSource {
     }
 
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let text = self.datas[indexPath.section].items[indexPath.row]["name"] ?? ""
+        if datas[indexPath.section].sectionName == "Prize" {
+            let cellBlock = { () -> ASCellNode in
+                let cellNode = MineItemCellNode()
+                return cellNode
+            }
 
-        let cellBlock = { () -> ASCellNode in
-            let cellNode = MineItemCellNode()
-            return cellNode
+            return cellBlock
+        } else {
+            let cellBlock = { () -> ASCellNode in
+                let cellNode = MineCellNode()
+                cellNode.text = text
+                return cellNode
+            }
+
+            return cellBlock
         }
-
-        return cellBlock
     }
 }

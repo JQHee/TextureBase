@@ -15,7 +15,13 @@ class MineCellNode: ASCellNode {
         super.init()
         self.accessoryType = .disclosureIndicator
         addSubnode(textNode)
-        textNode.attributedText = "测试".nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+        // textNode.attributedText = "测试".nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+    }
+
+    var text: String = "" {
+        didSet {
+            textNode.attributedText = text.nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+        }
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

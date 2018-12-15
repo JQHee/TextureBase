@@ -18,14 +18,19 @@ class MineItemCellNode: ASCellNode {
         addSubnode(leftImageNode)
         addSubnode(leftButtonNode)
 
+        // 分割线
+        addSubnode(lineTextNode)
+
         addSubnode(rightTextNode)
         addSubnode(rightImageNode)
-        addSubnode(lineTextNode)
+        addSubnode(rightButtonNode)
 
         lineTextNode.backgroundColor = .gray
         leftButtonNode.backgroundColor = .clear
+        rightButtonNode.backgroundColor = .clear
 
         leftButtonNode.addTarget(self, action: #selector(leftButtonAction), forControlEvents: ASControlNodeEvent.touchUpInside)
+        rightButtonNode.addTarget(self, action: #selector(rightButtonAction), forControlEvents: ASControlNodeEvent.touchUpInside)
 
         leftTextNode.attributedText = "  积分福利".nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
         leftImageNode.image = UIImage.init(named: "mine_welfare_img")
@@ -37,7 +42,12 @@ class MineItemCellNode: ASCellNode {
     // MARK: - Event response
     @objc
     func leftButtonAction() {
-        print("test")
+        print("leftButtonNode")
+    }
+
+    @objc
+    func rightButtonAction() {
+        print("rightButtonNode")
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -63,7 +73,8 @@ class MineItemCellNode: ASCellNode {
         rightStack.justifyContent = .spaceBetween
         rightStack.children = [rightTextNode, rightImageNode]
         rightStack.spacing = 5.0
-        let rightInsertSpec = ASInsetLayoutSpec.init(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0), child: rightStack)
+        let rightOver = ASOverlayLayoutSpec.init(child: rightStack, overlay: rightButtonNode)
+        let rightInsertSpec = ASInsetLayoutSpec.init(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0), child: rightOver)
         rightInsertSpec.style.flexGrow = 1
 
         let stacks = ASStackLayoutSpec.horizontal()
@@ -87,5 +98,6 @@ class MineItemCellNode: ASCellNode {
     // 右边
     lazy var rightTextNode = ASTextNode()
     lazy var rightImageNode = ASImageNode()
+    lazy var rightButtonNode = ASButtonNode()
 
 }
