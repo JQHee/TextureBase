@@ -24,8 +24,14 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
     override func viewDidLoad() {
         super.viewDidLoad()
         node.addSubnode(scrollNode)
+        node.addSubnode(pageControl)
         setupContents()
         scrollNode.frame = node.bounds
+        pageControl.view.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.height.equalTo(30)
+        }
     }
 
     // MARK: - Private methods
@@ -43,6 +49,7 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
             }
             scrollNode.addSubnode(imageNode)
         }
+        (pageControl.view as? UIPageControl)?.numberOfPages = imageNames.count
         let contentW = CGFloat(imageNames.count) * screen.width
         scrollNode.view.contentSize = CGSize.init(width: contentW, height: screen.height)
     }
@@ -80,7 +87,7 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
         buttonNode.setTitle("立即体验", with: UIFont.systemFont(ofSize: 13), with: UIColor.white, for: UIControl.State.normal)
         let screen = UIScreen.main.bounds
         buttonNode.frame = CGRect.init(x: (screen.width - 120.0) / 2.0, y: screen.height - 100, width: 120, height: 40)
-        buttonNode.isHidden = true
+        buttonNode.isHidden = false
         buttonNode.backgroundColor = UIColor.orange
         buttonNode.maskNodeBound(borderWidth: 0, radius: 5, borderColor: UIColor.clear)
         #warning("TouchUpInside")
@@ -95,6 +102,17 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
         return buttonNode
     }()
 
+    lazy var pageControl: ASDisplayNode = { [weak self] in
+        let view = ASDisplayNode.init(viewBlock: { () -> UIView in
+            let pageControl = UIPageControl()
+            pageControl.currentPage = 0
+            pageControl.pageIndicatorTintColor = .gray
+            pageControl.currentPageIndicatorTintColor = .red
+            return pageControl
+        })
+        return view
+    }()
+
     var imageNames: [String] = ["welecome1", "welecome2", "welecome3", "welecome4"]
 }
 
@@ -102,6 +120,6 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
 extension GuidePageViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let index = Int(scrollView.contentOffset.x / UIScreen.main.bounds.width)
-        buttonNode.isHidden = (index == imageNames.count - 1) ? false : true
+        (pageControl.view as? UIPageControl)?.currentPage = index
     }
 }
