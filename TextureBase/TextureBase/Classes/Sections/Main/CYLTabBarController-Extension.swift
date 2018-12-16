@@ -16,11 +16,11 @@ extension CYLTabBarController {
     class func customizeTabbar() {
         // 普通状态下的文字属性
         var normalAttrs = [NSAttributedString.Key: Any]()
-        normalAttrs[NSAttributedString.Key.foregroundColor] = UIColor(red: 153.0/255.0, green: 153.0/255.0, blue: 153.0/255.0, alpha: 1.0)
+        normalAttrs[NSAttributedString.Key.foregroundColor] = UIColor.gray
         
         // 选中状态下的文字属性
         var selectedAttrs = [NSAttributedString.Key: AnyObject]()
-        selectedAttrs[NSAttributedString.Key.foregroundColor] = UIColor(red: 55.0/255.0, green: 172.0/255.0, blue: 104.0/255.0, alpha: 1.0)
+        selectedAttrs[NSAttributedString.Key.foregroundColor] = UIColor.red
         
         // 设置文字属性
         let tabBar = UITabBarItem.appearance()

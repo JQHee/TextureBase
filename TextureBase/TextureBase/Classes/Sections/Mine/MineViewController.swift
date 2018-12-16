@@ -22,6 +22,15 @@ class MineViewController: ASViewController<ASDisplayNode> {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "我的"
@@ -35,7 +44,7 @@ class MineViewController: ASViewController<ASDisplayNode> {
     // MARK: - Private methods
     private func setupUI() {
         tableNode.view.parallaxHeader.view = mineHeaderView
-        tableNode.view.parallaxHeader.height = 135
+        tableNode.view.parallaxHeader.height = 150
         tableNode.view.parallaxHeader.mode = .fill
         tableNode.view.parallaxHeader.contentView.layer.zPosition = 1
     }

@@ -14,12 +14,16 @@ target 'TextureBase' do
   # pod 'JPFPSStatus', '~> 0.1.1'
   pod 'MLeaksFinder', '~> 1.0.0'
   pod 'SDWebImage', '~> 5.0.0-beta3'
+  # FPS
   pod 'GDPerformanceView-Swift', '~> 2.0.2'
   pod 'CYLTabBarController', '~> 1.17.22'
-  pod 'MXParallaxHeader'
+  # 视差
+  pod 'MXParallaxHeader', '~> 0.6.1'
   pod 'Alamofire', '~> 4.8.0'
   pod 'SwiftyJSON', '~> 4.2.0'
   pod 'Kingfisher', '~> 4.10.1'
+  # 分页查看器
+  pod 'JXCategoryView', '~> 1.1.4'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice

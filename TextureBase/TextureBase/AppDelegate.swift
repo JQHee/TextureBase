@@ -26,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func setupFirstRootVC() {
+        mainVC.setupRootVC()
+    }
+
     func setupRootVC() {
         guard let isFirstLoad = UserDefaults.standard.value(forKey: "isFirstLoad") as? Bool else {
             self.window?.rootViewController = GuidePageViewController()
@@ -34,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(isFirstLoad)
         mainVC.setupRootVC()
         addADLaunchController()
-        // self.window?.rootViewController = ADLaunchController()
     }
 
     // 添加广告页

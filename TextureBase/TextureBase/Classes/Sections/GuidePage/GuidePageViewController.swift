@@ -63,7 +63,7 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        appDelegate.setupRootVC()
+        appDelegate.setupFirstRootVC()
     }
 
     @objc

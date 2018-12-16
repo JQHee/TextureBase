@@ -48,6 +48,10 @@
 		66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A4224621C60E99003D5E40 /* UIImage+TYLaunchImage.m */; };
 		66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4224821C623C9003D5E40 /* ADLaunchRequest.swift */; };
 		66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4224B21C62548003D5E40 /* ADLaunchViewModel.swift */; };
+		66A4225421C676D1003D5E40 /* SelectItemCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4225321C676D1003D5E40 /* SelectItemCellNode.swift */; };
+		66A4225621C68189003D5E40 /* SelectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4225521C68189003D5E40 /* SelectModel.swift */; };
+		66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4225721C6819E003D5E40 /* SelectRequest.swift */; };
+		66A4225A21C681B3003D5E40 /* SelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4225921C681B3003D5E40 /* SelectViewModel.swift */; };
 		66BD871121C136A20072466D /* FPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871021C136A20072466D /* FPS.swift */; };
 		66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */; };
 		66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */; };
@@ -146,6 +150,10 @@
 		66A4224621C60E99003D5E40 /* UIImage+TYLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+TYLaunchImage.m"; path = "../../../../../../LovePlayNews-master/LovePlayNews/Foundation/Category/UIImage/UIImage+TYLaunchImage.m"; sourceTree = "<group>"; };
 		66A4224821C623C9003D5E40 /* ADLaunchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLaunchRequest.swift; sourceTree = "<group>"; };
 		66A4224B21C62548003D5E40 /* ADLaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLaunchViewModel.swift; sourceTree = "<group>"; };
+		66A4225321C676D1003D5E40 /* SelectItemCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItemCellNode.swift; sourceTree = "<group>"; };
+		66A4225521C68189003D5E40 /* SelectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModel.swift; sourceTree = "<group>"; };
+		66A4225721C6819E003D5E40 /* SelectRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRequest.swift; sourceTree = "<group>"; };
+		66A4225921C681B3003D5E40 /* SelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewModel.swift; sourceTree = "<group>"; };
 		66BD871021C136A20072466D /* FPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPS.swift; sourceTree = "<group>"; };
 		66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASNetworkImageNode+Extension.swift"; sourceTree = "<group>"; };
 		66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionNodeVC.swift; sourceTree = "<group>"; };
@@ -464,6 +472,38 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		66A4224D21C66D1D003D5E40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66A4225321C676D1003D5E40 /* SelectItemCellNode.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66A4224E21C66D2D003D5E40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66A4225521C68189003D5E40 /* SelectModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66A4224F21C66D3A003D5E40 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				66A4225721C6819E003D5E40 /* SelectRequest.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		66A4225021C66D49003D5E40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				66A4225921C681B3003D5E40 /* SelectViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		66BD871421C13A470072466D /* TestCollectionNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +608,10 @@
 		66F18A6321C3D86C0009A074 /* Select */ = {
 			isa = PBXGroup;
 			children = (
+				66A4225021C66D49003D5E40 /* ViewModel */,
+				66A4224F21C66D3A003D5E40 /* Util */,
+				66A4224E21C66D2D003D5E40 /* Model */,
+				66A4224D21C66D1D003D5E40 /* View */,
 				66F18A6A21C3D8EC0009A074 /* SelectViewController.swift */,
 			);
 			path = Select;
@@ -843,6 +887,7 @@
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
@@ -866,6 +911,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
@@ -923,6 +969,7 @@
 				5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */,
 				5E71773121C23C16003BCAE5 /* BaseAdapter.swift in Sources */,
 				66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */,
+				66A4225421C676D1003D5E40 /* SelectItemCellNode.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
 				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
@@ -933,6 +980,7 @@
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
 				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
+				66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */,
 				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */,
 				66F18A8421C3F7B30009A074 /* MineHeaderView.swift in Sources */,
@@ -949,6 +997,7 @@
 				66A4224021C6016B003D5E40 /* ADLaunchView.swift in Sources */,
 				5E850F7D21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift in Sources */,
 				66A4223921C5FA86003D5E40 /* Request.swift in Sources */,
+				66A4225A21C681B3003D5E40 /* SelectViewModel.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
@@ -964,6 +1013,7 @@
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
 				5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */,
+				66A4225621C68189003D5E40 /* SelectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class BaseNavigationViewController: UINavigationController {
         let navBar = UINavigationBar.appearance()
         /// 把这个半透明关闭，不然会影响布局
         navBar.isTranslucent = false
-        navBar.barTintColor = UIColor.orange
+        navBar.barTintColor = UIColor.black
         navBar.barStyle = .black
         navBar.tintColor = UIColor.white
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]

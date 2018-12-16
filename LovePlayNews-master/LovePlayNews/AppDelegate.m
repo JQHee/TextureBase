@@ -22,7 +22,7 @@
     
     [self addMainWindow];
     
-    [self addADLaunchController];
+    //[self addADLaunchController];
     
 #if defined(DEBUG)||defined(_DEBUG)
     [TYFPSLabel showInStutasBar];
