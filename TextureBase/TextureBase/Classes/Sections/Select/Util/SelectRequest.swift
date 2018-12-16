@@ -8,6 +8,8 @@
 
 import UIKit
 
-class SelectRequest: NSObject {
-
+struct SelectRequest: Request {
+    var path: String {
+        return API.selectList
+    }
 }

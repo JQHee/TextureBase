@@ -1,5 +1,5 @@
 //
-//  SelectModel.swift
+//  SelectTopRequest.swift
 //  TextureBase
 //
 //  Created by HJQ on 2018/12/16.
@@ -8,6 +8,8 @@
 
 import UIKit
 
-class SelectModel: NSObject {
-
+struct SelectTopRequest: Request {
+    var path: String {
+        return API.selectTop
+    }
 }

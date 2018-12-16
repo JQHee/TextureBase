@@ -9,9 +9,16 @@
 import Foundation
 import UIKit
 
+// MARK: - 通用
 struct API {
     
     static let baseURL = "http://i.play.163.com"
     static let adImage = "/news/initLogo/ios_iphone6"
 
+}
+
+// MARK: - 精选
+extension API {
+    static let selectTop = "/news/topicOrderSource/list"
+    static let selectList = "/news/config/config_focus_img/list/"
 }

@@ -28,6 +28,7 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
+        loadData()
     }
 
     // MARK: - Private methods
@@ -42,6 +43,42 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         }
     }
 
+    private func loadData() {
+        requestTopData()
+        requestListData()
+    }
+
+    // 请求列表数据
+    private func requestTopData() {
+        let request = SelectTopRequest()
+        selectVM.loadTopData(r: request, successBlock: {
+
+        }) {
+
+        }
+    }
+
+    // 请求广告数据
+    private func requestListData() {
+        let request = SelectRequest()
+        selectVM.loadListData(r: request, successBlock: { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            self.handleRequestResult()
+
+        }) { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            self.handleRequestResult()
+        }
+    }
+
+    private func handleRequestResult() {
+        self.collectionNode.reloadSections(IndexSet.init(integer: 0))
+    }
+
     // MARK:  - Lazy load
     lazy var collectionNode: ASCollectionNode = { [weak self] in
         let layout = UICollectionViewFlowLayout()
@@ -49,11 +86,13 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         clv.delegate = self
         clv.dataSource = self
         clv.backgroundColor = .white
-        clv.alwaysBounceHorizontal = true
+        clv.alwaysBounceVertical = true
         // 使用section
         clv.registerSupplementaryNode(ofKind: UICollectionView.elementKindSectionFooter)
         return clv
     }()
+
+    lazy var selectVM = SelectViewModel()
 
 }
 
@@ -91,8 +130,13 @@ extension SelectViewController: ASCollectionDataSource {
 
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         if indexPath.section == 0 {
-            let cellBlock = { () -> ASCellNode in
-                return SelectItemCellNode()
+            let cellBlock = { [weak self]() -> ASCellNode in
+                guard let `self` = self else {
+                    return SelectPagerCellNode()
+                }
+                let cellNode = SelectPagerCellNode()
+                cellNode.imageInfos = self.selectVM.infos
+                return cellNode
             }
             return cellBlock
         } else {
