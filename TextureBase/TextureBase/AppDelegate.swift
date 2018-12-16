@@ -34,14 +34,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(isFirstLoad)
         mainVC.setupRootVC()
         addADLaunchController()
+        // self.window?.rootViewController = ADLaunchController()
     }
 
     // 添加广告页
     func addADLaunchController() {
+        guard let window = UIApplication.shared.windows.last else {
+            return
+        }
         let VC = ADLaunchController()
-        VC.view.frame = mainVC.view.bounds
-        mainVC.view.addSubview(VC.view)
         mainVC.addChild(VC)
+        VC.view.frame = UIScreen.main.bounds
+        window.addSubview(VC.view)
+
     }
 
 }

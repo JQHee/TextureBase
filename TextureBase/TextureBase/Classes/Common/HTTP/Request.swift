@@ -17,11 +17,12 @@ enum HTTPRequestMethod: Int {
 protocol Request {
     var host: String { get }
     var path: String { get }
-    var requestMethod: HTTPRequestMethod { get }
+    var method: HTTPRequestMethod { get }
     // 请求参数
     var parameters: [String: Any]? { get }
     // 自定义请求头
     var normalHeaders: [String: String] { get }
+    var timeOut: TimeInterval { get }
 }
 
 extension Request {
@@ -31,7 +32,7 @@ extension Request {
     }
 
     var method: HTTPRequestMethod {
-        return .POST
+        return .GET
     }
 
     // 服务器的基本地址
@@ -55,6 +56,10 @@ extension Request {
         }
 
         return param
+    }
+
+    var timeOut: TimeInterval {
+        return 15.0
     }
 
 }

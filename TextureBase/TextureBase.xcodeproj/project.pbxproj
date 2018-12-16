@@ -43,6 +43,11 @@
 		66A4223721C5F9D5003D5E40 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223621C5F9D5003D5E40 /* HTTPClient.swift */; };
 		66A4223921C5FA86003D5E40 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223821C5FA86003D5E40 /* Request.swift */; };
 		66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223A21C5FD92003D5E40 /* ErrorModel.swift */; };
+		66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223C21C600A8003D5E40 /* String+Extension.swift */; };
+		66A4224021C6016B003D5E40 /* ADLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223F21C6016B003D5E40 /* ADLaunchView.swift */; };
+		66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A4224621C60E99003D5E40 /* UIImage+TYLaunchImage.m */; };
+		66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4224821C623C9003D5E40 /* ADLaunchRequest.swift */; };
+		66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4224B21C62548003D5E40 /* ADLaunchViewModel.swift */; };
 		66BD871121C136A20072466D /* FPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871021C136A20072466D /* FPS.swift */; };
 		66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */; };
 		66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */; };
@@ -52,7 +57,7 @@
 		66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */; };
 		66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */; };
 		66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */; };
-		66F18A5F21C3D6890009A074 /* startImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A5E21C3D6890009A074 /* startImage@2x.png */; };
+		66F18A5F21C3D6890009A074 /* startImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A5E21C3D6890009A074 /* startImage.png */; };
 		66F18A6121C3D7B40009A074 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */; };
 		66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6621C3D8CD0009A074 /* MineViewController.swift */; };
 		66F18A6921C3D8DD0009A074 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */; };
@@ -134,6 +139,13 @@
 		66A4223621C5F9D5003D5E40 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		66A4223821C5FA86003D5E40 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		66A4223A21C5FD92003D5E40 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		66A4223C21C600A8003D5E40 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		66A4223F21C6016B003D5E40 /* ADLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLaunchView.swift; sourceTree = "<group>"; };
+		66A4224421C60E98003D5E40 /* TextureBase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextureBase-Bridging-Header.h"; sourceTree = "<group>"; };
+		66A4224521C60E99003D5E40 /* UIImage+TYLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+TYLaunchImage.h"; path = "../../../../../../LovePlayNews-master/LovePlayNews/Foundation/Category/UIImage/UIImage+TYLaunchImage.h"; sourceTree = "<group>"; };
+		66A4224621C60E99003D5E40 /* UIImage+TYLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+TYLaunchImage.m"; path = "../../../../../../LovePlayNews-master/LovePlayNews/Foundation/Category/UIImage/UIImage+TYLaunchImage.m"; sourceTree = "<group>"; };
+		66A4224821C623C9003D5E40 /* ADLaunchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLaunchRequest.swift; sourceTree = "<group>"; };
+		66A4224B21C62548003D5E40 /* ADLaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLaunchViewModel.swift; sourceTree = "<group>"; };
 		66BD871021C136A20072466D /* FPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPS.swift; sourceTree = "<group>"; };
 		66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASNetworkImageNode+Extension.swift"; sourceTree = "<group>"; };
 		66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionNodeVC.swift; sourceTree = "<group>"; };
@@ -143,7 +155,7 @@
 		66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeactivityIndicatorCellNode.swift; sourceTree = "<group>"; };
 		66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASCellNode生命周期.png"; sourceTree = "<group>"; };
 		66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CYLTabBarController-Extension.swift"; sourceTree = "<group>"; };
-		66F18A5E21C3D6890009A074 /* startImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "startImage@2x.png"; path = "../../../../../LovePlayNews-master/LovePlayNews/startImage@2x.png"; sourceTree = "<group>"; };
+		66F18A5E21C3D6890009A074 /* startImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startImage.png; path = "../../../../../LovePlayNews-master/LovePlayNews/startImage.png"; sourceTree = "<group>"; };
 		66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		66F18A6621C3D8CD0009A074 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +303,7 @@
 				5E8BF44421BF4E6D005BD4E0 /* AppDelegate.swift */,
 				5E8BF44B21BF4E76005BD4E0 /* Assets.xcassets */,
 				5E8BF44D21BF4E76005BD4E0 /* LaunchScreen.storyboard */,
+				66A4224421C60E98003D5E40 /* TextureBase-Bridging-Header.h */,
 				5E8BF45021BF4E76005BD4E0 /* Info.plist */,
 			);
 			path = TextureBase;
@@ -355,6 +368,7 @@
 			children = (
 				5E8BF47A21BF587E005BD4E0 /* NSAttributedString+TextNode.swift */,
 				5E8BF47F21BF5F57005BD4E0 /* NSString+TextNode.swift */,
+				66A4223C21C600A8003D5E40 /* String+Extension.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -426,6 +440,30 @@
 			path = HTTP;
 			sourceTree = "<group>";
 		};
+		66A4223E21C60147003D5E40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66A4223F21C6016B003D5E40 /* ADLaunchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66A4224121C604DC003D5E40 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				66A4224821C623C9003D5E40 /* ADLaunchRequest.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		66A4224A21C62528003D5E40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				66A4224B21C62548003D5E40 /* ADLaunchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		66BD871421C13A470072466D /* TestCollectionNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +501,8 @@
 			isa = PBXGroup;
 			children = (
 				66BD871F21C147BC0072466D /* UIImage+Extension.swift */,
+				66A4224521C60E99003D5E40 /* UIImage+TYLaunchImage.h */,
+				66A4224621C60E99003D5E40 /* UIImage+TYLaunchImage.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -512,7 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				66F18A7421C3E07F0009A074 /* WelcomImages */,
-				66F18A5E21C3D6890009A074 /* startImage@2x.png */,
+				66F18A5E21C3D6890009A074 /* startImage.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -553,6 +593,9 @@
 		66F18A6E21C3DEC40009A074 /* ADLaunch */ = {
 			isa = PBXGroup;
 			children = (
+				66A4224A21C62528003D5E40 /* ViewModel */,
+				66A4224121C604DC003D5E40 /* Util */,
+				66A4223E21C60147003D5E40 /* View */,
 				66F18A6F21C3DEDE0009A074 /* ADLaunchController.swift */,
 			);
 			path = ADLaunch;
@@ -673,6 +716,7 @@
 				TargetAttributes = {
 					5E8BF44021BF4E6D005BD4E0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					5E8BF45421BF4E76005BD4E0 = {
 						CreatedOnToolsVersion = 10.1;
@@ -712,7 +756,7 @@
 				66F18A7A21C3E07F0009A074 /* welecome3.png in Resources */,
 				66F18A8521C3F7B30009A074 /* MineHeaderView.xib in Resources */,
 				5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */,
-				66F18A5F21C3D6890009A074 /* startImage@2x.png in Resources */,
+				66F18A5F21C3D6890009A074 /* startImage.png in Resources */,
 				5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */,
 				5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */,
 				66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */,
@@ -799,6 +843,7 @@
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
@@ -821,6 +866,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
@@ -879,6 +925,7 @@
 				66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
+				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
 				5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
@@ -897,7 +944,9 @@
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
+				66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
+				66A4224021C6016B003D5E40 /* ADLaunchView.swift in Sources */,
 				5E850F7D21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift in Sources */,
 				66A4223921C5FA86003D5E40 /* Request.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
@@ -905,8 +954,10 @@
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
+				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
+				66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */,
 				66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
 				66A4223721C5F9D5003D5E40 /* HTTPClient.swift in Sources */,
@@ -1080,6 +1131,7 @@
 			baseConfigurationReference = 6F49A79D501D231AD5BADC0F /* Pods-TextureBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYZGGW5E8S;
 				INFOPLIST_FILE = TextureBase/Info.plist;
@@ -1089,6 +1141,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureBase/TextureBase-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1099,6 +1153,7 @@
 			baseConfigurationReference = CA7255816CA5DCB33B9B7D58 /* Pods-TextureBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYZGGW5E8S;
 				INFOPLIST_FILE = TextureBase/Info.plist;
@@ -1108,6 +1163,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.TextureBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureBase/TextureBase-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

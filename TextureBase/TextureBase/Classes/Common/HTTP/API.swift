@@ -11,6 +11,7 @@ import UIKit
 
 struct API {
     
-    static let baseURL = ""
+    static let baseURL = "http://i.play.163.com"
+    static let adImage = "/news/initLogo/ios_iphone6"
 
 }

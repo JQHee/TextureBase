@@ -19,6 +19,7 @@ target 'TextureBase' do
   pod 'MXParallaxHeader'
   pod 'Alamofire', '~> 4.8.0'
   pod 'SwiftyJSON', '~> 4.2.0'
+  pod 'Kingfisher', '~> 4.10.1'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice

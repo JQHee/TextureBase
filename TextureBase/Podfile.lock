@@ -3,6 +3,7 @@ PODS:
   - CYLTabBarController (1.17.22)
   - FBRetainCycleDetector (0.1.4)
   - GDPerformanceView-Swift (2.0.2)
+  - Kingfisher (4.10.1)
   - MJRefresh (3.1.15.7)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
@@ -43,9 +44,10 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.8.0)
   - CYLTabBarController (~> 1.17.22)
   - GDPerformanceView-Swift (~> 2.0.2)
+  - Kingfisher
   - MJRefresh (~> 3.1.15.7)
   - MLeaksFinder (~> 1.0.0)
   - MXParallaxHeader
@@ -61,6 +63,7 @@ SPEC REPOS:
     - CYLTabBarController
     - FBRetainCycleDetector
     - GDPerformanceView-Swift
+    - Kingfisher
     - MJRefresh
     - MLeaksFinder
     - MXParallaxHeader
@@ -80,6 +83,7 @@ SPEC CHECKSUMS:
   CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   GDPerformanceView-Swift: a40b2f675589449f5b5082f3178f01bfdb7882ce
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
@@ -94,6 +98,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: c89b2b0d6163bc631f1b7bce47863d9bf0cf45e5
+PODFILE CHECKSUM: fe0176d3aea6ed3d17680f8e642f6a49553c7ad1
 
 COCOAPODS: 1.6.0.beta.1
