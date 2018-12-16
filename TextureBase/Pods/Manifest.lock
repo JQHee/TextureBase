@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.0)
   - CYLTabBarController (1.17.22)
   - FBRetainCycleDetector (0.1.4)
   - GDPerformanceView-Swift (2.0.2)
@@ -25,6 +26,7 @@ PODS:
     - SDWebImage/Core (= 5.0.0-beta3)
   - SDWebImage/Core (5.0.0-beta3)
   - SnapKit (4.2.0)
+  - SwiftyJSON (4.2.0)
   - Texture (2.7):
     - Texture/PINRemoteImage (= 2.7)
   - Texture/Core (2.7)
@@ -41,6 +43,7 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - Alamofire
   - CYLTabBarController (~> 1.17.22)
   - GDPerformanceView-Swift (~> 2.0.2)
   - MJRefresh (~> 3.1.15.7)
@@ -48,11 +51,13 @@ DEPENDENCIES:
   - MXParallaxHeader
   - SDWebImage (~> 5.0.0-beta3)
   - SnapKit (~> 4.2.0)
+  - SwiftyJSON (~> 4.2.0)
   - Texture (~> 2.7)
   - YYWebImage (~> 1.0.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - CYLTabBarController
     - FBRetainCycleDetector
     - GDPerformanceView-Swift
@@ -64,12 +69,14 @@ SPEC REPOS:
     - PINRemoteImage
     - SDWebImage
     - SnapKit
+    - SwiftyJSON
     - Texture
     - YYCache
     - YYImage
     - YYWebImage
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   GDPerformanceView-Swift: a40b2f675589449f5b5082f3178f01bfdb7882ce
@@ -81,11 +88,12 @@ SPEC CHECKSUMS:
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   SDWebImage: e52654ceef9fdc19f4c612d64a5b6d3f05dd81a4
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 425e4758914957735ffa970e04971c16a2c49c41
+PODFILE CHECKSUM: c89b2b0d6163bc631f1b7bce47863d9bf0cf45e5
 
 COCOAPODS: 1.6.0.beta.1

@@ -46,6 +46,13 @@ func dispatch_sync_safely_main_queue(_ block: () -> Void) {
     }
 }
 
+// DEBUG日志的打印
+func print(_ something: @autoclosure () -> Any) {
+    #if DEBUG
+    Swift.print(something())
+    #endif
+}
+
 // 本地是否有缓存
 func haveCacheImage(key: String) -> Bool {
     return YYImageCache.shared().containsImage(forKey: key)

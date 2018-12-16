@@ -17,6 +17,8 @@ target 'TextureBase' do
   pod 'GDPerformanceView-Swift', '~> 2.0.2'
   pod 'CYLTabBarController', '~> 1.17.22'
   pod 'MXParallaxHeader'
+  pod 'Alamofire', '~> 4.8.0'
+  pod 'SwiftyJSON', '~> 4.2.0'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice

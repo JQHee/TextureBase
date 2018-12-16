@@ -39,6 +39,10 @@
 		5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */; };
 		5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */; };
 		5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */; };
+		66A4223521C5F981003D5E40 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223421C5F981003D5E40 /* API.swift */; };
+		66A4223721C5F9D5003D5E40 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223621C5F9D5003D5E40 /* HTTPClient.swift */; };
+		66A4223921C5FA86003D5E40 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223821C5FA86003D5E40 /* Request.swift */; };
+		66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4223A21C5FD92003D5E40 /* ErrorModel.swift */; };
 		66BD871121C136A20072466D /* FPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871021C136A20072466D /* FPS.swift */; };
 		66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */; };
 		66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */; };
@@ -126,6 +130,10 @@
 		5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTAsKitTool.swift; sourceTree = "<group>"; };
 		5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFImageTextButton.swift; sourceTree = "<group>"; };
 		5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableNodeViewController.swift; sourceTree = "<group>"; };
+		66A4223421C5F981003D5E40 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		66A4223621C5F9D5003D5E40 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		66A4223821C5FA86003D5E40 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		66A4223A21C5FD92003D5E40 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		66BD871021C136A20072466D /* FPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPS.swift; sourceTree = "<group>"; };
 		66BD871221C138710072466D /* ASNetworkImageNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASNetworkImageNode+Extension.swift"; sourceTree = "<group>"; };
 		66BD871721C13F1A0072466D /* TestCollectionNodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionNodeVC.swift; sourceTree = "<group>"; };
@@ -322,6 +330,7 @@
 		5E8BF47721BF5821005BD4E0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				66A4223321C5F971003D5E40 /* HTTP */,
 				5E71772F21C23BEF003BCAE5 /* Base */,
 				66BD871B21C147230072466D /* Main */,
 				5E8BF48421BF63ED005BD4E0 /* View */,
@@ -404,6 +413,17 @@
 				5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		66A4223321C5F971003D5E40 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				66A4223421C5F981003D5E40 /* API.swift */,
+				66A4223621C5F9D5003D5E40 /* HTTPClient.swift */,
+				66A4223821C5FA86003D5E40 /* Request.swift */,
+				66A4223A21C5FD92003D5E40 /* ErrorModel.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 		66BD871421C13A470072466D /* TestCollectionNode */ = {
@@ -775,6 +795,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
@@ -786,6 +807,7 @@
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
@@ -795,6 +817,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
@@ -806,6 +829,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
@@ -867,12 +891,15 @@
 				66F18A8421C3F7B30009A074 /* MineHeaderView.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
 				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
+				66A4223521C5F981003D5E40 /* API.swift in Sources */,
 				66F18A6D21C3D8FB0009A074 /* InfomationViewController.swift in Sources */,
 				66F18A8921C400380009A074 /* MineItemCellNode.swift in Sources */,
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
+				66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
 				5E850F7D21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift in Sources */,
+				66A4223921C5FA86003D5E40 /* Request.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
@@ -882,6 +909,7 @@
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
 				66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
+				66A4223721C5F9D5003D5E40 /* HTTPClient.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
 				5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */,
