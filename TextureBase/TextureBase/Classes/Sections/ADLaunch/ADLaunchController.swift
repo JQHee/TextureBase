@@ -93,6 +93,11 @@ class ADLaunchController: ASViewController<ASDisplayNode> {
     }
 
     func dismissController() {
+        if let _ = timer {
+            timer?.invalidate()
+            timer = nil
+        }
+        #warning("需要研究一下node动画使用")
         UIView.animate(withDuration: 0.6, delay: 0.2, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.view.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
             self.view.alpha = 0
@@ -100,6 +105,7 @@ class ADLaunchController: ASViewController<ASDisplayNode> {
             self.view.removeFromSuperview()
             self.removeFromParent()
         }
+
     }
 
     // MARK: - Event response
@@ -113,8 +119,6 @@ class ADLaunchController: ASViewController<ASDisplayNode> {
         count -= 1
         adLaunchView.skipButtonNode.setTitle("跳过 \(count)s", with: UIFont.systemFont(ofSize: 15), with: UIColor.white, for: UIControl.State.normal)
         if count < 0 {
-            timer?.invalidate()
-            timer = nil
             dismissController()
         }
     }

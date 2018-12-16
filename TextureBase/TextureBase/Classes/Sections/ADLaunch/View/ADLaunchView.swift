@@ -51,6 +51,10 @@ class ADLaunchView: ASDisplayNode {
         launchImageNode.image = UIImage.init(contentsOfFile: path)
     }
 
+    override func animateLayoutTransition(_ context: ASContextTransitioning) {
+
+    }
+
     // MARK: - Lazy load
     lazy var launchImageNode = ASImageNode()
     lazy var adImageNode: ASDisplayNode = {
