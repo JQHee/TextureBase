@@ -29,7 +29,7 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
         loadData()
-        viewBindEvents()
+        // viewBindEvents()
     }
 
     deinit {
@@ -103,18 +103,23 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
 //        UIView.performWithoutAnimation {
 //            
 //        }
+//
+//        self.collectionNode.performBatchUpdates({
+//
+//        }) { (finish) in
+//
+//        }
 
-        if self.collectionNode.view.mj_header.isRefreshing {
-            print("123")
-            self.collectionNode.view.mj_header.endRefreshing()
-        }
+//        if self.collectionNode.view.mj_header.isRefreshing {
+//            print("123")
+//            self.collectionNode.view.mj_header.endRefreshing()
+//        }
         #warning("多次刷新造成页面卡死 重载方法是非常昂贵的,应该避免防止框架滴。推荐的方法是确实使用deleteRows删除一些行。已经说过,我猜想你实际上面临着死锁")
-        self.collectionNode.performBatchUpdates({
-            self.collectionNode.reloadSections(IndexSet.init(integer: section))
-        }) { (finish) in
-
+        count += 1
+        if count == 2 {
+            self.collectionNode.reloadData()
         }
-
+        // self.collectionNode.reloadSections(IndexSet.init(integer: section))
     }
 
     // MARK:  - Lazy load
@@ -132,6 +137,8 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
     }()
 
     lazy var selectVM = SelectViewModel()
+
+    var count: Int = 0
 
 }
 
