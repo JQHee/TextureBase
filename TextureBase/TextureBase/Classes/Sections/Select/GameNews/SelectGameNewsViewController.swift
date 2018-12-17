@@ -23,6 +23,8 @@ class SelectGameNewsViewController: ASViewController<ASDisplayNode> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "游戏资讯"
+        self.node.backgroundColor = UIColor.white
     }
 
 }

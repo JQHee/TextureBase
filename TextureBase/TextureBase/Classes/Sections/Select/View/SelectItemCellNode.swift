@@ -27,9 +27,6 @@ class SelectItemCellNode: ASCellNode {
     private func setupUI () {
         addSubnode(imageCellNode)
         addSubnode(nameTextNode)
-        
-
-        
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

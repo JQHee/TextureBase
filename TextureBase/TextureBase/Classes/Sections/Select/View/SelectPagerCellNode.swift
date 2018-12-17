@@ -18,6 +18,8 @@ class SelectPagerCellNode: ASCellNode {
             }
         }
     }
+    
+    var selectFinishBlock: ((_ model: AWSelectInfo) -> ())?
 
     override init() {
         super.init()
@@ -85,6 +87,10 @@ extension SelectPagerCellNode: ASCollectionDataSource {
 extension SelectPagerCellNode: ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+        if let _ = selectFinishBlock {
+            let model = imageInfos[indexPath.row]
+            selectFinishBlock!(model)
+        }
 
     }
 }

@@ -146,6 +146,11 @@ extension SelectViewController: ASCollectionDataSource {
                 }
                 let cellNode = SelectPagerCellNode()
                 cellNode.imageInfos = self.selectVM.infos
+                cellNode.selectFinishBlock = { (tempModel) in
+                    // 查看广告详情
+                    let VC = BFWebBrowserController.init(urlString: tempModel.address, navigationBarTitle: tempModel.title)
+                    self.navigationController?.pushViewController(VC, animated: true)
+                }
                 return cellNode
             }
             return cellBlock
@@ -165,7 +170,11 @@ extension SelectViewController: ASCollectionDataSource {
 extension SelectViewController: ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section > 0 {
-
+            let model = selectVM.listInfos[indexPath.row]
+            print(model.id)
+            let VC = SelectGameNewsViewController()
+            self.navigationController?.pushViewController(VC, animated: true)
+            
         }
     }
 
