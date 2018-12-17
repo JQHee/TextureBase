@@ -31,11 +31,10 @@ class TestTableNodeViewController: UIViewController {
     // MARK:  - Private methods
     private func setupUI() {
         self.view.addSubnode(tableNode)
-
-        let label = FPSLabel.init(frame: CGRect.init(x: 0, y: 0, width: 80, height: 30))
-        self.view.insertSubview(label, at: 999)
+        viewBindEvents()
     }
-    
+
+    #warning("tabbleView刷新，没见造成死锁")
     private func viewBindEvents() {
         
         self.tableNode.view.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
