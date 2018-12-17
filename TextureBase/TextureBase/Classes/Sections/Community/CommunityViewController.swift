@@ -113,6 +113,7 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
         scrollNode.view.isPagingEnabled = true
         scrollNode.view.showsVerticalScrollIndicator = false
         scrollNode.view.showsHorizontalScrollIndicator = false
+        scrollNode.view.bounces = false
         return scrollNode
     }()
     
