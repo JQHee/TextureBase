@@ -25,6 +25,7 @@ class SelectSectionItemCellNode: ASCellNode {
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
 
+        #warning("item的宽度不正常")
         imageNode.style.preferredSize = CGSize.init(width: 267, height: 113)
         textNode.style.flexShrink = 1
 

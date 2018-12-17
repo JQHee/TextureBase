@@ -10,6 +10,13 @@ import UIKit
 import AsyncDisplayKit
 
 class SelectItemCellNode: ASCellNode {
+    
+    var item: AWSelectListInfo? {
+        didSet {
+            nameTextNode.attributedText = item?.topicName.nodeAttributes(color: UIColor.red, font: UIFont.systemFont(ofSize: 13), alignment: .center)
+            imageCellNode.url = URL.init(string: (item?.iconUrl ?? "").appropriateImageURLSting())
+        }
+    }
 
     override init() {
         super.init()
@@ -20,8 +27,8 @@ class SelectItemCellNode: ASCellNode {
     private func setupUI () {
         addSubnode(imageCellNode)
         addSubnode(nameTextNode)
-        nameTextNode.attributedText = "测试".nodeAttributes(color: UIColor.red, font: UIFont.systemFont(ofSize: 13), alignment: .center)
-        imageCellNode.url = URL.init(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544594513693&di=75a19b23e965df406f26b9cbccbafad5&imgtype=0&src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-7cc4780a65e481894d1563e3808d2843_r.png")
+        
+
         
     }
 

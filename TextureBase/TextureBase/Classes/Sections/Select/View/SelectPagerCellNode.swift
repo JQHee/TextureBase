@@ -44,33 +44,33 @@ class SelectPagerCellNode: ASCellNode {
     }
 
     // MARK: - Lazy load
-    #warning ("ASPagerNode的使用")
-    lazy var pagerNode: ASPagerNode = {
-        let flowLayout = ASPagerFlowLayout()
+    #warning ("ASPagerNode有些代理方法不走，不推荐使用")
+    lazy var pagerNode: ASCollectionNode = {
+        let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.minimumLineSpacing = 10
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-        let pagerNode = ASPagerNode.init(collectionViewLayout: flowLayout)
-        pagerNode.dataSource = self
+        let pagerNode = ASCollectionNode.init(collectionViewLayout: flowLayout)
         pagerNode.delegate = self
+        pagerNode.dataSource = self
         return pagerNode
     }()
 }
 
 // MARK: - ASPagerDataSource
-extension SelectPagerCellNode: ASPagerDataSource, ASCollectionDataSource {
-    func numberOfPages(in pagerNode: ASPagerNode) -> Int {
+extension SelectPagerCellNode: ASCollectionDataSource {
+    func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
         return imageInfos.count
     }
-
+    
     func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForItemAt indexPath: IndexPath) -> ASSizeRange {
-        let minAMaxSize = CGSize.init(width: 267, height: 113)
+        let minAMaxSize = CGSize.init(width: 267.0, height: 113.0)
         return ASSizeRange.init(min: minAMaxSize, max: minAMaxSize)
     }
-
-    func pagerNode(_ pagerNode: ASPagerNode, nodeBlockAt index: Int) -> ASCellNodeBlock {
-        let model = imageInfos[index]
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let model = imageInfos[indexPath.row]
         let cellBlock = {()-> ASCellNode in
             let cellNode = SelectSectionItemCellNode()
             cellNode.item = model
@@ -82,8 +82,9 @@ extension SelectPagerCellNode: ASPagerDataSource, ASCollectionDataSource {
 }
 
 // MARK: - ASPagerDelegate
-extension SelectPagerCellNode: ASPagerDelegate, UICollectionViewDelegate {
+extension SelectPagerCellNode: ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
 
     }
 }

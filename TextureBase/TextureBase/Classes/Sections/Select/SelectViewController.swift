@@ -51,10 +51,16 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
     // 请求列表数据
     private func requestTopData() {
         let request = SelectTopRequest()
-        selectVM.loadTopData(r: request, successBlock: {
-
-        }) {
-
+        selectVM.loadTopData(r: request, successBlock: { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            self.handleRequestResult(section: 1)
+        }) { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            self.handleRequestResult(section: 1)
         }
     }
 
@@ -65,18 +71,21 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
             guard let `self` = self else {
                 return
             }
-            self.handleRequestResult()
+            self.handleRequestResult(section: 0)
 
         }) { [weak self] in
             guard let `self` = self else {
                 return
             }
-            self.handleRequestResult()
+            self.handleRequestResult(section: 0)
         }
     }
 
-    private func handleRequestResult() {
-        self.collectionNode.reloadSections(IndexSet.init(integer: 0))
+    private func handleRequestResult(section: Int) {
+//        UIView.performWithoutAnimation {
+//            
+//        }
+        self.collectionNode.reloadSections(IndexSet.init(integer: section))
     }
 
     // MARK:  - Lazy load
@@ -107,7 +116,7 @@ extension SelectViewController: ASCollectionDataSource {
         case 0:
             return 1
         case 1:
-            return 20
+            return selectVM.listInfos.count
         default:
             return 0
         }
@@ -120,6 +129,7 @@ extension SelectViewController: ASCollectionDataSource {
             let minSize = CGSize.init(width: width, height: 113)
             let maxSize = CGSize.init(width: width, height: 113)
             return ASSizeRangeMake(minSize, maxSize)
+            
         } else {
 
             let minSize = CGSize.init(width: width / 3.0, height: 102)
@@ -140,8 +150,11 @@ extension SelectViewController: ASCollectionDataSource {
             }
             return cellBlock
         } else {
+            let model = selectVM.listInfos[indexPath.row]
             let cellBlock = { () -> ASCellNode in
-                return SelectItemCellNode()
+                let cellNode = SelectItemCellNode()
+                cellNode.item = model
+                return cellNode
             }
             return cellBlock
         }

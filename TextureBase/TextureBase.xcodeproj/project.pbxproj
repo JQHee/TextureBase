@@ -22,6 +22,7 @@
 		5E71773C21C258C0003BCAE5 /* leftAndRightTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E71773B21C258C0003BCAE5 /* leftAndRightTitle.png */; };
 		5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */; };
 		5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */; };
+		5E725C9221C72EC7003183FD /* AWSelectListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9121C72EC7003183FD /* AWSelectListModel.swift */; };
 		5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */; };
 		5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */; };
 		5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */; };
@@ -119,6 +120,7 @@
 		5E71773B21C258C0003BCAE5 /* leftAndRightTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftAndRightTitle.png; sourceTree = "<group>"; };
 		5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textInsertBlowImage.png; sourceTree = "<group>"; };
 		5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsertBlowImageCellNode.swift; sourceTree = "<group>"; };
+		5E725C9121C72EC7003183FD /* AWSelectListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSelectListModel.swift; sourceTree = "<group>"; };
 		5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoEdgeIcon.png; sourceTree = "<group>"; };
 		5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEdgeIconCellNode.swift; sourceTree = "<group>"; };
 		5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeInsertTopAndBottomLine.swift; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				66A4226421C69F98003D5E40 /* AWSelectModel.swift */,
+				5E725C9121C72EC7003183FD /* AWSelectListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -987,6 +990,7 @@
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
 				5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
+				5E725C9221C72EC7003183FD /* AWSelectListModel.swift in Sources */,
 				66F18A6921C3D8DD0009A074 /* CommunityViewController.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
