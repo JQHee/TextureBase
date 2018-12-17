@@ -13,7 +13,7 @@ class SelectItemCellNode: ASCellNode {
     
     var item: AWSelectListInfo? {
         didSet {
-            nameTextNode.attributedText = item?.topicName.nodeAttributes(color: UIColor.red, font: UIFont.systemFont(ofSize: 13), alignment: .center)
+            nameTextNode.attributedText = item?.topicName.nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13), alignment: .center)
             imageCellNode.url = URL.init(string: (item?.iconUrl ?? "").appropriateImageURLSting())
         }
     }

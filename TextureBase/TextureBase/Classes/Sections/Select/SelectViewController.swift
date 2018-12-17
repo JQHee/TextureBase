@@ -124,17 +124,15 @@ extension SelectViewController: ASCollectionDataSource {
 
     // 返回的大小
     func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForItemAt indexPath: IndexPath) -> ASSizeRange {
-        let width = UIScreen.main.bounds.width
+        let width = kScreenW
         if indexPath.section == 0 {
             let minSize = CGSize.init(width: width, height: 113)
             let maxSize = CGSize.init(width: width, height: 113)
             return ASSizeRangeMake(minSize, maxSize)
             
         } else {
-
-            let minSize = CGSize.init(width: width / 3.0, height: 102)
-            let maxSize = CGSize.init(width: width / 3.0, height: 102)
-            return ASSizeRangeMake(minSize, maxSize)
+            let minAndMaxSize = CGSize.init(width: (width - 40) / 3.0, height: 102)
+            return ASSizeRangeMake(minAndMaxSize, minAndMaxSize)
         }
     }
 
@@ -204,14 +202,14 @@ extension SelectViewController: UICollectionViewDelegateFlowLayout {
         if section == 0 {
             return UIEdgeInsets.init(top: 15, left: 0, bottom: 15, right: 0)
         } else if section == 1 {
-            // return UIEdgeInsets.init(top: 20, left: 10, bottom: 20, right: 10)
+            return UIEdgeInsets.init(top: 20, left: 10, bottom: 20, right: 10)
         }
         return .zero
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if section == 1 {
-            //return 35
+            return 35
         }
         return 0
     }
