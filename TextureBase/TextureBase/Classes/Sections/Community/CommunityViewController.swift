@@ -94,16 +94,30 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
     func showVCWithIndex(index: Int) {
 
         if !VCsDict.keys.contains(index) { // 不存在 (懒加载)
-            let VC = UIViewController()
-            let x = CGFloat(index) * scrollNode.view.bounds.width
-            VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
-            VC.view.backgroundColor = index == 0 ? UIColor.orange : UIColor.gray
-            if index == 2 {
-                VC.view.backgroundColor = UIColor.white
+            if index == 0 {
+                let VC = UIViewController()
+                let x = CGFloat(index) * scrollNode.view.bounds.width
+                VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
+                scrollNode.view.addSubview(VC.view)
+                addChild(VC)
+                
+            } else if index == 1 {
+                let VC = UIViewController()
+                let x = CGFloat(index) * scrollNode.view.bounds.width
+                VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
+                scrollNode.view.addSubview(VC.view)
+                addChild(VC)
+                
+            } else { // 凯恩之角
+                let VC = KaneViewController()
+                let x = CGFloat(index) * scrollNode.view.bounds.width
+                VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
+                scrollNode.view.addSubview(VC.view)
+                addChild(VC)
+                // 加载数据
+                // VC.loadFirst()
             }
-            scrollNode.view.addSubview(VC.view)
-            // 加载数据
-            // VC.loadFirst()
+
         }
     }
     
