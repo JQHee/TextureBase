@@ -29,6 +29,12 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
         loadData()
+        viewBindEvents()
+    }
+
+    deinit {
+        self.collectionNode.delegate = nil
+        self.collectionNode.dataSource = nil
     }
 
     // MARK: - Private methods
@@ -48,6 +54,17 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         requestListData()
     }
 
+    func viewBindEvents() {
+        collectionNode.view.setupRefresh(isNeedFooterRefresh: false, headerCallback: { [weak self] in
+            guard let `self` = self else {
+                return
+
+            }
+            self.loadData()
+        }, footerCallBack: nil)
+    }
+
+
     // 请求列表数据
     private func requestTopData() {
         let request = SelectTopRequest()
@@ -55,6 +72,7 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
             guard let `self` = self else {
                 return
             }
+
             self.handleRequestResult(section: 1)
         }) { [weak self] in
             guard let `self` = self else {
@@ -85,7 +103,18 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
 //        UIView.performWithoutAnimation {
 //            
 //        }
-        self.collectionNode.reloadSections(IndexSet.init(integer: section))
+
+        if self.collectionNode.view.mj_header.isRefreshing {
+            print("123")
+            self.collectionNode.view.mj_header.endRefreshing()
+        }
+        #warning("多次刷新造成页面卡死 重载方法是非常昂贵的,应该避免防止框架滴。推荐的方法是确实使用deleteRows删除一些行。已经说过,我猜想你实际上面临着死锁")
+        self.collectionNode.performBatchUpdates({
+            self.collectionNode.reloadSections(IndexSet.init(integer: section))
+        }) { (finish) in
+
+        }
+
     }
 
     // MARK:  - Lazy load
@@ -96,6 +125,7 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         clv.dataSource = self
         clv.backgroundColor = .white
         clv.alwaysBounceVertical = true
+        clv.leadingScreensForBatching = 1.0
         // 使用section
         clv.registerSupplementaryNode(ofKind: UICollectionView.elementKindSectionFooter)
         return clv

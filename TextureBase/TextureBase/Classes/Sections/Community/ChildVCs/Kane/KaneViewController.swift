@@ -44,7 +44,7 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         let clv = ASCollectionNode.init(collectionViewLayout: layout)
         clv.delegate = self
         clv.dataSource = self
-        clv.backgroundColor = .white
+        clv.backgroundColor = UIColor.init(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0)
         clv.alwaysBounceVertical = true
         // 使用section
         clv.registerSupplementaryNode(ofKind: UICollectionView.elementKindSectionHeader)
@@ -72,6 +72,7 @@ extension KaneViewController: ASCollectionDataSource {
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         let cellBlock = { () -> ASCellNode in
             let cellNode = KaneCellNode()
+            cellNode.backgroundColor = UIColor.init(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0)
             return cellNode
         }
         return cellBlock
