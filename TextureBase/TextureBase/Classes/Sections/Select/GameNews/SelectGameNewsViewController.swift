@@ -10,6 +10,7 @@ import UIKit
 import AsyncDisplayKit
 
 // MARK: - 游戏资讯
+#warning("待做")
 class SelectGameNewsViewController: ASViewController<ASDisplayNode> {
 
     // MARK: - Life cycle
