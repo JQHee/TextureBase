@@ -23,10 +23,8 @@ class InfomationViewController: UIViewController {
         options.append(KingfisherOptionsInfoItem.forceRefresh)
         test.kf.setImage(with: URL.init(string: "http://iplay.nosdn.127.net/006sazpogmulhrhs31he1h3dr9u7ddvd.jpeg"), placeholder: nil, options:options , progressBlock: { (_, _) in
 
-        }) { [weak self](image, error, cacheType, url) in
-            guard let `self` = self else {
-                return
-            }
+        }) {(image, error, cacheType, url) in
+  
         }
     }
 

@@ -34,6 +34,7 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        #warning("scrollNode.view.bounds 需要在这个方法中才能获取到尺寸")
         // 设置内容contentSize
         let contentSizew = scrollNode.view.bounds.width * CGFloat(titles.count)
         scrollNode.view.contentSize = CGSize.init(width: contentSizew, height: 0)
