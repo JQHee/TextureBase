@@ -22,6 +22,14 @@
 		5E71773C21C258C0003BCAE5 /* leftAndRightTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E71773B21C258C0003BCAE5 /* leftAndRightTitle.png */; };
 		5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */; };
 		5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */; };
+		5E725C9221C72EC7003183FD /* AWSelectListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9121C72EC7003183FD /* AWSelectListModel.swift */; };
+		5E725C9521C73AA4003183FD /* SelectGameNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9421C73AA4003183FD /* SelectGameNewsViewController.swift */; };
+		5E725C9721C73E53003183FD /* BFWebBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9621C73E53003183FD /* BFWebBrowserController.swift */; };
+		5E725C9B21C77A50003183FD /* HotRecommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9A21C77A50003183FD /* HotRecommentViewController.swift */; };
+		5E725C9E21C77AC3003183FD /* LovePlayCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9D21C77AC3003183FD /* LovePlayCommunityViewController.swift */; };
+		5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725CA021C77B41003183FD /* KaneViewController.swift */; };
+		5E725CA421C780ED003183FD /* KaneCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725CA321C780ED003183FD /* KaneCellNode.swift */; };
+		5E725CA621C78105003183FD /* KaneSectionCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725CA521C78105003183FD /* KaneSectionCellNode.swift */; };
 		5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */; };
 		5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */; };
 		5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */; };
@@ -119,6 +127,14 @@
 		5E71773B21C258C0003BCAE5 /* leftAndRightTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftAndRightTitle.png; sourceTree = "<group>"; };
 		5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textInsertBlowImage.png; sourceTree = "<group>"; };
 		5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsertBlowImageCellNode.swift; sourceTree = "<group>"; };
+		5E725C9121C72EC7003183FD /* AWSelectListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSelectListModel.swift; sourceTree = "<group>"; };
+		5E725C9421C73AA4003183FD /* SelectGameNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameNewsViewController.swift; sourceTree = "<group>"; };
+		5E725C9621C73E53003183FD /* BFWebBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFWebBrowserController.swift; sourceTree = "<group>"; };
+		5E725C9A21C77A50003183FD /* HotRecommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewController.swift; sourceTree = "<group>"; };
+		5E725C9D21C77AC3003183FD /* LovePlayCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovePlayCommunityViewController.swift; sourceTree = "<group>"; };
+		5E725CA021C77B41003183FD /* KaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneViewController.swift; sourceTree = "<group>"; };
+		5E725CA321C780ED003183FD /* KaneCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneCellNode.swift; sourceTree = "<group>"; };
+		5E725CA521C78105003183FD /* KaneSectionCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneSectionCellNode.swift; sourceTree = "<group>"; };
 		5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoEdgeIcon.png; sourceTree = "<group>"; };
 		5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEdgeIconCellNode.swift; sourceTree = "<group>"; };
 		5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeInsertTopAndBottomLine.swift; sourceTree = "<group>"; };
@@ -268,6 +284,58 @@
 				5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */,
 			);
 			path = TextInsertBlowImage;
+			sourceTree = "<group>";
+		};
+		5E725C9321C73A80003183FD /* GameNews */ = {
+			isa = PBXGroup;
+			children = (
+				5E725C9421C73AA4003183FD /* SelectGameNewsViewController.swift */,
+			);
+			path = GameNews;
+			sourceTree = "<group>";
+		};
+		5E725C9821C779F8003183FD /* ChildVCs */ = {
+			isa = PBXGroup;
+			children = (
+				5E725C9F21C77B32003183FD /* Kane */,
+				5E725C9C21C77AB5003183FD /* LovePlayCommunity */,
+				5E725C9921C77A3C003183FD /* HotRecomment */,
+			);
+			path = ChildVCs;
+			sourceTree = "<group>";
+		};
+		5E725C9921C77A3C003183FD /* HotRecomment */ = {
+			isa = PBXGroup;
+			children = (
+				5E725C9A21C77A50003183FD /* HotRecommentViewController.swift */,
+			);
+			path = HotRecomment;
+			sourceTree = "<group>";
+		};
+		5E725C9C21C77AB5003183FD /* LovePlayCommunity */ = {
+			isa = PBXGroup;
+			children = (
+				5E725C9D21C77AC3003183FD /* LovePlayCommunityViewController.swift */,
+			);
+			path = LovePlayCommunity;
+			sourceTree = "<group>";
+		};
+		5E725C9F21C77B32003183FD /* Kane */ = {
+			isa = PBXGroup;
+			children = (
+				5E725CA221C780BC003183FD /* View */,
+				5E725CA021C77B41003183FD /* KaneViewController.swift */,
+			);
+			path = Kane;
+			sourceTree = "<group>";
+		};
+		5E725CA221C780BC003183FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E725CA321C780ED003183FD /* KaneCellNode.swift */,
+				5E725CA521C78105003183FD /* KaneSectionCellNode.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5E850F6A21C33EF6002A31E0 /* PhotoEdgeIcon */ = {
@@ -492,6 +560,7 @@
 			isa = PBXGroup;
 			children = (
 				66A4226421C69F98003D5E40 /* AWSelectModel.swift */,
+				5E725C9121C72EC7003183FD /* AWSelectListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -591,6 +660,7 @@
 		66F18A5A21C3D4AC0009A074 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5E725C9621C73E53003183FD /* BFWebBrowserController.swift */,
 				66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */,
 				66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */,
 			);
@@ -617,6 +687,7 @@
 		66F18A6321C3D86C0009A074 /* Select */ = {
 			isa = PBXGroup;
 			children = (
+				5E725C9321C73A80003183FD /* GameNews */,
 				66A4225021C66D49003D5E40 /* ViewModel */,
 				66A4224F21C66D3A003D5E40 /* Util */,
 				66A4224E21C66D2D003D5E40 /* Model */,
@@ -629,6 +700,7 @@
 		66F18A6421C3D8A20009A074 /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				5E725C9821C779F8003183FD /* ChildVCs */,
 				66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */,
 			);
 			path = Community;
@@ -975,18 +1047,22 @@
 				66A4226521C69F98003D5E40 /* AWSelectModel.swift in Sources */,
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
 				66F18A8721C3FB520009A074 /* MineCellNode.swift in Sources */,
+				5E725CA421C780ED003183FD /* KaneCellNode.swift in Sources */,
 				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
 				66A4226121C68FE9003D5E40 /* SelectSectionItemCellNode.swift in Sources */,
 				5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */,
 				5E71773121C23C16003BCAE5 /* BaseAdapter.swift in Sources */,
 				66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */,
 				66A4225421C676D1003D5E40 /* SelectItemCellNode.swift in Sources */,
+				5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
+				5E725CA621C78105003183FD /* KaneSectionCellNode.swift in Sources */,
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
 				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
 				5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
+				5E725C9221C72EC7003183FD /* AWSelectListModel.swift in Sources */,
 				66F18A6921C3D8DD0009A074 /* CommunityViewController.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
@@ -994,8 +1070,10 @@
 				66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */,
 				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */,
+				5E725C9521C73AA4003183FD /* SelectGameNewsViewController.swift in Sources */,
 				66F18A8421C3F7B30009A074 /* MineHeaderView.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
+				5E725C9E21C77AC3003183FD /* LovePlayCommunityViewController.swift in Sources */,
 				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
 				66A4223521C5F981003D5E40 /* API.swift in Sources */,
 				66F18A6D21C3D8FB0009A074 /* InfomationViewController.swift in Sources */,
@@ -1022,8 +1100,10 @@
 				66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */,
 				66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
+				5E725C9B21C77A50003183FD /* HotRecommentViewController.swift in Sources */,
 				66A4223721C5F9D5003D5E40 /* HTTPClient.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
+				5E725C9721C73E53003183FD /* BFWebBrowserController.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
 				5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */,
 			);

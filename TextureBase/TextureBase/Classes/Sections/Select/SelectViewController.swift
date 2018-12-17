@@ -51,10 +51,16 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
     // 请求列表数据
     private func requestTopData() {
         let request = SelectTopRequest()
-        selectVM.loadTopData(r: request, successBlock: {
-
-        }) {
-
+        selectVM.loadTopData(r: request, successBlock: { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            self.handleRequestResult(section: 1)
+        }) { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            self.handleRequestResult(section: 1)
         }
     }
 
@@ -65,18 +71,21 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
             guard let `self` = self else {
                 return
             }
-            self.handleRequestResult()
+            self.handleRequestResult(section: 0)
 
         }) { [weak self] in
             guard let `self` = self else {
                 return
             }
-            self.handleRequestResult()
+            self.handleRequestResult(section: 0)
         }
     }
 
-    private func handleRequestResult() {
-        self.collectionNode.reloadSections(IndexSet.init(integer: 0))
+    private func handleRequestResult(section: Int) {
+//        UIView.performWithoutAnimation {
+//            
+//        }
+        self.collectionNode.reloadSections(IndexSet.init(integer: section))
     }
 
     // MARK:  - Lazy load
@@ -107,7 +116,7 @@ extension SelectViewController: ASCollectionDataSource {
         case 0:
             return 1
         case 1:
-            return 20
+            return selectVM.listInfos.count
         default:
             return 0
         }
@@ -115,16 +124,15 @@ extension SelectViewController: ASCollectionDataSource {
 
     // 返回的大小
     func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForItemAt indexPath: IndexPath) -> ASSizeRange {
-        let width = UIScreen.main.bounds.width
+        let width = kScreenW
         if indexPath.section == 0 {
             let minSize = CGSize.init(width: width, height: 113)
             let maxSize = CGSize.init(width: width, height: 113)
             return ASSizeRangeMake(minSize, maxSize)
+            
         } else {
-
-            let minSize = CGSize.init(width: width / 3.0, height: 102)
-            let maxSize = CGSize.init(width: width / 3.0, height: 102)
-            return ASSizeRangeMake(minSize, maxSize)
+            let minAndMaxSize = CGSize.init(width: (width - 40) / 3.0, height: 102)
+            return ASSizeRangeMake(minAndMaxSize, minAndMaxSize)
         }
     }
 
@@ -136,12 +144,20 @@ extension SelectViewController: ASCollectionDataSource {
                 }
                 let cellNode = SelectPagerCellNode()
                 cellNode.imageInfos = self.selectVM.infos
+                cellNode.selectFinishBlock = { (tempModel) in
+                    // 查看广告详情
+                    let VC = BFWebBrowserController.init(urlString: tempModel.address, navigationBarTitle: tempModel.title)
+                    self.navigationController?.pushViewController(VC, animated: true)
+                }
                 return cellNode
             }
             return cellBlock
         } else {
+            let model = selectVM.listInfos[indexPath.row]
             let cellBlock = { () -> ASCellNode in
-                return SelectItemCellNode()
+                let cellNode = SelectItemCellNode()
+                cellNode.item = model
+                return cellNode
             }
             return cellBlock
         }
@@ -152,7 +168,11 @@ extension SelectViewController: ASCollectionDataSource {
 extension SelectViewController: ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section > 0 {
-
+            let model = selectVM.listInfos[indexPath.row]
+            print(model.id)
+            let VC = SelectGameNewsViewController()
+            self.navigationController?.pushViewController(VC, animated: true)
+            
         }
     }
 
@@ -182,14 +202,14 @@ extension SelectViewController: UICollectionViewDelegateFlowLayout {
         if section == 0 {
             return UIEdgeInsets.init(top: 15, left: 0, bottom: 15, right: 0)
         } else if section == 1 {
-            // return UIEdgeInsets.init(top: 20, left: 10, bottom: 20, right: 10)
+            return UIEdgeInsets.init(top: 20, left: 10, bottom: 20, right: 10)
         }
         return .zero
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if section == 1 {
-            //return 35
+            return 35
         }
         return 0
     }

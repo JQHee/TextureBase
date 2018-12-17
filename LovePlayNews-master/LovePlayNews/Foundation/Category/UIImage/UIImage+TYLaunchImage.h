@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+/* 适用于Assets中配置有启动图的情况 */
 @interface UIImage (TYLaunchImage)
 
 + (NSString *)ty_getLaunchImageName;
