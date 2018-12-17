@@ -13,8 +13,8 @@ class SelectPagerCellNode: ASCellNode {
 
     var imageInfos: [AWSelectInfo] = [AWSelectInfo] () {
         didSet {
-            dispatch_sync_safely_main_queue {
-                pagerNode.reloadData()
+            dispatch_async_safely_main_queue {
+                self.pagerNode.reloadData()
             }
         }
     }
@@ -25,14 +25,17 @@ class SelectPagerCellNode: ASCellNode {
         super.init()
         self.isUserInteractionEnabled = true
         setupUI()
+
     }
 
     override func didLoad() {
         super.didLoad()
         #warning ("要放在主线程中")
+
         pagerNode.view.isPagingEnabled = false
         pagerNode.view.allowsSelection = true
         pagerNode.reloadData()
+
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -73,7 +76,7 @@ extension SelectPagerCellNode: ASCollectionDataSource {
     
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         let model = imageInfos[indexPath.row]
-        let cellBlock = {()-> ASCellNode in
+        let cellBlock = {() -> ASCellNode in
             let cellNode = SelectSectionItemCellNode()
             cellNode.item = model
             return cellNode

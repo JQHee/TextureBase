@@ -115,7 +115,7 @@ extension TestTableNodeViewController: ASTableDataSource {
             } else {
                 cellNode.neverShowPlaceholders = false
             }
-            dispatch_sync_safely_main_queue {
+            dispatch_async_safely_main_queue {
                 // cellNode.startAnimating()
                 // UIImage(named: "iconName") // 需注意SomeNode有时会在子线程初始化，而UIImage(named:)并不是线程安全
             }

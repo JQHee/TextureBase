@@ -117,9 +117,12 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         #warning("多次刷新造成页面卡死 重载方法是非常昂贵的,应该避免防止框架滴。推荐的方法是确实使用deleteRows删除一些行。已经说过,我猜想你实际上面临着死锁")
         count += 1
         if count == 2 {
-            self.collectionNode.reloadData()
+            //self.collectionNode.reloadData()
         }
         // self.collectionNode.reloadSections(IndexSet.init(integer: section))
+        // collectionNode.cn_reloadIndexPaths = collectionNode.indexPathsForVisibleItems
+        self.collectionNode.reloadData()
+        // self.collectionNode.waitUntilAllUpdatesAreProcessed()
     }
 
     // MARK:  - Lazy load
@@ -161,14 +164,13 @@ extension SelectViewController: ASCollectionDataSource {
 
     // 返回的大小
     func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForItemAt indexPath: IndexPath) -> ASSizeRange {
-        let width = kScreenW
         if indexPath.section == 0 {
-            let minSize = CGSize.init(width: width, height: 113)
-            let maxSize = CGSize.init(width: width, height: 113)
+            let minSize = CGSize.init(width: node.bounds.width, height: 113)
+            let maxSize = CGSize.init(width: node.bounds.width, height: 113)
             return ASSizeRangeMake(minSize, maxSize)
             
         } else {
-            let minAndMaxSize = CGSize.init(width: (width - 40) / 3.0, height: 102)
+            let minAndMaxSize = CGSize.init(width: (node.bounds.width - 40) / 3.0, height: 102)
             return ASSizeRangeMake(minAndMaxSize, minAndMaxSize)
         }
     }
@@ -186,6 +188,14 @@ extension SelectViewController: ASCollectionDataSource {
                     let VC = BFWebBrowserController.init(urlString: tempModel.address, navigationBarTitle: tempModel.title)
                     self.navigationController?.pushViewController(VC, animated: true)
                 }
+                if ((collectionNode.cn_reloadIndexPaths ?? []).contains(indexPath)) {
+                    cellNode.neverShowPlaceholders = true
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                        cellNode.neverShowPlaceholders = false
+                    })
+                } else {
+                    cellNode.neverShowPlaceholders = false
+                }
                 return cellNode
             }
             return cellBlock
@@ -194,6 +204,14 @@ extension SelectViewController: ASCollectionDataSource {
             let cellBlock = { () -> ASCellNode in
                 let cellNode = SelectItemCellNode()
                 cellNode.item = model
+                if ((collectionNode.cn_reloadIndexPaths ?? []).contains(indexPath)) {
+                    cellNode.neverShowPlaceholders = true
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                        cellNode.neverShowPlaceholders = false
+                    })
+                } else {
+                    cellNode.neverShowPlaceholders = false
+                }
                 return cellNode
             }
             return cellBlock

@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         setupRootVC()
         PerformanceMonitor.shared().start()
+//        let nav = UINavigationController.init(rootViewController: TestCollectionNodeVC())
+//        self.window?.rootViewController = nav
         adapterIOS_11()
         return true
     }

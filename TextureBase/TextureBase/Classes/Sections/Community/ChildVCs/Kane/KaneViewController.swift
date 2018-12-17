@@ -65,14 +65,15 @@ extension KaneViewController: ASCollectionDataSource {
     
     // row 高度
     func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForItemAt indexPath: IndexPath) -> ASSizeRange {
-        let minAndMaxSize = CGSize.init(width: kScreenW, height: 100)
+        // (node.bounds.width - 1) / 2.0 就会自动居中
+        let minAndMaxSize = CGSize.init(width: (node.bounds.width - 1) / 2.0, height: 70)
         return ASSizeRange.init(min: minAndMaxSize, max: minAndMaxSize)
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         let cellBlock = { () -> ASCellNode in
             let cellNode = KaneCellNode()
-            cellNode.backgroundColor = UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1.0)
+            cellNode.backgroundColor = UIColor.white
             return cellNode
         }
         return cellBlock
@@ -112,10 +113,10 @@ extension KaneViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 1
     }
 }

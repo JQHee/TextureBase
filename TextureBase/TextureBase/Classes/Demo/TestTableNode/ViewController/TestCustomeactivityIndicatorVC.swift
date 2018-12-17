@@ -111,7 +111,7 @@ extension TestCustomeactivityIndicatorVC: ASTableDataSource {
             #warning("需要自定义cell")
             let cell = CustomeactivityIndicatorCellNode()
             #warning("不放在主线程会崩溃")
-            dispatch_sync_safely_main_queue {
+            dispatch_async_safely_main_queue {
                 cell.startAnimating()
                 // UIImage(named: "iconName") // 需注意SomeNode有时会在子线程初始化，而UIImage(named:)并不是线程安全
             }

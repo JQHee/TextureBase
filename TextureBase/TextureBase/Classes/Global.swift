@@ -36,11 +36,11 @@ var kNavBarH: CGFloat {
 
 // 全局方法
 // 获取主线程做相关操作
-func dispatch_sync_safely_main_queue(_ block: () -> Void) {
+func dispatch_async_safely_main_queue(_ block: @escaping () -> Void) {
     if Thread.isMainThread {
         block()
     } else {
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             block()
         }
     }

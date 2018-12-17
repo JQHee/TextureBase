@@ -16,6 +16,8 @@ class TestCollectionNodeVC: ASViewController<ASDisplayNode> {
     var currentPage: CGFloat = 0
     
     var datas = [String]()
+
+    var count: Int = 0
     
     // MARK: - Life cycle
     #warning ("需要初始化该方法才可以使用node添加subnode")
@@ -32,23 +34,37 @@ class TestCollectionNodeVC: ASViewController<ASDisplayNode> {
         super.viewDidLoad()
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         setupUI()
+        viewBindEvents()
     }
     
     // MARK: - Private methods
     private func setupUI() {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: button)
-        
-        
-        let label = FPSLabel.init(frame: CGRect.init(x: 0, y: 0, width: 80, height: 30))
-        self.view.insertSubview(label, at: 999)
+
+    }
+
+    func viewBindEvents() {
+        collectionNode.view.setupRefresh(isNeedFooterRefresh: false, headerCallback: { [weak self] in
+            guard let `self` = self else {
+                return
+
+            }
+            self.addAction()
+        }, footerCallBack: nil)
     }
     
     // MARK: - Event response
     @objc func addAction() {
-        for i in 0..<10 {
-            self.datas.append("\(i)")
+        if count == 0 {
+            count += 1
+            for i in 0..<10 {
+                self.datas.append("\(i)")
+            }
         }
-        collectionNode.cn_reloadIndexPaths = collectionNode.indexPathsForVisibleItems
+
+        self.collectionNode.view.mj_header.endRefreshing()
+
+        // collectionNode.cn_reloadIndexPaths = collectionNode.indexPathsForVisibleItems
         collectionNode.reloadData()
     }
     
