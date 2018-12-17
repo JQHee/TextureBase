@@ -29,7 +29,7 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
         loadData()
-        // viewBindEvents()
+        viewBindEvents()
     }
 
     deinit {
@@ -110,10 +110,10 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
 //
 //        }
 
-//        if self.collectionNode.view.mj_header.isRefreshing {
-//            print("123")
-//            self.collectionNode.view.mj_header.endRefreshing()
-//        }
+        if self.collectionNode.view.mj_header.isRefreshing {
+            print("123")
+            self.collectionNode.view.mj_header.endRefreshing()
+        }
         #warning("多次刷新造成页面卡死 重载方法是非常昂贵的,应该避免防止框架滴。推荐的方法是确实使用deleteRows删除一些行。已经说过,我猜想你实际上面临着死锁")
         count += 1
         if count == 2 {
@@ -254,4 +254,20 @@ extension SelectViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+}
+
+// MARK: - configData
+extension SelectViewController {
+    // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取 （添加一个hasNodata标识，滑动时会触发加载）
+    func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
+        return false
+    }
+
+    func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
+        context.beginBatchFetching()
+        #warning("需要放在主线程")
+        // [self.mainTableNode insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+        context.completeBatchFetching(true)
+    }
+
 }

@@ -44,7 +44,7 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         let clv = ASCollectionNode.init(collectionViewLayout: layout)
         clv.delegate = self
         clv.dataSource = self
-        clv.backgroundColor = UIColor.init(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0)
+        clv.backgroundColor = UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1.0)
         clv.alwaysBounceVertical = true
         // 使用section
         clv.registerSupplementaryNode(ofKind: UICollectionView.elementKindSectionHeader)
@@ -60,7 +60,7 @@ extension KaneViewController: ASCollectionDataSource {
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     // row 高度
@@ -72,7 +72,7 @@ extension KaneViewController: ASCollectionDataSource {
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
         let cellBlock = { () -> ASCellNode in
             let cellNode = KaneCellNode()
-            cellNode.backgroundColor = UIColor.init(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0)
+            cellNode.backgroundColor = UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1.0)
             return cellNode
         }
         return cellBlock
@@ -82,7 +82,7 @@ extension KaneViewController: ASCollectionDataSource {
     func collectionNode(_ collectionNode: ASCollectionNode, nodeForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> ASCellNode {
         if kind == UICollectionView.elementKindSectionHeader {
             let cellNode = KaneSectionCellNode()
-            cellNode.backgroundColor = UIColor.init(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0)
+            cellNode.style.preferredSize = CGSize.init(width: node.bounds.width, height: 30)
             return cellNode
         }
         return ASCellNode()
@@ -100,7 +100,7 @@ extension KaneViewController: ASCollectionDelegate {
 extension KaneViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize.init(width: view.bounds.width, height: 40)
+        return CGSize.init(width: view.bounds.width, height: 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
