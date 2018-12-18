@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AsyncDisplayKit
 
 class KaneCellNode: ASCellNode {
     
@@ -17,8 +18,12 @@ class KaneCellNode: ASCellNode {
     
     // MARK: - Private methods
     private func setupUI() {
-        addSubnode(textNode)
-        textNode.attributedText = "测试".nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+        addSubnode(iconImageNode)
+        addSubnode(titleNode)
+        addSubnode(descTextNode)
+        
+        
+        descTextNode.attributedText = "测试".nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -26,10 +31,12 @@ class KaneCellNode: ASCellNode {
         let stackSpec = ASStackLayoutSpec.vertical()
         stackSpec.alignItems = .center
         stackSpec.justifyContent = .center
-        let insetSpec = ASInsetLayoutSpec.init(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0), child: stackSpec)
+        stackSpec.children = [descTextNode]
         return stackSpec
     }
     
     // MARK: - Lazy load
-    lazy var textNode = ASTextNode()
+    lazy var iconImageNode = ASNetworkImageNode()
+    lazy var titleNode = ASTextNode()
+    lazy var descTextNode = ASTextNode()
 }

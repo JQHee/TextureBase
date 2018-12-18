@@ -19,8 +19,8 @@ class ADLaunchView: ASDisplayNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
 
         // 跳过按钮的大小和布局位置
-        skipButtonNode.style.preferredSize = CGSize.init(width: 65, height: 30)
-        skipButtonNode.style.layoutPosition = CGPoint.init(x: self.bounds.width - 65 - 20, y: 40)
+        skipButtonNode.style.preferredSize = CGSize.init(width: 100, height: 30)
+        skipButtonNode.style.layoutPosition = CGPoint.init(x: self.bounds.width - 100 - 20, y: 40)
 
         // 启动图背景
         let insetBackgroundImgSepc = ASInsetLayoutSpec.init(insets: UIEdgeInsets.zero, child: launchImageNode)

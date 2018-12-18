@@ -29,7 +29,7 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
         scrollNode.frame = node.bounds
         pageControl.view.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(-20)
             make.height.equalTo(30)
         }
     }

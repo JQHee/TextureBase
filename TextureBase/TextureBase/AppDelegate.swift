@@ -21,9 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()
         setupRootVC()
+        // FPS
         PerformanceMonitor.shared().start()
-//        let nav = UINavigationController.init(rootViewController: TestCollectionNodeVC())
-//        self.window?.rootViewController = nav
         adapterIOS_11()
         return true
     }

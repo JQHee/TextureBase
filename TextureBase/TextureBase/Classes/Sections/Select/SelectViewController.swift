@@ -100,10 +100,7 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
     }
 
     private func handleRequestResult(section: Int) {
-//        UIView.performWithoutAnimation {
-//            
-//        }
-//
+
 //        self.collectionNode.performBatchUpdates({
 //
 //        }) { (finish) in
@@ -114,15 +111,14 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
             print("123")
             self.collectionNode.view.mj_header.endRefreshing()
         }
-        #warning("多次刷新造成页面卡死 重载方法是非常昂贵的,应该避免防止框架滴。推荐的方法是确实使用deleteRows删除一些行。已经说过,我猜想你实际上面临着死锁")
-        count += 1
-        if count == 2 {
-            //self.collectionNode.reloadData()
+        // 不需要自带的刷新动画
+        UIView.performWithoutAnimation {
+            collectionNode.cn_reloadIndexPaths = collectionNode.indexPathsForVisibleItems
+            self.collectionNode.reloadSections(IndexSet.init(integer: section))
         }
-        // self.collectionNode.reloadSections(IndexSet.init(integer: section))
-        // collectionNode.cn_reloadIndexPaths = collectionNode.indexPathsForVisibleItems
-        self.collectionNode.reloadData()
-        // self.collectionNode.waitUntilAllUpdatesAreProcessed()
+
+        
+        // self.collectionNode.reloadData()
     }
 
     // MARK:  - Lazy load
@@ -140,8 +136,6 @@ class SelectViewController: ASViewController<ASDisplayNode>  {
     }()
 
     lazy var selectVM = SelectViewModel()
-
-    var count: Int = 0
 
 }
 
