@@ -99,13 +99,15 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
                 let x = CGFloat(index) * scrollNode.view.bounds.width
                 VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
                 scrollNode.view.addSubview(VC.view)
+                VCsDict[index] = VC
                 addChild(VC)
                 
             } else if index == 1 {
-                let VC = UIViewController()
+                let VC = LovePlayCommunityViewController()
                 let x = CGFloat(index) * scrollNode.view.bounds.width
                 VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
                 scrollNode.view.addSubview(VC.view)
+                VCsDict[index] = VC
                 addChild(VC)
                 
             } else { // 凯恩之角
@@ -113,6 +115,7 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
                 let x = CGFloat(index) * scrollNode.view.bounds.width
                 VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
                 scrollNode.view.addSubview(VC.view)
+                VCsDict[index] = VC
                 addChild(VC)
                 // 加载数据
                 // VC.loadFirst()

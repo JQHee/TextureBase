@@ -17,6 +17,7 @@
 		5E6AA59021C8824400EC4897 /* KaneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AA58F21C8824400EC4897 /* KaneViewModel.swift */; };
 		5E6AA59221C8825A00EC4897 /* KaneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AA59121C8825A00EC4897 /* KaneModel.swift */; };
 		5E6AA59421C8826C00EC4897 /* KaneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AA59321C8826C00EC4897 /* KaneRequest.swift */; };
+		5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AA59621C8AA7B00EC4897 /* LovePlayCommunityRequest.swift */; };
 		5E71773121C23C16003BCAE5 /* BaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71773021C23C16003BCAE5 /* BaseAdapter.swift */; };
 		5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71773221C23C53003BCAE5 /* BaseCell.swift */; };
 		5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71773421C23CA7003BCAE5 /* BaseController.swift */; };
@@ -128,6 +129,7 @@
 		5E6AA58F21C8824400EC4897 /* KaneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneViewModel.swift; sourceTree = "<group>"; };
 		5E6AA59121C8825A00EC4897 /* KaneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneModel.swift; sourceTree = "<group>"; };
 		5E6AA59321C8826C00EC4897 /* KaneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneRequest.swift; sourceTree = "<group>"; };
+		5E6AA59621C8AA7B00EC4897 /* LovePlayCommunityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovePlayCommunityRequest.swift; sourceTree = "<group>"; };
 		5E71773021C23C16003BCAE5 /* BaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAdapter.swift; sourceTree = "<group>"; };
 		5E71773221C23C53003BCAE5 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		5E71773421C23CA7003BCAE5 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -293,6 +295,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5E6AA59521C8AA6300EC4897 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5E6AA59621C8AA7B00EC4897 /* LovePlayCommunityRequest.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		5E71772F21C23BEF003BCAE5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +361,7 @@
 		5E725C9C21C77AB5003183FD /* LovePlayCommunity */ = {
 			isa = PBXGroup;
 			children = (
+				5E6AA59521C8AA6300EC4897 /* Util */,
 				5E725C9D21C77AC3003183FD /* LovePlayCommunityViewController.swift */,
 			);
 			path = LovePlayCommunity;
@@ -1145,6 +1156,7 @@
 				66A4226321C69B87003D5E40 /* SelectTopRequest.swift in Sources */,
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */,
+				5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,

@@ -29,4 +29,21 @@ class KaneViewModel {
             failureBlock()
         }
     }
+    
+    // 爱玩社区
+    func looadLovePlayCommunity(r: LovePlayCommunityRequest, successBlock: @escaping () -> (), failureBlock: @escaping () -> ()) {
+        HTTPClient.shared.send(r, progressBlock: { (progress) in
+            
+        }, success: { (result) in
+            self.discuzList = KaneModel.init(json: JSON.init(result)).info.discuzList
+            print(result)
+            successBlock()
+        }, failure: { (error) in
+            self.discuzList = [KaneDiscuzList]()
+            failureBlock()
+        }) { (_, error) in
+            self.discuzList = [KaneDiscuzList]()
+            failureBlock()
+        }
+    }
 }

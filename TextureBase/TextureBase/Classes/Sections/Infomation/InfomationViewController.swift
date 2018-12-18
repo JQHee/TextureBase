@@ -102,6 +102,7 @@ class InfomationViewController: ASViewController<ASDisplayNode> {
                 VC.view.backgroundColor = UIColor.white
             }
             scrollNode.view.addSubview(VC.view)
+            VCsDict[index] = VC
             // 加载数据
             // VC.loadFirst()
         }

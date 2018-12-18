@@ -27,6 +27,7 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
         requestListData()
+        viewBindEvents()
     }
     
     // MARK: - Private methods
@@ -35,6 +36,16 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         collectionNode.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func viewBindEvents() {
+        collectionNode.view.setupRefresh(isNeedFooterRefresh: false, headerCallback: { [weak self] in
+            guard let `self` = self else {
+                return
+                
+            }
+            self.requestListData()
+            }, footerCallBack: nil)
     }
     
     private func requestListData() {
@@ -49,12 +60,14 @@ class KaneViewController: ASViewController<ASDisplayNode> {
     }
     
     private func handleRequestResult() {
+        if let _ = self.collectionNode.view.mj_header {
+            self.collectionNode.view.mj_header.endRefreshing()
+        }
         self.collectionNode.reloadData()
     }
     
     // MARK: - Lazy load
     private lazy var collectionNode: ASCollectionNode = { [weak self] in
-        #warning("UICollectionViewFlowLayout")
         let layout = UICollectionViewFlowLayout()
         let clv = ASCollectionNode.init(collectionViewLayout: layout)
         clv.delegate = self
