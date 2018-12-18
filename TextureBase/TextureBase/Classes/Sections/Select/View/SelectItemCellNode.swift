@@ -42,6 +42,6 @@ class SelectItemCellNode: ASCellNode {
     }
 
     // MARK: - Lazy load
-    lazy var imageCellNode = ASNetworkImageNode()
+    lazy var imageCellNode = BFNetworkImageNode()
     lazy var nameTextNode = ASTextNode()
 }

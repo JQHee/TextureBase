@@ -29,7 +29,6 @@ class KaneCellNode: ASCellNode {
         addSubnode(iconImageNode)
         addSubnode(titleNode)
         addSubnode(descTextNode)
-            
         titleNode.maximumNumberOfLines = 1
         descTextNode.maximumNumberOfLines = 1
     }
@@ -58,7 +57,7 @@ class KaneCellNode: ASCellNode {
     }
     
     // MARK: - Lazy load
-    lazy var iconImageNode = ASNetworkImageNode()
+    lazy var iconImageNode = BFNetworkImageNode()
     lazy var titleNode = ASTextNode()
     lazy var descTextNode = ASTextNode()
 }

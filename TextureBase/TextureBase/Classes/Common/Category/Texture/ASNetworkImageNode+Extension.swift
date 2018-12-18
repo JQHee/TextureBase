@@ -11,6 +11,59 @@ import UIKit
 import YYWebImage
 import AsyncDisplayKit
 
+// 下载图片
+class BFNetworkImageNode: ASDisplayNode {
+    private var networkImageNode = ASNetworkImageNode.imageNode()
+    private var imageNode = ASImageNode()
+    
+    var placeholderColor: UIColor? {
+        didSet {
+            networkImageNode.placeholderColor = placeholderColor
+        }
+    }
+    
+    var image: UIImage? {
+        didSet {
+            networkImageNode.image = image
+        }
+    }
+    
+    override var placeholderFadeDuration: TimeInterval {
+        didSet {
+            networkImageNode.placeholderFadeDuration = placeholderFadeDuration
+        }
+    }
+    
+    var url: URL? {
+        didSet {
+            guard let u = url,
+                let image = cacheImage(key: u.absoluteString) else {
+                    networkImageNode.url = url
+                    return
+            }
+            
+            imageNode.image = image
+        }
+    }
+    
+    override init() {
+        super.init()
+        addSubnode(networkImageNode)
+        addSubnode(imageNode)
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: .zero,
+                                 child: networkImageNode.url == nil ? imageNode : networkImageNode)
+    }
+    
+    func addTarget(_ target: Any?, action: Selector, forControlEvents controlEvents: ASControlNodeEvent) {
+        networkImageNode.addTarget(target, action: action, forControlEvents: controlEvents)
+        imageNode.addTarget(target, action: action, forControlEvents: controlEvents)
+    }
+}
+
+
 extension ASNetworkImageNode {
     static func imageNode() -> ASNetworkImageNode {
         let manager = YYWebImageManager.shared()
@@ -71,54 +124,3 @@ extension YYWebImageManager: ASImageCacheProtocol, ASImageDownloaderProtocol {
     }
 }
 
-// 下载图片
-class BFNetworkImageNode: ASDisplayNode {
-    private var networkImageNode = ASNetworkImageNode.imageNode()
-    private var imageNode = ASImageNode()
-
-    var placeholderColor: UIColor? {
-        didSet {
-            networkImageNode.placeholderColor = placeholderColor
-        }
-    }
-
-    var image: UIImage? {
-        didSet {
-            networkImageNode.image = image
-        }
-    }
-
-    override var placeholderFadeDuration: TimeInterval {
-        didSet {
-            networkImageNode.placeholderFadeDuration = placeholderFadeDuration
-        }
-    }
-
-    var url: URL? {
-        didSet {
-            guard let u = url,
-                let image = cacheImage(key: u.absoluteString) else {
-                    networkImageNode.url = url
-                    return
-            }
-
-            imageNode.image = image
-        }
-    }
-
-    override init() {
-        super.init()
-        addSubnode(networkImageNode)
-        addSubnode(imageNode)
-    }
-
-    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        return ASInsetLayoutSpec(insets: .zero,
-                                 child: networkImageNode.url == nil ? imageNode : networkImageNode)
-    }
-
-    func addTarget(_ target: Any?, action: Selector, forControlEvents controlEvents: ASControlNodeEvent) {
-        networkImageNode.addTarget(target, action: action, forControlEvents: controlEvents)
-        imageNode.addTarget(target, action: action, forControlEvents: controlEvents)
-    }
-}
