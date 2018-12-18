@@ -98,9 +98,10 @@ class ADLaunchController: ASViewController<ASDisplayNode> {
             timer = nil
         }
         #warning("需要研究一下node动画使用")
-        UIView.animate(withDuration: 0.6, delay: 0.2, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.8, delay: 0.2, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.view.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
             self.view.alpha = 0
+            self.view.layoutIfNeeded()
         }) { (finish) in
             self.view.removeFromSuperview()
             self.removeFromParent()
