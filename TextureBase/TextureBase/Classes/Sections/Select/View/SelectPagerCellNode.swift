@@ -31,7 +31,6 @@ class SelectPagerCellNode: ASCellNode {
     override func didLoad() {
         super.didLoad()
         #warning ("要放在主线程中")
-
         pagerNode.view.isPagingEnabled = false
         pagerNode.view.allowsSelection = true
         pagerNode.reloadData()

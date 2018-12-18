@@ -34,7 +34,6 @@ class TestTableNodeViewController: UIViewController {
         viewBindEvents()
     }
 
-    #warning("tabbleView刷新，没见造成死锁")
     private func viewBindEvents() {
         
         self.tableNode.view.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
@@ -105,7 +104,6 @@ extension TestTableNodeViewController: ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         
         let cellNodeBlock: ASCellNodeBlock = { () -> ASCellNode in
-            #warning("需要自定义cell")
             let cellNode = ImageCellNode.init(key: "测试为内资")
             if ((tableNode.tn_reloadIndexPaths ?? []).contains(indexPath)) {
                 cellNode.neverShowPlaceholders = true

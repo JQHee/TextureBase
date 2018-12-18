@@ -9,6 +9,7 @@
 import UIKit
 import AsyncDisplayKit
 import TYCyclePagerView
+import YYWebImage
 
 
 private let kBannerCellID = "BannerViewCell"
@@ -31,6 +32,12 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
         viewBindEvents()
+        requestData()
+    }
+
+    deinit {
+        self.tableNode.delegate = nil
+        self.tableNode.dataSource = nil
     }
     
     // MARK: - Private methods
@@ -47,13 +54,38 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
                 return
                 
             }
-            self.tableNode.view.mj_header.endRefreshing()
+            self.requestData()
             }, footerCallBack: { [weak self] in
                 guard let `self` = self else {
                     return
                 }
-                self.tableNode.view.mj_footer.endRefreshing()
+                self.requestMoreData(finishBlock: {})
         })
+    }
+
+    func requestData() {
+
+        hotRecommentVM.pageIndex = 1
+        let request = HotRecommentRequest.init(pageIndex: 1, pageSize: 20)
+        hotRecommentVM.list(r: request, successBlock: { [weak self] (hasMore) in
+            guard let `self` = self else {return}
+            self.addBannerView()
+            self.hasMore = hasMore
+        }) {
+
+        }
+    }
+
+    func requestMoreData(finishBlock: @escaping () -> ()) {
+        hotRecommentVM.pageIndex += 1
+        let request = HotRecommentRequest.init(pageIndex: hotRecommentVM.pageIndex, pageSize: 20)
+        hotRecommentVM.list(r: request, successBlock: { [weak self] (hasMore) in
+            guard let `self` = self else {return}
+            self.hasMore = hasMore
+            finishBlock()
+        }) {
+            finishBlock()
+        }
     }
     
     // 添加轮播广告视图
@@ -61,11 +93,13 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
         let cycleScrollView = TYCyclePagerView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: 105))
         cycleScrollView.delegate = self
         cycleScrollView.dataSource = self
-        cycleScrollView.register(BannerViewCell.classForCoder(), forCellWithReuseIdentifier: kBannerCellID)
+        cycleScrollView.register(BannerViewCell.self, forCellWithReuseIdentifier: kBannerCellID)
         let pageControl = TYPageControl.init(frame: CGRect.init(x: 0, y: cycleScrollView.bounds.height - 26, width: cycleScrollView.bounds.width, height: 26))
+        self.pageControl = pageControl
         cycleScrollView.addSubview(pageControl)
         tableNode.view.tableHeaderView = cycleScrollView
-        // cycleScrollView.reloadData()
+        pageControl.numberOfPages = self.hotRecommentVM.focusList.count
+        cycleScrollView.reloadData()
     }
     
     // MARK:  - Lazy load
@@ -73,10 +107,20 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
         let table = ASTableNode.init(style: UITableView.Style.plain)
         table.delegate = self
         table.dataSource = self
+        table.leadingScreensForBatching = 1.0
         // table.view.register(, forHeaderFooterViewReuseIdentifier: )
         table.view.tableFooterView = UIView()
         return table
     }()
+
+    private lazy var hotRecommentVM: HotRecommentViewModel = { [weak self] in
+        let vm = HotRecommentViewModel()
+        vm.tableView = self?.tableNode
+        return vm
+    }()
+
+    var pageControl: TYPageControl?
+    var hasMore: Bool = false
     
 }
 
@@ -87,12 +131,20 @@ extension HotRecommentViewController: ASTableDataSource {
     }
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return hotRecommentVM.threadList.count
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         let cellBlock = {() -> ASCellNode in
             let cellNode = HotRecommentCellNode()
+            if ((tableNode.tn_reloadIndexPaths ?? []).contains(indexPath)) {
+                cellNode.neverShowPlaceholders = true
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                    cellNode.neverShowPlaceholders = false
+                })
+            } else {
+                cellNode.neverShowPlaceholders = false
+            }
             return cellNode
         }
         return cellBlock
@@ -112,6 +164,23 @@ extension HotRecommentViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         
     }
+
+    // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取
+    func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
+        return (self.hotRecommentVM.threadList.count > 0) && hasMore
+    }
+
+    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+        context.beginBatchFetching()
+        #warning("需要放在主线程")
+        self.requestMoreData(finishBlock: {
+            context.completeBatchFetching(true)
+        })
+        // [self.mainTableNode insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+
+
+    }
+
 }
 
 // MARK: - TYCyclePagerViewDelegate
@@ -119,17 +188,24 @@ extension HotRecommentViewController: TYCyclePagerViewDelegate {
     func pagerView(_ pageView: TYCyclePagerView, didSelectedItemCell cell: UICollectionViewCell, at index: Int) {
         
     }
+
+    func pagerView(_ pageView: TYCyclePagerView, didScrollFrom fromIndex: Int, to toIndex: Int) {
+        self.pageControl?.currentPage = toIndex
+    }
 }
 
+// MARK: - TYCyclePagerViewDataSource
 extension HotRecommentViewController: TYCyclePagerViewDataSource {
     func numberOfItems(in pageView: TYCyclePagerView) -> Int {
-        return 1
+        return hotRecommentVM.focusList.count
     }
     
     func pagerView(_ pagerView: TYCyclePagerView, cellForItemAt index: Int) -> UICollectionViewCell {
         guard let cell = pagerView.dequeueReusableCell(withReuseIdentifier: kBannerCellID, for: index) as? BannerViewCell else {
             return UICollectionViewCell()
         }
+        let model = hotRecommentVM.focusList[index]
+        cell.imageView.yy_imageURL = URL.init(string: model.img)
         return cell
     }
     

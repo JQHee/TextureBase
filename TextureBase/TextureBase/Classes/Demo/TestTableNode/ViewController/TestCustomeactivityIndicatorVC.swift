@@ -108,7 +108,6 @@ extension TestCustomeactivityIndicatorVC: ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         
         let cellNodeBlock: ASCellNodeBlock = { () -> ASCellNode in
-            #warning("需要自定义cell")
             let cell = CustomeactivityIndicatorCellNode()
             #warning("不放在主线程会崩溃")
             dispatch_async_safely_main_queue {
