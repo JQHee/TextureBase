@@ -48,7 +48,12 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
                 
             }
             self.tableNode.view.mj_header.endRefreshing()
-            }, footerCallBack: nil)
+            }, footerCallBack: { [weak self] in
+                guard let `self` = self else {
+                    return
+                }
+                self.tableNode.view.mj_footer.endRefreshing()
+        })
     }
     
     // 添加轮播广告视图
@@ -69,6 +74,7 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
         table.delegate = self
         table.dataSource = self
         // table.view.register(, forHeaderFooterViewReuseIdentifier: )
+        table.view.tableFooterView = UIView()
         return table
     }()
     

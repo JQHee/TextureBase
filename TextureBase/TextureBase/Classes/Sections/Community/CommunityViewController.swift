@@ -95,7 +95,7 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
 
         if !VCsDict.keys.contains(index) { // 不存在 (懒加载)
             if index == 0 {
-                let VC = UIViewController()
+                let VC = HotRecommentViewController()
                 let x = CGFloat(index) * scrollNode.view.bounds.width
                 VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
                 scrollNode.view.addSubview(VC.view)

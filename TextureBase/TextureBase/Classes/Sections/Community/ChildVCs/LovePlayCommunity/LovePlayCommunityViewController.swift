@@ -146,7 +146,8 @@ extension LovePlayCommunityViewController: ASCollectionDataSource {
 // MARK: - ASCollectionDelegate
 extension LovePlayCommunityViewController: ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
-        
+        // let model = kaneVM.discuzList[indexPath.section].detailList[indexPath.row]
+
     }
 }
 
