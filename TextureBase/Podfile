@@ -26,6 +26,8 @@ target 'TextureBase' do
   pod 'JXCategoryView', '~> 1.1.4' # 模拟器滑动切换的时候掉帧
   # pod 'TYPagerController', '~> 2.1.2'
   # pod 'TYAttributedLabel', '~> 2.6.6'
+  # 轮播广告
+  pod 'TYCyclePagerView', '~> 1.1.2'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
