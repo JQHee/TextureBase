@@ -26,6 +26,7 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         self.automaticallyAdjustsScrollViewInsets = false
         setupUI()
+        requestListData()
     }
     
     // MARK: - Private methods
@@ -34,7 +35,21 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         collectionNode.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        
+    }
+    
+    private func requestListData() {
+        let request = KaneRequest()
+        kaneVM.loadList(r: request, successBlock: { [weak self] in
+            guard let `self` = self else { return }
+            self.handleRequestResult()
+        }) { [weak self] in
+            guard let `self` = self else { return }
+            self.handleRequestResult()
+        }
+    }
+    
+    private func handleRequestResult() {
+        self.collectionNode.reloadData()
     }
     
     // MARK: - Lazy load
@@ -50,17 +65,19 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         clv.registerSupplementaryNode(ofKind: UICollectionView.elementKindSectionHeader)
         return clv
     }()
+    
+    lazy var kaneVM = KaneViewModel()
 
 }
 
 // MARK: - ASCollectionDataSource
 extension KaneViewController: ASCollectionDataSource {
     func numberOfSections(in collectionNode: ASCollectionNode) -> Int {
-        return 10
+        return kaneVM.discuzList.count
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return kaneVM.discuzList[section].detailList.count
     }
     
     // row 高度
@@ -71,9 +88,11 @@ extension KaneViewController: ASCollectionDataSource {
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let model = kaneVM.discuzList[indexPath.section].detailList[indexPath.row]
         let cellBlock = { () -> ASCellNode in
             let cellNode = KaneCellNode()
             cellNode.backgroundColor = UIColor.white
+            cellNode.model = model
             return cellNode
         }
         return cellBlock
@@ -82,8 +101,10 @@ extension KaneViewController: ASCollectionDataSource {
     // header
     func collectionNode(_ collectionNode: ASCollectionNode, nodeForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> ASCellNode {
         if kind == UICollectionView.elementKindSectionHeader {
+            let model = kaneVM.discuzList[indexPath.section]
             let cellNode = KaneSectionCellNode()
             cellNode.style.preferredSize = CGSize.init(width: node.bounds.width, height: 30)
+            cellNode.typeName = model.type.typeName
             return cellNode
         }
         return ASCellNode()

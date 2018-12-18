@@ -22,3 +22,9 @@ extension API {
     static let selectTop = "/news/topicOrderSource/list"
     static let selectList = "/news/config/config_focus_img/list/"
 }
+
+// MARK: - 社区
+extension API {
+    // 凯恩之角
+    static let kaneList = "/news/discuz/discuz_model_v2/list/center/1"
+}

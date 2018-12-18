@@ -16,6 +16,7 @@ import WebKit
 @_exported import SnapKit
 @_exported import MJRefresh
 @_exported import YYWebImage
+@_exported import SwiftyJSON
 
 // 常量
 var kScreenW: CGFloat {

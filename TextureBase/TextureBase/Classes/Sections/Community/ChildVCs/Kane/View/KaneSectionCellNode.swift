@@ -11,6 +11,12 @@ import AsyncDisplayKit
 
 class KaneSectionCellNode: ASCellNode {
     
+    var typeName: String = "" {
+        didSet {
+            textNode.attributedText = typeName.nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+        }
+    }
+    
     override init() {
         super.init()
         setupUI()
@@ -19,7 +25,6 @@ class KaneSectionCellNode: ASCellNode {
     // MARK: - Private methods
     private func setupUI() {
         addSubnode(textNode)
-        textNode.attributedText = "测试".nodeAttributes(color: UIColor.red, font: UIFont.systemFont(ofSize: 13))
 
         #warning("不设置node背景，防止挡住滚动条")
         textNode.placeholderEnabled = true
