@@ -57,7 +57,7 @@ override func calculateSizeThatFits(constrainedSize: CGSize) -> CGSize {
     direction： 主轴方向（排列方向：水平或垂直）
     spacing:    间距
     justifyContent： 主轴方向上子控件的排列方式
-    alignItems：十字轴方向（也就是与当前主轴垂直的那条轴）上子控件的排列方式
+    alignItems：十字轴方向（也就是与当前主轴垂直的那条轴）上子控件的排列方式 (stretch 在对应主轴内头、底部为0)
     flexShrink，flexGrow 当该控件比父控件大时，则可以在当前主轴方向上缩小或者拉伸自己，直至在当前方向上填满父空间。
     spacingBefore ， spacingAfter 如果是水平方向，before表示前面的间距，after表示后面的间距。如果是垂直方向，before表示上面的间距，after表示下面的间距
 
