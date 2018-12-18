@@ -63,7 +63,10 @@ class LovePlayCommunityViewController: ASViewController<ASDisplayNode> {
         if let _ = self.collectionNode.view.mj_header {
             self.collectionNode.view.mj_header.endRefreshing()
         }
-        self.collectionNode.reloadData()
+        UIView.performWithoutAnimation {
+            collectionNode.cn_reloadIndexPaths = collectionNode.indexPathsForVisibleItems
+            self.collectionNode.reloadData()
+        }
     }
     
     // MARK: - Lazy load
@@ -106,6 +109,14 @@ extension LovePlayCommunityViewController: ASCollectionDataSource {
             let cellNode = KaneCellNode()
             cellNode.backgroundColor = UIColor.white
             cellNode.model = model
+            if ((collectionNode.cn_reloadIndexPaths ?? []).contains(indexPath)) {
+                cellNode.neverShowPlaceholders = true
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                    cellNode.neverShowPlaceholders = false
+                })
+            } else {
+                cellNode.neverShowPlaceholders = false
+            }
             return cellNode
         }
         return cellBlock
@@ -118,6 +129,14 @@ extension LovePlayCommunityViewController: ASCollectionDataSource {
             let cellNode = KaneSectionCellNode()
             cellNode.style.preferredSize = CGSize.init(width: node.bounds.width, height: 30)
             cellNode.typeName = model.type.typeName
+            if ((collectionNode.cn_reloadIndexPaths ?? []).contains(indexPath)) {
+                cellNode.neverShowPlaceholders = true
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                    cellNode.neverShowPlaceholders = false
+                })
+            } else {
+                cellNode.neverShowPlaceholders = false
+            }
             return cellNode
         }
         return ASCellNode()
