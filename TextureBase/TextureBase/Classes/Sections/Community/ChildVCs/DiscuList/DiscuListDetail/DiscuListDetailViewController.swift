@@ -123,11 +123,11 @@ extension DiscuListDetailViewController: ASTableDataSource {
         return discuListDetailVM.list.count
     }
 
-    func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
-        let minSize = CGSize.init(width: tableNode.bounds.width, height: 100)
-        let maxSize = CGSize.init(width: tableNode.bounds.width, height: 200)
-        return ASSizeRange.init(min: minSize, max: maxSize)
-    }
+//    func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
+//        let minSize = CGSize.init(width: tableNode.bounds.width, height: 100)
+//        let maxSize = CGSize.init(width: tableNode.bounds.width, height: 200)
+//        return ASSizeRange.init(min: minSize, max: maxSize)
+//    }
 
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         

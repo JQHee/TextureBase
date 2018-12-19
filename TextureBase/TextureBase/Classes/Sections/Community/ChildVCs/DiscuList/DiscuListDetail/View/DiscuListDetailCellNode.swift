@@ -23,7 +23,7 @@ class DiscuListDetailCellNode: ASCellNode {
 
         #warning("文本内容需要处理")
         dispatch_async_safely_main_queue {
-            // (self.contentTextNode.view as? TYAttributedLabel)?.text = "122"
+            (self.contentTextNode.view as? TYAttributedLabel)?.textContainer = list.textContainer
         }
         //self.contentTextNode.attributedText = list.message.nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
     }
@@ -35,8 +35,17 @@ class DiscuListDetailCellNode: ASCellNode {
 
     override func didLoad() {
         super.didLoad()
-        (self.contentTextNode.view as? TYAttributedLabel)?.textContainer = list.textContainer
 
+    }
+
+    override func layout() {
+        super.layout()
+        guard let label = self.contentTextNode.view as? TYAttributedLabel else {
+            return
+        }
+        label.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: list.textContainer.textHeight)
+        label.textColor = UIColor.red
+        label.backgroundColor = UIColor.orange
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -82,9 +91,9 @@ class DiscuListDetailCellNode: ASCellNode {
     lazy var contentTextNode: ASDisplayNode = {
         let view = ASDisplayNode.init(viewBlock: { () -> UIView in
             let label = TYAttributedLabel()
-            label.textColor = UIColor.red
             return label
         })
+        view.backgroundColor = .red
         return view
     }()
 }
