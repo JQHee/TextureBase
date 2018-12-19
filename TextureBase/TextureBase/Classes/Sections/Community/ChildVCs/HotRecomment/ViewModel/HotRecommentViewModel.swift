@@ -45,8 +45,11 @@ class HotRecommentViewModel {
             }
             // self.tableView?.view.mj_footer.endRefreshing()
         }
-        self.tableView?.tn_reloadIndexPaths = self.tableView?.indexPathsForVisibleRows()
-        self.tableView?.reloadData()
+        UIView.performWithoutAnimation {
+            self.tableView?.tn_reloadIndexPaths = self.tableView?.indexPathsForVisibleRows()
+            self.tableView?.reloadData()
+        }
+
     }
 
     func handFailureResult() {
@@ -59,8 +62,10 @@ class HotRecommentViewModel {
             self.tableView?.view.mj_header.endRefreshing()
             // self.tableView?.view.mj_footer.endRefreshing()
         }
-        self.tableView?.tn_reloadIndexPaths = self.tableView?.indexPathsForVisibleRows()
-        self.tableView?.reloadData()
+        UIView.performWithoutAnimation {
+            self.tableView?.tn_reloadIndexPaths = self.tableView?.indexPathsForVisibleRows()
+            self.tableView?.reloadData()
+        }
     }
 
 }

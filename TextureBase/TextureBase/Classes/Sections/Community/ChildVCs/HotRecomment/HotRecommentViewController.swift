@@ -99,6 +99,7 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
         cycleScrollView.addSubview(pageControl)
         tableNode.view.tableHeaderView = cycleScrollView
         pageControl.numberOfPages = self.hotRecommentVM.focusList.count
+        #warning("如果不reload布局会出现不正常")
         cycleScrollView.reloadData()
     }
     
@@ -135,8 +136,11 @@ extension HotRecommentViewController: ASTableDataSource {
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let model = hotRecommentVM.threadList[indexPath.row]
         let cellBlock = {() -> ASCellNode in
             let cellNode = HotRecommentCellNode()
+            cellNode.selectionStyle = .none
+            cellNode.list = model
             if ((tableNode.tn_reloadIndexPaths ?? []).contains(indexPath)) {
                 cellNode.neverShowPlaceholders = true
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {

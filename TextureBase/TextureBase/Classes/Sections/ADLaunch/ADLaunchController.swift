@@ -117,7 +117,9 @@ class ADLaunchController: ASViewController<ASDisplayNode> {
     @objc
     func timeCount() {
         count -= 1
-        adLaunchView.skipButtonNode.setTitle("跳过广告 \(count)s", with: UIFont.systemFont(ofSize: 13), with: UIColor.white, for: UIControl.State.normal)
+        if count > 0 {
+            adLaunchView.skipButtonNode.setTitle("跳过广告 \(count)s", with: UIFont.systemFont(ofSize: 13), with: UIColor.white, for: UIControl.State.normal)
+        }
         if count == 0 {
             dismissController()
         }
