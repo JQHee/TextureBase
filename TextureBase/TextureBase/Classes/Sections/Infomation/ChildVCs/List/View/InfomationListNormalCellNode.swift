@@ -39,25 +39,32 @@ class InfomationListNormalCellNode: ASCellNode {
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
-        replayIconImageNode.style.preferredSize = CGSize.init(width: 12, height: 12)
-        iconImageNode.style.preferredSize = CGSize.init(width: 75, height: 75)
+        replayIconImageNode.style.preferredSize = CGSize.init(width: 11, height: 11)
+        iconImageNode.style.preferredSize = CGSize.init(width: 84, height: 62)
+        titleTextNode.style.flexShrink = 1
         
         // 评论数排序
         let rightBottomSpec = ASStackLayoutSpec.horizontal()
         rightBottomSpec.children = [replayIconImageNode, replayCountTextNode]
         rightBottomSpec.spacing = 5
+        rightBottomSpec.alignItems = .center
+        rightBottomSpec.justifyContent = .start
         
         // 右边内容上下排列
         let rightSpec = ASStackLayoutSpec.vertical()
         rightSpec.children = [titleTextNode, rightBottomSpec]
-        rightSpec.spacing = 10
+        rightSpec.spacing = 0
+        rightSpec.alignItems = .start
         #warning("子元素在主轴上的对齐方式")
         rightSpec.justifyContent = .spaceBetween
+        #warning("不设置则titileTextNode不能换行")
+        rightSpec.style.flexShrink = 1
         
         // 左右排列
         let contentSpec = ASStackLayoutSpec.horizontal()
         contentSpec.children = [iconImageNode, rightSpec]
         contentSpec.spacing = 10
+        contentSpec.alignItems = .stretch
         
         let insetSpec = ASInsetLayoutSpec.init(insets: UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10), child: contentSpec)
         return insetSpec
