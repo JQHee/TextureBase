@@ -99,7 +99,8 @@ extension LovePlayCommunityViewController: ASCollectionDataSource {
     // row 高度
     func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForItemAt indexPath: IndexPath) -> ASSizeRange {
         // (node.bounds.width - 1) / 2.0 就会自动居中
-        let minAndMaxSize = CGSize.init(width: (node.bounds.width - 1) / 2.0, height: 70)
+        let space: CGFloat = node.bounds.width.truncatingRemainder(dividingBy: 2.0) == 0 ? 1.5 : 0
+        let minAndMaxSize = CGSize.init(width: (node.bounds.width - space) / 2.0, height: 70)
         return ASSizeRange.init(min: minAndMaxSize, max: minAndMaxSize)
     }
     

@@ -38,4 +38,6 @@ extension API {
     static let infomationList = "/user/article/list/"
     // 论坛列表
     static let discuList = "http://bbs.d.163.com/api/mobile/index.php"
+    // 论坛列表顶部的图片（待接入）
+    static let discuListHeaderImg = "/news/discuz/discuz_model/fid_img"
 }

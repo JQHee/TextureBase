@@ -178,7 +178,19 @@ extension DiscuListViewController: ASTableDataSource {
 // MARK: - ASTableDelegate
 extension DiscuListViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
-        
+        var id = ""
+        if indexPath.section == 0 {
+            let model = self.discuListVM.topList[indexPath.row]
+            id = model.tid
+        } else {
+            let model = self.discuListVM.threadList[indexPath.row]
+            id = model.tid
+
+        }
+        let VC = DiscuListDetailViewController()
+        VC.tid = id
+        self.navigationController?.pushViewController(VC, animated: true)
+
     }
     
     // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取

@@ -109,7 +109,8 @@ class HotRecommentViewController: ASViewController<ASDisplayNode> {
         table.delegate = self
         table.dataSource = self
         table.leadingScreensForBatching = 1.0
-        // table.view.register(, forHeaderFooterViewReuseIdentifier: )
+        let nib = UINib.init(nibName: "HotRecommentSectionView", bundle: nil)
+        table.view.register( nib, forHeaderFooterViewReuseIdentifier: "HotRecommentSectionView")
         table.view.tableFooterView = UIView()
         return table
     }()
@@ -155,7 +156,7 @@ extension HotRecommentViewController: ASTableDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return HotRecommentSectionView.loadNib()
+        return tableView.dequeueReusableHeaderFooterView(withIdentifier: "HotRecommentSectionView")
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
