@@ -38,6 +38,8 @@
 		5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725CA021C77B41003183FD /* KaneViewController.swift */; };
 		5E725CA421C780ED003183FD /* KaneCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725CA321C780ED003183FD /* KaneCellNode.swift */; };
 		5E725CA621C78105003183FD /* KaneSectionCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725CA521C78105003183FD /* KaneSectionCellNode.swift */; };
+		5E72838121C9D3DA0090C2E9 /* InfomationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72838021C9D3DA0090C2E9 /* InfomationListViewController.swift */; };
+		5E72838421C9D4A60090C2E9 /* NewsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E72838321C9D4A60090C2E9 /* NewsInfo.plist */; };
 		5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */; };
 		5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */; };
 		5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */; };
@@ -157,6 +159,8 @@
 		5E725CA021C77B41003183FD /* KaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneViewController.swift; sourceTree = "<group>"; };
 		5E725CA321C780ED003183FD /* KaneCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneCellNode.swift; sourceTree = "<group>"; };
 		5E725CA521C78105003183FD /* KaneSectionCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaneSectionCellNode.swift; sourceTree = "<group>"; };
+		5E72838021C9D3DA0090C2E9 /* InfomationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationListViewController.swift; sourceTree = "<group>"; };
+		5E72838321C9D4A60090C2E9 /* NewsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NewsInfo.plist; path = "../../../../../LovePlayNews-master/LovePlayNews/NewsInfo.plist"; sourceTree = "<group>"; };
 		5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoEdgeIcon.png; sourceTree = "<group>"; };
 		5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEdgeIconCellNode.swift; sourceTree = "<group>"; };
 		5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeInsertTopAndBottomLine.swift; sourceTree = "<group>"; };
@@ -415,6 +419,30 @@
 				5E725CA521C78105003183FD /* KaneSectionCellNode.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5E72837E21C9D3A80090C2E9 /* ChildVCs */ = {
+			isa = PBXGroup;
+			children = (
+				5E72837F21C9D3BA0090C2E9 /* List */,
+			);
+			path = ChildVCs;
+			sourceTree = "<group>";
+		};
+		5E72837F21C9D3BA0090C2E9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				5E72838021C9D3DA0090C2E9 /* InfomationListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		5E72838221C9D4960090C2E9 /* Infomation */ = {
+			isa = PBXGroup;
+			children = (
+				5E72838321C9D4A60090C2E9 /* NewsInfo.plist */,
+			);
+			path = Infomation;
 			sourceTree = "<group>";
 		};
 		5E850F6A21C33EF6002A31E0 /* PhotoEdgeIcon */ = {
@@ -760,6 +788,7 @@
 		66F18A5821C3D42B0009A074 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E72838221C9D4960090C2E9 /* Infomation */,
 				66F18A5D21C3D66A0009A074 /* Images */,
 			);
 			path = Resources;
@@ -801,6 +830,7 @@
 		66F18A6221C3D8560009A074 /* Infomation */ = {
 			isa = PBXGroup;
 			children = (
+				5E72837E21C9D3A80090C2E9 /* ChildVCs */,
 				66F18A6C21C3D8FB0009A074 /* InfomationViewController.swift */,
 			);
 			path = Infomation;
@@ -1000,6 +1030,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E72838421C9D4A60090C2E9 /* NewsInfo.plist in Resources */,
 				66F18A7A21C3E07F0009A074 /* welecome3.png in Resources */,
 				66F18A8521C3F7B30009A074 /* MineHeaderView.xib in Resources */,
 				5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */,
@@ -1183,6 +1214,7 @@
 				5E6AA59A21C8C92300EC4897 /* HotRecommentSectionView.swift in Sources */,
 				66A4225421C676D1003D5E40 /* SelectItemCellNode.swift in Sources */,
 				5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */,
+				5E72838121C9D3DA0090C2E9 /* InfomationListViewController.swift in Sources */,
 				6698468921C7C74B0060DE9C /* MJRefresh-Extension.swift in Sources */,
 				5E6AA59221C8825A00EC4897 /* KaneModel.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,

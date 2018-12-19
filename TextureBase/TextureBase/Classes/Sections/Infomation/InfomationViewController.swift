@@ -62,6 +62,8 @@ class InfomationViewController: ASViewController<ASDisplayNode> {
         node.addSubnode(categoryView)
         node.addSubnode(scrollNode)
         
+        print(newsInfo)
+        
         guard let tcategoryView = categoryView.view as? JXCategoryTitleView else {
             return
         }
@@ -94,13 +96,10 @@ class InfomationViewController: ASViewController<ASDisplayNode> {
     func showVCWithIndex(index: Int) {
         
         if !VCsDict.keys.contains(index) { // 不存在 (懒加载)
-            let VC = UIViewController()
+            let VC = InfomationListViewController()
+            VC.topId = (newsInfo[index] as! Dictionary)["id"] ?? ""
             let x = CGFloat(index) * scrollNode.view.bounds.width
             VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
-            VC.view.backgroundColor = index == 0 ? UIColor.orange : UIColor.gray
-            if index == 2 {
-                VC.view.backgroundColor = UIColor.white
-            }
             scrollNode.view.addSubview(VC.view)
             VCsDict[index] = VC
             // 加载数据
@@ -143,8 +142,16 @@ class InfomationViewController: ASViewController<ASDisplayNode> {
         })
     }()
     
-    lazy var titles: [String] = ["头条", "网游", "手游", "主机", "电竞", "暴雪"]
+    lazy var titles: [String] = newsInfo.compactMap {($0 as! Dictionary)["title"]}
     lazy var VCsDict: [Int: UIViewController] = [Int: UIViewController]()
+    lazy var newsInfo: NSArray = {
+        let path = Bundle.main.path(forResource: "NewsInfo", ofType: "plist") ?? ""
+        let data = NSDictionary.init(contentsOfFile: path)
+        guard let array = data?["newsPageInfos"] as? NSArray else {
+            return NSArray()
+        }
+        return  array
+    }()
     
 }
 
