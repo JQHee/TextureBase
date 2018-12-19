@@ -22,14 +22,16 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
         fatalError("init(coder:) has not been implemented")
     }
     
+    #warning ("隐藏导航栏一定要带动画， 不然会出现断层")
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,6 +45,7 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
         }
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = tcategoryView.selectedIndex == 0 ? true : false
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
