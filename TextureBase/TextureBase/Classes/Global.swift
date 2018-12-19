@@ -35,6 +35,11 @@ var kNavBarH: CGFloat {
     return 44.0
 }
 
+// 分页加载的数量
+var kPageSize: Int {
+    return 20
+}
+
 // 全局方法
 // 获取主线程做相关操作
 func dispatch_async_safely_main_queue(_ block: @escaping () -> Void) {
@@ -50,7 +55,8 @@ func dispatch_async_safely_main_queue(_ block: @escaping () -> Void) {
 // DEBUG日志的打印
 func print(_ something: @autoclosure () -> Any) {
     #if DEBUG
-    Swift.print(something())
+    let fileName = (#file as NSString).lastPathComponent
+    Swift.print("\(fileName):(\(#line))-\(something())")
     #endif
 }
 

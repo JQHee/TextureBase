@@ -219,7 +219,10 @@ extension SelectViewController: ASCollectionDelegate {
         if indexPath.section > 0 {
             let model = selectVM.listInfos[indexPath.row]
             print(model.id)
-            let VC = SelectGameNewsViewController()
+            let VC = InfomationListViewController()
+            VC.topId = String(model.topicId)
+            VC.sourceType = model.sourceType
+            VC.title = model.topicName
             self.navigationController?.pushViewController(VC, animated: true)
             
         }

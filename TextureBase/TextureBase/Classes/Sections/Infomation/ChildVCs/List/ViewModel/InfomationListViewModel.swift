@@ -1,28 +1,27 @@
 //
-//  HotRecommentViewModel.swift
+//  InfomationListViewModel.swift
 //  TextureBase
 //
-//  Created by HJQ on 2018/12/18.
-//  Copyright © 2018 ml. All rights reserved.
+//  Created by midland on 2018/12/19.
+//  Copyright © 2018年 ml. All rights reserved.
 //
 
 import UIKit
 import SwiftyJSON
 
-class HotRecommentViewModel {
-
+class InfomationListViewModel {
+    
     var tableView: ASTableNode?
     var pageIndex = 1
-    var focusList = [HotRecommentFocusList]()
-    var threadList = [HotRecommentThreadList]()
-
-    func list(r: HotRecommentRequest, successBlock: @escaping (_ hasMore: Bool) -> (), failureBlock: @escaping () -> ()) {
+    var info = [InfomationListInfo]()
+    
+    func list(r: InfomationListRequest, successBlock: @escaping (_ hasMore: Bool) -> (), failureBlock: @escaping () -> ()) {
         HTTPClient.shared.send(r, progressBlock: { (progress) in
-
+            
         }, success: { (result) in
-            let info = HotRecommentModel.init(json: JSON.init(result)).info
-            self.handleSuccessResult(info: info)
-            successBlock(info.threadList.isEmpty ? false : true)
+            let model = InfomationListModel.init(json: JSON.init(result))
+            self.handleSuccessResult(model: model)
+            successBlock(model.info.isEmpty ? false : true)
         }, failure: { (error) in
             self.handFailureResult()
             failureBlock()
@@ -31,16 +30,15 @@ class HotRecommentViewModel {
             failureBlock()
         }
     }
-
-    func handleSuccessResult(info: HotRecommentInfo) {
+    
+    func handleSuccessResult(model: InfomationListModel) {
         if pageIndex == 1 {
-            focusList = info.focusList
-            threadList = info.threadList
+            self.info = model.info
             // self.tableView?.view.mj_footer.isHidden = false
             self.tableView?.view.mj_header.endRefreshing()
         } else {
-            threadList += info.threadList
-            if info.threadList.isEmpty {
+            self.info += model.info
+            if model.info.isEmpty {
                 // self.tableView?.view.mj_footer.isHidden = true
             }
             // self.tableView?.view.mj_footer.endRefreshing()
@@ -49,13 +47,12 @@ class HotRecommentViewModel {
             self.tableView?.tn_reloadIndexPaths = self.tableView?.indexPathsForVisibleRows()
             self.tableView?.reloadData()
         }
-
+        
     }
-
+    
     func handFailureResult() {
         if pageIndex == 1 {
-            focusList = [HotRecommentFocusList]()
-            threadList = [HotRecommentThreadList]()
+            info = [InfomationListInfo]()
             // self.tableView?.view.mj_footer.resetNoMoreData()
             self.tableView?.view.mj_header.endRefreshing()
         } else {
@@ -68,5 +65,5 @@ class HotRecommentViewModel {
             self.tableView?.reloadData()
         }
     }
-
+    
 }

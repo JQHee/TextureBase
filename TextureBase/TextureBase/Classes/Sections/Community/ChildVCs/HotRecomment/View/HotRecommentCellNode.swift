@@ -41,7 +41,7 @@ class HotRecommentCellNode: ASCellNode {
         addSubnode(sendTextNode)
         
         titleTextNode.maximumNumberOfLines = 2
-        titleTextNode.placeholderEnabled = true;
+        titleTextNode.placeholderEnabled = true
         titleTextNode.placeholderColor = UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1.0)
         titleTextNode.isLayerBacked = true
         

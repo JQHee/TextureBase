@@ -31,3 +31,9 @@ extension API {
     static let kaneList = "/news/discuz/discuz_model_v2/list/center/1"
     static let lovePlayList = "/news/discuz/discuz_model_v2/list/center/0"
 }
+
+// MAKR: - 资讯
+extension API {
+    // 资讯列表
+    static let infomationList = "/user/article/list/"
+}
