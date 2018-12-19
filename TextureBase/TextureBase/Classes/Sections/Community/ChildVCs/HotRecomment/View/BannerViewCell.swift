@@ -13,6 +13,9 @@ class BannerViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(imageView)
+        imageView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -21,7 +24,6 @@ class BannerViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.frame = bounds
     }
     
     lazy var imageView = UIImageView()

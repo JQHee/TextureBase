@@ -25,6 +25,8 @@ extension API {
 
 // MARK: - 社区
 extension API {
+    // 热门推荐
+    static let hotRecomment = "/news/discuz/forum_recommend_detail"
     // 凯恩之角
     static let kaneList = "/news/discuz/discuz_model_v2/list/center/1"
     static let lovePlayList = "/news/discuz/discuz_model_v2/list/center/0"

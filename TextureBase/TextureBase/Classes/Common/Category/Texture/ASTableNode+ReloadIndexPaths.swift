@@ -37,7 +37,7 @@ extension ASCollectionNode {
 }
 
 /* 可视cell刷新
- _tableNode.js_reloadIndexPaths = _tableNode.indexPathsForVisibleRows;
+ _tableNode.js_reloadIndexPaths = _tableNode.indexPathsForVisibleRows()
  [self.tableNode reloadData];
  */
 
