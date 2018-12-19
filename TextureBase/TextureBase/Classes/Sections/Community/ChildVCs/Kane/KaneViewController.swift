@@ -146,8 +146,11 @@ extension KaneViewController: ASCollectionDataSource {
 // MARK: - ASCollectionDelegate
 extension KaneViewController: ASCollectionDelegate {
     func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
-       // let model = kaneVM.discuzList[indexPath.section].detailList[indexPath.row]
-
+        let model = kaneVM.discuzList[indexPath.section].detailList[indexPath.row]
+        let VC = DiscuListViewController()
+        VC.fid = String(model.fid)
+        VC.title = model.modelName
+        self.navigationController?.pushViewController(VC, animated: true)
     }
 }
 

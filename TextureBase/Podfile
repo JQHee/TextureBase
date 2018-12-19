@@ -9,7 +9,7 @@ target 'TextureBase' do
   pod 'SnapKit', '~> 4.2.0'
   pod 'MJRefresh', '~> 3.1.15.7'
   # 5.0 不支持 iOS 9
-  # pod 'Kingfisher', '~> 4.10.1'
+  pod 'Kingfisher', '~> 4.10.1'
   pod 'YYWebImage', '~> 1.0.5'
   # pod 'JPFPSStatus', '~> 0.1.1'
   pod 'MLeaksFinder', '~> 1.0.0'
@@ -21,7 +21,6 @@ target 'TextureBase' do
   pod 'MXParallaxHeader', '~> 0.6.1'
   pod 'Alamofire', '~> 4.8.0'
   pod 'SwiftyJSON', '~> 4.2.0'
-  pod 'Kingfisher', '~> 4.10.1'
   # 分页查看器
   pod 'JXCategoryView', '~> 1.1.4' # 模拟器滑动切换的时候掉帧
   # pod 'TYPagerController', '~> 2.1.2'

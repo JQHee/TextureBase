@@ -28,6 +28,23 @@ class HotRecommentCellNode: ASCellNode {
             sendTextNode.attributedText = attr
         }
     }
+    
+    // 论坛列表
+    var formList: DiscuListForum_threadlist! {
+        didSet {
+            let titleColor = UIColor.init(red: 36/255.0, green: 36/255.0, blue: 36/255.0, alpha: 1.0)
+            titleTextNode.attributedText = formList.subject.nodeAttributes(color: titleColor, font: UIFont.init(name: "HelveticaNeue", size: 15) ?? UIFont.systemFont(ofSize: 15))
+            let color = UIColor.init(red: 150/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0)
+            replayTextNode.attributedText = "\(formList.replies)回复".nodeAttributes(color: color, font: UIFont.init(name: "HelveticaNeue", size: 11) ?? UIFont.systemFont(ofSize: 11))
+            nameTextNode.attributedText = formList.lastpost.nodeAttributes(color: color, font: UIFont.init(name: "HelveticaNeue", size: 11) ?? UIFont.systemFont(ofSize: 11))
+            
+            let attrs = [NSAttributedString.Key.font: UIFont.init(name: "HelveticaNeue", size: 11) ?? UIFont.systemFont(ofSize: 11), NSAttributedString.Key.foregroundColor: color]
+            let detailText = "\(formList.lastposter)" as NSString
+            let attr = NSMutableAttributedString.init(string: detailText as String, attributes: attrs)
+            sendTextNode.attributedText = attr
+        }
+    }
+    
     override init() {
         super.init()
         setupUI()

@@ -36,4 +36,6 @@ extension API {
 extension API {
     // 资讯列表
     static let infomationList = "/user/article/list/"
+    // 论坛列表
+    static let discuList = "http://bbs.d.163.com/api/mobile/index.php"
 }

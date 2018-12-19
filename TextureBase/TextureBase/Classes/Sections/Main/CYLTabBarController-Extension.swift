@@ -95,8 +95,7 @@ class BFTabBarController: CYLTabBarController {
         super.viewDidLoad()
         viewBindEvents()
     }
-    
-    // MARK: - Private methods
+
     // MARK: - Private methdos
     func setupRootVC() {
         BFTabBarController.fullFunction()
