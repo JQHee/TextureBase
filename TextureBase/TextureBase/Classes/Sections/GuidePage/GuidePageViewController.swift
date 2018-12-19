@@ -33,6 +33,10 @@ class GuidePageViewController: ASViewController<ASDisplayNode> {
             make.height.equalTo(30)
         }
     }
+    
+    deinit {
+        print("guide page deinit")
+    }
 
     // MARK: - Private methods
     private func setupContents() {

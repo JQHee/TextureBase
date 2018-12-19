@@ -31,7 +31,6 @@
 		5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */; };
 		5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */; };
 		5E725C9221C72EC7003183FD /* AWSelectListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9121C72EC7003183FD /* AWSelectListModel.swift */; };
-		5E725C9521C73AA4003183FD /* SelectGameNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9421C73AA4003183FD /* SelectGameNewsViewController.swift */; };
 		5E725C9721C73E53003183FD /* BFWebBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9621C73E53003183FD /* BFWebBrowserController.swift */; };
 		5E725C9B21C77A50003183FD /* HotRecommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9A21C77A50003183FD /* HotRecommentViewController.swift */; };
 		5E725C9E21C77AC3003183FD /* LovePlayCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E725C9D21C77AC3003183FD /* LovePlayCommunityViewController.swift */; };
@@ -46,6 +45,10 @@
 		5E72839021C9F0980090C2E9 /* InfomationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72838F21C9F0980090C2E9 /* InfomationListViewModel.swift */; };
 		5E72839221C9F0B10090C2E9 /* InfomationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72839121C9F0B10090C2E9 /* InfomationListModel.swift */; };
 		5E72839421C9F0CD0090C2E9 /* InfomationListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72839321C9F0CD0090C2E9 /* InfomationListRequest.swift */; };
+		5E72839A21CA193D0090C2E9 /* InfomationDetailCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72839921CA193D0090C2E9 /* InfomationDetailCommentViewController.swift */; };
+		5E72839C21CA194F0090C2E9 /* InfomationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72839B21CA194F0090C2E9 /* InfomationDetailViewController.swift */; };
+		5E72839F21CA21C60090C2E9 /* DiscuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72839E21CA21C60090C2E9 /* DiscuListViewController.swift */; };
+		5E7283A221CA22290090C2E9 /* DiscuListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7283A121CA22290090C2E9 /* DiscuListDetailViewController.swift */; };
 		5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */; };
 		5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */; };
 		5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */; };
@@ -158,7 +161,6 @@
 		5E71773E21C25D24003BCAE5 /* textInsertBlowImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textInsertBlowImage.png; sourceTree = "<group>"; };
 		5E71774021C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsertBlowImageCellNode.swift; sourceTree = "<group>"; };
 		5E725C9121C72EC7003183FD /* AWSelectListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSelectListModel.swift; sourceTree = "<group>"; };
-		5E725C9421C73AA4003183FD /* SelectGameNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameNewsViewController.swift; sourceTree = "<group>"; };
 		5E725C9621C73E53003183FD /* BFWebBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFWebBrowserController.swift; sourceTree = "<group>"; };
 		5E725C9A21C77A50003183FD /* HotRecommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewController.swift; sourceTree = "<group>"; };
 		5E725C9D21C77AC3003183FD /* LovePlayCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovePlayCommunityViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,10 @@
 		5E72838F21C9F0980090C2E9 /* InfomationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationListViewModel.swift; sourceTree = "<group>"; };
 		5E72839121C9F0B10090C2E9 /* InfomationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationListModel.swift; sourceTree = "<group>"; };
 		5E72839321C9F0CD0090C2E9 /* InfomationListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationListRequest.swift; sourceTree = "<group>"; };
+		5E72839921CA193D0090C2E9 /* InfomationDetailCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailCommentViewController.swift; sourceTree = "<group>"; };
+		5E72839B21CA194F0090C2E9 /* InfomationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailViewController.swift; sourceTree = "<group>"; };
+		5E72839E21CA21C60090C2E9 /* DiscuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscuListViewController.swift; sourceTree = "<group>"; };
+		5E7283A121CA22290090C2E9 /* DiscuListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscuListDetailViewController.swift; sourceTree = "<group>"; };
 		5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoEdgeIcon.png; sourceTree = "<group>"; };
 		5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEdgeIconCellNode.swift; sourceTree = "<group>"; };
 		5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeInsertTopAndBottomLine.swift; sourceTree = "<group>"; };
@@ -373,17 +379,10 @@
 			path = TextInsertBlowImage;
 			sourceTree = "<group>";
 		};
-		5E725C9321C73A80003183FD /* GameNews */ = {
-			isa = PBXGroup;
-			children = (
-				5E725C9421C73AA4003183FD /* SelectGameNewsViewController.swift */,
-			);
-			path = GameNews;
-			sourceTree = "<group>";
-		};
 		5E725C9821C779F8003183FD /* ChildVCs */ = {
 			isa = PBXGroup;
 			children = (
+				5E72839D21CA21B30090C2E9 /* DiscuList */,
 				5E725C9F21C77B32003183FD /* Kane */,
 				5E725C9C21C77AB5003183FD /* LovePlayCommunity */,
 				5E725C9921C77A3C003183FD /* HotRecomment */,
@@ -436,6 +435,8 @@
 		5E72837E21C9D3A80090C2E9 /* ChildVCs */ = {
 			isa = PBXGroup;
 			children = (
+				5E72839821CA19290090C2E9 /* InfomationDetailComment */,
+				5E72839721CA19070090C2E9 /* InfomationDetail */,
 				5E72837F21C9D3BA0090C2E9 /* List */,
 			);
 			path = ChildVCs;
@@ -493,6 +494,39 @@
 				5E72838F21C9F0980090C2E9 /* InfomationListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E72839721CA19070090C2E9 /* InfomationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5E72839B21CA194F0090C2E9 /* InfomationDetailViewController.swift */,
+			);
+			path = InfomationDetail;
+			sourceTree = "<group>";
+		};
+		5E72839821CA19290090C2E9 /* InfomationDetailComment */ = {
+			isa = PBXGroup;
+			children = (
+				5E72839921CA193D0090C2E9 /* InfomationDetailCommentViewController.swift */,
+			);
+			path = InfomationDetailComment;
+			sourceTree = "<group>";
+		};
+		5E72839D21CA21B30090C2E9 /* DiscuList */ = {
+			isa = PBXGroup;
+			children = (
+				5E7283A021CA22200090C2E9 /* DiscuListDetail */,
+				5E72839E21CA21C60090C2E9 /* DiscuListViewController.swift */,
+			);
+			path = DiscuList;
+			sourceTree = "<group>";
+		};
+		5E7283A021CA22200090C2E9 /* DiscuListDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5E7283A121CA22290090C2E9 /* DiscuListDetailViewController.swift */,
+			);
+			path = DiscuListDetail;
 			sourceTree = "<group>";
 		};
 		5E850F6A21C33EF6002A31E0 /* PhotoEdgeIcon */ = {
@@ -889,7 +923,6 @@
 		66F18A6321C3D86C0009A074 /* Select */ = {
 			isa = PBXGroup;
 			children = (
-				5E725C9321C73A80003183FD /* GameNews */,
 				66A4225021C66D49003D5E40 /* ViewModel */,
 				66A4224F21C66D3A003D5E40 /* Util */,
 				66A4224E21C66D2D003D5E40 /* Model */,
@@ -1272,6 +1305,7 @@
 				5E6AA59221C8825A00EC4897 /* KaneModel.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
 				6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */,
+				5E72839A21CA193D0090C2E9 /* InfomationDetailCommentViewController.swift in Sources */,
 				5E725CA621C78105003183FD /* KaneSectionCellNode.swift in Sources */,
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
 				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
@@ -1284,14 +1318,15 @@
 				6698468C21C7C7660060DE9C /* BFRefreshNormalHeader.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
+				5E72839F21CA21C60090C2E9 /* DiscuListViewController.swift in Sources */,
 				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
 				66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */,
 				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */,
-				5E725C9521C73AA4003183FD /* SelectGameNewsViewController.swift in Sources */,
 				5E6AA59421C8826C00EC4897 /* KaneRequest.swift in Sources */,
 				66F18A8421C3F7B30009A074 /* MineHeaderView.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
+				5E72839C21CA194F0090C2E9 /* InfomationDetailViewController.swift in Sources */,
 				5E725C9E21C77AC3003183FD /* LovePlayCommunityViewController.swift in Sources */,
 				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
 				66A4223521C5F981003D5E40 /* API.swift in Sources */,
@@ -1320,6 +1355,7 @@
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
+				5E7283A221CA22290090C2E9 /* DiscuListDetailViewController.swift in Sources */,
 				66A4225F21C68FBE003D5E40 /* SelectPagerCellNode.swift in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
