@@ -8,8 +8,16 @@
 
 import UIKit
 
-class InfomationDetailSectionFooterView: UIView {
+class InfomationDetailSectionFooterView: UITableViewHeaderFooterView {
 
-
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundView = UIView.init(frame: bounds)
+        self.backgroundView?.backgroundColor = UIColor.white
+    }
 
 }
