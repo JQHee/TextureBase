@@ -167,7 +167,11 @@ extension HotRecommentViewController: ASTableDataSource {
 // MARK: - ASTableDelegate
 extension HotRecommentViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
-        
+        // 查询详情
+        let model = hotRecommentVM.threadList[indexPath.row]
+        let VC = DiscuListDetailViewController()
+        VC.tid = model.tid
+        self.navigationController?.pushViewController(VC, animated: true)
     }
 
     // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取
