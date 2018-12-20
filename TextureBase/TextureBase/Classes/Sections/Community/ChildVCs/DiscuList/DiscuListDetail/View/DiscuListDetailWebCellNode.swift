@@ -22,15 +22,8 @@ class DiscuListDetailWebCellNode: ASCellNode {
         
 
         dispatch_async_safely_main_queue {
-            guard let webView = self.webViewNode.view as? UIWebView else {
-                return
-            }
-            guard let url = URL.init(string: "https://www.baidu.com") else {
-                return
-            }
-            webView.loadRequest(URLRequest.init(url: url))
+            self.loadWebHtml(htmlBody: list.message as NSString)
         }
-      
     }
 
     var webViewHeight: CGFloat = 0
@@ -58,7 +51,7 @@ class DiscuListDetailWebCellNode: ASCellNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
 
         iconImageNode.style.preferredSize = CGSize.init(width: 50, height: 50)
-        webViewNode.style.preferredSize = CGSize.init(width: constrainedSize.max.width, height: webViewHeight == 0 ? 0.001 : webViewHeight)
+        webViewNode.style.preferredSize = CGSize.init(width: constrainedSize.max.width - 20, height: webViewHeight == 0 ? 0.001 : webViewHeight)
 
         let nameSpec = ASStackLayoutSpec.horizontal()
         nameSpec.children = [nameNode, timeNode]
@@ -112,8 +105,52 @@ class DiscuListDetailWebCellNode: ASCellNode {
 
     }
     
-    @objc private func addWebViewTapGesture(tap: UITapGestureRecognizer) {
+    func loadWebHtml(htmlBody: NSString) {
+        let cssURL = URL.init(fileURLWithPath: Bundle.main.path(forResource: "News", ofType: "css") ?? "")
+        guard let webView = self.webViewNode.view as? UIWebView else {
+            return
+        }
+        webView.loadHTMLString(handleWithHtmlBody(htmlBody: htmlBody), baseURL: cssURL)
         
+    }
+    
+    func handleWithHtmlBody(htmlBody: NSString) -> String {
+        let html = htmlBody.replacingOccurrences(of: "\t", with: "")
+        let cssName = "News.css"
+        var htmlString = "<html>"
+        htmlString += "<head><meta charset=\"UTF-8\">"
+        htmlString += "<link rel =\"stylesheet\" href = \""
+        htmlString += cssName
+        htmlString += "\" type=\"text/css\" />"
+        htmlString += "</head>"
+        htmlString += "<body>"
+        htmlString += html
+        htmlString += "</body>"
+        htmlString += "</html>"
+        return html
+    }
+    
+    // 点击图片
+    @objc private func addWebViewTapGesture(tap: UITapGestureRecognizer) {
+        guard let contentView = tap.view else {
+            return
+        }
+        guard let webView = contentView as? UIWebView else {
+            return
+        }
+        let pt = tap.location(in: webView)
+        let imageURL = "document.elementFromPoint(\(pt.x), \(pt.y)).src"
+        let urlToSave = webView.stringByEvaluatingJavaScript(from: imageURL)
+        if (urlToSave ?? "").count  > 0 {
+            print(urlToSave ?? "")
+            showImageURL(url: urlToSave ?? "", point: pt)
+            
+        }
+    }
+    
+    func showImageURL(url: String, point: CGPoint) {
+        if !url.hasPrefix("http") { return }
+        // 查看图片
     }
     
     // MARK: - Event response
@@ -139,7 +176,7 @@ class DiscuListDetailWebCellNode: ASCellNode {
 // MARK: - UIWebViewDelegate
 extension DiscuListDetailWebCellNode: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        webViewHeight = CGFloat(((webView.stringByEvaluatingJavaScript(from: "document.body.offsetHeight") ?? "0") as NSString).floatValue + 10.0)
+        webViewHeight = CGFloat(((webView.stringByEvaluatingJavaScript(from: "document.body.offsetHeight") ?? "0.01") as NSString).floatValue + 10.0)
         self.setNeedsLayout()
     }
 }
