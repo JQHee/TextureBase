@@ -43,6 +43,18 @@ class DiscuListDetailWebCellNode: ASCellNode {
 //        let layout = ASLayout()
 //        return layout
 //    }
+    
+    deinit {
+        dispatch_async_safely_main_queue {
+            do {
+                guard let webView = self.webViewNode.view as? UIWebView else {
+                    return
+                }
+                webView.scrollView.removeObserver(self, forKeyPath: "contentSize")
+            }
+        }
+
+    }
 
     override func layout() {
         super.layout()
@@ -94,6 +106,8 @@ class DiscuListDetailWebCellNode: ASCellNode {
             webView.backgroundColor = UIColor.init(red: 247.0/255, green: 247.0/255, blue: 247.0/255, alpha: 1.0)
             webView.scalesPageToFit = false
             
+            // kvo 监听内容高度
+            webView.scrollView.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.new, context: nil)
             
             // 添加点击手势
             let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.addWebViewTapGesture(tap:)))
@@ -103,6 +117,19 @@ class DiscuListDetailWebCellNode: ASCellNode {
             webView.addGestureRecognizer(tap)
         }
 
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if (keyPath ?? "") == "contentSize" {
+            guard let webView = self.webViewNode.view as? UIWebView else {
+                return
+            }
+            webViewHeight = webView.sizeThatFits(CGSize.zero).height
+            if webViewHeight > 0 || webViewHeight != webViewHeight {
+                self.setNeedsLayout()
+            }
+
+        }
     }
     
     func loadWebHtml(htmlBody: NSString) {
@@ -182,7 +209,7 @@ extension DiscuListDetailWebCellNode: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
         webViewHeight = CGFloat(((webView.stringByEvaluatingJavaScript(from: "document.body.offsetHeight") ?? "0.01") as NSString).floatValue + 10.0)
         #warning("会多次触发，导致重复更新布局，闪烁")
-        self.setNeedsLayout()
+        // self.setNeedsLayout()
     }
 }
 
