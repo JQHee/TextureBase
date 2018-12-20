@@ -151,6 +151,10 @@ class DiscuListDetailWebCellNode: ASCellNode {
     func showImageURL(url: String, point: CGPoint) {
         if !url.hasPrefix("http") { return }
         // 查看图片
+        guard let viewController  = self.view.viewContainingController() else {
+            return
+        }
+        BFPhotoViewer.shared.viewRemoteImages(vc: viewController, datas: [url], currentIndex: 0)
     }
     
     // MARK: - Event response
@@ -177,6 +181,7 @@ class DiscuListDetailWebCellNode: ASCellNode {
 extension DiscuListDetailWebCellNode: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
         webViewHeight = CGFloat(((webView.stringByEvaluatingJavaScript(from: "document.body.offsetHeight") ?? "0.01") as NSString).floatValue + 10.0)
+        #warning("会多次触发，导致重复更新布局，闪烁")
         self.setNeedsLayout()
     }
 }

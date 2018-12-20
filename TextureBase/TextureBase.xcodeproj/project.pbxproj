@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		2A8BF9A8CE84BBD354FB2267 /* Pods_TextureBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */; };
 		4D9C10C588302A14D67E6DF6 /* Pods_TextureBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */; };
+		5E5B767D21CB529F00E49936 /* BFPhotoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767221CB529F00E49936 /* BFPhotoViewer.swift */; };
+		5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767421CB529F00E49936 /* YLAnimatedTransition.swift */; };
+		5E5B767F21CB529F00E49936 /* YLDrivenInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767521CB529F00E49936 /* YLDrivenInteractive.swift */; };
+		5E5B768021CB529F00E49936 /* YLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767621CB529F00E49936 /* YLExtension.swift */; };
+		5E5B768121CB529F00E49936 /* YLPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767721CB529F00E49936 /* YLPhoto.swift */; };
+		5E5B768221CB529F00E49936 /* YLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767821CB529F00E49936 /* YLPhotoBrowser.swift */; };
+		5E5B768321CB529F00E49936 /* YLPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767921CB529F00E49936 /* YLPhotoCell.swift */; };
+		5E5B768421CB529F00E49936 /* YLPhotoProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767A21CB529F00E49936 /* YLPhotoProgressView.swift */; };
+		5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767B21CB529F00E49936 /* YLPopAnimator.swift */; };
+		5E5B768621CB529F00E49936 /* YLPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767C21CB529F00E49936 /* YLPushAnimator.swift */; };
+		5E5B768821CB539B00E49936 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B768721CB539B00E49936 /* UIView+Extension.swift */; };
 		5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */; };
 		5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */; };
 		5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3921C0A69F0025F45B /* ReadMe.swift */; };
@@ -160,6 +171,17 @@
 		28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB482ABB7990619B4674469 /* Pods-TextureBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseUITests/Pods-TextureBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		553E745B134D836BADC51E38 /* Pods-TextureBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseTests/Pods-TextureBaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E5B767221CB529F00E49936 /* BFPhotoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFPhotoViewer.swift; sourceTree = "<group>"; };
+		5E5B767421CB529F00E49936 /* YLAnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLAnimatedTransition.swift; sourceTree = "<group>"; };
+		5E5B767521CB529F00E49936 /* YLDrivenInteractive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLDrivenInteractive.swift; sourceTree = "<group>"; };
+		5E5B767621CB529F00E49936 /* YLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLExtension.swift; sourceTree = "<group>"; };
+		5E5B767721CB529F00E49936 /* YLPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPhoto.swift; sourceTree = "<group>"; };
+		5E5B767821CB529F00E49936 /* YLPhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPhotoBrowser.swift; sourceTree = "<group>"; };
+		5E5B767921CB529F00E49936 /* YLPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPhotoCell.swift; sourceTree = "<group>"; };
+		5E5B767A21CB529F00E49936 /* YLPhotoProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPhotoProgressView.swift; sourceTree = "<group>"; };
+		5E5B767B21CB529F00E49936 /* YLPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPopAnimator.swift; sourceTree = "<group>"; };
+		5E5B767C21CB529F00E49936 /* YLPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPushAnimator.swift; sourceTree = "<group>"; };
+		5E5B768721CB539B00E49936 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomeactivityIndicatorVC.swift; sourceTree = "<group>"; };
 		5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASTableNode+ReloadIndexPaths.swift"; sourceTree = "<group>"; };
 		5E682E3921C0A69F0025F45B /* ReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
@@ -335,6 +357,31 @@
 				28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E5B767121CB529F00E49936 /* PhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				5E5B767221CB529F00E49936 /* BFPhotoViewer.swift */,
+				5E5B767321CB529F00E49936 /* PhotoBrowserSource */,
+			);
+			path = PhotoViewer;
+			sourceTree = "<group>";
+		};
+		5E5B767321CB529F00E49936 /* PhotoBrowserSource */ = {
+			isa = PBXGroup;
+			children = (
+				5E5B767421CB529F00E49936 /* YLAnimatedTransition.swift */,
+				5E5B767521CB529F00E49936 /* YLDrivenInteractive.swift */,
+				5E5B767621CB529F00E49936 /* YLExtension.swift */,
+				5E5B767721CB529F00E49936 /* YLPhoto.swift */,
+				5E5B767821CB529F00E49936 /* YLPhotoBrowser.swift */,
+				5E5B767921CB529F00E49936 /* YLPhotoCell.swift */,
+				5E5B767A21CB529F00E49936 /* YLPhotoProgressView.swift */,
+				5E5B767B21CB529F00E49936 /* YLPopAnimator.swift */,
+				5E5B767C21CB529F00E49936 /* YLPushAnimator.swift */,
+			);
+			path = PhotoBrowserSource;
 			sourceTree = "<group>";
 		};
 		5E682E3821C0A68C0025F45B /* LayoutSpec */ = {
@@ -739,6 +786,7 @@
 		5E8BF48121BF6083005BD4E0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5E5B767121CB529F00E49936 /* PhotoViewer */,
 				5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */,
 				66ABDB9C21CA9087008C7E09 /* BFPostTextParser.swift */,
 			);
@@ -750,6 +798,7 @@
 			children = (
 				66BD871021C136A20072466D /* FPS.swift */,
 				5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */,
+				5E5B768721CB539B00E49936 /* UIView+Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1429,10 +1478,13 @@
 				66A4226521C69F98003D5E40 /* AWSelectModel.swift in Sources */,
 				5E72839421C9F0CD0090C2E9 /* InfomationListRequest.swift in Sources */,
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
+				5E5B768421CB529F00E49936 /* YLPhotoProgressView.swift in Sources */,
 				5E72838721C9E7B80090C2E9 /* InfomationListNormalCellNode.swift in Sources */,
+				5E5B767F21CB529F00E49936 /* YLDrivenInteractive.swift in Sources */,
 				66ABDB7A21CA6D36008C7E09 /* InfomationDetailSectionFooterView.swift in Sources */,
 				66F18A8721C3FB520009A074 /* MineCellNode.swift in Sources */,
 				5E725CA421C780ED003183FD /* KaneCellNode.swift in Sources */,
+				5E5B768221CB529F00E49936 /* YLPhotoBrowser.swift in Sources */,
 				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
 				66A4226121C68FE9003D5E40 /* SelectSectionItemCellNode.swift in Sources */,
 				6698468D21C7C7660060DE9C /* BFRefreshBackStateFooter.swift in Sources */,
@@ -1449,9 +1501,11 @@
 				66ABDB9221CA7F6A008C7E09 /* DiscuListDetailCellNode.swift in Sources */,
 				5E7283A921CA330A0090C2E9 /* DiscuListPlaceTopCellNode.swift in Sources */,
 				5E72838121C9D3DA0090C2E9 /* InfomationListViewController.swift in Sources */,
+				5E5B768821CB539B00E49936 /* UIView+Extension.swift in Sources */,
 				6698468921C7C74B0060DE9C /* MJRefresh-Extension.swift in Sources */,
 				5E6AA59221C8825A00EC4897 /* KaneModel.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
+				5E5B768621CB529F00E49936 /* YLPushAnimator.swift in Sources */,
 				6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */,
 				66ABDB9D21CA9087008C7E09 /* BFPostTextParser.swift in Sources */,
 				5E7283B021CA37190090C2E9 /* DiscuListRequest.swift in Sources */,
@@ -1490,17 +1544,21 @@
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				6682FAF921C92CC0003B0880 /* HotRecommentModel.swift in Sources */,
 				6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */,
+				5E5B768121CB529F00E49936 /* YLPhoto.swift in Sources */,
 				66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */,
+				5E5B767D21CB529F00E49936 /* BFPhotoViewer.swift in Sources */,
 				5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */,
 				5E72839021C9F0980090C2E9 /* InfomationListViewModel.swift in Sources */,
 				5E72838921C9E7DD0090C2E9 /* InfomationListBottomBigImageCellNode.swift in Sources */,
 				5E7283A521CA2EA40090C2E9 /* DiscuListHeaderView.swift in Sources */,
+				5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
 				66A4224021C6016B003D5E40 /* ADLaunchView.swift in Sources */,
 				5E850F7D21C3A6A8002A31E0 /* ASDisplayNode+Extension.swift in Sources */,
 				5E7283AE21CA36FD0090C2E9 /* DiscuListViewModel.swift in Sources */,
+				5E5B768021CB529F00E49936 /* YLExtension.swift in Sources */,
 				66ABDB7821CA6CFC008C7E09 /* InfomationDetailSectionHeaderView.swift in Sources */,
 				66A4223921C5FA86003D5E40 /* Request.swift in Sources */,
 				66A4225A21C681B3003D5E40 /* SelectViewModel.swift in Sources */,
@@ -1509,6 +1567,7 @@
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,
+				5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */,
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
 				5E7283A221CA22290090C2E9 /* DiscuListDetailViewController.swift in Sources */,
@@ -1517,6 +1576,7 @@
 				66ABDB9921CA82FD008C7E09 /* DiscuListDetailViewModel.swift in Sources */,
 				66ABDB9521CA8252008C7E09 /* DiscuListDetailRequest.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
+				5E5B768321CB529F00E49936 /* YLPhotoCell.swift in Sources */,
 				66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */,
 				66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
