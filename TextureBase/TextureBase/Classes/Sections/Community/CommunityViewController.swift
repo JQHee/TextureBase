@@ -25,7 +25,7 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
     #warning ("隐藏导航栏一定要带动画， 不然会出现断层")
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
