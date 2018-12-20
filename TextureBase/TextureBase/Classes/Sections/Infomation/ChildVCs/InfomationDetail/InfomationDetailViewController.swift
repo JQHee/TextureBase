@@ -48,6 +48,8 @@ class InfomationDetailViewController: ASViewController<ASDisplayNode> {
     private func addHeaderView() {
         let headerView = InfomationDetailHeaderView.loadNib()
         headerView.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: 150)
+        headerView.titleLabel.text = self.infomationDetailVM.info.article.title
+        headerView.timeLabel.text = self.infomationDetailVM.info.article.ptime
         tableNode.view.tableHeaderView = headerView
     }
     
@@ -86,6 +88,10 @@ class InfomationDetailViewController: ASViewController<ASDisplayNode> {
         table.delegate = self
         table.dataSource = self
         table.view.tableFooterView = UIView()
+        let sectionHeaderNib = UINib.init(nibName: "InfomationDetailSectionHeaderView", bundle: nil)
+        let sectionFooterNib = UINib.init(nibName: "InfomationDetailSectionFooterView", bundle: nil)
+        table.view.register(sectionHeaderNib, forHeaderFooterViewReuseIdentifier: "InfomationDetailSectionHeaderView")
+        table.view.register(sectionFooterNib, forHeaderFooterViewReuseIdentifier: "InfomationDetailSectionFooterView")
         return table
     }()
     
@@ -104,7 +110,7 @@ extension InfomationDetailViewController: ASTableDataSource {
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            return infomationDetailVM.info.article.digest.count > 0 ? 2 : 1
         } else {
             return infomationDetailVM.info.tie.commentIds.count
         }
@@ -113,7 +119,10 @@ extension InfomationDetailViewController: ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         
         if indexPath.section == 0 {
-            let body = infomationDetailVM.info.article.body
+            var body = infomationDetailVM.info.article.body
+            if indexPath.row == 1 {
+                body = infomationDetailVM.info.article.digest
+            }
             let cellBlock = {() -> ASCellNode in
                 let cellNode = InfomationDetailCellNode()
                 cellNode.body = body
@@ -129,7 +138,8 @@ extension InfomationDetailViewController: ASTableDataSource {
                 return cellNode
             }
             return cellBlock
-        } else {
+        } else { // 热门跟帖
+            #warning("重要的布局")
             let cellBlock = {() -> ASCellNode in
                 let cellNode = ASCellNode()
                 //cellNode.setList(list: model, index: indexPath.row + 1)
@@ -146,6 +156,30 @@ extension InfomationDetailViewController: ASTableDataSource {
             }
             return cellBlock
         }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableView.dequeueReusableHeaderFooterView(withIdentifier: "InfomationDetailSectionHeaderView")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section > 0 && self.infomationDetailVM.info.tie.commentIds.count > 0 {
+            return 30
+        }
+        return 0
+        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return tableView.dequeueReusableHeaderFooterView(withIdentifier: "InfomationDetailSectionFooterView")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section > 0 && self.infomationDetailVM.info.tie.commentIds.count > 0 {
+            return 30
+        }
+        return 0
     }
 }
 
