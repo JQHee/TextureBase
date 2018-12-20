@@ -29,15 +29,18 @@ extension API {
     static let hotRecomment = "/news/discuz/forum_recommend_detail"
     // 凯恩之角
     static let kaneList = "/news/discuz/discuz_model_v2/list/center/1"
+    // 爱玩社区
     static let lovePlayList = "/news/discuz/discuz_model_v2/list/center/0"
+    // 论坛列表
+    static let discuList = "http://bbs.d.163.com/api/mobile/index.php"
+    // 论坛列表顶部的图片（待接入）
+    static let discuListHeaderImg = "/news/discuz/discuz_model/fid_img"
 }
 
 // MAKR: - 资讯
 extension API {
     // 资讯列表
     static let infomationList = "/user/article/list/"
-    // 论坛列表
-    static let discuList = "http://bbs.d.163.com/api/mobile/index.php"
-    // 论坛列表顶部的图片（待接入）
-    static let discuListHeaderImg = "/news/discuz/discuz_model/fid_img"
+    // 资讯详情
+    static let infomationDetail = "/news/appDetail/"
 }

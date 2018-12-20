@@ -10,7 +10,6 @@ import UIKit
 import AsyncDisplayKit
 
 // MARK: - 论坛详情
-#warning("待做")
 class DiscuListDetailViewController: ASViewController<ASDisplayNode> {
 
     var tid = ""

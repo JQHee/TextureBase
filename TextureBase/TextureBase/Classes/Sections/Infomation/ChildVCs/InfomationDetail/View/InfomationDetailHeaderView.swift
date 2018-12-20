@@ -12,5 +12,9 @@ class InfomationDetailHeaderView: UIView {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    
+    static func loadNib() -> InfomationDetailHeaderView {
+        return Bundle.main.loadNibNamed("InfomationDetailHeaderView", owner: nil, options: nil)?.last as! InfomationDetailHeaderView
+    }
 
 }

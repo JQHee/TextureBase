@@ -179,7 +179,7 @@ extension InfomationListViewController: ASTableDelegate {
         
         let model = infomationListVM.info[indexPath.row]
         let VC = InfomationDetailViewController()
-        VC.newId = String(model.newTopicId)
+        VC.newId = String(model.docid)
         self.navigationController?.pushViewController(VC, animated: true)
     }
     

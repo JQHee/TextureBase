@@ -30,6 +30,11 @@ class KaneViewController: ASViewController<ASDisplayNode> {
         viewBindEvents()
     }
     
+    deinit {
+        self.collectionNode.delegate = nil
+        self.collectionNode.dataSource = nil
+    }
+    
     // MARK: - Private methods
     private func setupUI() {
         node.addSubnode(collectionNode)

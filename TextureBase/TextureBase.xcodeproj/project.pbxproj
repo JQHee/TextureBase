@@ -20,6 +20,10 @@
 		5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767B21CB529F00E49936 /* YLPopAnimator.swift */; };
 		5E5B768621CB529F00E49936 /* YLPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767C21CB529F00E49936 /* YLPushAnimator.swift */; };
 		5E5B768821CB539B00E49936 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B768721CB539B00E49936 /* UIView+Extension.swift */; };
+		5E5B769021CB7A9100E49936 /* InfomationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B768F21CB7A9100E49936 /* InfomationDetailViewModel.swift */; };
+		5E5B769221CB7AB800E49936 /* InfomationDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B769121CB7AB800E49936 /* InfomationDetailModel.swift */; };
+		5E5B769421CB7ADE00E49936 /* InfomationDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B769321CB7ADE00E49936 /* InfomationDetailRequest.swift */; };
+		5E5B769621CB830700E49936 /* InfomationDetailCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B769521CB830700E49936 /* InfomationDetailCellNode.swift */; };
 		5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */; };
 		5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */; };
 		5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E682E3921C0A69F0025F45B /* ReadMe.swift */; };
@@ -182,6 +186,10 @@
 		5E5B767B21CB529F00E49936 /* YLPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPopAnimator.swift; sourceTree = "<group>"; };
 		5E5B767C21CB529F00E49936 /* YLPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLPushAnimator.swift; sourceTree = "<group>"; };
 		5E5B768721CB539B00E49936 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5E5B768F21CB7A9100E49936 /* InfomationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailViewModel.swift; sourceTree = "<group>"; };
+		5E5B769121CB7AB800E49936 /* InfomationDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfomationDetailModel.swift; sourceTree = "<group>"; };
+		5E5B769321CB7ADE00E49936 /* InfomationDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailRequest.swift; sourceTree = "<group>"; };
+		5E5B769521CB830700E49936 /* InfomationDetailCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailCellNode.swift; sourceTree = "<group>"; };
 		5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomeactivityIndicatorVC.swift; sourceTree = "<group>"; };
 		5E682E3621C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASTableNode+ReloadIndexPaths.swift"; sourceTree = "<group>"; };
 		5E682E3921C0A69F0025F45B /* ReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
@@ -384,6 +392,30 @@
 			path = PhotoBrowserSource;
 			sourceTree = "<group>";
 		};
+		5E5B768921CB7A1A00E49936 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5E5B769321CB7ADE00E49936 /* InfomationDetailRequest.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		5E5B768A21CB7A2700E49936 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E5B769121CB7AB800E49936 /* InfomationDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E5B768B21CB7A3B00E49936 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E5B768F21CB7A9100E49936 /* InfomationDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5E682E3821C0A68C0025F45B /* LayoutSpec */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,6 +612,9 @@
 		5E72839721CA19070090C2E9 /* InfomationDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5E5B768B21CB7A3B00E49936 /* ViewModel */,
+				5E5B768A21CB7A2700E49936 /* Model */,
+				5E5B768921CB7A1A00E49936 /* Util */,
 				66ABDB7621CA6CDC008C7E09 /* View */,
 				5E72839B21CA194F0090C2E9 /* InfomationDetailViewController.swift */,
 			);
@@ -952,6 +987,7 @@
 				66ABDB7D21CA6D9F008C7E09 /* InfomationDetailSectionFooterView.xib */,
 				66ABDB7F21CA7009008C7E09 /* InfomationDetailHeaderView.swift */,
 				66ABDB8121CA7017008C7E09 /* InfomationDetailHeaderView.xib */,
+				5E5B769521CB830700E49936 /* InfomationDetailCellNode.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1473,6 +1509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5B769421CB7ADE00E49936 /* InfomationDetailRequest.swift in Sources */,
 				66F18A6121C3D7B40009A074 /* BaseNavigationViewController.swift in Sources */,
 				66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */,
 				66A4226521C69F98003D5E40 /* AWSelectModel.swift in Sources */,
@@ -1520,6 +1557,7 @@
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
 				5E725C9221C72EC7003183FD /* AWSelectListModel.swift in Sources */,
 				66ABDB8521CA763A008C7E09 /* DiscuListDetailHeaderView.swift in Sources */,
+				5E5B769221CB7AB800E49936 /* InfomationDetailModel.swift in Sources */,
 				66F18A6921C3D8DD0009A074 /* CommunityViewController.swift in Sources */,
 				6698468C21C7C7660060DE9C /* BFRefreshNormalHeader.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
@@ -1551,6 +1589,7 @@
 				5E72839021C9F0980090C2E9 /* InfomationListViewModel.swift in Sources */,
 				5E72838921C9E7DD0090C2E9 /* InfomationListBottomBigImageCellNode.swift in Sources */,
 				5E7283A521CA2EA40090C2E9 /* DiscuListHeaderView.swift in Sources */,
+				5E5B769621CB830700E49936 /* InfomationDetailCellNode.swift in Sources */,
 				5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */,
@@ -1564,6 +1603,7 @@
 				66A4225A21C681B3003D5E40 /* SelectViewModel.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
+				5E5B769021CB7A9100E49936 /* InfomationDetailViewModel.swift in Sources */,
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,

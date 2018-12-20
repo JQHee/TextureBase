@@ -46,9 +46,8 @@ class InfomationDetailViewController: ASViewController<ASDisplayNode> {
     }
 
     private func addHeaderView() {
-        let headerView = DiscuListDetailHeaderView.loadNib()
+        let headerView = InfomationDetailHeaderView.loadNib()
         headerView.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: 150)
-        headerView.titleLabel.text = self.discuListDetailVM.variables.thread.subject
         tableNode.view.tableHeaderView = headerView
     }
     
@@ -56,85 +55,68 @@ class InfomationDetailViewController: ASViewController<ASDisplayNode> {
         tableNode.view.setupRefresh(isNeedFooterRefresh: false, headerCallback: { [weak self] in
             guard let `self` = self else {
                 return
-                
             }
             self.requestData()
-            }, footerCallBack: { [weak self] in
-                guard let `self` = self else {
-                    return
-                }
-                self.requestMoreData(finishBlock: {})
+            }, footerCallBack: {
         })
     }
     
     func requestData() {
         
-        discuListDetailVM.pageIndex = 1
-        let request = DiscuListDetailRequest.init(page: 1, tid: newId)
-        discuListDetailVM.list(r: request, successBlock: { [weak self] (hasMore) in
+        let request = InfomationDetailRequest.init(newId: newId)
+        infomationDetailVM.list(r: request, successBlock: { [weak self] (hasMore) in
             guard let `self` = self else {return}
             self.addHeaderView()
-            self.hasMore = hasMore
-        }) {
-            
-        }
-    }
-    
-    func requestMoreData(finishBlock: @escaping () -> ()) {
-        discuListDetailVM.pageIndex += 1
-        let request = DiscuListDetailRequest.init(page: discuListDetailVM.pageIndex, tid: newId)
-        discuListDetailVM.list(r: request, successBlock: { [weak self] (hasMore) in
+            UIView.performWithoutAnimation {
+                self.tableNode.view.mj_header.endRefreshing()
+                self.tableNode.reloadData()
+            }
+        }) { [weak self] in
             guard let `self` = self else {return}
-            self.hasMore = hasMore
-            finishBlock()
-        }) {
-            finishBlock()
+            UIView.performWithoutAnimation {
+                 self.tableNode.view.mj_header.endRefreshing()
+                self.tableNode.reloadData()
+            }
         }
     }
     
     // MARK:  - Lazy load
     private lazy var tableNode: ASTableNode = {
         let table = ASTableNode.init(style: UITableView.Style.plain)
-        table.leadingScreensForBatching = 1.0
         table.delegate = self
         table.dataSource = self
         table.view.tableFooterView = UIView()
         return table
     }()
     
-    private lazy var discuListDetailVM: DiscuListDetailViewModel = { [weak self] in
-        let vm = DiscuListDetailViewModel()
-        vm.tableView = self?.tableNode
+    private lazy var infomationDetailVM: InfomationDetailViewModel = {
+        let vm = InfomationDetailViewModel()
         return vm
     }()
-    
-    var hasMore: Bool = false
     
 }
 
 // MARK:  -ASTableDataSource
 extension InfomationDetailViewController: ASTableDataSource {
     func numberOfSections(in tableNode: ASTableNode) -> Int {
-        return 1
+        return 2
     }
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return discuListDetailVM.list.count
+        if section == 0 {
+            return 1
+        } else {
+            return infomationDetailVM.info.tie.commentIds.count
+        }
     }
-    
-    //    func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
-    //        let minSize = CGSize.init(width: tableNode.bounds.width, height: 100)
-    //        let maxSize = CGSize.init(width: tableNode.bounds.width, height: 200)
-    //        return ASSizeRange.init(min: minSize, max: maxSize)
-    //    }
-    
+
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         
-        let model = discuListDetailVM.list[indexPath.row]
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
+            let body = infomationDetailVM.info.article.body
             let cellBlock = {() -> ASCellNode in
-                let cellNode = DiscuListDetailWebCellNode()
-                cellNode.setList(list: model, index: indexPath.row + 1)
+                let cellNode = InfomationDetailCellNode()
+                cellNode.body = body
                 cellNode.selectionStyle = .none
                 if ((tableNode.tn_reloadIndexPaths ?? []).contains(indexPath)) {
                     cellNode.neverShowPlaceholders = true
@@ -149,8 +131,8 @@ extension InfomationDetailViewController: ASTableDataSource {
             return cellBlock
         } else {
             let cellBlock = {() -> ASCellNode in
-                let cellNode = DiscuListDetailCellNode()
-                cellNode.setList(list: model, index: indexPath.row + 1)
+                let cellNode = ASCellNode()
+                //cellNode.setList(list: model, index: indexPath.row + 1)
                 cellNode.selectionStyle = .none
                 if ((tableNode.tn_reloadIndexPaths ?? []).contains(indexPath)) {
                     cellNode.neverShowPlaceholders = true
@@ -170,22 +152,6 @@ extension InfomationDetailViewController: ASTableDataSource {
 // MARK: - ASTableDelegate
 extension InfomationDetailViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取
-    func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
-        return (self.discuListDetailVM.list.count > 0) && hasMore
-    }
-    
-    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
-        context.beginBatchFetching()
-        #warning("需要放在主线程")
-        self.requestMoreData(finishBlock: {
-            context.completeBatchFetching(true)
-        })
-        // [self.mainTableNode insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
-        
         
     }
     
