@@ -25,7 +25,6 @@ class DiscuListDetailCellNode: ASCellNode {
         dispatch_async_safely_main_queue {
             (self.contentTextNode.view as? TYAttributedLabel)?.textContainer = list.textContainer
         }
-        //self.contentTextNode.attributedText = list.message.nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
     }
 
     override init() {
@@ -40,17 +39,14 @@ class DiscuListDetailCellNode: ASCellNode {
 
     override func layout() {
         super.layout()
-        guard let label = self.contentTextNode.view as? TYAttributedLabel else {
-            return
-        }
-        label.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: list.textContainer.textHeight)
-        label.textColor = UIColor.red
-        label.backgroundColor = UIColor.orange
+        // self.contentTextNode.view.backgroundColor = UIColor.orange
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
 
         iconImageNode.style.preferredSize = CGSize.init(width: 50, height: 50)
+        contentTextNode.style.preferredSize = CGSize.init(width: constrainedSize.max.width - 20, height: list.textContainer.textHeight)
+        
 
         let nameSpec = ASStackLayoutSpec.horizontal()
         nameSpec.children = [nameNode, timeNode]
@@ -93,7 +89,6 @@ class DiscuListDetailCellNode: ASCellNode {
             let label = TYAttributedLabel()
             return label
         })
-        view.backgroundColor = .red
         return view
     }()
 }

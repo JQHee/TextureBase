@@ -19,6 +19,18 @@ class DiscuListDetailWebCellNode: ASCellNode {
         self.nameNode.attributedText = list.author.nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
         self.timeNode.attributedText = list.dateline.nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
         self.countTextNode.attributedText = "\(index)".nodeAttributes(color: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+        
+
+        dispatch_async_safely_main_queue {
+            guard let webView = self.webViewNode.view as? UIWebView else {
+                return
+            }
+            guard let url = URL.init(string: "https://www.baidu.com") else {
+                return
+            }
+            webView.loadRequest(URLRequest.init(url: url))
+        }
+      
     }
 
     var webViewHeight: CGFloat = 0
@@ -26,14 +38,17 @@ class DiscuListDetailWebCellNode: ASCellNode {
     override init() {
         super.init()
         setupUI()
+
     }
 
 //    override func calculateSizeThatFits(_ constrainedSize: CGSize) -> CGSize {
-//        return CGSize.init(width: constrainedSize.width, height: webViewHeight)
+//        return CGSize.init(width: constrainedSize.width, height: 500)
 //    }
-
+//
 //    override func calculateLayoutThatFits(_ constrainedSize: ASSizeRange, restrictedTo size: ASLayoutElementSize, relativeToParentSize parentSize: CGSize) -> ASLayout {
 //
+//        let layout = ASLayout()
+//        return layout
 //    }
 
     override func layout() {
@@ -43,6 +58,7 @@ class DiscuListDetailWebCellNode: ASCellNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
 
         iconImageNode.style.preferredSize = CGSize.init(width: 50, height: 50)
+        webViewNode.style.preferredSize = CGSize.init(width: constrainedSize.max.width, height: webViewHeight == 0 ? 0.001 : webViewHeight)
 
         let nameSpec = ASStackLayoutSpec.horizontal()
         nameSpec.children = [nameNode, timeNode]
@@ -73,6 +89,36 @@ class DiscuListDetailWebCellNode: ASCellNode {
         addSubnode(timeNode)
         addSubnode(countTextNode)
         addSubnode(webViewNode)
+        
+
+        dispatch_async_safely_main_queue {
+            guard let webView = self.webViewNode.view as? UIWebView else {
+                return
+            }
+            webView.scrollView.isScrollEnabled = false
+            webView.scrollView.scrollsToTop = false
+            webView.delegate = self
+            webView.backgroundColor = UIColor.init(red: 247.0/255, green: 247.0/255, blue: 247.0/255, alpha: 1.0)
+            webView.scalesPageToFit = false
+            
+            
+            // 添加点击手势
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.addWebViewTapGesture(tap:)))
+            tap.delegate = self
+            tap.cancelsTouchesInView = false
+            tap.delaysTouchesBegan = true
+            webView.addGestureRecognizer(tap)
+        }
+
+    }
+    
+    @objc private func addWebViewTapGesture(tap: UITapGestureRecognizer) {
+        
+    }
+    
+    // MARK: - Event response
+    func webViewTapAction() {
+        
     }
 
     // MARK: - Lazy load
@@ -93,6 +139,14 @@ class DiscuListDetailWebCellNode: ASCellNode {
 // MARK: - UIWebViewDelegate
 extension DiscuListDetailWebCellNode: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        webViewHeight = CGFloat(((webView.stringByEvaluatingJavaScript(from: "document.body.offsetHeight") ?? "0") as NSString).floatValue + 10.0)
         self.setNeedsLayout()
+    }
+}
+
+// MARK: - UIGestureRecognizerDelegate
+extension DiscuListDetailWebCellNode: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
