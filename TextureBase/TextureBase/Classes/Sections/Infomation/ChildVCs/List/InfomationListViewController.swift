@@ -177,6 +177,10 @@ extension InfomationListViewController: ASTableDataSource {
 extension InfomationListViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         
+        let model = infomationListVM.info[indexPath.row]
+        let VC = InfomationDetailViewController()
+        VC.newId = String(model.newTopicId)
+        self.navigationController?.pushViewController(VC, animated: true)
     }
     
     // 这个方法返回一个 Bool 值，用于告诉 tableNode 是否需要批抓取

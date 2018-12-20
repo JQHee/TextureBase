@@ -103,6 +103,8 @@ class InfomationViewController: ASViewController<ASDisplayNode> {
             VC.view.frame = CGRect.init(x: x, y: 0, width: scrollNode.view.bounds.width, height: scrollNode.view.bounds.height)
             scrollNode.view.addSubview(VC.view)
             VCsDict[index] = VC
+            #warning("必须添加")
+            addChild(VC)
             // 加载数据
             // VC.loadFirst()
         }
