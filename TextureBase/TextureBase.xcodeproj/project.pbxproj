@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2A8BF9A8CE84BBD354FB2267 /* Pods_TextureBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB25A0C6CDA8A289D5051082 /* Pods_TextureBase.framework */; };
 		4D9C10C588302A14D67E6DF6 /* Pods_TextureBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */; };
+		5E46857621CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E46857521CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift */; };
+		5E46857821CC7147008B0CC3 /* InfomationDetailCommentReplyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E46857721CC7147008B0CC3 /* InfomationDetailCommentReplyNode.swift */; };
+		5E46857A21CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E46857921CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift */; };
 		5E5B767D21CB529F00E49936 /* BFPhotoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767221CB529F00E49936 /* BFPhotoViewer.swift */; };
 		5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767421CB529F00E49936 /* YLAnimatedTransition.swift */; };
 		5E5B767F21CB529F00E49936 /* YLDrivenInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B767521CB529F00E49936 /* YLDrivenInteractive.swift */; };
@@ -175,6 +178,9 @@
 		28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureBaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB482ABB7990619B4674469 /* Pods-TextureBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseUITests/Pods-TextureBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		553E745B134D836BADC51E38 /* Pods-TextureBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureBaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureBaseTests/Pods-TextureBaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E46857521CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailCommentCellNode.swift; sourceTree = "<group>"; };
+		5E46857721CC7147008B0CC3 /* InfomationDetailCommentReplyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailCommentReplyNode.swift; sourceTree = "<group>"; };
+		5E46857921CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDetailCommentReplyItemNode.swift; sourceTree = "<group>"; };
 		5E5B767221CB529F00E49936 /* BFPhotoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFPhotoViewer.swift; sourceTree = "<group>"; };
 		5E5B767421CB529F00E49936 /* YLAnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLAnimatedTransition.swift; sourceTree = "<group>"; };
 		5E5B767521CB529F00E49936 /* YLDrivenInteractive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLDrivenInteractive.swift; sourceTree = "<group>"; };
@@ -365,6 +371,16 @@
 				28E12C35B52ADE4A0F855483 /* Pods_TextureBaseUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E46857121CC70BF008B0CC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E46857521CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift */,
+				5E46857721CC7147008B0CC3 /* InfomationDetailCommentReplyNode.swift */,
+				5E46857921CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5E5B767121CB529F00E49936 /* PhotoViewer */ = {
@@ -624,6 +640,7 @@
 		5E72839821CA19290090C2E9 /* InfomationDetailComment */ = {
 			isa = PBXGroup;
 			children = (
+				5E46857121CC70BF008B0CC3 /* View */,
 				5E72839921CA193D0090C2E9 /* InfomationDetailCommentViewController.swift */,
 			);
 			path = InfomationDetailComment;
@@ -1533,6 +1550,7 @@
 				66BD871821C13F1A0072466D /* TestCollectionNodeVC.swift in Sources */,
 				5E6AA59A21C8C92300EC4897 /* HotRecommentSectionView.swift in Sources */,
 				66A4225421C676D1003D5E40 /* SelectItemCellNode.swift in Sources */,
+				5E46857821CC7147008B0CC3 /* InfomationDetailCommentReplyNode.swift in Sources */,
 				5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */,
 				5E72839221C9F0B10090C2E9 /* InfomationListModel.swift in Sources */,
 				66ABDB9221CA7F6A008C7E09 /* DiscuListDetailCellNode.swift in Sources */,
@@ -1588,6 +1606,7 @@
 				5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */,
 				5E72839021C9F0980090C2E9 /* InfomationListViewModel.swift in Sources */,
 				5E72838921C9E7DD0090C2E9 /* InfomationListBottomBigImageCellNode.swift in Sources */,
+				5E46857A21CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift in Sources */,
 				5E7283A521CA2EA40090C2E9 /* DiscuListHeaderView.swift in Sources */,
 				5E5B769621CB830700E49936 /* InfomationDetailCellNode.swift in Sources */,
 				5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */,
@@ -1605,6 +1624,7 @@
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E5B769021CB7A9100E49936 /* InfomationDetailViewModel.swift in Sources */,
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
+				5E46857621CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,
 				5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */,

@@ -141,7 +141,7 @@ extension InfomationDetailViewController: ASTableDataSource {
         } else { // 热门跟帖
             #warning("重要的布局")
             let cellBlock = {() -> ASCellNode in
-                let cellNode = ASCellNode()
+                let cellNode = InfomationDetailCommentCellNode()
                 //cellNode.setList(list: model, index: indexPath.row + 1)
                 cellNode.selectionStyle = .none
                 if ((tableNode.tn_reloadIndexPaths ?? []).contains(indexPath)) {
