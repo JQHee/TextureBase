@@ -25,12 +25,12 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
     #warning ("隐藏导航栏一定要带动画， 不然会出现断层")
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        // self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        // self.navigationController?.setNavigationBarHidden(false, animated: true )
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     
@@ -51,6 +51,7 @@ class CommunityViewController: ASViewController<ASDisplayNode> {
         super.viewDidLoad()
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         self.automaticallyAdjustsScrollViewInsets = false
+        self.navigationController?.delegate = self
         setupUI()
     }
     
@@ -182,5 +183,13 @@ extension CommunityViewController: JXCategoryViewDelegate {
         } else {
             showVCWithIndex(index: rightIndex)
         }
+    }
+}
+
+// MARK: - UINavigationControllerDelegate
+extension CommunityViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        let isHidden = viewController.isKind(of: CommunityViewController.classForCoder())
+        navigationController.setNavigationBarHidden(isHidden, animated: true)
     }
 }

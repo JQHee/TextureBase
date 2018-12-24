@@ -36,13 +36,7 @@ class DiscuListDetailWebCellNode: ASCellNode {
     }
 
 //    override func calculateSizeThatFits(_ constrainedSize: CGSize) -> CGSize {
-//        return CGSize.init(width: constrainedSize.width, height: 500)
-//    }
-//
-//    override func calculateLayoutThatFits(_ constrainedSize: ASSizeRange, restrictedTo size: ASLayoutElementSize, relativeToParentSize parentSize: CGSize) -> ASLayout {
-//
-//        let layout = ASLayout()
-//        return layout
+//        return CGSize.init(width: constrainedSize.width, height: webViewHeight == 0 ? 0.001 : webViewHeight)
 //    }
     
     deinit {
@@ -56,6 +50,7 @@ class DiscuListDetailWebCellNode: ASCellNode {
 
     override func layout() {
         super.layout()
+        // self.webViewNode.view.frame = CGRect.init(x: 10, y: 50, width: kScreenW - 20, height: webViewHeight == 0 ? 0.001 : webViewHeight)
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
