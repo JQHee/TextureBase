@@ -27,6 +27,8 @@ target 'TextureBase' do
   pod 'TYAttributedLabel', '~> 2.6.6'
   # 轮播广告
   pod 'TYCyclePagerView', '~> 1.1.2'
+  # 数据缓存
+  # pod 'DataSources'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
