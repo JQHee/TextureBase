@@ -4,6 +4,7 @@ PODS:
   - Differentiator (3.1.0)
   - FBRetainCycleDetector (0.1.4)
   - GDPerformanceView-Swift (2.0.2)
+  - HandyJSON (4.2.1)
   - JXCategoryView (1.1.4)
   - Kingfisher (4.10.1)
   - MJRefresh (3.1.15.7)
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.8.0)
   - CYLTabBarController (~> 1.17.22)
   - GDPerformanceView-Swift (~> 2.0.2)
+  - HandyJSON (~> 4.2.1)
   - JXCategoryView (~> 1.1.4)
   - Kingfisher (~> 4.10.1)
   - MJRefresh (~> 3.1.15.7)
@@ -96,6 +98,7 @@ SPEC REPOS:
     - Differentiator
     - FBRetainCycleDetector
     - GDPerformanceView-Swift
+    - HandyJSON
     - JXCategoryView
     - Kingfisher
     - MJRefresh
@@ -127,6 +130,7 @@ SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   GDPerformanceView-Swift: a40b2f675589449f5b5082f3178f01bfdb7882ce
+  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
   JXCategoryView: b255f32c0a8e54f5c7769a9ad6ec6940318d23c9
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
@@ -152,6 +156,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 5c88786758da9647648021bfc014e4ce99b9cabb
+PODFILE CHECKSUM: f38e5296f122136d150c388737f925041ea0a4c1
 
 COCOAPODS: 1.5.3

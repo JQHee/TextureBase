@@ -99,6 +99,10 @@
 		5E8E814A21D7462900BDEF5A /* BFRxRequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */; };
 		5E8E814B21D7462900BDEF5A /* BFRxResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */; };
 		5E8E814C21D7462900BDEF5A /* ObjectMapperCommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */; };
+		5E8E816921D7598A00BDEF5A /* Observable+HandyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E816821D7598A00BDEF5A /* Observable+HandyJSON.swift */; };
+		5E8E816F21D75A8600BDEF5A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */; };
+		5E8E817221D75C5200BDEF5A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E817121D75C5200BDEF5A /* NewsViewModel.swift */; };
+		5E8E817521D75C9600BDEF5A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E817421D75C9600BDEF5A /* NewsModel.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
 		6682FAF921C92CC0003B0880 /* HotRecommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */; };
@@ -284,6 +288,10 @@
 		5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxRequestPlugin.swift; sourceTree = "<group>"; };
 		5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxResultModel.swift; sourceTree = "<group>"; };
 		5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMapperCommonFunc.swift; sourceTree = "<group>"; };
+		5E8E816821D7598A00BDEF5A /* Observable+HandyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+HandyJSON.swift"; sourceTree = "<group>"; };
+		5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		5E8E817121D75C5200BDEF5A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		5E8E817421D75C9600BDEF5A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
 		6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentModel.swift; sourceTree = "<group>"; };
@@ -950,6 +958,8 @@
 		5E8E813C21D745BE00BDEF5A /* RxSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E817021D75C4100BDEF5A /* RxDatasources */,
+				5E8E816A21D75A5D00BDEF5A /* BaseViewModel */,
 				5E8E813E21D7462900BDEF5A /* RXNetwork */,
 			);
 			path = RxSwiftKit;
@@ -958,6 +968,7 @@
 		5E8E813E21D7462900BDEF5A /* RXNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E816721D7595D00BDEF5A /* HandyJSON */,
 				5E8E813F21D7462900BDEF5A /* MoyaRequest */,
 				5E8E814521D7462900BDEF5A /* ObjectMapper */,
 			);
@@ -1014,6 +1025,39 @@
 				5E8E814021D7462900BDEF5A /* BFRxNetRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		5E8E816721D7595D00BDEF5A /* HandyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E816821D7598A00BDEF5A /* Observable+HandyJSON.swift */,
+			);
+			path = HandyJSON;
+			sourceTree = "<group>";
+		};
+		5E8E816A21D75A5D00BDEF5A /* BaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */,
+			);
+			path = BaseViewModel;
+			sourceTree = "<group>";
+		};
+		5E8E817021D75C4100BDEF5A /* RxDatasources */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E817321D75C8800BDEF5A /* Model */,
+				5E8E817121D75C5200BDEF5A /* NewsViewModel.swift */,
+			);
+			path = RxDatasources;
+			sourceTree = "<group>";
+		};
+		5E8E817321D75C8800BDEF5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E817421D75C9600BDEF5A /* NewsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6682FAF121C9281B003B0880 /* Util */ = {
@@ -1583,6 +1627,7 @@
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -1617,6 +1662,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -1718,6 +1764,7 @@
 				5E72839A21CA193D0090C2E9 /* InfomationDetailCommentViewController.swift in Sources */,
 				5E725CA621C78105003183FD /* KaneSectionCellNode.swift in Sources */,
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
+				5E8E817521D75C9600BDEF5A /* NewsModel.swift in Sources */,
 				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
 				5E6AA5A021C8CF7800EC4897 /* HotRecommentCellNode.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
@@ -1765,6 +1812,7 @@
 				5E46857A21CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift in Sources */,
 				5E7283A521CA2EA40090C2E9 /* DiscuListHeaderView.swift in Sources */,
 				5E5B769621CB830700E49936 /* InfomationDetailCellNode.swift in Sources */,
+				5E8E816F21D75A8600BDEF5A /* BaseViewModel.swift in Sources */,
 				5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
 				66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */,
@@ -1779,6 +1827,7 @@
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E5B769021CB7A9100E49936 /* InfomationDetailViewModel.swift in Sources */,
+				5E8E816921D7598A00BDEF5A /* Observable+HandyJSON.swift in Sources */,
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
 				5E46857621CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
@@ -1797,6 +1846,7 @@
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
 				5E5B768321CB529F00E49936 /* YLPhotoCell.swift in Sources */,
 				66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */,
+				5E8E817221D75C5200BDEF5A /* NewsViewModel.swift in Sources */,
 				66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
 				5E725C9B21C77A50003183FD /* HotRecommentViewController.swift in Sources */,
