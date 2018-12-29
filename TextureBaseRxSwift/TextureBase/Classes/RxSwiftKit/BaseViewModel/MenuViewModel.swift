@@ -54,7 +54,11 @@ extension RecommentViewModel: BFViewModelType {
     
     struct RecommentViewModelInput {
         let imageNameArr: [String] = []
-        let titleArr: [String] = []
+        var titleArr: [String] = []
+        
+        mutating func setTitleArray(titleArr: [String]) {
+            self.titleArr = titleArr
+        }
     }
     
     struct RecommentViewModelOutput: OutputRefreshProtocol {
