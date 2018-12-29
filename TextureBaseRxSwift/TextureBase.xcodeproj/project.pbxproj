@@ -93,6 +93,12 @@
 		5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */; };
 		5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */; };
 		5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */; };
+		5E8E814721D7462900BDEF5A /* BFRxNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814021D7462900BDEF5A /* BFRxNetRequest.swift */; };
+		5E8E814821D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814121D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift */; };
+		5E8E814921D7462900BDEF5A /* BFRxRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814221D7462900BDEF5A /* BFRxRequestApi.swift */; };
+		5E8E814A21D7462900BDEF5A /* BFRxRequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */; };
+		5E8E814B21D7462900BDEF5A /* BFRxResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */; };
+		5E8E814C21D7462900BDEF5A /* ObjectMapperCommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
 		6682FAF921C92CC0003B0880 /* HotRecommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */; };
@@ -272,6 +278,12 @@
 		5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFTAsKitTool.swift; sourceTree = "<group>"; };
 		5E8BF48521BF6412005BD4E0 /* BFImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFImageTextButton.swift; sourceTree = "<group>"; };
 		5E8BF48B21BF6D21005BD4E0 /* TestTableNodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableNodeViewController.swift; sourceTree = "<group>"; };
+		5E8E814021D7462900BDEF5A /* BFRxNetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxNetRequest.swift; sourceTree = "<group>"; };
+		5E8E814121D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFRxObservable+ObjectMapper.swift"; sourceTree = "<group>"; };
+		5E8E814221D7462900BDEF5A /* BFRxRequestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxRequestApi.swift; sourceTree = "<group>"; };
+		5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxRequestPlugin.swift; sourceTree = "<group>"; };
+		5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxResultModel.swift; sourceTree = "<group>"; };
+		5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMapperCommonFunc.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
 		6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentModel.swift; sourceTree = "<group>"; };
@@ -830,6 +842,7 @@
 		5E8BF47221BF51EE005BD4E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E813C21D745BE00BDEF5A /* RxSwiftKit */,
 				66F18A5921C3D43F0009A074 /* Sections */,
 				66F18A5821C3D42B0009A074 /* Resources */,
 				5E682E3821C0A68C0025F45B /* LayoutSpec */,
@@ -932,6 +945,75 @@
 				5E682E3421C091D50025F45B /* TestCustomeactivityIndicatorVC.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5E8E813C21D745BE00BDEF5A /* RxSwiftKit */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E813E21D7462900BDEF5A /* RXNetwork */,
+			);
+			path = RxSwiftKit;
+			sourceTree = "<group>";
+		};
+		5E8E813E21D7462900BDEF5A /* RXNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E813F21D7462900BDEF5A /* MoyaRequest */,
+				5E8E814521D7462900BDEF5A /* ObjectMapper */,
+			);
+			path = RXNetwork;
+			sourceTree = "<group>";
+		};
+		5E8E813F21D7462900BDEF5A /* MoyaRequest */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E815221D757AE00BDEF5A /* Requests */,
+				5E8E815121D74D7600BDEF5A /* BaseResultModel */,
+				5E8E815021D74CFD00BDEF5A /* Plugins */,
+				5E8E814F21D74CC600BDEF5A /* ApiManagers */,
+			);
+			path = MoyaRequest;
+			sourceTree = "<group>";
+		};
+		5E8E814521D7462900BDEF5A /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E814121D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift */,
+				5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */,
+			);
+			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		5E8E814F21D74CC600BDEF5A /* ApiManagers */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E814221D7462900BDEF5A /* BFRxRequestApi.swift */,
+			);
+			path = ApiManagers;
+			sourceTree = "<group>";
+		};
+		5E8E815021D74CFD00BDEF5A /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		5E8E815121D74D7600BDEF5A /* BaseResultModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */,
+			);
+			path = BaseResultModel;
+			sourceTree = "<group>";
+		};
+		5E8E815221D757AE00BDEF5A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E814021D7462900BDEF5A /* BFRxNetRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		6682FAF121C9281B003B0880 /* Util */ = {
@@ -1498,6 +1580,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
@@ -1506,12 +1589,14 @@
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -1529,6 +1614,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
@@ -1537,12 +1623,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -1592,6 +1680,7 @@
 				66F18A6121C3D7B40009A074 /* BaseNavigationViewController.swift in Sources */,
 				66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */,
 				66A4226521C69F98003D5E40 /* AWSelectModel.swift in Sources */,
+				5E8E814C21D7462900BDEF5A /* ObjectMapperCommonFunc.swift in Sources */,
 				5E72839421C9F0CD0090C2E9 /* InfomationListRequest.swift in Sources */,
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
 				5E5B768421CB529F00E49936 /* YLPhotoProgressView.swift in Sources */,
@@ -1671,6 +1760,7 @@
 				5E8B999E21D5D37900F14138 /* TextField3ViewController.swift in Sources */,
 				5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */,
 				5E72839021C9F0980090C2E9 /* InfomationListViewModel.swift in Sources */,
+				5E8E814B21D7462900BDEF5A /* BFRxResultModel.swift in Sources */,
 				5E72838921C9E7DD0090C2E9 /* InfomationListBottomBigImageCellNode.swift in Sources */,
 				5E46857A21CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift in Sources */,
 				5E7283A521CA2EA40090C2E9 /* DiscuListHeaderView.swift in Sources */,
@@ -1692,11 +1782,14 @@
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
 				5E46857621CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
+				5E8E814821D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift in Sources */,
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,
 				5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */,
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
 				5E7283A221CA22290090C2E9 /* DiscuListDetailViewController.swift in Sources */,
+				5E8E814A21D7462900BDEF5A /* BFRxRequestPlugin.swift in Sources */,
+				5E8E814721D7462900BDEF5A /* BFRxNetRequest.swift in Sources */,
 				66A4225F21C68FBE003D5E40 /* SelectPagerCellNode.swift in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				66ABDB9921CA82FD008C7E09 /* DiscuListDetailViewModel.swift in Sources */,
@@ -1708,6 +1801,7 @@
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
 				5E725C9B21C77A50003183FD /* HotRecommentViewController.swift in Sources */,
 				66A4223721C5F9D5003D5E40 /* HTTPClient.swift in Sources */,
+				5E8E814921D7462900BDEF5A /* BFRxRequestApi.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,
 				5E725C9721C73E53003183FD /* BFWebBrowserController.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,

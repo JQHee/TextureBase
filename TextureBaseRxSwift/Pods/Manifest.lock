@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.0)
   - CYLTabBarController (1.17.22)
+  - Differentiator (3.1.0)
   - FBRetainCycleDetector (0.1.4)
   - GDPerformanceView-Swift (2.0.2)
   - JXCategoryView (1.1.4)
@@ -13,7 +14,11 @@ PODS:
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - MXParallaxHeader (0.6.1)
+  - ObjectMapper (3.4.2)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -32,6 +37,10 @@ PODS:
   - Result (4.0.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
@@ -66,8 +75,11 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.15.7)
   - MLeaksFinder (~> 1.0.0)
   - Moya (~> 12.0.1)
+  - Moya/RxSwift (~> 12.0.1)
   - MXParallaxHeader (~> 0.6.1)
+  - ObjectMapper (~> 3.4.2)
   - RxCocoa (~> 4.4.0)
+  - RxDataSources (~> 3.1.0)
   - RxSwift (~> 4.4.0)
   - SDWebImage (~> 5.0.0-beta3)
   - SnapKit (~> 4.2.0)
@@ -81,6 +93,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CYLTabBarController
+    - Differentiator
     - FBRetainCycleDetector
     - GDPerformanceView-Swift
     - JXCategoryView
@@ -89,12 +102,14 @@ SPEC REPOS:
     - MLeaksFinder
     - Moya
     - MXParallaxHeader
+    - ObjectMapper
     - PINCache
     - PINOperation
     - PINRemoteImage
     - Result
     - RxAtomic
     - RxCocoa
+    - RxDataSources
     - RxSwift
     - SDWebImage
     - SnapKit
@@ -109,6 +124,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   GDPerformanceView-Swift: a40b2f675589449f5b5082f3178f01bfdb7882ce
   JXCategoryView: b255f32c0a8e54f5c7769a9ad6ec6940318d23c9
@@ -117,12 +133,14 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SDWebImage: e52654ceef9fdc19f4c612d64a5b6d3f05dd81a4
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
@@ -134,6 +152,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: be8e03ad1dbc565715c55df377cbc3f9f49c92f6
+PODFILE CHECKSUM: 5c88786758da9647648021bfc014e4ce99b9cabb
 
 COCOAPODS: 1.5.3
