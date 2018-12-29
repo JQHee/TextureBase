@@ -13,11 +13,20 @@ import RxCocoa
 class UIButton4ViewController: UIViewController {
     
     let button = UIButton()
-     let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
+    
+    let tempButtonView = TestUIButton4View()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tempButtonView.loginCommand.subscribe(onNext: { () in
+            
+        }).disposed(by: disposeBag)
+
+    }
+    
+    private func testButton() {
         //按钮点击响应
         button.rx.tap
             .subscribe({[weak self] _ in
@@ -31,8 +40,6 @@ class UIButton4ViewController: UIViewController {
                 print(self ?? "")
             }
             .disposed(by: disposeBag)
-
     }
     
-
 }

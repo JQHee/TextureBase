@@ -103,6 +103,12 @@
 		5E8E816F21D75A8600BDEF5A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */; };
 		5E8E817221D75C5200BDEF5A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E817121D75C5200BDEF5A /* NewsViewModel.swift */; };
 		5E8E817521D75C9600BDEF5A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E817421D75C9600BDEF5A /* NewsModel.swift */; };
+		5E8E817821D76BCC00BDEF5A /* UIScrollView5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E817721D76BCC00BDEF5A /* UIScrollView5ViewController.swift */; };
+		5E8E817B21D76C8B00BDEF5A /* TestUIButton4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E817A21D76C8B00BDEF5A /* TestUIButton4View.swift */; };
+		5E8E817E21D7707400BDEF5A /* Observable+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E817D21D7707400BDEF5A /* Observable+SwiftyJSON.swift */; };
+		5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818021D773BF00BDEF5A /* Refreshable.swift */; };
+		5E8E818321D7743600BDEF5A /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818221D7743600BDEF5A /* MenuViewModel.swift */; };
+		5E8E818521D7745200BDEF5A /* BFViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818421D7745200BDEF5A /* BFViewModelType.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
 		6682FAF921C92CC0003B0880 /* HotRecommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */; };
@@ -292,6 +298,12 @@
 		5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		5E8E817121D75C5200BDEF5A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		5E8E817421D75C9600BDEF5A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		5E8E817721D76BCC00BDEF5A /* UIScrollView5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView5ViewController.swift; sourceTree = "<group>"; };
+		5E8E817A21D76C8B00BDEF5A /* TestUIButton4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIButton4View.swift; sourceTree = "<group>"; };
+		5E8E817D21D7707400BDEF5A /* Observable+SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+SwiftyJSON.swift"; sourceTree = "<group>"; };
+		5E8E818021D773BF00BDEF5A /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		5E8E818221D7743600BDEF5A /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		5E8E818421D7745200BDEF5A /* BFViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFViewModelType.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
 		6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentModel.swift; sourceTree = "<group>"; };
@@ -754,6 +766,7 @@
 		5E8B999521D5C02800F14138 /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E817621D76BB200BDEF5A /* UIScrollView5 */,
 				5E8B999F21D5D54600F14138 /* UIButton4 */,
 				5E8B999C21D5D36C00F14138 /* TextField3 */,
 				5E8B999921D5D16800F14138 /* Subjects2 */,
@@ -789,6 +802,7 @@
 		5E8B999F21D5D54600F14138 /* UIButton4 */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E817921D76C6700BDEF5A /* View */,
 				5E8B99A021D5D55A00F14138 /* UIButton4ViewController.swift */,
 			);
 			path = UIButton4;
@@ -958,6 +972,7 @@
 		5E8E813C21D745BE00BDEF5A /* RxSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E817F21D773AC00BDEF5A /* Refresh */,
 				5E8E817021D75C4100BDEF5A /* RxDatasources */,
 				5E8E816A21D75A5D00BDEF5A /* BaseViewModel */,
 				5E8E813E21D7462900BDEF5A /* RXNetwork */,
@@ -968,6 +983,7 @@
 		5E8E813E21D7462900BDEF5A /* RXNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E817C21D7704500BDEF5A /* SwiftyJSON */,
 				5E8E816721D7595D00BDEF5A /* HandyJSON */,
 				5E8E813F21D7462900BDEF5A /* MoyaRequest */,
 				5E8E814521D7462900BDEF5A /* ObjectMapper */,
@@ -1039,6 +1055,8 @@
 			isa = PBXGroup;
 			children = (
 				5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */,
+				5E8E818221D7743600BDEF5A /* MenuViewModel.swift */,
+				5E8E818421D7745200BDEF5A /* BFViewModelType.swift */,
 			);
 			path = BaseViewModel;
 			sourceTree = "<group>";
@@ -1058,6 +1076,38 @@
 				5E8E817421D75C9600BDEF5A /* NewsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5E8E817621D76BB200BDEF5A /* UIScrollView5 */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E817721D76BCC00BDEF5A /* UIScrollView5ViewController.swift */,
+			);
+			path = UIScrollView5;
+			sourceTree = "<group>";
+		};
+		5E8E817921D76C6700BDEF5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E817A21D76C8B00BDEF5A /* TestUIButton4View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E8E817C21D7704500BDEF5A /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E817D21D7707400BDEF5A /* Observable+SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		5E8E817F21D773AC00BDEF5A /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E818021D773BF00BDEF5A /* Refreshable.swift */,
+			);
+			path = Refresh;
 			sourceTree = "<group>";
 		};
 		6682FAF121C9281B003B0880 /* Util */ = {
@@ -1766,6 +1816,7 @@
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
 				5E8E817521D75C9600BDEF5A /* NewsModel.swift in Sources */,
 				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
+				5E8E817821D76BCC00BDEF5A /* UIScrollView5ViewController.swift in Sources */,
 				5E6AA5A021C8CF7800EC4897 /* HotRecommentCellNode.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
 				66ABDB8921CA7864008C7E09 /* DiscuListDetailWebCellNode.swift in Sources */,
@@ -1778,10 +1829,12 @@
 				6698468C21C7C7660060DE9C /* BFRefreshNormalHeader.swift in Sources */,
 				5E8BF48321BF60A5005BD4E0 /* BFTAsKitTool.swift in Sources */,
 				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
+				5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */,
 				5E72839F21CA21C60090C2E9 /* DiscuListViewController.swift in Sources */,
 				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
 				66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */,
 				5E8B999821D5C08B00F14138 /* Observable1ViewController.swift in Sources */,
+				5E8E818321D7743600BDEF5A /* MenuViewModel.swift in Sources */,
 				5E682E3A21C0A69F0025F45B /* ReadMe.swift in Sources */,
 				66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */,
 				5E6AA59421C8826C00EC4897 /* KaneRequest.swift in Sources */,
@@ -1789,6 +1842,7 @@
 				5E8B999B21D5D17700F14138 /* Subjects2ViewController.swift in Sources */,
 				5E8BF44521BF4E6D005BD4E0 /* AppDelegate.swift in Sources */,
 				5E72839C21CA194F0090C2E9 /* InfomationDetailViewController.swift in Sources */,
+				5E8E818521D7745200BDEF5A /* BFViewModelType.swift in Sources */,
 				5E7283B221CA3BD90090C2E9 /* DiscuListModel.swift in Sources */,
 				5E725C9E21C77AC3003183FD /* LovePlayCommunityViewController.swift in Sources */,
 				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
@@ -1836,6 +1890,7 @@
 				5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */,
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
+				5E8E817B21D76C8B00BDEF5A /* TestUIButton4View.swift in Sources */,
 				5E7283A221CA22290090C2E9 /* DiscuListDetailViewController.swift in Sources */,
 				5E8E814A21D7462900BDEF5A /* BFRxRequestPlugin.swift in Sources */,
 				5E8E814721D7462900BDEF5A /* BFRxNetRequest.swift in Sources */,
@@ -1850,6 +1905,7 @@
 				66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */,
 				5E682E3721C0A2E70025F45B /* ASTableNode+ReloadIndexPaths.swift in Sources */,
 				5E725C9B21C77A50003183FD /* HotRecommentViewController.swift in Sources */,
+				5E8E817E21D7707400BDEF5A /* Observable+SwiftyJSON.swift in Sources */,
 				66A4223721C5F9D5003D5E40 /* HTTPClient.swift in Sources */,
 				5E8E814921D7462900BDEF5A /* BFRxRequestApi.swift in Sources */,
 				5E8BF48021BF5F57005BD4E0 /* NSString+TextNode.swift in Sources */,

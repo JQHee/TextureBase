@@ -55,6 +55,7 @@ public final class BFRxNetRequest: NSObject {
     func request(_ token : Moya.TargetType, callbackQueue: DispatchQueue? = .global()) -> Observable<BFRxResultModel> {
         
         return Observable<BFRxResultModel>.create({ (observer) -> Disposable in
+            // asDriver(onErrorJustReturn: [])
             return self.provider.rx.request(token as! ApiManager, callbackQueue: callbackQueue)
                 .asObservable()
                 .mapJSON()
