@@ -79,10 +79,22 @@ extension RecommentViewModel: BFViewModelType {
             print(self)
         }).disposed(by: disposeBag)
         
-        // VC中发起自动刷新
-        // output.autoSetRefreshHeaderStatus(header: <#T##MJRefreshHeader?#>, footer: <#T##MJRefreshFooter?#>)
         return output
     }
     
-    
 }
+
+/* VC中发起自动刷新
+vmOutput = viewModel.transform(input: RecommentViewModel.RecommentViewModelInput)
+
+vmOutput?.sections.drive(recommendCollectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
+
+refreshHeader = initRefreshHeader(recommendCollectionView) { [weak self] in
+    self?.vmOutput?.requestCommand.onNext(true)
+}
+let refreshFooter = initRefreshFooter(recommendCollectionView) { [weak self] in
+    self?.vmOutput?.requestCommand.onNext(false)
+}
+
+vmOutput?.autoSetRefreshHeaderStatus(header: refreshHeader, footer: refreshFooter).disposed(by: rx.disposeBag)
+ */
