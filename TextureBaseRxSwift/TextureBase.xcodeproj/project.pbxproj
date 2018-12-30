@@ -109,6 +109,7 @@
 		5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818021D773BF00BDEF5A /* Refreshable.swift */; };
 		5E8E818321D7743600BDEF5A /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818221D7743600BDEF5A /* MenuViewModel.swift */; };
 		5E8E818521D7745200BDEF5A /* BFViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818421D7745200BDEF5A /* BFViewModelType.swift */; };
+		664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
 		6682FAF921C92CC0003B0880 /* HotRecommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */; };
@@ -304,6 +305,7 @@
 		5E8E818021D773BF00BDEF5A /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		5E8E818221D7743600BDEF5A /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		5E8E818421D7745200BDEF5A /* BFViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFViewModelType.swift; sourceTree = "<group>"; };
+		664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter6ViewController.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
 		6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentModel.swift; sourceTree = "<group>"; };
@@ -766,6 +768,7 @@
 		5E8B999521D5C02800F14138 /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				664E4BF721D913AC006ADC10 /* NSNotificationCenter6 */,
 				5E8E817621D76BB200BDEF5A /* UIScrollView5 */,
 				5E8B999F21D5D54600F14138 /* UIButton4 */,
 				5E8B999C21D5D36C00F14138 /* TextField3 */,
@@ -1108,6 +1111,14 @@
 				5E8E818021D773BF00BDEF5A /* Refreshable.swift */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		664E4BF721D913AC006ADC10 /* NSNotificationCenter6 */ = {
+			isa = PBXGroup;
+			children = (
+				664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */,
+			);
+			path = NSNotificationCenter6;
 			sourceTree = "<group>";
 		};
 		6682FAF121C9281B003B0880 /* Util */ = {
@@ -1887,6 +1898,7 @@
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
 				5E8E814821D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift in Sources */,
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,
+				664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */,
 				5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */,
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
