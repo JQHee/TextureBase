@@ -61,6 +61,8 @@ extension ApiManager: Moya.TargetType {
         switch self {
          
         case .testUser(let paramete):
+            // url 请求参数
+            // Task.requestCompositeParameters(bodyParameters: <#T##[String : Any]#>, bodyEncoding: <#T##ParameterEncoding#>, urlParameters: <#T##[String : Any]#>)
             return .requestParameters(parameters: paramete, encoding: URLEncoding.default)
             
         default:

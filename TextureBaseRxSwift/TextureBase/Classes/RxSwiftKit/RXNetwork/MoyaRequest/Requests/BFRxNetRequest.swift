@@ -43,17 +43,48 @@ public final class BFRxNetRequest: NSObject {
                 print("error:", error)
             }
         }
+
+        let endpointClosure = { (target: Moya.TargetType) -> Endpoint in
+            let defaultEndpoint = MoyaProvider<ApiManager>.defaultEndpointMapping(for: target as! ApiManager)
+            return defaultEndpoint.adding(newHTTPHeaderFields: ["APP_NAME": "MY_AWESOME_APP"])
+        }
+
         if custom.isActivityIndicator {
-            self.provider = MoyaProvider<ApiManager>(requestClosure: requestClosure, manager: Manager.default, plugins: [networkActivityPlugin, BFRxRequestLoadingPlugin(self.customRequest)])
+            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [networkActivityPlugin, BFRxRequestLoadingPlugin(self.customRequest)])
         
         } else {
-            self.provider = MoyaProvider<ApiManager>(requestClosure: requestClosure, manager: Manager.default, plugins: [BFRxRequestLoadingPlugin(self.customRequest)])
+            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [BFRxRequestLoadingPlugin(self.customRequest)])
         }
     }
-    
+
+    // 带进度条的
+    @discardableResult
+    func request(_ token : Moya.TargetType, callbackQueue: DispatchQueue? = .global()) -> Observable<ProgressResponse> {
+        
+        return Observable<ProgressResponse>.create({ (observer) -> Disposable in
+            // asDriver(onErrorJustReturn: [])
+            return self.provider.rx.requestWithProgress(token as! ApiManager, callbackQueue: callbackQueue)
+                .asObservable()
+                .subscribe(onNext: { (result) in
+                    DispatchQueue.global().async {
+                        print(result.progressObject ?? "")
+                        print(result.response ?? "")
+                        observer.onNext(result)
+                        DispatchQueue.main.async {
+                            observer.onCompleted()
+                        }
+                    }
+                }, onError: { (error) in
+                    DispatchQueue.main.async {
+                        observer.onError(error)
+                    }
+                })
+        })
+    }
+
     @discardableResult
     func request(_ token : Moya.TargetType, callbackQueue: DispatchQueue? = .global()) -> Observable<BFRxResultModel> {
-        
+
         return Observable<BFRxResultModel>.create({ (observer) -> Disposable in
             // asDriver(onErrorJustReturn: [])
             return self.provider.rx.request(token as! ApiManager, callbackQueue: callbackQueue)
@@ -72,12 +103,19 @@ public final class BFRxNetRequest: NSObject {
                     }
                 })
         })
-        
-        
     }
     
-    
-    
+
+    // MARK: -取消所有请求
+    func cancelAllRequest() {
+        // MyAPIProvider.manager.session.invalidateAndCancel()  //取消所有请求
+        provider.manager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
+            dataTasks.forEach { $0.cancel() }
+            uploadTasks.forEach { $0.cancel() }
+            downloadTasks.forEach { $0.cancel() }
+        }
+    }
+
     deinit {
         print("网络请求对象销毁!!!")
     }
