@@ -22,10 +22,30 @@ struct BFRxCustomRequest {
     var timeOut = 15.0
 }
 
+// MARK: - HTTPS证书验证
+extension Manager {
+    
+    static func defaultAlamofireManager() -> Manager {
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        //获取本地证书
+        let path: String = Bundle.main.path(forResource: "证书名", ofType: "cer")!
+        let certificateData = try? Data(contentsOf: URL(fileURLWithPath: path)) as CFData
+        let certificate = SecCertificateCreateWithData(nil, certificateData!)
+        let certificates :[SecCertificate] = [certificate!]
+        
+        let policies: [String: ServerTrustPolicy] = [
+            "域名" : .pinCertificates(certificates: certificates, validateCertificateChain: true, validateHost: true)
+        ]
+        let manager = Alamofire.SessionManager(configuration: configuration,serverTrustPolicyManager: ServerTrustPolicyManager(policies: policies))
+        return manager
+    }
+}
+
 class BFRxNetRequest {
 
     var provider: MoyaProvider<ApiManager>
-    
+
     init(_ custom: BFRxCustomRequest = BFRxCustomRequest()) {
     
         /// 设置请求头,超时时间等
@@ -44,12 +64,11 @@ class BFRxNetRequest {
             return defaultEndpoint.adding(newHTTPHeaderFields: ["APP_NAME": "MY_AWESOME_APP"])
         }
 
+        var plugins: [PluginType] = [BFRxRequestLoadingPlugin(custom)]
         if custom.isActivityIndicator {
-            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [networkActivityPlugin, BFRxRequestLoadingPlugin(custom)])
-        
-        } else {
-            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [BFRxRequestLoadingPlugin(custom)])
+            plugins = [networkActivityPlugin, BFRxRequestLoadingPlugin(custom)]
         }
+        self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: plugins)
     }
 
     // 带进度条的
