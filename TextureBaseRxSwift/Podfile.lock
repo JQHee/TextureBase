@@ -40,6 +40,11 @@ PODS:
   - ReactorKit (1.2.1):
     - RxSwift (>= 4.0.0)
   - Result (4.0.0)
+  - RxAlamofire (4.3.0):
+    - RxAlamofire/Core (= 4.3.0)
+  - RxAlamofire/Core (4.3.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -89,6 +94,7 @@ DEPENDENCIES:
   - "NSObject+Rx (~> 4.4.1)"
   - ObjectMapper (~> 3.4.2)
   - ReactorKit (~> 1.2.1)
+  - RxAlamofire (~> 4.3.0)
   - RxCocoa (~> 4.4.0)
   - RxDataSources (~> 3.1.0)
   - RxGesture (~> 2.1.0)
@@ -122,6 +128,7 @@ SPEC REPOS:
     - PINRemoteImage
     - ReactorKit
     - Result
+    - RxAlamofire
     - RxAtomic
     - RxCocoa
     - RxDataSources
@@ -157,6 +164,7 @@ SPEC CHECKSUMS:
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   ReactorKit: 8be57f0527ad1ac2963cd5c338274a46a01e57a3
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
@@ -172,6 +180,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: f633f29f8e37932ef831c819b145459125e452fe
+PODFILE CHECKSUM: 2bf11d4b27d4392774f4028c502fa6c7e5b45a89
 
 COCOAPODS: 1.5.3

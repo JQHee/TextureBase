@@ -23,6 +23,9 @@ class ViewControllerReactor: Reactor {
         case response(sectionModels: [SectionModel<String, String>])
     }
     
+    // 当前刷新的页数
+    private var currentPage = 0
+    
     // 代表当前视图的状态
     struct State {
         var refreshingState = MJRefreshState.idle
