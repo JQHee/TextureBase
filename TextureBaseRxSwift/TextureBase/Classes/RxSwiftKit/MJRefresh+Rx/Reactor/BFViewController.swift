@@ -54,6 +54,7 @@ class BFViewController: UIViewController {
 }
 
 extension BFViewController: View {
+    // VC.reactor = reator 赋值了才会调用
     func bind(reactor: ViewControllerReactor) {
         // 如果发出一个refreshing事件，就发起请求
         // 这里就是用户下拉tableview了

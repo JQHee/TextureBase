@@ -29,6 +29,8 @@ target 'TextureBase' do
   pod 'TYCyclePagerView', '~> 1.1.2'
   # 数据缓存 (数据驱动UI)
   # pod 'DataSources'
+  # 小红点
+  # pod 'BadgeSwift', '~> 7.0'
   
   # Rx相关
   # 运行错误：Command CompileSwiftSources failed with a nonzero exit code
