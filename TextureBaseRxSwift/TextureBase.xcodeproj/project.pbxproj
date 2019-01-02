@@ -112,6 +112,10 @@
 		5EC41A6C21DC44F500E95A86 /* MJRefresh+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */; };
 		5EC41A7021DC45FC00E95A86 /* ViewControllerReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */; };
 		5EC41A7121DC45FC00E95A86 /* BFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */; };
+		5EC41A7521DC58B000E95A86 /* UILayoutAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7421DC58B000E95A86 /* UILayoutAdaptor.swift */; };
+		5EC41A7821DC5A0200E95A86 /* FDTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7721DC5A0200E95A86 /* FDTransaction.swift */; };
+		5EC41A7B21DC5D6400E95A86 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7A21DC5D6400E95A86 /* NSObject+Rx.swift */; };
+		5EC41A7D21DC5D7300E95A86 /* ReactorKit+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7C21DC5D7200E95A86 /* ReactorKit+Rx.swift */; };
 		664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
@@ -311,6 +315,10 @@
 		5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MJRefresh+Rx.swift"; sourceTree = "<group>"; };
 		5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerReactor.swift; sourceTree = "<group>"; };
 		5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFViewController.swift; sourceTree = "<group>"; };
+		5EC41A7421DC58B000E95A86 /* UILayoutAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutAdaptor.swift; sourceTree = "<group>"; };
+		5EC41A7721DC5A0200E95A86 /* FDTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDTransaction.swift; sourceTree = "<group>"; };
+		5EC41A7A21DC5D6400E95A86 /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		5EC41A7C21DC5D7200E95A86 /* ReactorKit+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReactorKit+Rx.swift"; sourceTree = "<group>"; };
 		664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter6ViewController.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
@@ -981,6 +989,7 @@
 		5E8E813C21D745BE00BDEF5A /* RxSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				5EC41A7221DC586000E95A86 /* Fate */,
 				5EC41A6A21DC44DE00E95A86 /* MJRefresh+Rx */,
 				5E8E817F21D773AC00BDEF5A /* Refresh */,
 				5E8E817021D75C4100BDEF5A /* RxDatasources */,
@@ -1136,6 +1145,41 @@
 				5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */,
 			);
 			path = Reactor;
+			sourceTree = "<group>";
+		};
+		5EC41A7221DC586000E95A86 /* Fate */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A7921DC5CF900E95A86 /* RxAdaptor */,
+				5EC41A7621DC59F300E95A86 /* RunloopOptimize */,
+				5EC41A7321DC589300E95A86 /* UILayoutAdaptor */,
+			);
+			path = Fate;
+			sourceTree = "<group>";
+		};
+		5EC41A7321DC589300E95A86 /* UILayoutAdaptor */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A7421DC58B000E95A86 /* UILayoutAdaptor.swift */,
+			);
+			path = UILayoutAdaptor;
+			sourceTree = "<group>";
+		};
+		5EC41A7621DC59F300E95A86 /* RunloopOptimize */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A7721DC5A0200E95A86 /* FDTransaction.swift */,
+			);
+			path = RunloopOptimize;
+			sourceTree = "<group>";
+		};
+		5EC41A7921DC5CF900E95A86 /* RxAdaptor */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A7C21DC5D7200E95A86 /* ReactorKit+Rx.swift */,
+				5EC41A7A21DC5D6400E95A86 /* NSObject+Rx.swift */,
+			);
+			path = RxAdaptor;
 			sourceTree = "<group>";
 		};
 		664E4BF721D913AC006ADC10 /* NSNotificationCenter6 */ = {
@@ -1848,6 +1892,7 @@
 				5E7283A921CA330A0090C2E9 /* DiscuListPlaceTopCellNode.swift in Sources */,
 				5E72838121C9D3DA0090C2E9 /* InfomationListViewController.swift in Sources */,
 				5E5B768821CB539B00E49936 /* UIView+Extension.swift in Sources */,
+				5EC41A7521DC58B000E95A86 /* UILayoutAdaptor.swift in Sources */,
 				6698468921C7C74B0060DE9C /* MJRefresh-Extension.swift in Sources */,
 				5E6AA59221C8825A00EC4897 /* KaneModel.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
@@ -1892,6 +1937,7 @@
 				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
 				66A4223521C5F981003D5E40 /* API.swift in Sources */,
 				66F18A6D21C3D8FB0009A074 /* InfomationViewController.swift in Sources */,
+				5EC41A7D21DC5D7300E95A86 /* ReactorKit+Rx.swift in Sources */,
 				5E72838B21C9EC930090C2E9 /* InfomationListTopBigImageCellNode.swift in Sources */,
 				66F18A8921C400380009A074 /* MineItemCellNode.swift in Sources */,
 				66A4226321C69B87003D5E40 /* SelectTopRequest.swift in Sources */,
@@ -1913,6 +1959,7 @@
 				5E8E816F21D75A8600BDEF5A /* BaseViewModel.swift in Sources */,
 				5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
+				5EC41A7821DC5A0200E95A86 /* FDTransaction.swift in Sources */,
 				66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
 				66A4224021C6016B003D5E40 /* ADLaunchView.swift in Sources */,
@@ -1937,6 +1984,7 @@
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
 				5E8E817B21D76C8B00BDEF5A /* TestUIButton4View.swift in Sources */,
+				5EC41A7B21DC5D6400E95A86 /* NSObject+Rx.swift in Sources */,
 				5E7283A221CA22290090C2E9 /* DiscuListDetailViewController.swift in Sources */,
 				5E8E814A21D7462900BDEF5A /* BFRxRequestPlugin.swift in Sources */,
 				5E8E814721D7462900BDEF5A /* BFRxNetRequest.swift in Sources */,

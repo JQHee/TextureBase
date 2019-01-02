@@ -44,6 +44,7 @@ target 'TextureBase' do
   # redux
   pod 'ReactorKit', '~> 1.2.1'
   pod 'NSObject+Rx', '~> 4.4.1' # 为了使用rx_disposeBag
+  # 组件化
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
