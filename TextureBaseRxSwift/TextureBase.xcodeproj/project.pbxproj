@@ -109,6 +109,8 @@
 		5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818021D773BF00BDEF5A /* Refreshable.swift */; };
 		5E8E818321D7743600BDEF5A /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818221D7743600BDEF5A /* MenuViewModel.swift */; };
 		5E8E818521D7745200BDEF5A /* BFViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818421D7745200BDEF5A /* BFViewModelType.swift */; };
+		662D31F421DA4C57002840FB /* Response+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D31F321DA4C57002840FB /* Response+Observable.swift */; };
+		662D31F721DA4D6C002840FB /* BFProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D31F621DA4D6C002840FB /* BFProgressHUD.swift */; };
 		664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
@@ -305,6 +307,8 @@
 		5E8E818021D773BF00BDEF5A /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		5E8E818221D7743600BDEF5A /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		5E8E818421D7745200BDEF5A /* BFViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFViewModelType.swift; sourceTree = "<group>"; };
+		662D31F321DA4C57002840FB /* Response+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Observable.swift"; sourceTree = "<group>"; };
+		662D31F621DA4D6C002840FB /* BFProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFProgressHUD.swift; sourceTree = "<group>"; };
 		664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter6ViewController.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
@@ -975,6 +979,7 @@
 		5E8E813C21D745BE00BDEF5A /* RxSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				662D31F521DA4D49002840FB /* HUD */,
 				5E8E817F21D773AC00BDEF5A /* Refresh */,
 				5E8E817021D75C4100BDEF5A /* RxDatasources */,
 				5E8E816A21D75A5D00BDEF5A /* BaseViewModel */,
@@ -1010,6 +1015,7 @@
 			children = (
 				5E8E814121D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift */,
 				5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */,
+				662D31F321DA4C57002840FB /* Response+Observable.swift */,
 			);
 			path = ObjectMapper;
 			sourceTree = "<group>";
@@ -1111,6 +1117,14 @@
 				5E8E818021D773BF00BDEF5A /* Refreshable.swift */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		662D31F521DA4D49002840FB /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				662D31F621DA4D6C002840FB /* BFProgressHUD.swift */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		664E4BF721D913AC006ADC10 /* NSNotificationCenter6 */ = {
@@ -1682,8 +1696,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
@@ -1695,16 +1710,22 @@
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TYAttributedLabel/TYAttributedLabel.framework",
@@ -1719,6 +1740,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
@@ -1730,16 +1752,22 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYAttributedLabel.framework",
@@ -1751,7 +1779,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEE31F0BF95B7FBE5F8F2EC5 /* [CP] Check Pods Manifest.lock */ = {
@@ -1842,6 +1870,7 @@
 				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
 				5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */,
 				5E72839F21CA21C60090C2E9 /* DiscuListViewController.swift in Sources */,
+				662D31F721DA4D6C002840FB /* BFProgressHUD.swift in Sources */,
 				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
 				66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */,
 				5E8B999821D5C08B00F14138 /* Observable1ViewController.swift in Sources */,
@@ -1911,6 +1940,7 @@
 				66ABDB9921CA82FD008C7E09 /* DiscuListDetailViewModel.swift in Sources */,
 				66ABDB9521CA8252008C7E09 /* DiscuListDetailRequest.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
+				662D31F421DA4C57002840FB /* Response+Observable.swift in Sources */,
 				5E5B768321CB529F00E49936 /* YLPhotoCell.swift in Sources */,
 				66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */,
 				5E8E817221D75C5200BDEF5A /* NewsViewModel.swift in Sources */,

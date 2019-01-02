@@ -32,15 +32,25 @@ target 'TextureBase' do
   
   # Rx相关
   # 运行错误：Command CompileSwiftSources failed with a nonzero exit code
-  # 解决办法：https://www.jianshu.com/p/7a3dc4f59fcd
+  # 解决办法：https://www.jianshu.com/p/7a3dc4f59fcd  clean 重新编译
   pod 'RxSwift', '~> 4.4.0'
   pod 'RxCocoa', '~> 4.4.0'
+  pod 'RxAlamofire', '~> 4.3.0'
   pod 'Moya', '~> 12.0.1'
   pod 'Moya/RxSwift', '~> 12.0.1'
   pod 'RxDataSources', '~> 3.1.0'
   pod 'ObjectMapper', '~> 3.4.2'
   pod 'HandyJSON', '~> 4.2.1'
   pod 'RxGesture', '~> 2.1.0'
+  pod 'NSObject+Rx', '~> 4.4.1' # 为了使用rx_disposebag
+  pod 'Reusable', '~> 4.0.5'
+  pod 'SVProgressHUD', '~> 2.2.5'
+  # 蓝牙 https://github.com/sheepy1/VisualBlue
+  # pod 'RxBluetoothKit'
+  # 路由
+  pod 'CTMediator', '~> 25'
+  # redux
+  pod 'ReactorKit'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
