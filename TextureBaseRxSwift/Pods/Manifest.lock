@@ -19,6 +19,8 @@ PODS:
     - Moya/Core
     - RxSwift (~> 4.0)
   - MXParallaxHeader (0.6.1)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
   - ObjectMapper (3.4.2)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
@@ -35,6 +37,8 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
+  - ReactorKit (1.2.1):
+    - RxSwift (>= 4.0.0)
   - Result (4.0.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
@@ -43,6 +47,9 @@ PODS:
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
+  - RxGesture (2.1.0):
+    - RxCocoa (~> 4.4.0)
+    - RxSwift (~> 4.4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SDWebImage (5.0.0-beta3):
@@ -79,9 +86,12 @@ DEPENDENCIES:
   - Moya (~> 12.0.1)
   - Moya/RxSwift (~> 12.0.1)
   - MXParallaxHeader (~> 0.6.1)
+  - "NSObject+Rx (~> 4.4.1)"
   - ObjectMapper (~> 3.4.2)
+  - ReactorKit (~> 1.2.1)
   - RxCocoa (~> 4.4.0)
   - RxDataSources (~> 3.1.0)
+  - RxGesture (~> 2.1.0)
   - RxSwift (~> 4.4.0)
   - SDWebImage (~> 5.0.0-beta3)
   - SnapKit (~> 4.2.0)
@@ -105,14 +115,17 @@ SPEC REPOS:
     - MLeaksFinder
     - Moya
     - MXParallaxHeader
+    - "NSObject+Rx"
     - ObjectMapper
     - PINCache
     - PINOperation
     - PINRemoteImage
+    - ReactorKit
     - Result
     - RxAtomic
     - RxCocoa
     - RxDataSources
+    - RxGesture
     - RxSwift
     - SDWebImage
     - SnapKit
@@ -137,14 +150,17 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  ReactorKit: 8be57f0527ad1ac2963cd5c338274a46a01e57a3
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SDWebImage: e52654ceef9fdc19f4c612d64a5b6d3f05dd81a4
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
@@ -156,6 +172,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: f38e5296f122136d150c388737f925041ea0a4c1
+PODFILE CHECKSUM: f633f29f8e37932ef831c819b145459125e452fe
 
 COCOAPODS: 1.5.3

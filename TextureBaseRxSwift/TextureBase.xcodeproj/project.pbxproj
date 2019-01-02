@@ -109,6 +109,9 @@
 		5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818021D773BF00BDEF5A /* Refreshable.swift */; };
 		5E8E818321D7743600BDEF5A /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818221D7743600BDEF5A /* MenuViewModel.swift */; };
 		5E8E818521D7745200BDEF5A /* BFViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818421D7745200BDEF5A /* BFViewModelType.swift */; };
+		5EC41A6C21DC44F500E95A86 /* MJRefresh+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */; };
+		5EC41A7021DC45FC00E95A86 /* ViewControllerReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */; };
+		5EC41A7121DC45FC00E95A86 /* BFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */; };
 		664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
@@ -305,6 +308,9 @@
 		5E8E818021D773BF00BDEF5A /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		5E8E818221D7743600BDEF5A /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		5E8E818421D7745200BDEF5A /* BFViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFViewModelType.swift; sourceTree = "<group>"; };
+		5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MJRefresh+Rx.swift"; sourceTree = "<group>"; };
+		5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerReactor.swift; sourceTree = "<group>"; };
+		5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFViewController.swift; sourceTree = "<group>"; };
 		664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter6ViewController.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
@@ -975,6 +981,7 @@
 		5E8E813C21D745BE00BDEF5A /* RxSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				5EC41A6A21DC44DE00E95A86 /* MJRefresh+Rx */,
 				5E8E817F21D773AC00BDEF5A /* Refresh */,
 				5E8E817021D75C4100BDEF5A /* RxDatasources */,
 				5E8E816A21D75A5D00BDEF5A /* BaseViewModel */,
@@ -1111,6 +1118,24 @@
 				5E8E818021D773BF00BDEF5A /* Refreshable.swift */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		5EC41A6A21DC44DE00E95A86 /* MJRefresh+Rx */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A6D21DC45CC00E95A86 /* Reactor */,
+				5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */,
+			);
+			path = "MJRefresh+Rx";
+			sourceTree = "<group>";
+		};
+		5EC41A6D21DC45CC00E95A86 /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */,
+				5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */,
+			);
+			path = Reactor;
 			sourceTree = "<group>";
 		};
 		664E4BF721D913AC006ADC10 /* NSNotificationCenter6 */ = {
@@ -1695,14 +1720,17 @@
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -1730,14 +1758,17 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -1797,6 +1828,7 @@
 				66F18A8721C3FB520009A074 /* MineCellNode.swift in Sources */,
 				5E725CA421C780ED003183FD /* KaneCellNode.swift in Sources */,
 				5E5B768221CB529F00E49936 /* YLPhotoBrowser.swift in Sources */,
+				5EC41A6C21DC44F500E95A86 /* MJRefresh+Rx.swift in Sources */,
 				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
 				66A4226121C68FE9003D5E40 /* SelectSectionItemCellNode.swift in Sources */,
 				6698468D21C7C7660060DE9C /* BFRefreshBackStateFooter.swift in Sources */,
@@ -1812,6 +1844,7 @@
 				5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */,
 				5E72839221C9F0B10090C2E9 /* InfomationListModel.swift in Sources */,
 				66ABDB9221CA7F6A008C7E09 /* DiscuListDetailCellNode.swift in Sources */,
+				5EC41A7121DC45FC00E95A86 /* BFViewController.swift in Sources */,
 				5E7283A921CA330A0090C2E9 /* DiscuListPlaceTopCellNode.swift in Sources */,
 				5E72838121C9D3DA0090C2E9 /* InfomationListViewController.swift in Sources */,
 				5E5B768821CB539B00E49936 /* UIView+Extension.swift in Sources */,
@@ -1892,6 +1925,7 @@
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E5B769021CB7A9100E49936 /* InfomationDetailViewModel.swift in Sources */,
+				5EC41A7021DC45FC00E95A86 /* ViewControllerReactor.swift in Sources */,
 				5E8E816921D7598A00BDEF5A /* Observable+HandyJSON.swift in Sources */,
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
 				5E46857621CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift in Sources */,

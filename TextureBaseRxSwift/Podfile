@@ -27,7 +27,7 @@ target 'TextureBase' do
   pod 'TYAttributedLabel', '~> 2.6.6'
   # 轮播广告
   pod 'TYCyclePagerView', '~> 1.1.2'
-  # 数据缓存
+  # 数据缓存 (数据驱动UI)
   # pod 'DataSources'
   
   # Rx相关
@@ -41,6 +41,9 @@ target 'TextureBase' do
   pod 'ObjectMapper', '~> 3.4.2'
   pod 'HandyJSON', '~> 4.2.1'
   pod 'RxGesture', '~> 2.1.0'
+  # redux
+  pod 'ReactorKit', '~> 1.2.1'
+  pod 'NSObject+Rx', '~> 4.4.1' # 为了使用rx_disposeBag
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
@@ -50,6 +53,7 @@ target 'TextureBase' do
   # RxSwift 参考地址
   # https://github.com/LinXunFeng/LXFBiliBili
   # https://github.com/sessionCh/RxXMLY
+  # 本地组件化 https://github.com/AnyOptional/U17
 
   target 'TextureBaseTests' do
     inherit! :search_paths
