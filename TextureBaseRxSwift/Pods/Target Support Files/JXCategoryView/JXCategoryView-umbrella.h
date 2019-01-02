@@ -18,6 +18,7 @@
 #import "JXCategoryFactory.h"
 #import "JXCategoryIndicatorParamsModel.h"
 #import "JXCategoryIndicatorProtocol.h"
+#import "JXCategoryListContainerView.h"
 #import "JXCategoryListVCContainerView.h"
 #import "JXCategoryViewDefines.h"
 #import "UIColor+JXAdd.h"

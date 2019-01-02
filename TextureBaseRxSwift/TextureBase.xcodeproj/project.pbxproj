@@ -109,8 +109,20 @@
 		5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818021D773BF00BDEF5A /* Refreshable.swift */; };
 		5E8E818321D7743600BDEF5A /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818221D7743600BDEF5A /* MenuViewModel.swift */; };
 		5E8E818521D7745200BDEF5A /* BFViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E818421D7745200BDEF5A /* BFViewModelType.swift */; };
-		662D31F421DA4C57002840FB /* Response+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D31F321DA4C57002840FB /* Response+Observable.swift */; };
-		662D31F721DA4D6C002840FB /* BFProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D31F621DA4D6C002840FB /* BFProgressHUD.swift */; };
+		5EC41A6C21DC44F500E95A86 /* MJRefresh+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */; };
+		5EC41A7021DC45FC00E95A86 /* ViewControllerReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */; };
+		5EC41A7121DC45FC00E95A86 /* BFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */; };
+		5EC41A7521DC58B000E95A86 /* UILayoutAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7421DC58B000E95A86 /* UILayoutAdaptor.swift */; };
+		5EC41A7821DC5A0200E95A86 /* FDTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7721DC5A0200E95A86 /* FDTransaction.swift */; };
+		5EC41A7B21DC5D6400E95A86 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7A21DC5D6400E95A86 /* NSObject+Rx.swift */; };
+		5EC41A7D21DC5D7300E95A86 /* ReactorKit+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A7C21DC5D7200E95A86 /* ReactorKit+Rx.swift */; };
+		5EC41A8221DC9A3300E95A86 /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8121DC9A3300E95A86 /* DispatchQueueExtension.swift */; };
+		5EC41A8421DC9AE600E95A86 /* NumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8321DC9AE600E95A86 /* NumberExtension.swift */; };
+		5EC41A8621DC9B0900E95A86 /* ExOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8521DC9B0900E95A86 /* ExOptional.swift */; };
+		5EC41A8821DC9B2F00E95A86 /* ExString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8721DC9B2F00E95A86 /* ExString.swift */; };
+		5EC41A8A21DC9B3800E95A86 /* ExUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8921DC9B3700E95A86 /* ExUIApplication.swift */; };
+		5EC41A8C21DC9B5D00E95A86 /* ExUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8B21DC9B5D00E95A86 /* ExUIButton.swift */; };
+		5EC41A8E21DC9CC300E95A86 /* BundleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8D21DC9CC300E95A86 /* BundleLoader.swift */; };
 		664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
@@ -307,8 +319,20 @@
 		5E8E818021D773BF00BDEF5A /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		5E8E818221D7743600BDEF5A /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		5E8E818421D7745200BDEF5A /* BFViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFViewModelType.swift; sourceTree = "<group>"; };
-		662D31F321DA4C57002840FB /* Response+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Observable.swift"; sourceTree = "<group>"; };
-		662D31F621DA4D6C002840FB /* BFProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFProgressHUD.swift; sourceTree = "<group>"; };
+		5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MJRefresh+Rx.swift"; sourceTree = "<group>"; };
+		5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerReactor.swift; sourceTree = "<group>"; };
+		5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFViewController.swift; sourceTree = "<group>"; };
+		5EC41A7421DC58B000E95A86 /* UILayoutAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutAdaptor.swift; sourceTree = "<group>"; };
+		5EC41A7721DC5A0200E95A86 /* FDTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDTransaction.swift; sourceTree = "<group>"; };
+		5EC41A7A21DC5D6400E95A86 /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		5EC41A7C21DC5D7200E95A86 /* ReactorKit+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReactorKit+Rx.swift"; sourceTree = "<group>"; };
+		5EC41A8121DC9A3300E95A86 /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
+		5EC41A8321DC9AE600E95A86 /* NumberExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtension.swift; sourceTree = "<group>"; };
+		5EC41A8521DC9B0900E95A86 /* ExOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExOptional.swift; sourceTree = "<group>"; };
+		5EC41A8721DC9B2F00E95A86 /* ExString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
+		5EC41A8921DC9B3700E95A86 /* ExUIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIApplication.swift; sourceTree = "<group>"; };
+		5EC41A8B21DC9B5D00E95A86 /* ExUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIButton.swift; sourceTree = "<group>"; };
+		5EC41A8D21DC9CC300E95A86 /* BundleLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleLoader.swift; sourceTree = "<group>"; };
 		664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter6ViewController.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
@@ -979,7 +1003,8 @@
 		5E8E813C21D745BE00BDEF5A /* RxSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
-				662D31F521DA4D49002840FB /* HUD */,
+				5EC41A7221DC586000E95A86 /* Fate */,
+				5EC41A6A21DC44DE00E95A86 /* MJRefresh+Rx */,
 				5E8E817F21D773AC00BDEF5A /* Refresh */,
 				5E8E817021D75C4100BDEF5A /* RxDatasources */,
 				5E8E816A21D75A5D00BDEF5A /* BaseViewModel */,
@@ -1015,7 +1040,6 @@
 			children = (
 				5E8E814121D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift */,
 				5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */,
-				662D31F321DA4C57002840FB /* Response+Observable.swift */,
 			);
 			path = ObjectMapper;
 			sourceTree = "<group>";
@@ -1119,12 +1143,72 @@
 			path = Refresh;
 			sourceTree = "<group>";
 		};
-		662D31F521DA4D49002840FB /* HUD */ = {
+		5EC41A6A21DC44DE00E95A86 /* MJRefresh+Rx */ = {
 			isa = PBXGroup;
 			children = (
-				662D31F621DA4D6C002840FB /* BFProgressHUD.swift */,
+				5EC41A6D21DC45CC00E95A86 /* Reactor */,
+				5EC41A6B21DC44F500E95A86 /* MJRefresh+Rx.swift */,
 			);
-			path = HUD;
+			path = "MJRefresh+Rx";
+			sourceTree = "<group>";
+		};
+		5EC41A6D21DC45CC00E95A86 /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A6F21DC45FC00E95A86 /* BFViewController.swift */,
+				5EC41A6E21DC45FB00E95A86 /* ViewControllerReactor.swift */,
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
+		5EC41A7221DC586000E95A86 /* Fate */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A8021DC9A1000E95A86 /* Core */,
+				5EC41A7921DC5CF900E95A86 /* RxAdaptor */,
+				5EC41A7621DC59F300E95A86 /* RunloopOptimize */,
+				5EC41A7321DC589300E95A86 /* UILayoutAdaptor */,
+			);
+			path = Fate;
+			sourceTree = "<group>";
+		};
+		5EC41A7321DC589300E95A86 /* UILayoutAdaptor */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A7421DC58B000E95A86 /* UILayoutAdaptor.swift */,
+			);
+			path = UILayoutAdaptor;
+			sourceTree = "<group>";
+		};
+		5EC41A7621DC59F300E95A86 /* RunloopOptimize */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A7721DC5A0200E95A86 /* FDTransaction.swift */,
+			);
+			path = RunloopOptimize;
+			sourceTree = "<group>";
+		};
+		5EC41A7921DC5CF900E95A86 /* RxAdaptor */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A7C21DC5D7200E95A86 /* ReactorKit+Rx.swift */,
+				5EC41A7A21DC5D6400E95A86 /* NSObject+Rx.swift */,
+			);
+			path = RxAdaptor;
+			sourceTree = "<group>";
+		};
+		5EC41A8021DC9A1000E95A86 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5EC41A8D21DC9CC300E95A86 /* BundleLoader.swift */,
+				5EC41A8B21DC9B5D00E95A86 /* ExUIButton.swift */,
+				5EC41A8921DC9B3700E95A86 /* ExUIApplication.swift */,
+				5EC41A8721DC9B2F00E95A86 /* ExString.swift */,
+				5EC41A8521DC9B0900E95A86 /* ExOptional.swift */,
+				5EC41A8121DC9A3300E95A86 /* DispatchQueueExtension.swift */,
+				5EC41A8321DC9AE600E95A86 /* NumberExtension.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		664E4BF721D913AC006ADC10 /* NSNotificationCenter6 */ = {
@@ -1825,9 +1909,11 @@
 				66F18A8721C3FB520009A074 /* MineCellNode.swift in Sources */,
 				5E725CA421C780ED003183FD /* KaneCellNode.swift in Sources */,
 				5E5B768221CB529F00E49936 /* YLPhotoBrowser.swift in Sources */,
+				5EC41A6C21DC44F500E95A86 /* MJRefresh+Rx.swift in Sources */,
 				66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */,
 				66A4226121C68FE9003D5E40 /* SelectSectionItemCellNode.swift in Sources */,
 				6698468D21C7C7660060DE9C /* BFRefreshBackStateFooter.swift in Sources */,
+				5EC41A8621DC9B0900E95A86 /* ExOptional.swift in Sources */,
 				5E6AA59021C8824400EC4897 /* KaneViewModel.swift in Sources */,
 				66ABDB9B21CA8357008C7E09 /* DiscuListDetailModel.swift in Sources */,
 				5E71773521C23CA7003BCAE5 /* BaseController.swift in Sources */,
@@ -1840,9 +1926,11 @@
 				5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */,
 				5E72839221C9F0B10090C2E9 /* InfomationListModel.swift in Sources */,
 				66ABDB9221CA7F6A008C7E09 /* DiscuListDetailCellNode.swift in Sources */,
+				5EC41A7121DC45FC00E95A86 /* BFViewController.swift in Sources */,
 				5E7283A921CA330A0090C2E9 /* DiscuListPlaceTopCellNode.swift in Sources */,
 				5E72838121C9D3DA0090C2E9 /* InfomationListViewController.swift in Sources */,
 				5E5B768821CB539B00E49936 /* UIView+Extension.swift in Sources */,
+				5EC41A7521DC58B000E95A86 /* UILayoutAdaptor.swift in Sources */,
 				6698468921C7C74B0060DE9C /* MJRefresh-Extension.swift in Sources */,
 				5E6AA59221C8825A00EC4897 /* KaneModel.swift in Sources */,
 				5E71774121C25D3C003BCAE5 /* TextInsertBlowImageCellNode.swift in Sources */,
@@ -1852,6 +1940,7 @@
 				5E7283B021CA37190090C2E9 /* DiscuListRequest.swift in Sources */,
 				5E72839A21CA193D0090C2E9 /* InfomationDetailCommentViewController.swift in Sources */,
 				5E725CA621C78105003183FD /* KaneSectionCellNode.swift in Sources */,
+				5EC41A8421DC9AE600E95A86 /* NumberExtension.swift in Sources */,
 				5E71773321C23C53003BCAE5 /* BaseCell.swift in Sources */,
 				5E8E817521D75C9600BDEF5A /* NewsModel.swift in Sources */,
 				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
@@ -1870,7 +1959,6 @@
 				66F18A6B21C3D8EC0009A074 /* SelectViewController.swift in Sources */,
 				5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */,
 				5E72839F21CA21C60090C2E9 /* DiscuListViewController.swift in Sources */,
-				662D31F721DA4D6C002840FB /* BFProgressHUD.swift in Sources */,
 				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
 				66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */,
 				5E8B999821D5C08B00F14138 /* Observable1ViewController.swift in Sources */,
@@ -1888,9 +1976,11 @@
 				66F18A7321C3E0300009A074 /* GuidePageViewController.swift in Sources */,
 				66A4223521C5F981003D5E40 /* API.swift in Sources */,
 				66F18A6D21C3D8FB0009A074 /* InfomationViewController.swift in Sources */,
+				5EC41A7D21DC5D7300E95A86 /* ReactorKit+Rx.swift in Sources */,
 				5E72838B21C9EC930090C2E9 /* InfomationListTopBigImageCellNode.swift in Sources */,
 				66F18A8921C400380009A074 /* MineItemCellNode.swift in Sources */,
 				66A4226321C69B87003D5E40 /* SelectTopRequest.swift in Sources */,
+				5EC41A8E21DC9CC300E95A86 /* BundleLoader.swift in Sources */,
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
 				6682FAF921C92CC0003B0880 /* HotRecommentModel.swift in Sources */,
 				6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */,
@@ -1899,6 +1989,7 @@
 				66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */,
 				5E5B767D21CB529F00E49936 /* BFPhotoViewer.swift in Sources */,
 				5E8B999E21D5D37900F14138 /* TextField3ViewController.swift in Sources */,
+				5EC41A8821DC9B2F00E95A86 /* ExString.swift in Sources */,
 				5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */,
 				5E72839021C9F0980090C2E9 /* InfomationListViewModel.swift in Sources */,
 				5E8E814B21D7462900BDEF5A /* BFRxResultModel.swift in Sources */,
@@ -1909,6 +2000,7 @@
 				5E8E816F21D75A8600BDEF5A /* BaseViewModel.swift in Sources */,
 				5E5B767E21CB529F00E49936 /* YLAnimatedTransition.swift in Sources */,
 				5E8BF48C21BF6D21005BD4E0 /* TestTableNodeViewController.swift in Sources */,
+				5EC41A7821DC5A0200E95A86 /* FDTransaction.swift in Sources */,
 				66A4223D21C600A8003D5E40 /* String+Extension.swift in Sources */,
 				5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */,
 				66A4224021C6016B003D5E40 /* ADLaunchView.swift in Sources */,
@@ -1918,9 +2010,12 @@
 				66ABDB7821CA6CFC008C7E09 /* InfomationDetailSectionHeaderView.swift in Sources */,
 				66A4223921C5FA86003D5E40 /* Request.swift in Sources */,
 				66A4225A21C681B3003D5E40 /* SelectViewModel.swift in Sources */,
+				5EC41A8A21DC9B3800E95A86 /* ExUIApplication.swift in Sources */,
 				5E8BF47E21BF59C9005BD4E0 /* NetworkImageNode.swift in Sources */,
+				5EC41A8C21DC9B5D00E95A86 /* ExUIButton.swift in Sources */,
 				5E682E3C21C0AC7A0025F45B /* CollectionFlowLayout.swift in Sources */,
 				5E5B769021CB7A9100E49936 /* InfomationDetailViewModel.swift in Sources */,
+				5EC41A7021DC45FC00E95A86 /* ViewControllerReactor.swift in Sources */,
 				5E8E816921D7598A00BDEF5A /* Observable+HandyJSON.swift in Sources */,
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
 				5E46857621CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift in Sources */,
@@ -1932,15 +2027,16 @@
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
 				66A4224721C60E99003D5E40 /* UIImage+TYLaunchImage.m in Sources */,
 				5E8E817B21D76C8B00BDEF5A /* TestUIButton4View.swift in Sources */,
+				5EC41A7B21DC5D6400E95A86 /* NSObject+Rx.swift in Sources */,
 				5E7283A221CA22290090C2E9 /* DiscuListDetailViewController.swift in Sources */,
 				5E8E814A21D7462900BDEF5A /* BFRxRequestPlugin.swift in Sources */,
+				5EC41A8221DC9A3300E95A86 /* DispatchQueueExtension.swift in Sources */,
 				5E8E814721D7462900BDEF5A /* BFRxNetRequest.swift in Sources */,
 				66A4225F21C68FBE003D5E40 /* SelectPagerCellNode.swift in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				66ABDB9921CA82FD008C7E09 /* DiscuListDetailViewModel.swift in Sources */,
 				66ABDB9521CA8252008C7E09 /* DiscuListDetailRequest.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
-				662D31F421DA4C57002840FB /* Response+Observable.swift in Sources */,
 				5E5B768321CB529F00E49936 /* YLPhotoCell.swift in Sources */,
 				66A4224921C623C9003D5E40 /* ADLaunchRequest.swift in Sources */,
 				5E8E817221D75C5200BDEF5A /* NewsViewModel.swift in Sources */,
