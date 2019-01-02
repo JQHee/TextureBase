@@ -14,25 +14,20 @@ import Alamofire
 let dispose = DisposeBag()
 
 struct BFRxCustomRequest {
-    var isSave: Bool = false
-    var cacheTime: NSInteger = 5
     /* 是否需要指示器 */
-    var isActivityIndicator: Bool = false
+    var isActivityIndicator: Bool = true
     /* 请求参数 */
     var parameter: [String:Any]? = nil
     /* 请求超时时间 */
     var timeOut = 15.0
 }
 
-public final class BFRxNetRequest: NSObject {
+class BFRxNetRequest {
 
     var provider: MoyaProvider<ApiManager>
-    var customRequest: BFRxCustomRequest
-
+    
     init(_ custom: BFRxCustomRequest = BFRxCustomRequest()) {
-        
-        self.customRequest = custom
-        
+    
         /// 设置请求头,超时时间等
         let requestClosure = { (endpoint: Endpoint, closure: @escaping MoyaProvider<ApiManager>.RequestResultClosure) in
             do {
@@ -50,10 +45,10 @@ public final class BFRxNetRequest: NSObject {
         }
 
         if custom.isActivityIndicator {
-            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [networkActivityPlugin, BFRxRequestLoadingPlugin(self.customRequest)])
+            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [networkActivityPlugin, BFRxRequestLoadingPlugin(custom)])
         
         } else {
-            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [BFRxRequestLoadingPlugin(self.customRequest)])
+            self.provider = MoyaProvider<ApiManager>(endpointClosure: endpointClosure, requestClosure: requestClosure, manager: Manager.default, plugins: [BFRxRequestLoadingPlugin(custom)])
         }
     }
 
