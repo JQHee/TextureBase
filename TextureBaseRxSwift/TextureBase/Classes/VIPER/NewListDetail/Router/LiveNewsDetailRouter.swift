@@ -25,11 +25,6 @@ class LiveNewsDetailRouter: NewsListDetailPresenterToRouterProtocol {
         return view
     }
     
-    // 返回上一级
-    func popAction() {
-        
-    }
-    
     static func createModule(news: LiveNewsModel, callback: @escaping () -> ()) -> UIViewController {
         let view = NewsDetailView()
         let presenter: NewsListDetailViewToPresenterProtocol = LiveNewsDetailPresenter()

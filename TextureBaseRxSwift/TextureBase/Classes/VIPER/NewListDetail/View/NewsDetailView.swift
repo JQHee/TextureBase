@@ -34,7 +34,8 @@ class NewsDetailView: UIViewController {
         if let _ = self.callback {
             self.callback!()
         }
-       self.navigationController?.popViewController(animated: true)
+        // 返回上一级页面
+        presenter?.goBackAction()
     }
     
     // MARK: - Private methods
@@ -51,6 +52,9 @@ class NewsDetailView: UIViewController {
 }
 
 extension NewsDetailView: NewsListDetailPresenterToViewProtocol {
+    func goBackAction() {
+         self.navigationController?.popViewController(animated: true)
+    }
     
     func showDataToNewsDetail(news: LiveNewsModel, callback: @escaping () -> ()) {
         print("有callback参数")

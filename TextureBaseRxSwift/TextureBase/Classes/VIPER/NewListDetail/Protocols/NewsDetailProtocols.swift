@@ -14,6 +14,7 @@ import UIKit
 protocol NewsListDetailPresenterToViewProtocol: class {
     func showDataToNewsDetail(news: LiveNewsModel)
     func showDataToNewsDetail(news: LiveNewsModel, callback: @escaping() -> ())
+    func goBackAction()
 }
 
 // MARK: - View驱动Presenter
@@ -24,6 +25,7 @@ protocol NewsListDetailViewToPresenterProtocol: class {
     var news: LiveNewsModel? { get set }
     var callback: (() -> ())? { get set }
     func viewDidLoad()
+    func goBackAction()
 }
 
 // MARK: - Presenter驱动路由

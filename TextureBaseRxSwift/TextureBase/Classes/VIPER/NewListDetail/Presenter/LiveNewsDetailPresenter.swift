@@ -23,4 +23,8 @@ class LiveNewsDetailPresenter: NewsListDetailViewToPresenterProtocol {
         view?.showDataToNewsDetail(news: news!, callback: callback!)
     }
     
+    func goBackAction() {
+        view?.goBackAction()
+    }
+    
 }
