@@ -10,37 +10,39 @@ import Foundation
 import UIKit
 
 // MARK: - 将数据展示到View
-protocol PresenterToViewProtocol: class {
+protocol NewsListPresenterToViewProtocol: class {
     func showNews(news: LiveNewsModel)
     func showError()
 }
 
 // MARK: - 请求数据后，将数据给Presenter
-protocol InterectorToPresenterProtocol: class {
+protocol NewsListInterectorToPresenterProtocol: class {
     func liveNewsFetched(news: LiveNewsModel)
     func liveNewsFetchedFailed()
 }
 
 // MARK: - Presentor让Interector请求网络数据
-protocol PresentorToInterectorProtocol: class {
-    var presenter: InterectorToPresenterProtocol? { get set }
+protocol NewsListPresentorToInterectorProtocol: class {
+    var presenter: NewsListInterectorToPresenterProtocol? { get set }
     func fetchLiveNews()
 }
 
 // MARK: - View驱动Presenter
-protocol ViewToPresenterProtocol: class {
-    var view: PresenterToViewProtocol? { get set }
-    var interector: PresentorToInterectorProtocol? { get set }
-    var router: PresenterToRouterProtocol? { get set }
+protocol NewsListViewToPresenterProtocol: class {
+    var view: NewsListPresenterToViewProtocol? { get set }
+    var interector: NewsListPresentorToInterectorProtocol? { get set }
+    var router: NewsListPresenterToRouterProtocol? { get set }
     func viewDidLoad()
     /* 跳转详情页 */
     func showPostDetail(news: LiveNewsModel)
+    func showPostDetail(news: LiveNewsModel, callback: @escaping () -> ())
 }
 
 // MARK: - Presenter驱动路由
-protocol PresenterToRouterProtocol: class {
+protocol NewsListPresenterToRouterProtocol: class {
     static func createModule() -> UIViewController
-    func pushDetailVC(from view: PresenterToViewProtocol, news: LiveNewsModel)
+    func pushDetailVC(from view: NewsListPresenterToViewProtocol, news: LiveNewsModel)
+    func pushDetailVC(from view: NewsListPresenterToViewProtocol, news: LiveNewsModel, callback: @escaping () -> ())
 }
 
 

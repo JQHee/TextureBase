@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-class LiveNewsInterector: PresentorToInterectorProtocol {
+class LiveNewsInterector: NewsListPresentorToInterectorProtocol {
 
-    var presenter: InterectorToPresenterProtocol?
+    var presenter: NewsListInterectorToPresenterProtocol?
     
     func fetchLiveNews() {
         Alamofire.request(Constants.URL).responseJSON { response in

@@ -8,11 +8,12 @@
 
 import Foundation
 
-class LiveNewsPresenter: ViewToPresenterProtocol {
+class LiveNewsPresenter: NewsListViewToPresenterProtocol {
 
-    var view: PresenterToViewProtocol?
-    var interector: PresentorToInterectorProtocol?
-    var router: PresenterToRouterProtocol?
+    // 不用weak回造成循环引用
+    weak var view: NewsListPresenterToViewProtocol?
+    var interector: NewsListPresentorToInterectorProtocol?
+    var router: NewsListPresenterToRouterProtocol?
     
     func viewDidLoad() {
         interector?.fetchLiveNews()
@@ -21,9 +22,13 @@ class LiveNewsPresenter: ViewToPresenterProtocol {
     func showPostDetail(news: LiveNewsModel) {
         router?.pushDetailVC(from: view!, news: news)
     }
+    
+    func showPostDetail(news: LiveNewsModel, callback: @escaping () -> ()) {
+        router?.pushDetailVC(from: view!, news: news, callback: callback)
+    }
 }
 
-extension LiveNewsPresenter: InterectorToPresenterProtocol {
+extension LiveNewsPresenter: NewsListInterectorToPresenterProtocol {
 	
 	func liveNewsFetched(news: LiveNewsModel) {
         view?.showNews(news: news)

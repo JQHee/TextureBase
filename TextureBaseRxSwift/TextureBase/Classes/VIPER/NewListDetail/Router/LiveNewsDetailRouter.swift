@@ -8,17 +8,39 @@
 
 import Foundation
 
-class LiveNewsDetailRouter: PresenterToNewsDetailRouterProtocol {
+class LiveNewsDetailRouter: NewsListDetailPresenterToRouterProtocol {
+
     static func createModule(news: LiveNewsModel) -> UIViewController {
         let view = NewsDetailView()
-        let presenter: DetailViewToPresenterProtocol = LiveNewsDetailPresenter()
+        let presenter: NewsListDetailViewToPresenterProtocol = LiveNewsDetailPresenter()
         // let interactor: PresentorToInterectorProtocol = LiveNewsInterector()
-        let router: PresenterToNewsDetailRouterProtocol = LiveNewsDetailRouter()
+        let router: NewsListDetailPresenterToRouterProtocol = LiveNewsDetailRouter()
         
         view.presenter = presenter
         presenter.view = view
         presenter.router = router
         presenter.news = news
+        // presenter.interector = interactor
+        // interactor.presenter = presenter
+        return view
+    }
+    
+    // 返回上一级
+    func popAction() {
+        
+    }
+    
+    static func createModule(news: LiveNewsModel, callback: @escaping () -> ()) -> UIViewController {
+        let view = NewsDetailView()
+        let presenter: NewsListDetailViewToPresenterProtocol = LiveNewsDetailPresenter()
+        // let interactor: PresentorToInterectorProtocol = LiveNewsInterector()
+        let router: NewsListDetailPresenterToRouterProtocol = LiveNewsDetailRouter()
+        
+        view.presenter = presenter
+        presenter.view = view
+        presenter.router = router
+        presenter.news = news
+        presenter.callback = callback
         // presenter.interector = interactor
         // interactor.presenter = presenter
         

@@ -10,14 +10,10 @@ import UIKit
 
 class LiveNewsViewController: UIViewController {
     
-    weak var presenter: ViewToPresenterProtocol?
+    var presenter: NewsListViewToPresenterProtocol?
     
     // 数据保存在View
     var news: LiveNewsModel?
-    
-    lazy var authorLabel: UILabel = UILabel()
-    lazy var titleLabel: UILabel  = UILabel()
-    lazy var descriptionLabel: UITextView = UITextView()
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -30,22 +26,58 @@ class LiveNewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "列表页"
+        view.backgroundColor = UIColor.white
+        edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        setupUI()
         presenter?.viewDidLoad()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 跳转新闻详情页
         guard let model = self.news else { return }
-        presenter?.showPostDetail(news: model)
+        presenter?.showPostDetail(news: model, callback: {
+            print("callback")
+        })
     }
+    
+    // MARK: - Private methods
+    private func setupUI() {
+        view.addSubview(authorLabel)
+        view.addSubview(titleLabel)
+        view.addSubview(descriptionLabel)
+        
+        authorLabel.snp.makeConstraints { (make) in
+            make.left.right.top.equalToSuperview()
+            make.height.equalTo(21)
+        }
+        
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(authorLabel.snp.bottom).offset(10)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(21)
+        }
+        
+        descriptionLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(100)
+        }
+        
+    }
+    
+    // MARK: - Lazy load
+    lazy var authorLabel: UILabel = UILabel()
+    lazy var titleLabel: UILabel  = UILabel()
+    lazy var descriptionLabel: UITextView = UITextView()
 }
 
-extension LiveNewsViewController: PresenterToViewProtocol {
+extension LiveNewsViewController: NewsListPresenterToViewProtocol {
     
     func showNews(news: LiveNewsModel) {
         self.news = news
-        authorLabel.text = news.author
-        titleLabel.text = news.title
-        descriptionLabel.text = news.description
+        authorLabel.text = "作者：" + (news.author ?? "")
+        titleLabel.text = "标题：" + (news.title ?? "")
+        descriptionLabel.text = "内容：" + (news.description ?? "")
     }
     
     func showError() {

@@ -11,20 +11,23 @@ import UIKit
 
 
 // MARK: - 将数据展示到View
-protocol PresenterToDetailViewProtocol: class {
+protocol NewsListDetailPresenterToViewProtocol: class {
     func showDataToNewsDetail(news: LiveNewsModel)
+    func showDataToNewsDetail(news: LiveNewsModel, callback: @escaping() -> ())
 }
 
 // MARK: - View驱动Presenter
-protocol DetailViewToPresenterProtocol: class {
-    var view: PresenterToDetailViewProtocol? { get set }
+protocol NewsListDetailViewToPresenterProtocol: class {
+    var view: NewsListDetailPresenterToViewProtocol? { get set }
     // var interector: PresentorToInterectorProtocol? { get set }
-    var router: PresenterToNewsDetailRouterProtocol? { get set }
+    var router: NewsListDetailPresenterToRouterProtocol? { get set }
     var news: LiveNewsModel? { get set }
+    var callback: (() -> ())? { get set }
     func viewDidLoad()
 }
 
 // MARK: - Presenter驱动路由
-protocol PresenterToNewsDetailRouterProtocol: class {
+protocol NewsListDetailPresenterToRouterProtocol: class {
     static func createModule(news: LiveNewsModel) -> UIViewController
+    static func createModule(news: LiveNewsModel, callback: @escaping () -> ()) -> UIViewController
 }

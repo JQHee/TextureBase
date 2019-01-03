@@ -9,18 +9,17 @@
 import Foundation
 import UIKit
 
-class LiveNewsRouter: PresenterToRouterProtocol{
+class LiveNewsRouter: NewsListPresenterToRouterProtocol{
 
-    
-    
-    class func createModule() ->UIViewController {
+    static func createModule() -> UIViewController {
         let view = LiveNewsViewController()
         let nav = UINavigationController.init(rootViewController: view)
-            // mainstoryboard.instantiateViewController(withIdentifier: "LiveNewsViewController") as? LiveNewsViewController;
-        //if let view = navController.childViewControllers.first as? LiveNewsViewController {
-        let presenter: ViewToPresenterProtocol & InterectorToPresenterProtocol = LiveNewsPresenter()
-        let interactor: PresentorToInterectorProtocol = LiveNewsInterector()
-        let router: PresenterToRouterProtocol = LiveNewsRouter()
+        // 使用storyboard开发
+        // mainstoryboard.instantiateViewController(withIdentifier: "LiveNewsViewController") as? LiveNewsViewController;
+        // if let view = navController.childViewControllers.first as? LiveNewsViewController {
+        let presenter: NewsListViewToPresenterProtocol & NewsListInterectorToPresenterProtocol = LiveNewsPresenter()
+        let interactor: NewsListPresentorToInterectorProtocol = LiveNewsInterector()
+        let router: NewsListPresenterToRouterProtocol = LiveNewsRouter()
         
         view.presenter = presenter
         presenter.view = view
@@ -35,14 +34,23 @@ class LiveNewsRouter: PresenterToRouterProtocol{
         //return UIViewController()
     }
     
-    static var mainstoryboard: UIStoryboard{
+    var mainstoryboard: UIStoryboard {
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
     
-    
-    func pushDetailVC(from view: PresenterToViewProtocol, news: LiveNewsModel) {
+    // 跳转新闻详情
+    func pushDetailVC(from view: NewsListPresenterToViewProtocol, news: LiveNewsModel) {
         
         let postDetailViewController = LiveNewsDetailRouter.createModule(news: news)
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(postDetailViewController, animated: true)
+        }
+    }
+    
+    // 跳转新闻详情
+    func pushDetailVC(from view: NewsListPresenterToViewProtocol, news: LiveNewsModel, callback: @escaping () -> ()) {
+        
+        let postDetailViewController = LiveNewsDetailRouter.createModule(news: news, callback: callback)
         if let sourceView = view as? UIViewController {
             sourceView.navigationController?.pushViewController(postDetailViewController, animated: true)
         }
