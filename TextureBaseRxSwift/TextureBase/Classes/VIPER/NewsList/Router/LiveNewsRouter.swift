@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 
 class LiveNewsRouter: PresenterToRouterProtocol{
+
+    
     
     class func createModule() ->UIViewController {
         let view = LiveNewsViewController()
+        let nav = UINavigationController.init(rootViewController: view)
             // mainstoryboard.instantiateViewController(withIdentifier: "LiveNewsViewController") as? LiveNewsViewController;
         //if let view = navController.childViewControllers.first as? LiveNewsViewController {
         let presenter: ViewToPresenterProtocol & InterectorToPresenterProtocol = LiveNewsPresenter()
@@ -25,7 +28,7 @@ class LiveNewsRouter: PresenterToRouterProtocol{
         presenter.interector = interactor
         interactor.presenter = presenter
             
-        return view
+        return nav
             
         //}
         
@@ -34,5 +37,14 @@ class LiveNewsRouter: PresenterToRouterProtocol{
     
     static var mainstoryboard: UIStoryboard{
         return UIStoryboard(name:"Main",bundle: Bundle.main)
+    }
+    
+    
+    func pushDetailVC(from view: PresenterToViewProtocol, news: LiveNewsModel) {
+        
+        let postDetailViewController = LiveNewsDetailRouter.createModule(news: news)
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(postDetailViewController, animated: true)
+        }
     }
 }

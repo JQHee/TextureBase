@@ -10,7 +10,7 @@ import UIKit
 
 class LiveNewsViewController: UIViewController {
     
-    var presenter: ViewToPresenterProtocol?
+    weak var presenter: ViewToPresenterProtocol?
     
     // 数据保存在View
     var news: LiveNewsModel?
@@ -29,7 +29,13 @@ class LiveNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.updateView()
+        title = "列表页"
+        presenter?.viewDidLoad()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let model = self.news else { return }
+        presenter?.showPostDetail(news: model)
     }
 }
 

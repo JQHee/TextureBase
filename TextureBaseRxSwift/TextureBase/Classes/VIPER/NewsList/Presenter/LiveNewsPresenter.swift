@@ -9,13 +9,17 @@
 import Foundation
 
 class LiveNewsPresenter: ViewToPresenterProtocol {
-    
+
     var view: PresenterToViewProtocol?
     var interector: PresentorToInterectorProtocol?
     var router: PresenterToRouterProtocol?
     
-    func updateView() {
+    func viewDidLoad() {
         interector?.fetchLiveNews()
+    }
+    
+    func showPostDetail(news: LiveNewsModel) {
+        router?.pushDetailVC(from: view!, news: news)
     }
 }
 

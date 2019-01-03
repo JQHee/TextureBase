@@ -32,10 +32,15 @@ protocol ViewToPresenterProtocol: class {
     var view: PresenterToViewProtocol? { get set }
     var interector: PresentorToInterectorProtocol? { get set }
     var router: PresenterToRouterProtocol? { get set }
-    func updateView()
+    func viewDidLoad()
+    /* 跳转详情页 */
+    func showPostDetail(news: LiveNewsModel)
 }
 
 // MARK: - Presenter驱动路由
 protocol PresenterToRouterProtocol: class {
     static func createModule() -> UIViewController
+    func pushDetailVC(from view: PresenterToViewProtocol, news: LiveNewsModel)
 }
+
+
