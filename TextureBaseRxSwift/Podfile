@@ -62,6 +62,8 @@ target 'TextureBase' do
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice
   # demo不错 https://github.com/tomykho/ios-boilerplate
   # https://github.com/fuhailong/FuASObjet
+  # VIPER架构：https://github.com/Zuikyo/ZIKViper
+  # https://blog.csdn.net/zhanggenpin/article/details/79095618
   
   # RxSwift 参考地址
   # https://github.com/LinXunFeng/LXFBiliBili

@@ -123,6 +123,13 @@
 		5EC41A8A21DC9B3800E95A86 /* ExUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8921DC9B3700E95A86 /* ExUIApplication.swift */; };
 		5EC41A8C21DC9B5D00E95A86 /* ExUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8B21DC9B5D00E95A86 /* ExUIButton.swift */; };
 		5EC41A8E21DC9CC300E95A86 /* BundleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC41A8D21DC9CC300E95A86 /* BundleLoader.swift */; };
+		5EFDE88D21DDA6B400492842 /* LiveNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE88C21DDA6B400492842 /* LiveNewsViewController.swift */; };
+		5EFDE88F21DDA6DE00492842 /* LiveNewsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE88E21DDA6DE00492842 /* LiveNewsProtocols.swift */; };
+		5EFDE89121DDA6E600492842 /* LiveNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE89021DDA6E600492842 /* LiveNewsRouter.swift */; };
+		5EFDE89321DDA6ED00492842 /* LiveNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE89221DDA6ED00492842 /* LiveNewsModel.swift */; };
+		5EFDE89521DDA6F300492842 /* LiveNewsInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE89421DDA6F300492842 /* LiveNewsInterector.swift */; };
+		5EFDE89721DDA70C00492842 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE89621DDA70C00492842 /* Constants.swift */; };
+		5EFDE89A21DDA7B000492842 /* LiveNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE89921DDA7B000492842 /* LiveNewsPresenter.swift */; };
 		664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
@@ -333,6 +340,13 @@
 		5EC41A8921DC9B3700E95A86 /* ExUIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIApplication.swift; sourceTree = "<group>"; };
 		5EC41A8B21DC9B5D00E95A86 /* ExUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUIButton.swift; sourceTree = "<group>"; };
 		5EC41A8D21DC9CC300E95A86 /* BundleLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleLoader.swift; sourceTree = "<group>"; };
+		5EFDE88C21DDA6B400492842 /* LiveNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveNewsViewController.swift; sourceTree = "<group>"; };
+		5EFDE88E21DDA6DE00492842 /* LiveNewsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveNewsProtocols.swift; sourceTree = "<group>"; };
+		5EFDE89021DDA6E600492842 /* LiveNewsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveNewsRouter.swift; sourceTree = "<group>"; };
+		5EFDE89221DDA6ED00492842 /* LiveNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveNewsModel.swift; sourceTree = "<group>"; };
+		5EFDE89421DDA6F300492842 /* LiveNewsInterector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveNewsInterector.swift; sourceTree = "<group>"; };
+		5EFDE89621DDA70C00492842 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5EFDE89921DDA7B000492842 /* LiveNewsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveNewsPresenter.swift; sourceTree = "<group>"; };
 		664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter6ViewController.swift; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
@@ -895,6 +909,7 @@
 		5E8BF47221BF51EE005BD4E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5EFDE88321DDA5B400492842 /* VIPER */,
 				5E8E813C21D745BE00BDEF5A /* RxSwiftKit */,
 				66F18A5921C3D43F0009A074 /* Sections */,
 				66F18A5821C3D42B0009A074 /* Resources */,
@@ -1209,6 +1224,68 @@
 				5EC41A8321DC9AE600E95A86 /* NumberExtension.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		5EFDE88321DDA5B400492842 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				5EFDE89621DDA70C00492842 /* Constants.swift */,
+				5EFDE89821DDA7A900492842 /* Presenter */,
+				5EFDE88821DDA63600492842 /* Protocols */,
+				5EFDE88721DDA61C00492842 /* Interector */,
+				5EFDE88621DDA5FD00492842 /* Entity */,
+				5EFDE88521DDA5DE00492842 /* View */,
+				5EFDE88421DDA5CD00492842 /* Router */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		5EFDE88421DDA5CD00492842 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5EFDE89021DDA6E600492842 /* LiveNewsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5EFDE88521DDA5DE00492842 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EFDE88C21DDA6B400492842 /* LiveNewsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EFDE88621DDA5FD00492842 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5EFDE89221DDA6ED00492842 /* LiveNewsModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5EFDE88721DDA61C00492842 /* Interector */ = {
+			isa = PBXGroup;
+			children = (
+				5EFDE89421DDA6F300492842 /* LiveNewsInterector.swift */,
+			);
+			path = Interector;
+			sourceTree = "<group>";
+		};
+		5EFDE88821DDA63600492842 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5EFDE88E21DDA6DE00492842 /* LiveNewsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5EFDE89821DDA7A900492842 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5EFDE89921DDA7B000492842 /* LiveNewsPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		664E4BF721D913AC006ADC10 /* NSNotificationCenter6 */ = {
@@ -1896,6 +1973,7 @@
 				5E8E814C21D7462900BDEF5A /* ObjectMapperCommonFunc.swift in Sources */,
 				5E72839421C9F0CD0090C2E9 /* InfomationListRequest.swift in Sources */,
 				5E8BF47621BF526B005BD4E0 /* Global.swift in Sources */,
+				5EFDE89A21DDA7B000492842 /* LiveNewsPresenter.swift in Sources */,
 				5E5B768421CB529F00E49936 /* YLPhotoProgressView.swift in Sources */,
 				5E72838721C9E7B80090C2E9 /* InfomationListNormalCellNode.swift in Sources */,
 				5E5B767F21CB529F00E49936 /* YLDrivenInteractive.swift in Sources */,
@@ -1918,6 +1996,7 @@
 				66A4225421C676D1003D5E40 /* SelectItemCellNode.swift in Sources */,
 				5E46857821CC7147008B0CC3 /* InfomationDetailCommentReplyNode.swift in Sources */,
 				5E725CA121C77B41003183FD /* KaneViewController.swift in Sources */,
+				5EFDE89321DDA6ED00492842 /* LiveNewsModel.swift in Sources */,
 				5E72839221C9F0B10090C2E9 /* InfomationListModel.swift in Sources */,
 				66ABDB9221CA7F6A008C7E09 /* DiscuListDetailCellNode.swift in Sources */,
 				5EC41A7121DC45FC00E95A86 /* BFViewController.swift in Sources */,
@@ -1982,6 +2061,7 @@
 				5E8B99A121D5D55A00F14138 /* UIButton4ViewController.swift in Sources */,
 				66A4223B21C5FD92003D5E40 /* ErrorModel.swift in Sources */,
 				5E5B767D21CB529F00E49936 /* BFPhotoViewer.swift in Sources */,
+				5EFDE89121DDA6E600492842 /* LiveNewsRouter.swift in Sources */,
 				5E8B999E21D5D37900F14138 /* TextField3ViewController.swift in Sources */,
 				5EC41A8821DC9B2F00E95A86 /* ExString.swift in Sources */,
 				5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */,
@@ -2012,10 +2092,12 @@
 				5EC41A7021DC45FC00E95A86 /* ViewControllerReactor.swift in Sources */,
 				5E8E816921D7598A00BDEF5A /* Observable+HandyJSON.swift in Sources */,
 				5E6AA59E21C8CC3500EC4897 /* BannerViewCell.swift in Sources */,
+				5EFDE88D21DDA6B400492842 /* LiveNewsViewController.swift in Sources */,
 				5E46857621CC712B008B0CC3 /* InfomationDetailCommentCellNode.swift in Sources */,
 				5E71773A21C25782003BCAE5 /* LeftAndRightTitleCellNode.swift in Sources */,
 				5E8E814821D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift in Sources */,
 				66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */,
+				5EFDE88F21DDA6DE00492842 /* LiveNewsProtocols.swift in Sources */,
 				664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */,
 				5E5B768521CB529F00E49936 /* YLPopAnimator.swift in Sources */,
 				66BD871321C138710072466D /* ASNetworkImageNode+Extension.swift in Sources */,
@@ -2029,6 +2111,7 @@
 				66A4225F21C68FBE003D5E40 /* SelectPagerCellNode.swift in Sources */,
 				5E8BF47B21BF587E005BD4E0 /* NSAttributedString+TextNode.swift in Sources */,
 				66ABDB9921CA82FD008C7E09 /* DiscuListDetailViewModel.swift in Sources */,
+				5EFDE89721DDA70C00492842 /* Constants.swift in Sources */,
 				66ABDB9521CA8252008C7E09 /* DiscuListDetailRequest.swift in Sources */,
 				5E8BF48621BF6412005BD4E0 /* BFImageTextButton.swift in Sources */,
 				5E5B768321CB529F00E49936 /* YLPhotoCell.swift in Sources */,
@@ -2044,6 +2127,7 @@
 				5E725C9721C73E53003183FD /* BFWebBrowserController.swift in Sources */,
 				66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */,
 				5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */,
+				5EFDE89521DDA6F300492842 /* LiveNewsInterector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

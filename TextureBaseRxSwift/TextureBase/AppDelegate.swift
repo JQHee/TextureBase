@@ -33,11 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setupRootVC() {
         
-        let reator = ViewControllerReactor()
-        let VC = BFViewController()
-        VC.reactor = reator
-        let nav = UINavigationController.init(rootViewController: VC)
-        self.window?.rootViewController = nav
+        /**
+         测试redux
+         */
+//        let reator = ViewControllerReactor()
+//        let VC = BFViewController()
+//        VC.reactor = reator
+//        let nav = UINavigationController.init(rootViewController: VC)
+//        self.window?.rootViewController = nav
+        
+        /**
+         测试VIPER架构
+         */
+        let liveNews = LiveNewsRouter.createModule()
+        self.window?.rootViewController = liveNews
         /*
         guard let isFirstLoad = UserDefaults.standard.value(forKey: "isFirstLoad") as? Bool else {
             self.window?.rootViewController = GuidePageViewController()
