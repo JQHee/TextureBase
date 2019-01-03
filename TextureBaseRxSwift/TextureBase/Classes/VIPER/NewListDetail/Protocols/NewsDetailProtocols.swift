@@ -9,12 +9,15 @@
 import Foundation
 import UIKit
 
+protocol NewsDetailViewable: class {
+    func doPopBackFromeNewsListDetail()
+}
 
 // MARK: - 将数据展示到View
 protocol NewsListDetailPresenterToViewProtocol: class {
     func showDataToNewsDetail(news: LiveNewsModel)
     func showDataToNewsDetail(news: LiveNewsModel, callback: @escaping() -> ())
-    func goBackAction()
+    func doPopBackFromeNewsListDetail()
 }
 
 // MARK: - View驱动Presenter
@@ -32,4 +35,5 @@ protocol NewsListDetailViewToPresenterProtocol: class {
 protocol NewsListDetailPresenterToRouterProtocol: class {
     static func createModule(news: LiveNewsModel) -> UIViewController
     static func createModule(news: LiveNewsModel, callback: @escaping () -> ()) -> UIViewController
+    func doPopBackFromeNewsListDetail(view: NewsListDetailPresenterToViewProtocol)
 }

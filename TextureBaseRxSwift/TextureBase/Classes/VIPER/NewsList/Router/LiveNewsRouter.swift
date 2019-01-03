@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LiveNewsRouter: NewsListPresenterToRouterProtocol{
+class LiveNewsRouter: NewsListPresenterToRouterProtocol {
 
     static func createModule() -> UIViewController {
         let view = LiveNewsViewController()
@@ -54,5 +54,9 @@ class LiveNewsRouter: NewsListPresenterToRouterProtocol{
         if let sourceView = view as? UIViewController {
             sourceView.navigationController?.pushViewController(postDetailViewController, animated: true)
         }
+    }
+    
+    deinit {
+        print("LiveNewsRouter deinit")
     }
 }

@@ -24,7 +24,6 @@ class LiveNewsDetailPresenter: NewsListDetailViewToPresenterProtocol {
     }
     
     func goBackAction() {
-        view?.goBackAction()
+        router?.doPopBackFromeNewsListDetail(view: view!)
     }
-    
 }

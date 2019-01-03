@@ -52,8 +52,9 @@ class NewsDetailView: UIViewController {
 }
 
 extension NewsDetailView: NewsListDetailPresenterToViewProtocol {
-    func goBackAction() {
-         self.navigationController?.popViewController(animated: true)
+    
+    func doPopBackFromeNewsListDetail() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func showDataToNewsDetail(news: LiveNewsModel, callback: @escaping () -> ()) {

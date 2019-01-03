@@ -41,4 +41,15 @@ class LiveNewsDetailRouter: NewsListDetailPresenterToRouterProtocol {
         
         return view
     }
+    
+    func doPopBackFromeNewsListDetail(view: NewsListDetailPresenterToViewProtocol) {
+       let controller = view
+        controller.doPopBackFromeNewsListDetail()
+    }
+    
+    deinit {
+        print("LiveNewsDetailRouter deinit")
+    }
+    
 }
+
