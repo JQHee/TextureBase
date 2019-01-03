@@ -6,6 +6,10 @@
 //  Copyright © 2017 pseudo0. All rights reserved.
 //
 
+/**
+ * 面向接口编程
+ */
+
 import Foundation
 
 class Constants {
