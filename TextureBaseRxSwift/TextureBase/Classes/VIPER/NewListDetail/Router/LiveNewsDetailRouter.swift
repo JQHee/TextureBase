@@ -43,8 +43,9 @@ class LiveNewsDetailRouter: NewsListDetailPresenterToRouterProtocol {
     }
     
     func doPopBackFromeNewsListDetail(view: NewsListDetailPresenterToViewProtocol) {
-       let controller = view
-        controller.doPopBackFromeNewsListDetail()
+        guard let controller = view as? UIViewController else { return }
+        controller.navigationController?.popViewController(animated: true)
+        // controller.doPopBackFromeNewsListDetail()
     }
     
     deinit {
