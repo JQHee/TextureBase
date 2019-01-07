@@ -33,7 +33,7 @@ class LiveNewsViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        BFRxNetRequest().request(target: ApiManager.testHome)?.subscribe(onNext: { (respose) in
+        BFRxNetRequest.shared.request(target: ApiManager.testHome)?.subscribe(onNext: { (respose) in
             print(respose.progress)
             print(respose.response ?? "")
         }, onError: { (error) in

@@ -34,6 +34,9 @@ extension Manager {
 }
 
 class BFRxNetRequest {
+
+    static let shared = BFRxNetRequest()
+    private init() {}
     
     // 用来处理只请求一次的栅栏队列
     private let barrierQueue = DispatchQueue(label: "cn.bf.BFRxNetRequest", attributes: .concurrent)

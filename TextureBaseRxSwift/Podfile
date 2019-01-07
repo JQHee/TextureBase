@@ -50,6 +50,8 @@ target 'TextureBase' do
   pod 'RxGesture', '~> 2.1.0'
   pod 'ObjectMapper', '~> 3.4.2'
   pod 'HandyJSON', '~> 4.2.1'
+  # @dynamicMemberLookup
+  # pod 'DynamicJSON', '~> 2.0'
   pod 'Reusable', '~> 4.0.5'
   pod 'SVProgressHUD', '~> 2.2.5'
   # 蓝牙 https://github.com/sheepy1/VisualBlue

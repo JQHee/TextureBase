@@ -184,6 +184,7 @@
 		66BD871A21C13F3E0072466D /* TestCollectionNodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871921C13F3E0072466D /* TestCollectionNodeCell.swift */; };
 		66BD871D21C147480072466D /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871C21C147480072466D /* BaseTabBarController.swift */; };
 		66BD872021C147BC0072466D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD871F21C147BC0072466D /* UIImage+Extension.swift */; };
+		66C1F9CA21E374DC00E7848F /* StringCalculateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1F9C921E374DC00E7848F /* StringCalculateManager.swift */; };
 		66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */; };
 		66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */; };
 		66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */; };
@@ -412,6 +413,7 @@
 		66BD871921C13F3E0072466D /* TestCollectionNodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionNodeCell.swift; sourceTree = "<group>"; };
 		66BD871C21C147480072466D /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		66BD871F21C147BC0072466D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		66C1F9C921E374DC00E7848F /* StringCalculateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculateManager.swift; sourceTree = "<group>"; };
 		66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeactivityIndicatorCellNode.swift; sourceTree = "<group>"; };
 		66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASCellNode生命周期.png"; sourceTree = "<group>"; };
 		66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CYLTabBarController-Extension.swift"; sourceTree = "<group>"; };
@@ -999,6 +1001,7 @@
 				5E5B767121CB529F00E49936 /* PhotoViewer */,
 				5E8BF48221BF60A5005BD4E0 /* BFTAsKitTool.swift */,
 				66ABDB9C21CA9087008C7E09 /* BFPostTextParser.swift */,
+				66C1F9C921E374DC00E7848F /* StringCalculateManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2126,6 +2129,7 @@
 				5E8E818121D773BF00BDEF5A /* Refreshable.swift in Sources */,
 				5E72839F21CA21C60090C2E9 /* DiscuListViewController.swift in Sources */,
 				66F18A7021C3DEDE0009A074 /* ADLaunchController.swift in Sources */,
+				66C1F9CA21E374DC00E7848F /* StringCalculateManager.swift in Sources */,
 				66A4225821C6819E003D5E40 /* SelectRequest.swift in Sources */,
 				5E8B999821D5C08B00F14138 /* Observable1ViewController.swift in Sources */,
 				5E8E818321D7743600BDEF5A /* MenuViewModel.swift in Sources */,
