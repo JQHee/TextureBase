@@ -33,11 +33,17 @@ class LiveNewsViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // 跳转新闻详情页
-        guard let model = self.news else { return }
-        presenter?.showPostDetail(news: model, callback: {
-            print("callback")
-        })
+        BFRxNetRequest().request(target: ApiManager.testHome)?.subscribe(onNext: { (respose) in
+            print(respose.progress)
+            print(respose.response ?? "")
+        }, onError: { (error) in
+            print(error)
+        }).disposed(by: DisposeBag())
+//        // 跳转新闻详情页
+//        guard let model = self.news else { return }
+//        presenter?.showPostDetail(news: model, callback: {
+//            print("callback")
+//        })
     }
     
     // MARK: - Private methods

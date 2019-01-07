@@ -19,11 +19,16 @@ let networkActivityPlugin = NetworkActivityPlugin { (change, targeType) in
 
         switch(change){
         case .ended:
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+           
             
         case .began:
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            }
+
         }
 }
 
@@ -38,10 +43,10 @@ func BFRxbase64(_ base64: String) -> String {
 /// 此类不允许继承
 public final class BFRxRequestLoadingPlugin: PluginType {
     
-    var custom : BFRxCustomRequest
+    var isShowHud: Bool = false
     
-    init(_ custom : BFRxCustomRequest) {
-        self.custom = custom
+    init(isShowHud: Bool) {
+        self.isShowHud = isShowHud
         ///初始化 hud
     }
     
@@ -51,7 +56,7 @@ public final class BFRxRequestLoadingPlugin: PluginType {
     
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
         print("结束请求")
-        DispatchQueue.global().async { //[weak self] in
+        DispatchQueue.main.async { //[weak self] in
             
 //            if (self?.custom.isSave)! {
 //                switch result {

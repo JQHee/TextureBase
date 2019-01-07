@@ -76,6 +76,7 @@
 		5E7283AE21CA36FD0090C2E9 /* DiscuListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7283AD21CA36FD0090C2E9 /* DiscuListViewModel.swift */; };
 		5E7283B021CA37190090C2E9 /* DiscuListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7283AF21CA37190090C2E9 /* DiscuListRequest.swift */; };
 		5E7283B221CA3BD90090C2E9 /* DiscuListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7283B121CA3BD90090C2E9 /* DiscuListModel.swift */; };
+		5E8367A521E3542700213EE1 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8367A421E3542700213EE1 /* Array+Safe.swift */; };
 		5E850F6C21C33F4B002A31E0 /* PhotoEdgeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */; };
 		5E850F6E21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */; };
 		5E850F7121C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */; };
@@ -101,7 +102,6 @@
 		5E8E814821D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814121D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift */; };
 		5E8E814921D7462900BDEF5A /* BFRxRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814221D7462900BDEF5A /* BFRxRequestApi.swift */; };
 		5E8E814A21D7462900BDEF5A /* BFRxRequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */; };
-		5E8E814B21D7462900BDEF5A /* BFRxResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */; };
 		5E8E814C21D7462900BDEF5A /* ObjectMapperCommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */; };
 		5E8E816921D7598A00BDEF5A /* Observable+HandyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E816821D7598A00BDEF5A /* Observable+HandyJSON.swift */; };
 		5E8E816F21D75A8600BDEF5A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */; };
@@ -296,6 +296,7 @@
 		5E7283AD21CA36FD0090C2E9 /* DiscuListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscuListViewModel.swift; sourceTree = "<group>"; };
 		5E7283AF21CA37190090C2E9 /* DiscuListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscuListRequest.swift; sourceTree = "<group>"; };
 		5E7283B121CA3BD90090C2E9 /* DiscuListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscuListModel.swift; sourceTree = "<group>"; };
+		5E8367A421E3542700213EE1 /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		5E850F6B21C33F4B002A31E0 /* PhotoEdgeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoEdgeIcon.png; sourceTree = "<group>"; };
 		5E850F6D21C33F70002A31E0 /* PhotoEdgeIconCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEdgeIconCellNode.swift; sourceTree = "<group>"; };
 		5E850F7021C3429B002A31E0 /* NodeInsertTopAndBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeInsertTopAndBottomLine.swift; sourceTree = "<group>"; };
@@ -327,7 +328,6 @@
 		5E8E814121D7462900BDEF5A /* BFRxObservable+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFRxObservable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		5E8E814221D7462900BDEF5A /* BFRxRequestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxRequestApi.swift; sourceTree = "<group>"; };
 		5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxRequestPlugin.swift; sourceTree = "<group>"; };
-		5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRxResultModel.swift; sourceTree = "<group>"; };
 		5E8E814621D7462900BDEF5A /* ObjectMapperCommonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMapperCommonFunc.swift; sourceTree = "<group>"; };
 		5E8E816821D7598A00BDEF5A /* Observable+HandyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+HandyJSON.swift"; sourceTree = "<group>"; };
 		5E8E816E21D75A8600BDEF5A /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -807,6 +807,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5E8367A321E3540400213EE1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5E8367A421E3542700213EE1 /* Array+Safe.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		5E850F6A21C33EF6002A31E0 /* PhotoEdgeIcon */ = {
 			isa = PBXGroup;
 			children = (
@@ -1060,8 +1068,8 @@
 		5E8E813F21D7462900BDEF5A /* MoyaRequest */ = {
 			isa = PBXGroup;
 			children = (
+				5E8367A321E3540400213EE1 /* Base */,
 				5E8E815221D757AE00BDEF5A /* Requests */,
-				5E8E815121D74D7600BDEF5A /* BaseResultModel */,
 				5E8E815021D74CFD00BDEF5A /* Plugins */,
 				5E8E814F21D74CC600BDEF5A /* ApiManagers */,
 			);
@@ -1091,14 +1099,6 @@
 				5E8E814321D7462900BDEF5A /* BFRxRequestPlugin.swift */,
 			);
 			path = Plugins;
-			sourceTree = "<group>";
-		};
-		5E8E815121D74D7600BDEF5A /* BaseResultModel */ = {
-			isa = PBXGroup;
-			children = (
-				5E8E814421D7462900BDEF5A /* BFRxResultModel.swift */,
-			);
-			path = BaseResultModel;
 			sourceTree = "<group>";
 		};
 		5E8E815221D757AE00BDEF5A /* Requests */ = {
@@ -2112,6 +2112,7 @@
 				5E8E817821D76BCC00BDEF5A /* UIScrollView5ViewController.swift in Sources */,
 				5E6AA5A021C8CF7800EC4897 /* HotRecommentCellNode.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
+				5E8367A521E3542700213EE1 /* Array+Safe.swift in Sources */,
 				66ABDB8921CA7864008C7E09 /* DiscuListDetailWebCellNode.swift in Sources */,
 				5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
@@ -2159,7 +2160,6 @@
 				5EC41A8821DC9B2F00E95A86 /* ExString.swift in Sources */,
 				5E6AA59721C8AA7B00EC4897 /* LovePlayCommunityRequest.swift in Sources */,
 				5E72839021C9F0980090C2E9 /* InfomationListViewModel.swift in Sources */,
-				5E8E814B21D7462900BDEF5A /* BFRxResultModel.swift in Sources */,
 				5E72838921C9E7DD0090C2E9 /* InfomationListBottomBigImageCellNode.swift in Sources */,
 				5E46857A21CC7188008B0CC3 /* InfomationDetailCommentReplyItemNode.swift in Sources */,
 				5E7283A521CA2EA40090C2E9 /* DiscuListHeaderView.swift in Sources */,

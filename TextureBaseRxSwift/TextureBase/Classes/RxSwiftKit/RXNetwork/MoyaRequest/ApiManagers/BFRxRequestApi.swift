@@ -15,6 +15,12 @@ import Moya
 
 let cachePath = NSHomeDirectory() + "/Library/Caches" + "/MYLazyRequestCache"
 
+protocol MoyaAddable {
+    var cacheKey: String? { get }
+    var isShowHud: Bool { get }
+    var timeOut: Double { get }
+}
+
 enum ApiManager {
     case testHome
     case testUser([String: Any])
@@ -22,7 +28,7 @@ enum ApiManager {
 }
 
 /// 执行代理
-extension ApiManager: Moya.TargetType {
+extension ApiManager: Moya.TargetType, MoyaAddable {
     
     var sampleData: Data {
         return "".data(using: String.Encoding.utf8)!
@@ -31,7 +37,7 @@ extension ApiManager: Moya.TargetType {
     var baseURL: URL {
         switch self {
         case .testHome:
-            return URL.init(string: "")!
+            return URL.init(string: "http://www.baidu.com")!
             
         default:
             return URL.init(string: "")!
@@ -72,6 +78,18 @@ extension ApiManager: Moya.TargetType {
     
     var headers: [String : String]? {
         return nil
+    }
+    
+    var cacheKey: String? {
+        return ""
+    }
+    
+    var isShowHud: Bool {
+        return true
+    }
+    
+    var timeOut: Double {
+        return 15.0
     }
 }
 
