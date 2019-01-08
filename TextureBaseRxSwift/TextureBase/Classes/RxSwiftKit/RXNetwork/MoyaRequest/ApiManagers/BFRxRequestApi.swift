@@ -31,13 +31,13 @@ enum ApiManager {
 extension ApiManager: Moya.TargetType, MoyaAddable {
     
     var sampleData: Data {
-        return "".data(using: String.Encoding.utf8)!
+        return "{}".data(using: String.Encoding.utf8)!
     }
     
     var baseURL: URL {
         switch self {
         case .testHome:
-            return URL.init(string: "http://www.baidu.com")!
+            return URL.init(string: "https://douban.fm")!
             
         default:
             return URL.init(string: "")!
@@ -47,7 +47,7 @@ extension ApiManager: Moya.TargetType, MoyaAddable {
     var path: String {
         switch self {
         case .testHome:
-            return ""
+            return "/j/mine/playlist"
         default:
             return ""
         }
@@ -56,7 +56,7 @@ extension ApiManager: Moya.TargetType, MoyaAddable {
     var method: Moya.Method {
         switch self {
         case .testHome:
-            return .post
+            return .get
             
         default:
             return .post
@@ -66,6 +66,14 @@ extension ApiManager: Moya.TargetType, MoyaAddable {
     var task: Task {
         switch self {
          
+        case .testHome:
+            // return .requestPlain
+            var params: [String: Any] = [:]
+            params["channel"] = 1
+            params["type"] = "n"
+            params["from"] = "mainsite"
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            
         case .testUser(let paramete):
             // url 请求参数
             // Task.requestCompositeParameters(bodyParameters: <#T##[String : Any]#>, bodyEncoding: <#T##ParameterEncoding#>, urlParameters: <#T##[String : Any]#>)
@@ -89,7 +97,7 @@ extension ApiManager: Moya.TargetType, MoyaAddable {
     }
     
     var timeOut: Double {
-        return 15.0
+        return 20.0
     }
 }
 

@@ -43,9 +43,42 @@ class BFRxNetRequest {
     // 用来处理只请求一次的数组,保存请求的信息 唯一
     private var fetchRequestKeys = [String]()
 
+    // 不带进度条的
+    @discardableResult
+    func request<T: TargetType & MoyaAddable>(target: T) -> Observable<Response>? {
+        
+        // 同一请求正在请求直接返回
+        if isSameRequest(target) {
+            return nil
+        }
+        
+        return Observable<Response>.create({ (observer) -> Disposable in
+            
+            let provider = self.createProvider(target: target)
+            return provider.rx.request(target, callbackQueue: DispatchQueue.global())
+                .asObservable()
+                .subscribe(onNext: { (result) in
+                    DispatchQueue.global().async {
+                        observer.onNext(result)
+                        DispatchQueue.main.async {
+                            observer.onCompleted()
+                        }
+                    }
+                    // 请求完成移除
+                    self.cleanRequest(target)
+                }, onError: { (error) in
+                    DispatchQueue.main.async {
+                        observer.onError(error)
+                    }
+                    // 请求完成移除
+                    self.cleanRequest(target)
+                })
+        })
+    }
+    
     // 带进度条的
     @discardableResult
-    func request<T: TargetType & MoyaAddable>(target: T) -> Observable<ProgressResponse>? {
+    func send<T: TargetType & MoyaAddable>(target: T) -> Observable<ProgressResponse>? {
         
         // 同一请求正在请求直接返回
         if isSameRequest(target) {
@@ -53,35 +86,44 @@ class BFRxNetRequest {
         }
         
         return Observable<ProgressResponse>.create({ (observer) -> Disposable in
-            let provider = self.createProvider(target: target)
             
+            let provider = self.createProvider(target: target)
             // asDriver(onErrorJustReturn: [])
-            return provider.rx.requestWithProgress(target, callbackQueue: DispatchQueue.global())
-                .asObservable()
-                .subscribe(onNext: { (result) in
-                    // 请求完成移除
-                    self.cleanRequest(target)
-                    DispatchQueue.global().async {
-                        print(result.progressObject ?? "")
-                        print(result.response ?? "")
-                        observer.onNext(result)
-                        DispatchQueue.main.async {
-                            observer.onCompleted()
-                        }
-                    }
-                }, onError: { (error) in
-                    // 请求完成移除
-                    self.cleanRequest(target)
+             return provider.rx.requestWithProgress(target, callbackQueue: DispatchQueue.global())
+             .asObservable()
+             .subscribe(onNext: { (result) in
+                
+                do {
+                    //过滤成功的状态码响应
+                    let data = try result.response?.mapJSON()
+                    print(data ?? "")
+                    //继续做一些其它事情....
+                }
+                catch {
+                    //处理错误状态码的响应...
+                }
+                DispatchQueue.global().async {
+                    observer.onNext(result)
                     DispatchQueue.main.async {
-                        observer.onError(error)
+                        observer.onCompleted()
                     }
-                })
+                }
+                // 请求完成移除
+                self.cleanRequest(target)
+             }, onError: { (error) in
+                DispatchQueue.main.async {
+                    observer.onError(error)
+                }
+                // 请求完成移除
+                self.cleanRequest(target)
+             })
         })
     }
 
     // 创建moya请求类
     private func createProvider<T: TargetType & MoyaAddable>(target: T) -> MoyaProvider<T> {
         /// 设置请求头,超时时间等
+        /*
         let requestClosure = { (endpoint: Endpoint, closure: @escaping MoyaProvider<T>.RequestResultClosure) in
             do {
                 var request = try endpoint.urlRequest()
@@ -91,14 +133,18 @@ class BFRxNetRequest {
                 print("error:", error)
             }
         }
+         */
+        
+        let manager = Manager.default
+        manager.session.configuration.timeoutIntervalForRequest = target.timeOut
         
         //  NetworkLoggerPlugin(verbose: false)
         let plugins: [PluginType] = [networkActivityPlugin, BFRxRequestLoadingPlugin(isShowHud: target.isShowHud)]
-        return MoyaProvider<T>(requestClosure: requestClosure, manager: Manager.default, plugins: plugins)
+        return MoyaProvider<T>(manager: manager, plugins: plugins)
     }
 
     deinit {
-        print("网络请求对象销毁!!!")
+        // print("网络请求对象销毁!!!")
     }
     
 }
@@ -109,11 +155,11 @@ extension BFRxNetRequest {
         switch type.task {
         case let .requestParameters(parameters, _):
             let key = type.path + parameters.description
-            var result: Bool!
+            var result: Bool = false
             barrierQueue.sync(flags: .barrier) {
                 result = fetchRequestKeys.contains(key)
                 if !result {
-                    fetchRequestKeys.append(key)
+                    // fetchRequestKeys.append(key)
                 }
             }
             return result

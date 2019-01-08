@@ -12,6 +12,8 @@ class LiveNewsViewController: UIViewController {
     
     var presenter: NewsListViewToPresenterProtocol?
     
+    let disposeBag = DisposeBag()
+    
     // 数据保存在View
     var news: LiveNewsModel?
     
@@ -33,17 +35,43 @@ class LiveNewsViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        /*
         BFRxNetRequest.shared.request(target: ApiManager.testHome)?.subscribe(onNext: { (respose) in
-            print(respose.progress)
-            print(respose.response ?? "")
+            do {
+                //过滤成功的状态码响应
+                let data = try respose.mapJSON()
+                print(data)
+                //继续做一些其它事情....
+            }
+            catch {
+                //处理错误状态码的响应...
+            }
+            print(respose)
+            
         }, onError: { (error) in
             print(error)
-        }).disposed(by: DisposeBag())
+        }).disposed(by: disposeBag)
+         */
+        
+        BFRxNetRequest.shared.send(target: ApiManager.testHome)?.subscribe(onNext: { (result) in
+            do {
+                //过滤成功的状态码响应
+                let data = try result.response?.mapJSON()
+                print(data ?? "")
+                //继续做一些其它事情....
+            }
+            catch {
+                //处理错误状态码的响应...
+            }
+        }).disposed(by: disposeBag)
+        
 //        // 跳转新闻详情页
 //        guard let model = self.news else { return }
 //        presenter?.showPostDetail(news: model, callback: {
 //            print("callback")
 //        })
+
     }
     
     // MARK: - Private methods

@@ -70,12 +70,12 @@ func dispatch_async_safely_main_queue(_ block: @escaping () -> Void) {
 }
 
 // DEBUG日志的打印
-func print(_ something: @autoclosure () -> Any) {
-    #if DEBUG
-    let fileName = (#file as NSString).lastPathComponent
-    Swift.print("\(fileName):(\(#line))-\(something())")
-    #endif
-}
+//func print(_ something: @autoclosure () -> Any) {
+//    #if DEBUG
+//    let fileName = (#file as NSString).lastPathComponent
+//    Swift.print("\(fileName):(\(#line))-\(something())")
+//    #endif
+//}
 
 // 本地是否有缓存
 func haveCacheImage(key: String) -> Bool {
