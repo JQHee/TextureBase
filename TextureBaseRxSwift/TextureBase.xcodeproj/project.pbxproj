@@ -188,7 +188,7 @@
 		66D69EF521BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */; };
 		66D69EF721BFDC01008C31BD /* ASCellNode生命周期.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */; };
 		66F18A5C21C3D4ED0009A074 /* CYLTabBarController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */; };
-		66F18A5F21C3D6890009A074 /* startImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A5E21C3D6890009A074 /* startImage.png */; };
+		66F18A5F21C3D6890009A074 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 66F18A5E21C3D6890009A074 /* start.png */; };
 		66F18A6121C3D7B40009A074 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */; };
 		66F18A6721C3D8CD0009A074 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6621C3D8CD0009A074 /* MineViewController.swift */; };
 		66F18A6921C3D8DD0009A074 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */; };
@@ -417,7 +417,7 @@
 		66D69EF421BFDB36008C31BD /* CustomeactivityIndicatorCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeactivityIndicatorCellNode.swift; sourceTree = "<group>"; };
 		66D69EF621BFDC01008C31BD /* ASCellNode生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASCellNode生命周期.png"; sourceTree = "<group>"; };
 		66F18A5B21C3D4ED0009A074 /* CYLTabBarController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CYLTabBarController-Extension.swift"; sourceTree = "<group>"; };
-		66F18A5E21C3D6890009A074 /* startImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startImage.png; path = "../../../../../LovePlayNews-master/LovePlayNews/startImage.png"; sourceTree = "<group>"; };
+		66F18A5E21C3D6890009A074 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = "../../../../../LovePlayNews-master/LovePlayNews/start.png"; sourceTree = "<group>"; };
 		66F18A6021C3D7B40009A074 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		66F18A6621C3D8CD0009A074 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		66F18A6821C3D8DD0009A074 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -1643,7 +1643,7 @@
 			isa = PBXGroup;
 			children = (
 				66F18A7421C3E07F0009A074 /* WelcomImages */,
-				66F18A5E21C3D6890009A074 /* startImage.png */,
+				66F18A5E21C3D6890009A074 /* start.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1857,7 +1857,7 @@
 				66F18A8521C3F7B30009A074 /* MineHeaderView.xib in Resources */,
 				5E8BF44F21BF4E76005BD4E0 /* LaunchScreen.storyboard in Resources */,
 				66ABDB8F21CA7923008C7E09 /* NewsInfo.plist in Resources */,
-				66F18A5F21C3D6890009A074 /* startImage.png in Resources */,
+				66F18A5F21C3D6890009A074 /* start.png in Resources */,
 				5E71773F21C25D24003BCAE5 /* textInsertBlowImage.png in Resources */,
 				5E8BF44C21BF4E76005BD4E0 /* Assets.xcassets in Resources */,
 				66ABDB8221CA7017008C7E09 /* InfomationDetailHeaderView.xib in Resources */,

@@ -23,4 +23,5 @@ extension Response {
         let jsonString = String.init(data: data, encoding: .utf8)
         return JSONDeserializer<T>.deserializeFrom(json: jsonString)!
     }
+
 }

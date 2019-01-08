@@ -101,6 +101,8 @@ class BFRxNetRequest {
                 case let .failure(error):
                     observer.onError(error)
                 }
+                // 请求完成移除
+                self.cleanRequest(target)
             }
             
             return Disposables.create {

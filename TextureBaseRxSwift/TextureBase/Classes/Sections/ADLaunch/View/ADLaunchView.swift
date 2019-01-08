@@ -47,7 +47,7 @@ class ADLaunchView: ASDisplayNode {
         skipButtonNode.cornerRadius = 4.0
         skipButtonNode.alpha = 0.92
         
-        let path = Bundle.main.path(forResource: "startImage", ofType: "png") ?? ""
+        let path = Bundle.main.path(forResource: "start", ofType: "png") ?? ""
         launchImageNode.image = UIImage.init(contentsOfFile: path)
     }
 

@@ -57,7 +57,8 @@ class LiveNewsViewController: UIViewController {
         BFRxNetRequest.shared.send(target: ApiManager.testHome)?.subscribe(onNext: { (result) in
             do {
                 //过滤成功的状态码响应
-                let data = try result.response?.mapJSON()
+                let tempResult = try result.response?.filterSuccessfulStatusCodes()
+                let data = try tempResult?.mapJSON()
                 print(data ?? "")
                 //继续做一些其它事情....
             }
