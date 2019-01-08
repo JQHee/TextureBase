@@ -57,6 +57,7 @@ class BFRxNetRequest {
             let provider = self.createProvider(target: target)
             return provider.rx.request(target, callbackQueue: DispatchQueue.global())
                 .asObservable()
+                .filterSuccessfulStatusCodes()
                 .subscribe(onNext: { (result) in
                     DispatchQueue.global().async {
                         observer.onNext(result)
@@ -85,9 +86,38 @@ class BFRxNetRequest {
             return nil
         }
         
+        let provider = self.createProvider(target: target)
+        let progressBlock: (AnyObserver) -> (ProgressResponse) -> Void = { observer in
+            return { progress in
+                observer.onNext(progress)
+            }
+        }
+        
+        let response: Observable<ProgressResponse> = Observable.create { observer in
+            let cancellableToken = provider.request(target, callbackQueue: DispatchQueue.global(), progress: progressBlock(observer)) { result in
+                switch result {
+                case .success:
+                    observer.onCompleted()
+                case let .failure(error):
+                    observer.onError(error)
+                }
+            }
+            
+            return Disposables.create {
+                cancellableToken.cancel()
+            }
+        }
+        
+        // Accumulate all progress and combine them when the result comes
+        return response.scan(ProgressResponse()) { last, progress in
+            let progressObject = progress.progressObject ?? last.progressObject
+            let response = progress.response ?? last.response
+            return ProgressResponse(progress: progressObject, response: response)
+        }
+        
+        /* 下面这种写法，有时没有数据返回
         return Observable<ProgressResponse>.create({ (observer) -> Disposable in
             
-            let provider = self.createProvider(target: target)
             // asDriver(onErrorJustReturn: [])
              return provider.rx.requestWithProgress(target, callbackQueue: DispatchQueue.global())
              .asObservable()
@@ -117,7 +147,9 @@ class BFRxNetRequest {
                 // 请求完成移除
                 self.cleanRequest(target)
              })
+
         })
+         */
     }
 
     // 创建moya请求类
