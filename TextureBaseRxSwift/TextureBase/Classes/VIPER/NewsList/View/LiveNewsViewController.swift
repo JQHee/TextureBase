@@ -54,6 +54,33 @@ class LiveNewsViewController: UIViewController {
         }).disposed(by: disposeBag)
          */
         
+        /*
+        BFRxNetRequest.rx.sendRequest(target: ApiManager.testHome)?.subscribe(onNext: { (result) in
+            
+            do {
+                let data = try result.mapJSON()
+                print(data)
+            }
+            catch let error {
+                print(error)
+            }
+            
+        }).disposed(by: disposeBag)
+         */
+        
+        BFRxNetRequest.rx.sendProgressRequest(target: ApiManager.testHome)?.subscribe(onNext: { (result) in
+            
+            do {
+                let data = try result.response?.mapJSON()
+                print(data)
+            }
+            catch let error {
+                print(error)
+            }
+            
+        }).disposed(by: disposeBag)
+                
+        /*
         BFRxNetRequest.shared.send(target: ApiManager.testHome)?.subscribe(onNext: { (result) in
             do {
                 //过滤成功的状态码响应
@@ -66,6 +93,7 @@ class LiveNewsViewController: UIViewController {
                 //处理错误状态码的响应...
             }
         }).disposed(by: disposeBag)
+         */
         
 //        // 跳转新闻详情页
 //        guard let model = self.news else { return }

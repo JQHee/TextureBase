@@ -1,13 +1,13 @@
 //
 //  MYRequestApi.swift
-//  MY_Demo
+//  
 //
-//  Created by magic on 2018/9/18.
-//  Copyright © 2018年 magic. All rights reserved.
+//  Created by HJQ on 2018/9/18.
+//  Copyright © 2018年 HJQ. All rights reserved.
 //
 
 /*
- * Moya 网络请求,各个接口配置,集中管理快捷方便
+ * Moya Interface configuration
  */
 
 import Foundation
@@ -15,6 +15,7 @@ import Moya
 
 let cachePath = NSHomeDirectory() + "/Library/Caches" + "/MYLazyRequestCache"
 
+// add new protocol
 protocol MoyaAddable {
     var cacheKey: String? { get }
     var isShowHud: Bool { get }
@@ -27,8 +28,8 @@ enum ApiManager {
     case testUserapi([String: Any])
 }
 
-/// 执行代理
-extension ApiManager: Moya.TargetType, MoyaAddable {
+
+extension ApiManager: RxMoyaTargetType {
     
     var sampleData: Data {
         return "{}".data(using: String.Encoding.utf8)!
@@ -75,7 +76,6 @@ extension ApiManager: Moya.TargetType, MoyaAddable {
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
             
         case .testUser(let paramete):
-            // url 请求参数
             // Task.requestCompositeParameters(bodyParameters: <#T##[String : Any]#>, bodyEncoding: <#T##ParameterEncoding#>, urlParameters: <#T##[String : Any]#>)
             return .requestParameters(parameters: paramete, encoding: URLEncoding.default)
             

@@ -1,20 +1,20 @@
 //
 //  MYRequestPlugin.swift
-//  MY_Demo
+//  
 //
-//  Created by magic on 2018/9/18.
-//  Copyright © 2018年 magic. All rights reserved.
+//  Created by HJQ on 2018/9/18.
+//  Copyright © 2018年 HJQ. All rights reserved.
 //
 
 /*
- * 网络请求插件
+ * Plugins
  */
 
 import Foundation
 import Moya
 import Result
 
-/// 设置网络请求导航栏小菊花
+/// setting request NetworkActivity
 let networkActivityPlugin = NetworkActivityPlugin { (change, targeType) in
 
         switch(change){
@@ -31,25 +31,19 @@ let networkActivityPlugin = NetworkActivityPlugin { (change, targeType) in
         }
 }
 
-/// 此类不允许继承
 public final class BFRxRequestLoadingPlugin: PluginType {
     
     var isShowHud: Bool = false
     
     init(isShowHud: Bool) {
         self.isShowHud = isShowHud
-        ///初始化 hud
     }
     
     public func willSend(_ request: RequestType, target: TargetType) {
-        // print("请求开始")
+        // print("request start")
     }
     
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
-        // print("结束请求")
-    }
-    
-    deinit {
-        // print("插件销毁!!!")
+        // print("request end")
     }
 }
