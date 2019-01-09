@@ -68,11 +68,13 @@ class LiveNewsViewController: UIViewController {
         }).disposed(by: disposeBag)
          */
         
+        // BFRxNetRequest.shared.cancleAllRequest(target: ApiManager.self)
+        
         BFRxNetRequest.rx.sendProgressRequest(target: ApiManager.testHome)?.subscribe(onNext: { (result) in
             
             do {
                 let data = try result.response?.mapJSON()
-                print(data)
+                print(data ?? "")
             }
             catch let error {
                 print(error)

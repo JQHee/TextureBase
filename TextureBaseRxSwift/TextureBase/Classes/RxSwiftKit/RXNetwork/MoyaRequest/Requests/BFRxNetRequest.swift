@@ -16,7 +16,7 @@ typealias RxMoyaTargetType = Moya.TargetType & MoyaAddable
 // MARK: - HTTPS Certificate authentication
 extension Manager {
     
-    static func defaultAlamofireManager() -> Manager {
+    static func httpsAlamofireManager() -> Manager {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         // get local Certificate authentication
@@ -33,10 +33,10 @@ extension Manager {
     }
 }
 
-public class BFRxNetRequest {
+public class BFRxNetRequest: NSObject {
 
     static let shared = BFRxNetRequest()
-    private init() {}
+    private override init() {}
     
     // is request once
     private let barrierQueue = DispatchQueue(label: "cn.bf.BFRxNetRequest", attributes: .concurrent)
@@ -111,6 +111,19 @@ public class BFRxNetRequest {
             return ProgressResponse(progress: progressObject, response: response)
         }
     }
+    
+    // cancle all request
+    func cancleAllRequest<T: RxMoyaTargetType>(target: T.Type) {
+        MoyaProvider<T>.defaultAlamofireManager().session.invalidateAndCancel()
+    }
+    
+    /*
+    func cancleAllRequest<T: RxMoyaTargetType>(target: T) {
+        MoyaProvider<T>.defaultAlamofireManager().session.getAllTasks { (task) in
+
+        }
+    }
+     */
 
     // create moya instance
     private func createProvider<T: RxMoyaTargetType>(target: T) -> MoyaProvider<T> {
