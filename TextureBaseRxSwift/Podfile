@@ -70,6 +70,8 @@ target 'TextureBase' do
   # pod 'RxKeyboard'
   # pod 'RxOptional'
   # pod 'RxAnimated'
+  
+  pod 'Bagel'
 
   # 学习相关文章
   # https://github.com/CivelXu/UseAsyncDisplayKit-Practice

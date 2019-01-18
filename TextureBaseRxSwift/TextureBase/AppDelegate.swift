@@ -8,6 +8,7 @@
 
 import UIKit
 import GDPerformanceView_Swift
+import Bagel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()
+        #if DEBUG
+            Bagel.start()
+        #endif
         setupRootVC()
         // FPS
         PerformanceMonitor.shared().start()
@@ -45,10 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /**
          测试VIPER架构
          */
+        /*
         let liveNews = LiveNewsRouter.createModule()
         self.window?.rootViewController = liveNews
+         */
         
-        /*
         guard let isFirstLoad = UserDefaults.standard.value(forKey: "isFirstLoad") as? Bool else {
             self.window?.rootViewController = GuidePageViewController()
             return
@@ -56,7 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(isFirstLoad)
         mainVC.setupRootVC()
         addADLaunchController()
-         */
     }
 
     // 添加广告页
