@@ -49,7 +49,7 @@ target 'TextureBase' do
   # 为了更加方便添加点击事件
   pod 'RxGesture', '~> 2.1.0'
   pod 'ObjectMapper', '~> 3.4.2'
-  pod 'HandyJSON', '~> 4.2.1'
+  pod 'HandyJSON', '~> 5.0.0-beta'
   # @dynamicMemberLookup
   # pod 'DynamicJSON', '~> 2.0'
   pod 'Reusable', '~> 4.0.5'

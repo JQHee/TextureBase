@@ -140,6 +140,9 @@
 		5EFDE8A921DDB98D00492842 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE8A821DDB98D00492842 /* NewsDetailView.swift */; };
 		5EFDE8AB21DDB9F600492842 /* LiveNewsDetailInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFDE8AA21DDB9F600492842 /* LiveNewsDetailInterector.swift */; };
 		664E4BF921D913C1006ADC10 /* NSNotificationCenter6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */; };
+		665915C12254ED520010A126 /* JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665915C02254ED520010A126 /* JSONMappable.swift */; };
+		665915C32254EDAB0010A126 /* Observable+JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665915C22254EDAB0010A126 /* Observable+JSONMappable.swift */; };
+		665915C52254EDD80010A126 /* Response+JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665915C42254EDD80010A126 /* Response+JSONMappable.swift */; };
 		6682FAF521C92879003B0880 /* HotRecommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF421C92879003B0880 /* HotRecommentRequest.swift */; };
 		6682FAF721C92919003B0880 /* HotRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */; };
 		6682FAF921C92CC0003B0880 /* HotRecommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */; };
@@ -367,6 +370,9 @@
 		5EFDE8A821DDB98D00492842 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		5EFDE8AA21DDB9F600492842 /* LiveNewsDetailInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveNewsDetailInterector.swift; sourceTree = "<group>"; };
 		664E4BF821D913C1006ADC10 /* NSNotificationCenter6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter6ViewController.swift; sourceTree = "<group>"; };
+		665915C02254ED520010A126 /* JSONMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMappable.swift; sourceTree = "<group>"; };
+		665915C22254EDAB0010A126 /* Observable+JSONMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+JSONMappable.swift"; sourceTree = "<group>"; };
+		665915C42254EDD80010A126 /* Response+JSONMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+JSONMappable.swift"; sourceTree = "<group>"; };
 		6682FAF421C92879003B0880 /* HotRecommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentRequest.swift; sourceTree = "<group>"; };
 		6682FAF621C92919003B0880 /* HotRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentViewModel.swift; sourceTree = "<group>"; };
 		6682FAF821C92CC0003B0880 /* HotRecommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecommentModel.swift; sourceTree = "<group>"; };
@@ -1167,6 +1173,9 @@
 			isa = PBXGroup;
 			children = (
 				5E8E817D21D7707400BDEF5A /* Observable+SwiftyJSON.swift */,
+				665915C02254ED520010A126 /* JSONMappable.swift */,
+				665915C22254EDAB0010A126 /* Observable+JSONMappable.swift */,
+				665915C42254EDD80010A126 /* Response+JSONMappable.swift */,
 			);
 			path = SwiftyJSON;
 			sourceTree = "<group>";
@@ -1941,96 +1950,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bagel/Bagel.framework",
-				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
-				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
-				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
-				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
-				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
-				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
-				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/TYAttributedLabel/TYAttributedLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/TYCyclePagerView/TYCyclePagerView.framework",
-				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
-				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
-				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bagel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYAttributedLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYCyclePagerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextureBase/Pods-TextureBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEE31F0BF95B7FBE5F8F2EC5 /* [CP] Check Pods Manifest.lock */ = {
@@ -2117,12 +2045,14 @@
 				5E8E817521D75C9600BDEF5A /* NewsModel.swift in Sources */,
 				66A4224C21C62548003D5E40 /* ADLaunchViewModel.swift in Sources */,
 				5E8E817821D76BCC00BDEF5A /* UIScrollView5ViewController.swift in Sources */,
+				665915C12254ED520010A126 /* JSONMappable.swift in Sources */,
 				5E6AA5A021C8CF7800EC4897 /* HotRecommentCellNode.swift in Sources */,
 				66BD871121C136A20072466D /* FPS.swift in Sources */,
 				5E8367A521E3542700213EE1 /* Array+Safe.swift in Sources */,
 				66ABDB8921CA7864008C7E09 /* DiscuListDetailWebCellNode.swift in Sources */,
 				5E71773721C23CDE003BCAE5 /* BaseLayout.swift in Sources */,
 				5E682E3521C091D50025F45B /* TestCustomeactivityIndicatorVC.swift in Sources */,
+				665915C32254EDAB0010A126 /* Observable+JSONMappable.swift in Sources */,
 				5E725C9221C72EC7003183FD /* AWSelectListModel.swift in Sources */,
 				66ABDB8521CA763A008C7E09 /* DiscuListDetailHeaderView.swift in Sources */,
 				5E5B769221CB7AB800E49936 /* InfomationDetailModel.swift in Sources */,
@@ -2153,6 +2083,7 @@
 				5EC41A7D21DC5D7300E95A86 /* ReactorKit+Rx.swift in Sources */,
 				5E72838B21C9EC930090C2E9 /* InfomationListTopBigImageCellNode.swift in Sources */,
 				66F18A8921C400380009A074 /* MineItemCellNode.swift in Sources */,
+				665915C52254EDD80010A126 /* Response+JSONMappable.swift in Sources */,
 				66A4226321C69B87003D5E40 /* SelectTopRequest.swift in Sources */,
 				5EC41A8E21DC9CC300E95A86 /* BundleLoader.swift in Sources */,
 				5E682E3E21C0B2A00025F45B /* ImageCellNode.swift in Sources */,
